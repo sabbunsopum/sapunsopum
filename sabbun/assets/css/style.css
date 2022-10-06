@@ -44,10 +44,25 @@
 h2 {
     font-size: 30px;
 }
+.contents > h3 {
+    font-family: 'PyeongChangPeace';
+    font-weight: 700;
+    font-size: 25px;
+    text-align: left;
+    padding: 20px 10px;
+
+}
+.contents > p {
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 40px;
+    padding: 0 30px;
+
+}
 
 .contents {
-    font-size: 20px;
-    text-align: left;
+    /* font-size: 20px;
+    text-align: left; */
     margin: 40px;
     padding: 30px 30px;
     height: 80%;
@@ -60,5 +75,8 @@ h2 {
 }
 .contents a {
     color: #F9ECE5;
-    margin: 30px;
+    margin-bottom: 40px;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    border: 1px dashed #F9ECE5;
 }
