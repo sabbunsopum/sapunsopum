@@ -1,8 +1,8 @@
   /* footer */
 
   .footer__inner {
-    max-width: 1160px;
-    margin: 0 auto;
+    /* max-width: 1160px;
+    margin: 0 auto; */
     background: #F1F1F1;
     display: flex;
     justify-content: center;

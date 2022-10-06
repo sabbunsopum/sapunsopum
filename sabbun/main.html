@@ -11,6 +11,126 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
+
+    <style>
+        .login__popup {
+            background-color:rgba(0,0,0,.5);
+            position:fixed;
+            left:0;
+            top:0;
+            z-index:5000;
+            width:100%;
+            height:100%;
+            box-sizing:border-box;
+            display:none;
+        }
+        .login__popup.open {
+            display:block;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .login__inner {
+            width:500px;
+            border-radius:10px;
+            background-color:#FDFBF7;
+            padding:40px;
+            box-sizing:border-box;
+            position:relative;
+        }
+        .login__header h3 {
+            text-align:center;
+            font-size:2.5rem;
+            font-weight: 700;
+            text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+            color: #828282;
+            padding:1rem;
+            margin-bottom:1rem;
+            position:relative;
+        }
+        .login__contents {
+            position:relative;
+            padding-bottom:20px;
+            padding-top:10px;
+        }
+        .login__contents legend,
+        .login__contents label {
+            position:absolute;
+            clip:rect(0 0 0 0);
+            width:1px;
+            height:1px;
+            margin:-1px;
+            overflow:hidden;
+        }
+        .login__footer .btn {
+            display:flex;
+            flex-wrap:wrap;
+            align-items:center;
+            justify-content:space-between;
+            height:inherit;
+        }
+        .login__footer .btn a {
+            width:32%;
+            display:inline-block;
+            background-color: #C0B7A8;
+            color: #fff;
+            border-radius:5px;
+            text-align:center;
+            padding:.5em 1em;
+            box-sizing:border-box;
+        }
+        .input__style {
+            background-color:#eee;
+            font-size:1rem;
+            padding:1rem;
+            width:100%;
+            border:0;
+            box-sizing:border-box;
+            border-radius:5px;
+            margin-bottom:5px
+        }
+        .input__button {
+            border-radius:5px;
+            width:100%;
+            font-size:1.3rem;
+            padding:1rem;
+            background-color:#7B7468;
+            color:#fff;
+            margin-top:10px;
+            cursor:pointer
+        }
+        .sub__input {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .input__button2-1 {
+            border-radius:5px;
+            width:49%;
+            height: 3.5rem;
+            font-size:1.3rem;
+            padding:1rem;
+            background-color:rgba(251, 229, 77, .6);
+            background-image: url(assets/img/login__icon.svg);
+            background-position: 80px 2px;
+            background-repeat: no-repeat;
+            margin-top:10px;
+            cursor:pointer
+        }
+        .input__button2-2 {
+            border-radius:5px;
+            width:49%;
+            font-size:1.3rem;
+            padding:1rem;
+            background-color:#fff;
+            background-image: url(assets/img/login__icon.svg);
+            background-position: -120px 2px;
+            background-repeat: no-repeat;
+            border: 1px solid #E0E0E0;
+            margin-top:10px;
+            cursor:pointer
+        }
+    </style>
 </head>
 <body>
     <header id="header" class="header__wrap container">
@@ -42,8 +162,8 @@
     </header>
     <!-- //header -->
 
-    <footer id="footer__type">
-        <div class="footer__inner">
+    <footer id="footer__type container">
+        <div class="footer__inner pc">
             <div class="footer__title">
                 <h2>사뿐소품</h2>
                 <p>주소 | 경기도 안산시 단원구 고잔동 535-2</p>
@@ -72,9 +192,9 @@
     <!-- //footer -->
 
     <!-- 로그인 가입 팝업 -->
-    <div class="login__popup">
+    <div class="login__popup pc">
         <div class="login__inner">
-            <div class="login__header">
+            <div class="login__header pcp">
                 <h3>로그인</h3>
             </div>
             <div class="login__contents">
@@ -90,6 +210,10 @@
                             <input type="password" name="youPass" id="youPass" placeholder="비밀번호" class="input__style" required>
                         </div>
                         <button type="submit" class="input__button">로그인</button>
+                        <div class="sub__input">
+                            <button type="submit" class="input__button2-1 ir">카카오 로그인</button>
+                            <button type="submit" class="input__button2-2 ir">구글 로그인</button>
+                        </div>
                     </fieldset>
                 </form>
             </div>
