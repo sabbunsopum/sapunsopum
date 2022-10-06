@@ -7,6 +7,10 @@
     font-family: 'PyeongChangPeace';
     font-weight: 700;
 }
+.sy {
+    font-family: 'UhBeenamsoyoung';
+    font-weight: 400;
+}
 
 .title {
     font-family: 'PyeongChangPeace';
@@ -22,7 +26,6 @@
 .section2,
 .section3 {
   width: 33.333%;
-  height: 100vh;
   text-align: center;
 }
 
@@ -68,9 +71,6 @@ h2 {
     height: 80%;
     border-radius: 20px;
     background: rgba(255,255,255,0.3);
-
-    font-family: 'UhBeenamsoyoung';
-    font-weight: normal;
     font-size: 20px;
 }
 .contents a {
