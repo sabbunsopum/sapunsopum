@@ -1,0 +1,77 @@
+  /* footer */
+
+  .footer__inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    height: 190px;
+    background: #F1F1F1;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.footer__title {
+    width: 30%;
+}
+
+.footer__title h2 {
+    font-family: 'PyeongChang Peace';
+    font-size: 45px;
+    font-weight: 700;
+    color: #f7cac9;
+    text-align: left;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin-bottom: 10px;
+}
+
+.footer__title p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: left;
+    color: #666;
+}
+
+
+.footer__menu {
+    width: 55%;
+    display: flex;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    justify-content: space-between;
+}
+
+.footer__menu h3 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+
+}
+
+.footer__menu li {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 5px;
+}
+
+
+
+
+@media(max-width:960px) {
+    .footer__title {
+        width: 100%;
+    }
+    .footer__title h2{
+        text-align: center;
+    }
+    .footer__title p{
+        text-align: center;
+
+    }
+    .footer__menu {
+        display: none;
+    }
+}
