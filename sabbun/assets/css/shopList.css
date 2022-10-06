@@ -1,0 +1,40 @@
+.shopList__menu {}
+
+.shopList__menu>ul li {
+    display: inline-block;
+    padding: 30px 40px;
+    background: #FFE8E8;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.shopList__menu>ul li a {
+    display: inline-block;
+    font-family: 'PyeongChangPeace';
+    font-weight: 300;
+}
+
+.shopList__Box {
+    width: 410px;
+    height: 1100px;
+    background-color: #FFE8E8;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.shopList__tab {
+    margin: 50px 60px;
+    width: 990px;
+    height: 60px;
+    background: #ccc;
+
+}
+.shopList__cardbox {
+    width: 460px;
+    height: 1000px;
+}
+.card {
+    width: 240px;
+    height: 280px;
+    background: rgba(225,225,225,0.4);
+}
