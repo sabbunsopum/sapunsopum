@@ -99,7 +99,11 @@ html, body {
 }
 .pcp {
     font-family: 'PyeongChangPeace';
-    font-weight: 300;
+    font-weight: 700;
+}
+.pc {
+    font-family: 'PyeongChang';
+    font-weight: 400;
 }
 
 
