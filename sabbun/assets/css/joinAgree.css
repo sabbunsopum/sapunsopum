@@ -9,8 +9,65 @@
     font-size: 40px
 }
 
+.join__step__list  {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.join__step__list li {
+    position: relative;
+    display: inline-block;
+    width: 15%;
+    padding-top: 40px;
+}
+.join__step__list li::before {
+    position: absolute;
+    content: '';
+    right: -4.8rem;
+    top: 12px;
+    width: 9.6rem;
+    height: 1px;
+    background-color: #eee;
+}
+.join__step__list li:last-child:before {
+    width: 0;
+    height: 0;
+}
+
+.join__step__list li:first-child {
+    background-image: url(../img/step_icon.svg);
+    background-position: 65px 0;
+    background-repeat: no-repeat;
+}
+.join__step__list li.active:first-child {
+    background-image: url(../img/step_icon.svg);
+    background-position: 73px -75px;
+}
+.join__step__list li.active:first-child::before {
+    background-color: #7B7468;
+}
+.join__step__list li:nth-child(2) {
+    background-image: url(../img/step_icon.svg);
+    background-position: -73px 0;
+    background-repeat: no-repeat;
+}
+.join__step__list li.active:nth-child(2) {
+    background-image: url(../img/step_icon.svg);
+    background-position: -73px -75px;
+}
+.join__step__list li:last-child {
+    background-image: url(../img/step_icon.svg);
+    background-position: -219px 0;
+    background-repeat: no-repeat;
+}
+.join__step__list li.active:last-child {
+    background-image: url(../img/step_icon.svg);
+    background-position: -219px -75px;
+}
+
 .agree__inner {
-    padding: 100px 200px
+    padding: 50px 200px
 }
 
 .agree__inner>div {
@@ -37,7 +94,7 @@
     color: #999;
 }
 
-.agree__inner .btn {
+/* .agree__inner .btn {
     width: 400px;
     background: #000;
     color: #fff;
@@ -48,7 +105,7 @@
     border-radius: 50px;
     padding: .7rem;
     cursor: pointer
-}
+} */
 
 .agree__inner .check {
     position: absolute;
@@ -101,14 +158,19 @@
     box-sizing: border-box
 }
 
-.join__btn {
-    display: block;
+.joinBtn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.joinBtn .btn {
+    display: inline-block;
     text-align: center;
-    background-color: #000;
+    background-color: #7B7468;
     color: #fff;
-    padding: 1rem;
-    font-size: 1.3rem;
-    width: 100%;
-    border-radius: 5px;
-    cursor: pointer
+    width: 44%;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    padding: .7rem;
 }
