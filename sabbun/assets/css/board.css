@@ -7,6 +7,7 @@
     overflow: hidden;
 }
 
+
 .board__inner {
     position: relative;
     padding: 70px 0;
@@ -85,15 +86,16 @@
 }
 
 .board__table table {
-    border-top: 2px solid #000;
-    border-bottom: 2px solid #000;
+    border-top: 2px solid #c6c6c6;
+    border-bottom: 2px solid #c6c6c6;
     width: 100%;
 }
 
 .board__table td,
 .board__table th {
+    border-radius: 5px;
     padding: 20px 5px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #f5f5f5;
 }
 
 .board__table th {
@@ -131,19 +133,21 @@
 }
 
 .board__view table {
-    border-top: 2px solid #000;
-    border-bottom: 2px solid #000;
+    border-top: 2px solid #f5f5f5;
+    border-bottom: 2px solid #f5f5f5;
 }
 
 .board__view th,
 .board__view td {
     padding: 20px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #f5f5f5;
 }
 
 .board__view th {
     background-color: #F4F2FF;
     font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid #f5f5f5;
 }
 
 .board__view td {
@@ -182,37 +186,42 @@
 }
 
 .board__write label {
-    width: 100%;
-    display: block;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
     font-size: 20px;
     margin-bottom: 10px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;  
+    width: 30%;
+    align-items: center;
+    background-color: #F4F2FF;
 }
 
 .board__write input {
+    border: 1px solid #c6c6c6;
     display: block;
-    border: 0;
-    background-color: #f5f5f5;
     width: 100%;
     border-radius: 5px;
-    padding: 20px 30px;
+    padding: 10px;
     font-size: 18px;
     font-weight: 300;
     box-sizing: border-box;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     outline: none;
 }
 
 .board__write textarea {
+    border: 1px solid #c6c6c6;
     width: 100%;
     resize: none;
-    border: 0;
-    background-color: #f5f5f5;
     border-radius: 5px;
     padding: 20px;
     font-size: 1rem;
     font-weight: 300;
     box-sizing: border-box;
     outline: none;
+    margin-bottom: 10px;
 }
 
 .board__write .btn {
@@ -227,6 +236,7 @@
     margin-top: 20px;
     float: right;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 .board__modify legend {
@@ -239,38 +249,53 @@
 }
 
 .board__modify label {
-    width: 100%;
-    display: block;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
     font-size: 20px;
     margin-bottom: 10px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;  
+    width: 30%;
+    align-items: center;
+    background-color: #F4F2FF;
 }
 
 .board__modify input {
+    border: 1px solid #c6c6c6;
     display: block;
-    border: 0;
-    background-color: #f5f5f5;
     width: 100%;
     border-radius: 5px;
-    padding: 20px 30px;
+    padding: 10px;
     font-size: 18px;
     font-weight: 300;
     box-sizing: border-box;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    outline: none;
+}
+.board__modify .input {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    box-sizing: border-box;
+    margin-bottom: 10px;
     outline: none;
 }
 
 .board__modify textarea {
+    border: 1px solid #c6c6c6;
     width: 100%;
     resize: none;
-    border: 0;
-    background-color: #f5f5f5;
     border-radius: 5px;
     padding: 20px;
     font-size: 1rem;
     font-weight: 300;
     box-sizing: border-box;
     outline: none;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .board__modify .btn {
@@ -278,6 +303,7 @@
     border: 1px solid #C6C6C6;
     color: #000;
     padding: 13px 30px;
+    margin-left: 10px;
     display: inline-block;
     border-radius: 5px;
     font-size: 1rem;
@@ -285,6 +311,10 @@
     float: right;
     cursor: pointer;
 }
+.board__modify__fieldset__div{
+    display: flex;
+}
+
 
 .board__title h3 {
     text-align: center;
@@ -292,6 +322,15 @@
     font-family: 'PyeongChangPeace';
     font-weight: 700;
     font-size: 70px;
+    color: #F7CAC9;
+    text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+}
+.board__title h4 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: 'PyeongChangPeace';
+    font-weight: 700;
+    font-size: 50px;
     color: #F7CAC9;
     text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
 }
