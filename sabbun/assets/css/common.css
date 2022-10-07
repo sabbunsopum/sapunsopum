@@ -89,24 +89,8 @@ html, body {
 }
 
 /* 폰트 */
-.nexon {
-    font-family: 'nexonLv1Gothic';
-    font-weight: 400;
-}
-.gmark {
-    font-family: 'GmarketSans';
-    font-weight: 500;
-}
-.pcp {
-    font-family: 'PyeongChangPeace';
-    font-weight: 700;
-}
-.pc {
-    font-family: 'PyeongChang';
-    font-weight: 400;
-}
-.sy {
-    font-family: 'UhBeenamsoyoung';
+.nanum {
+    font-family: 'NanumSquare';
     font-weight: 400;
 }
 
