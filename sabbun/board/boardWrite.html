@@ -74,15 +74,16 @@
                     <form action="boardWriteSave.php" name="boardWrite" method="post">
                         <fieldset>
                             <legend>게시판 작성 영역</legend>
-                            <div>
+                            <div class="board__modify__fieldset__div">
                                 <label for="boardTitle">제목</label>
                                 <input type="text" name="boardTitle" id="boardTitle">
                             </div>
-                            <div>
+                            <div class="board__modify__fieldset__div">
                                 <label for="boardContents">내용</label>
                                 <textarea name="boardContents" id="boardContents" rows="20"></textarea>
                             </div>
-                            <button type="submit" class="btn">저장하기</button>
+                            <button type="submit" class="btn">취소</button>
+                            <button type="submit" class="btn">저장</button>
                         </fieldset>
                     </form>
                 </div>
