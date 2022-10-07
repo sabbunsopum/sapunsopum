@@ -5,309 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP 사이트 만들기</title>
+    <title>board</title>
     <style>
-        #board h2 {
-            position: absolute;
-            clip: rect(0 0 0 0);
-            width: 1px;
-            height: 1px;
-            margin: -1px;
-            overflow: hidden;
-        }
-
-        .board__inner {
-            position: relative;
-            padding: 70px 0;
-        }
-
-        /* .board__inner::before {
-            content: "";
-            width: 100%;
-            height: 1px;
-            background: #000;
-            position: absolute;
-            left: 0;
-            bottom: -8px;
-        } */
-
-        .board__search {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            height: inherit;
-            margin-bottom: 20px;
-            align-items: flex-end;
-        }
-
-        .board__search .left em {
-            color: red;
-        }
-
-        .board__search .right legend {
-            position: absolute;
-            clip: rect(0 0 0 0);
-            width: 1px;
-            height: 1px;
-            margin: -1px;
-            overflow: hidden;
-        }
-
-        .board__search .right #searchKeyword {
-            border: 1px solid #c6c6c6;
-            padding: 13px 20px;
-            font-size: 1rem;
-            border-radius: 5px;
-            color: #666;
-            box-sizing: border-box;
-        }
-
-        .board__search .right #searchOption {
-            border: 1px solid #c6c6c6;
-            padding: 13px 20px;
-            font-size: 1rem;
-            border-radius: 5px;
-            color: #666;
-            box-sizing: border-box;
-        }
-
-        .board__search .right .searchBtn {
-            border: 1px solid #c6c6c6;
-            padding: 13px 30px;
-            display: inline-block;
-            border-radius: 5px;
-            background-color: #fff;
-            font-size: 1rem;
-            box-sizing: border-box;
-            color: #000;
-        }
-
-        .board__search .right .btn {
-            background: #f4f2ff;
-            padding: 13px 30px;
-            display: inline-block;
-            border-radius: 5px;
-            font-size: 1rem;
-            box-sizing: border-box;
-        }
-
-        .board__table table {
-            border-top: 2px solid #000;
-            border-bottom: 2px solid #000;
-            width: 100%;
-        }
-
-        .board__table td,
-        .board__table th {
-            padding: 20px 5px;
-            border-bottom: 1px solid #000;
-        }
-
-        .board__table th {
-            font-weight: 500;
-            background-color: #F4F2FF;
-        }
-
-        .board__table td {
-            text-align: center;
-        }
-
-        .board__table tr:hover {
-            background-color: #e0e0e0;
-        }
-
-        .board__pages {
-            margin: 70px 0 50px;
-        }
-
-        .board__pages ul {
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .board__pages ul li a {
-            padding: 13px 10px;
-            margin-right: -1px;
-        }
-
-        .board__pages ul li.active a {
-            background: #000;
-            color: #fff;
-        }
-
-        .board__view table {
-            border-top: 2px solid #000;
-            border-bottom: 2px solid #000;
-        }
-
-        .board__view th,
-        .board__view td {
-            padding: 20px;
-            border-bottom: 1px solid #000;
-        }
-
-        .board__view th {
-            background-color: #e0e0e0;
-            font-weight: 500;
-        }
-
-        .board__view td {
-            line-height: 1.5;
-        }
-
-        .board__view td.height {
-            min-height: 500px;
-            display: block;
-            border-bottom: 0;
-        }
-
-        .board__btn {
-            text-align: right;
-        }
-
-        .board__btn a {
-            background: #000;
-            color: #fff;
-            padding: 13px 30px;
-            display: inline-block;
-            border-radius: 5px;
-            font-size: 1rem;
-            box-sizing: border-box;
-            margin-top: 20px;
-        }
-
-        .board__write legend {
-            position: absolute;
-            clip: rect(0 0 0 0);
-            width: 1px;
-            height: 1px;
-            margin: -1px;
-            overflow: hidden;
-        }
-
-        .board__write label {
-            width: 100%;
-            display: block;
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .board__write input {
-            display: block;
-            border: 0;
-            background-color: #f5f5f5;
-            width: 100%;
-            border-radius: 5px;
-            padding: 20px 30px;
-            font-size: 18px;
-            font-weight: 300;
-            box-sizing: border-box;
-            margin-bottom: 30px;
-            outline: none;
-        }
-
-        .board__write textarea {
-            width: 100%;
-            resize: none;
-            border: 0;
-            background-color: #f5f5f5;
-            border-radius: 5px;
-            padding: 20px;
-            font-size: 1rem;
-            font-weight: 300;
-            box-sizing: border-box;
-            outline: none;
-        }
-
-        .board__write .btn {
-            background: #000;
-            color: #fff;
-            padding: 13px 30px;
-            display: inline-block;
-            border-radius: 5px;
-            font-size: 1rem;
-            box-sizing: border-box;
-            margin-top: 20px;
-            float: right;
-            cursor: pointer;
-        }
-
-        .board__modify legend {
-            position: absolute;
-            clip: rect(0 0 0 0);
-            width: 1px;
-            height: 1px;
-            margin: -1px;
-            overflow: hidden;
-        }
-
-        .board__modify label {
-            width: 100%;
-            display: block;
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .board__modify input {
-            display: block;
-            border: 0;
-            background-color: #f5f5f5;
-            width: 100%;
-            border-radius: 5px;
-            padding: 20px 30px;
-            font-size: 18px;
-            font-weight: 300;
-            box-sizing: border-box;
-            margin-bottom: 30px;
-            outline: none;
-        }
-
-        .board__modify textarea {
-            width: 100%;
-            resize: none;
-            border: 0;
-            background-color: #f5f5f5;
-            border-radius: 5px;
-            padding: 20px;
-            font-size: 1rem;
-            font-weight: 300;
-            box-sizing: border-box;
-            outline: none;
-            margin-bottom: 30px;
-        }
-
-        .board__modify .btn {
-            background: #000;
-            color: #fff;
-            padding: 13px 30px;
-            display: inline-block;
-            border-radius: 5px;
-            font-size: 1rem;
-            box-sizing: border-box;
-            float: right;
-            cursor: pointer;
-        }
-
-        .board__title h3 {
-            text-align: center;
-            font-size: 46px;
-            margin-bottom: 20px;
-            margin-top: 40px;
-            font-family: 'PyeongChangPeace';
-            font-weight: 700;
-            font-size: 60px;
-            color: #F7CAC9;
-            text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
-        }
-
-        .board__title p {
-            font-size: 22px;
-            margin-bottom: 80px;
-            font-weight: 300;
-        }
+       
     </style>
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/fonts.css">
@@ -315,6 +15,7 @@
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/board.css">
     <!-- META -->
     <meta name="author" content="webstoryboy">
     <meta name="description" content="PHP 사이트 만들기입니다.">
@@ -372,27 +73,7 @@
                     <div class="board__title">
                         <h3>자유게시판</h3>
                     </div>
-                    <div class="board__search">
-                        <div class="left">
-                            <!-- * 총 <em>1111</em>건의 게시물이 등록되어 있습니다. -->
-                        </div>
-                        <div class="right">
-                            <form action="boardSearch.php" name="boardSearch" method="get">
-                                <fieldset>
-                                    <legend>게시판 검색 영역</legend>
-                                    <input type="search" name="searchKeyword" id="searchKeyword"
-                                        placeholder="검색어를 입력하세요!" aria-label="search" required>
-                                    <select name="searchOption" id="searchOption">
-                                        <option value="title">제목</option>
-                                        <option value="content">내용</option>
-                                        <option value="name">등록자</option>
-                                    </select>
-                                    <button type="submit" class="searchBtn">검색</button>
-                                    <a href="boardWrite.html" class="btn">글쓰기</a>
-                                </fieldset>
-                            </form>
-                        </div>
-                    </div>
+                    
                     <div class="board__table">
                         <table>
                             <colgroup>
@@ -485,6 +166,7 @@
                             </tbody>
                         </table>
                     </div>
+                    
                     <div class="board__pages">
                         <ul>
                             <li><a href="#">처음</a></li>
@@ -500,6 +182,28 @@
                             <li><a href="#">마지막</a></li>
                         </ul>
                     </div>
+
+                    <div class="board__search">
+                        <div class="left">
+                            <!-- * 총 <em>1111</em>건의 게시물이 등록되어 있습니다. -->
+                        </div>
+                        <div class="right">
+                            <form action="boardSearch.php" name="boardSearch" method="get">
+                                <fieldset>
+                                    <legend>게시판 검색 영역</legend>
+                                    <input type="search" name="searchKeyword" id="searchKeyword"
+                                        placeholder="검색어를 입력하세요!" aria-label="search" required>
+                                    <select name="searchOption" id="searchOption">
+                                        <option value="title">제목</option>
+                                        <option value="content">내용</option>
+                                        <option value="name">등록자</option>
+                                    </select>
+                                    <button type="submit" class="searchBtn">검색</button>
+                                    <a href="boardWrite.html" class="btn">글쓰기</a>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!-- //board -->
@@ -509,7 +213,7 @@
         <!-- //main -->
 
         <footer id="footer__type">
-            <div class="footer__inner">
+            <div class="footer__inner container">
                 <div class="footer__title">
                     <h2>사뿐소품</h2>
                     <p>주소 | 경기도 안산시 단원구 고잔동 535-2</p>
