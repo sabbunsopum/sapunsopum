@@ -15,21 +15,33 @@
     <header id="headerType" class="header__wrap nexon">
         <div class="header__inner">
             <div class="header__logo clearfix">
-                <a href="#">jeju <em>sari</em></a>
+                <a href="#">사뿐소품</a>
             </div>
             <nav class="header__menu">
                 <ul>
-                    <li><a href="#sliderType">슬라이드 영역</a></li>
-                    <li><a href="#imageType">이미지 영역</a></li>
-                    <li><a href="#imgTextType">이미지/텍스트 영역</a></li>
-                    <li><a href="#cardType">카드 영역</a></li>
-                    <li><a href="#bannerType">배너 영역</a></li>
-                    <li><a href="#textType">텍스트 영역</a></li>
-                    <li><a href="#footerType">푸터 영역</a></li>
+                    <li><a href="#sliderType">사뿐소품이란?</a></li>
+                    <li><a href="#imageType">소품샵 리스트</a></li>
+                    <li><a href="#imgTextType">커뮤니티</a></li>
+                    <li><a href="#cardType">마이페이지</a></li>
+                    <li><a href="#bannerType">고객센터</a></li>
                 </ul>
             </nav>
             <div class="header__member clearfix">
-                <a href="#"><img src="assets/img/member.svg" alt="로그인"></a>
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+            </div>
+            <div class="header__search clearfix">
+                <form action="headerSearch.php" name="headerSearch" method="get">
+                    <fieldset>
+                        <legend>검색 영역</legend>
+                        <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !" aria-label="search" required>
+                        <button type="submit" class="searchBtn">
+                            <img src="assets/img/search_icon.svg" alt="검색버튼">
+                        </button>
+                    </fieldset>
+                </form>
             </div>
             <div class="header__ham">
                 <span></span>
