@@ -1,55 +1,45 @@
-/* PyeongChangPeace */
+/* NanumSquare */
 @font-face {
-    font-family: 'PyeongChangPeace';
+    font-family: 'NanumSquare';
     font-weight: 300;
     font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Light.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Light.eot?#iefix') format('embedded-opentype'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Light.woff2') format('woff2'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Light.woff') format('woff'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Light.ttf') format("truetype");
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Light.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Light.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Light.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Light.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Light.ttf') format("truetype");
     font-display: swap;
 } 
 @font-face {
-    font-family: 'PyeongChangPeace';
-    font-weight: 700;
-    font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Bold.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Bold.eot?#iefix') format('embedded-opentype'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Bold.woff2') format('woff2'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Bold.woff') format('woff'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Bold.ttf') format("truetype");
-    font-display: swap;
-} 
-
-/* PyeongChang */
-@font-face {
-    font-family: 'PyeongChang';
+    font-family: 'NanumSquare';
     font-weight: 400;
     font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChang-Regular.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChang-Regular.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChang-Regular.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChang-Regular.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChang-Regular.ttf') format("truetype");
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Regular.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Regular.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Regular.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Regular.ttf') format("truetype");
     font-display: swap;
 } 
 @font-face {
-    font-family: 'PyeongChang';
+    font-family: 'NanumSquare';
     font-weight: 700;
     font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChang-Bold.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChang-Bold.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChang-Bold.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChang-Bold.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChang-Bold.ttf') format("truetype");
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Bold.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Bold.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Bold.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-Bold.ttf') format("truetype");
     font-display: swap;
 } 
-
-/* UhBeenamsoyoung */
 @font-face {
-    font-family: 'UhBeenamsoyoung';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeenamsoyoung.woff') format('woff');
-    font-weight: normal;
+    font-family: 'NanumSquare';
+    font-weight: 800;
     font-style: normal;
-    }
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-ExtraBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-ExtraBold.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-ExtraBold.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-ExtraBold.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumSquare/NanumSquare-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+} 
