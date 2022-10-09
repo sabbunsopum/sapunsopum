@@ -64,7 +64,7 @@
 
 .board__search .left #searchOption {
     border: 1px solid #194330;
-    padding: 7px 20px;
+    padding: 7px 10px;
     font-size: 1rem;
     color: #666;
     box-sizing: border-box;
@@ -82,9 +82,8 @@
 }
 
 .board__search .btn {
-    border: 1px solid #c6c6c6;
     background: #363636;
-    padding: 7px 20px;
+    padding: 10px 20px;
     display: inline-block;
     font-size: 1rem;
     box-sizing: border-box;
@@ -130,7 +129,7 @@
 }
 
 .board__table .notice {
-    background: rgba(225, 225, 225, 0.5);
+    background: rgba(235, 235, 235, 0.5);
 }
 
 .board__pages {
