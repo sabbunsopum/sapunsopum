@@ -29,6 +29,7 @@
 
 .header__menu li {
     display: inline;
+    float: left;
 }
 
 .header__menu li a {
