@@ -45,7 +45,7 @@
     color: red;
 }
 
-.board__search .right legend {
+.board__search .left legend {
     position: absolute;
     clip: rect(0 0 0 0);
     width: 1px;
@@ -54,43 +54,41 @@
     overflow: hidden;
 }
 
-.board__search .right #searchKeyword {
-    border: 1px solid #c6c6c6;
-    padding: 13px 20px;
+.board__search .left #searchKeyword {
+    border: 1px solid #194330;
+    padding: 7px 25px;
     font-size: 1rem;
-    border-radius: 5px;
     color: #666;
     box-sizing: border-box;
 }
 
-.board__search .right #searchOption {
-    border: 1px solid #c6c6c6;
-    padding: 13px 20px;
+.board__search .left #searchOption {
+    border: 1px solid #194330;
+    padding: 7px 20px;
     font-size: 1rem;
-    border-radius: 5px;
     color: #666;
     box-sizing: border-box;
 }
-
-.board__search .right .searchBtn {
-    border: 1px solid #c6c6c6;
-    padding: 13px 30px;
-    display: inline-block;
-    border-radius: 5px;
-    background-color: #fff;
-    font-size: 1rem;
-    box-sizing: border-box;
-    color: #000;
+.board__search .left .searchBtn{
+    position: relative;
+}
+.board__search .left .searchBtn img {
+    position: absolute;
+    content: '';
+    top: -16px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
 }
 
-.board__search .right .btn {
+.board__search .btn {
     border: 1px solid #c6c6c6;
-    background: #f4f2ff;
-    padding: 13px 30px;
+    background: #363636;
+    padding: 7px 20px;
     display: inline-block;
-    border-radius: 5px;
     font-size: 1rem;
     box-sizing: border-box;
+    color: #fff;
 }
 
 .board__table table {
@@ -98,6 +96,7 @@
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
+    margin-bottom: 10px;
 }
 
 .board__table td,
@@ -115,10 +114,11 @@
 
 .board__table td {
     text-align: center;
-    color: rgba(33,33,33,0.4);
+    color: rgba(33, 33, 33, 0.4);
     font-size: 12px;
 
 }
+
 .board__table td.title {
     text-align: left;
     color: #000;
@@ -126,11 +126,13 @@
 }
 
 .board__table tr:hover {
-    background-color: rgba(241, 222, 234, 0.719)
+    background-color: rgba(222, 241, 234, 0.719)
 }
-.board__table .notice{
-    background : rgba(225, 225, 225, 0.5);
+
+.board__table .notice {
+    background: rgba(225, 225, 225, 0.5);
 }
+
 .board__pages {
     margin: 30px 0 50px;
 }
@@ -148,7 +150,7 @@
 }
 
 .board__pages ul li.active a {
-    background: #F7CAC9;
+    background: #666;
     color: #fff;
 }
 
