@@ -157,35 +157,150 @@
     background: #666;
     color: #fff;
 }
-
-.board__view table {
-    border-top: 2px solid #f5f5f5;
-    border-bottom: 2px solid #f5f5f5;
+.board__view h3{
+    font-size: 19px;
+    color: #000;
+    margin-bottom: 20px;
 }
-
-.board__view th,
-.board__view td {
-    padding: 20px;
-    border-bottom: 1px solid #f5f5f5;
+.board__view__head{
+    align-items: center;
+    display: flex;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #c6c6c6;
+    position: relative;
 }
-
-.board__view th {
-    background-color: #F4F2FF;
+.board__view__head p{
+    position: absolute;
+    top: 3px;
+    left: 57px;
+    font-size: 16px;
+    color: #000;
     font-weight: 500;
-    border-radius: 5px;
-    border: 1px solid #f5f5f5;
 }
-
-.board__view td {
-    line-height: 1.5;
+.board__view__head span{
+    font-size: 13px;
+    margin-right: 10px;
+    padding-top: 15px;
+    color: #666;
 }
+.board__view__head img{
+    width: 100%;
+    border-radius: 50%;
+    margin-right: 17px;
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+}
+.board__view__contents{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.board__view__contents p {
+    margin-bottom: 40px;
+}
+.board__view__contents span{
+    font-size: 20px;
+}
+.board__view__contents .tool{
+    float: right;
 
-.board__view td.height {
-    min-height: 500px;
+}
+.board__view__comment{
+    display: flex;
+    font-size: 13px;
+    padding: 18px 0;
+    border-bottom: 1px solid #C6C6C6;
+}
+.board__view__comment.last{
+    border: 0;
+}
+.board__view__comment .name{
+    color: #000;
+    font-size: 14px;
+}
+.bvcc{
+    font-size: 20px;
+    line-height: 2.2;
+    margin-right: 20px;
+}
+.board__view__comment img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.board__view__comment div{
+    margin-bottom: 5px;
+}
+.board__view__comment__modify{
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 12px;
+    color: #666;
+}
+.board__view__comment__write{
+    margin-top: 10px;
+    position: relative;
+    margin-bottom: 30px;
+}
+.board__view__comment__write input{
+    height: 35px;
+    margin-bottom: 10px;
+}
+.board__view__comment__write textarea{
+    width: 100%;
+    height: 140px;
+}
+.board__view__comment__write__imging{
+    position: absolute;
+    left: 15px;
+    bottom: 20px;
+    font-size: 20px;
+}
+.board__view__comment__write__btn{
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+    background-color: #363636;
+    color: #fff;
+    width: 66px;
+    text-align: center;
+    height: 32px;
+    line-height: 2.5;
+    font-size: 13px;
+}
+.board__view__updownlist{
+    border-top: 1px solid #c6c6c6;
+    margin-bottom: 15px;
+}
+.board__view__updownlist span{
+    margin-right: 20px;
+    margin-left: 10px;
+}
+.board__view__updownlist div{
+    border-bottom: 1px solid #C6C6C6;
+    padding: 10px 0;
+    font-size: 14px;
+}
+.board__view__btn a{
+    margin: 5px;
     display: block;
-    border-bottom: 0;
+    right: 15px;
+    bottom: 20px;
+    background-color: #363636;
+    color: #fff;
+    width: 66px;
+    text-align: center;
+    height: 32px;
+    line-height: 2.5;
+    font-size: 13px;
 }
-
+.board__view__btn .modify{
+    float: right;
+}
+.board__view__btn .delete{
+    float: right;
+}
 .board__btn {
     text-align: right;
 }
