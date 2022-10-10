@@ -317,6 +317,20 @@
     margin-top: 20px;
 }
 
+/* boardWrite */
+.board__writeInner {
+    padding-top: 30px;
+    padding-bottom: 170px;
+    box-sizing: border-box;
+}
+.board__write {
+    width: 1140px;
+    height: 728px;
+    margin-top: 30px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
 .board__write legend {
     position: absolute;
     clip: rect(0 0 0 0);

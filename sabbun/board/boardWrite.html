@@ -32,7 +32,7 @@
 
 <body>
 
-  
+
 
     <header id="header" class="header__wrap container">
         <div class="header__inner">
@@ -64,28 +64,30 @@
 
     <main id="main">
 
-        <section id="board" class="container">
+        <section id="board" class="">
             <h2>게시판 영역입니다.</h2>
             <div class="board__inner">
-                <div class="board__title">
+                <div class="board__title container">
                     <h3>게시글 작성하기</h3>
                 </div>
-                <div class="board__write">
-                    <form action="boardWriteSave.php" name="boardWrite" method="post">
-                        <fieldset>
-                            <legend>게시판 작성 영역</legend>
-                            <div class="board__modify__fieldset__div">
-                                <label for="boardTitle">제목</label>
-                                <input type="text" name="boardTitle" id="boardTitle">
-                            </div>
-                            <div class="board__modify__fieldset__div">
-                                <label for="boardContents">내용</label>
-                                <textarea name="boardContents" id="boardContents" rows="20"></textarea>
-                            </div>
-                            <button type="submit" class="btn">취소</button>
-                            <button type="submit" class="btn">저장</button>
-                        </fieldset>
-                    </form>
+                <div class="gray board__writeInner">
+                    <div class="board__write container">
+                        <form action="boardWriteSave.php" name="boardWrite" method="post">
+                            <fieldset>
+                                <legend>게시판 작성 영역</legend>
+                                <div class="board__modify__fieldset__div">
+                                    <label for="boardTitle">제목</label>
+                                    <input type="text" name="boardTitle" id="boardTitle">
+                                </div>
+                                <div class="board__modify__fieldset__div">
+                                    <label for="boardContents">내용</label>
+                                    <textarea name="boardContents" id="boardContents" rows="20"></textarea>
+                                </div>
+                                <button type="submit" class="btn">취소</button>
+                                <button type="submit" class="btn">저장</button>
+                            </fieldset>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
