@@ -207,18 +207,6 @@
     box-sizing: border-box
 }
 
-.join__btn {
-    display: block;
-    text-align: center;
-    background-color: #000;
-    color: #fff;
-    padding: 1rem;
-    font-size: 1.3rem;
-    width: 100%;
-    border-radius: 5px;
-    cursor: pointer
-}
-
 .moreover {
     border-bottom: 0;
 }
