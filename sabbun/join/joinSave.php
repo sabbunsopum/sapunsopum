@@ -32,7 +32,6 @@
     $youNickName = $_POST['youNickName'];
     $youName = $_POST['youName'];
     $youPass = $_POST['youPass'];
-    $youBirth = $_POST['youBirth'];
     $youPhone = $_POST['youPhone'];
     $regTime = time();
 
@@ -40,12 +39,11 @@
     $youNickName = $connect -> real_escape_string(trim($youNickName));
     $youName = $connect -> real_escape_string(trim($youName));
     $youPass = $connect -> real_escape_string(trim($youPass));
-    $youBirth = $connect -> real_escape_string(trim($youBirth));
     $youPhone = $connect -> real_escape_string(trim($youPhone));
     $youPass = sha1("web".$youPass);
 
     // 회원가입
-    $sql = "INSERT INTO myAdminMember(youEmail, youNickName, youName, youPass, youBirth, youPhone, regTime) VALUES('$youEmail', '$youNickName', '$youName', '$youPass', '$youBirth', '$youPhone', '$regTime' )";
+    $sql = "INSERT INTO myAdminMember(youEmail, youNickName, youName, youPass, youPhone, regTime) VALUES('$youEmail', '$youNickName', '$youName', '$youPass', '$youPhone', '$regTime' )";
     $result = $connect -> query($sql);
     
     if($result){
