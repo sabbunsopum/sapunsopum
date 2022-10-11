@@ -86,7 +86,7 @@
                             <legend>로그인 입력폼</legend>
                             <div>
                                 <label for="youEmail">이메일</label>
-                                <input type="email" name="youEmail" id="youEmail" placeholder="이메일" class="input__style" required><!-- required 필수로 적어야 넘어감 -->
+                                <input type="email" name="youEmail" id="youEmail" placeholder="이메일" class="input__style" required>
                             </div>
                             <div>
                                 <label for="youPass">비밀번호</label>
@@ -420,6 +420,10 @@
     inputPhone.addEventListener("click", ()=>{
         findidPhone.classList.remove("open");
         findidSuccess.classList.add("open");
+    });
+    findPw.addEventListener("click", ()=>{
+        findidSuccess.classList.remove("open");
+        findpwPopup.classList.add("open");
     });
     findidClose3.addEventListener("click", ()=>{
         findidSuccess.classList.remove("open");
