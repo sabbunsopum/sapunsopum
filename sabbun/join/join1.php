@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입 페이지_1</title>
 
-    <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/join.css">
+    <link rel="stylesheet" href="../html/assets/css/fonts.css">
+    <link rel="stylesheet" href="../html/assets/css/reset.css">
+    <link rel="stylesheet" href="../html/assets/css/common.css">
+    <link rel="stylesheet" href="../html/assets/css/join.css">
 </head>
 <body>
     <header id="header" class="header">
         <div class="logo">
-            <img src="assets/img/temp_logo.svg" alt="사뿐소품 로고">
+            <img src="../html/assets/img/temp_logo.svg" alt="사뿐소품 로고">
         </div>
     </header>
     <main id="main">
@@ -30,7 +30,7 @@
                 <p>사뿐소품 사이트 이용을 위하여 아래의 약관 동의 및 회원가입이 필요합니다.</p>
             </div>
             <div class="join__inner">
-                <form action="adminJoinSave.php" name="join" method="post" onsubmit="return joinChecks()">
+                <form action="joinSave.php" name="join" method="post" onsubmit="return joinChecks()">
                     <fieldset>
                         <legend>약관동의</legend>
                         <div class="join__agree">
@@ -110,5 +110,16 @@
             </div>
         </section>
     </main>
+
+    <script>
+        function joinChecks() {
+            // 개인정보 동의 체크
+            let joinCheck = $("#agreeCheck1").is(":checked");
+            if (joinCheck == false) {
+                alert("개인정보수집 및 동의를 체크해주세요");
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>
