@@ -38,13 +38,13 @@
                                     <label for="youName">이름</label>
                                     <input type="text" id="youName" name="youName" maxlength="5" placeholder="이름을 적어주세요!" required>
                                 </div>
-                                <div>
+                                <div class="overlap">
                                     <label for="youNickName">닉네임</label>
                                     <input type="text" id="youNickName" name="youNickName" placeholder="닉네임을 적어주세요!" required>
                                     <a class="check" href="#c" onclick="nickChecking()">중복검사</a>
                                     <p class="msg" id="youNickNameComment"><!-- * 닉네임이 존재합니다. --></p>
                                 </div>
-                                <div>
+                                <div class="overlap">
                                     <label for="youEmail">이메일</label>
                                     <input type="email" id="youEmail" name="youEmail" placeholder="이메일을 적어주세요!" required>
                                     <a class="check" href="#c" onclick="emailChecking()">중복검사</a>
@@ -84,11 +84,11 @@
                                 </div>
                                 <div class="youGd">
                                     <label for="youGender">성별</label>
-                                    <div class="btn">
+                                    <div class="btn men">
                                         <img src="../html/assets/img/boy-dynamic-color@3x.png" alt="남성">
                                         <span>남성</span>
                                     </div>
-                                    <div class="btn">
+                                    <div class="btn women">
                                         <img src="../html/assets/img/girl-dynamic-color@3x.png" alt="여성">
                                         <span>여성</span>
                                     </div>
@@ -104,6 +104,20 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
+        const menBtn = document.querySelector(".men");
+        const womenBtn = document.querySelector(".women");
+
+        menBtn.addEventListener("click", ()=>{
+            menBtn.classList.add("active");
+            womenBtn.classList.remove("active");
+        });
+
+        womenBtn.addEventListener("click", ()=>{
+            womenBtn.classList.add("active");
+            menBtn.classList.remove("active");
+        });
+
+
         let emailCheck = false;
         let nickCheck = false;
         function emailChecking() {
