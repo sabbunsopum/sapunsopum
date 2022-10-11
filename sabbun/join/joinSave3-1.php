@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입 완료</title>
-    <?php include "../include/link.php" ?>
+    <title>회원가입 페이지_4</title>
+
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/join.css">
 </head>
 <body>
-    <div id="skip">
-        <a href="#header">헤더 영역 바로가기</a>
-        <a href="#main">컨텐츠 영역 바로가기</a>
-        <a href="#footer">푸터 영역 바로가기</a>
-    </div>
-    <!-- //skip -->
-    <?php include "../include/header.php" ?>
-    <!-- //header -->
+    <header id="header" class="header">
+        <div class="logo">
+            <img src="assets/img/temp_logo.svg" alt="사뿐소품 로고">
+        </div>
+    </header>
     <main id="main">
-        <section id="banner">
-            <h2>회원가입 페이지입니다.</h2>
-            <div class="banner__inner2 container">
-                <div class="img">
-                    <img src="../assets/img/banner_img03.svg" alt="배너 이미지">
-                </div>
-                <div class="desc">
-                    어떤 일이라도 <em>노력</em>하고 즐기면 그 결과는 <em>빛</em>을 바란다고 생각합니다.<br>
+        <section id="join" class="container nanum">
+            <div class="join__step active4">
+                <em>4</em>/4
+            </div>
+            <div class="join__desc">
+                <h1>
+                    <span>회원가입 완료!</span><br>
+                    함께 해주셔서 감사합니다 :)
+                </h1>
+                <p>로그인하시면 더욱 다양한 서비스와 혜택을 제공 받으실 수 있습니다.</p>
 <?php
     include "../connect/connect.php";
 
@@ -52,14 +55,17 @@
         echo "에러발생 -- 관리자에게 문의하세요!";
     }
 ?>
+            </div>
+            <div class="join__result">
+                <div class="img">
+                    <img src="assets/img/hand+heart 1@3x.png" alt="손으로 감싼 하트">
                 </div>
-                <a class="btn" href="#">메인으로</a>
+                <div class="btn">
+                    <a href="main.html">홈으로 가기</a>
+                    <a href="login.html">로그인 하기</a>
+                </div>
             </div>
         </section>
-        <!-- //banner -->
     </main>
-    <!-- //main -->
-    <?php include "../include/footer.php" ?>
-    <!-- //footer -->
 </body>
 </html>
