@@ -8,7 +8,7 @@
 }
 
 .login__left {
-    width: 70%;
+    width: 65%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -76,7 +76,7 @@
 }
 
 .login__inner {
-    width: 30%;
+    width: 35%;
     position: relative;
 }
 
@@ -176,4 +176,21 @@
 }
 .login__footer .btn a:last-child::before {
     width: 0;
+}
+
+@media (max-width: 1280px) {
+    .login__footer .btn {
+        justify-content: center;
+    }
+    .login__footer .btn .btnJoin {
+        display: none;
+    }
+}
+@media (max-width: 980px) {
+    .login__left {
+        width: 100%;
+    }
+    .login__inner {
+        width: 100%;
+    }
 }
