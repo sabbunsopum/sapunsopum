@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입 페이지_3_2</title>
 
-    <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/join.css">
+    <link rel="stylesheet" href="../html/assets/css/fonts.css">
+    <link rel="stylesheet" href="../html/assets/css/reset.css">
+    <link rel="stylesheet" href="../html/assets/css/common.css">
+    <link rel="stylesheet" href="../html/assets/css/join.css">
 </head>
 <body>
     <header id="header" class="header">
         <div class="logo">
-            <img src="assets/img/temp_logo.svg" alt="사뿐소품 로고">
+            <img src="../html/assets/img/temp_logo.svg" alt="사뿐소품 로고">
         </div>
     </header>
     <main id="main">
@@ -63,20 +63,17 @@
                                 <div class="youGd">
                                     <label for="youGender">성별</label>
                                     <div class="btn">
-                                        <img src="assets/img/boy-dynamic-color@3x.png" alt="남성">
+                                        <img src="../html/assets/img/boy-dynamic-color@3x.png" alt="남성">
                                         <span>남성</span>
                                     </div>
                                     <div class="btn">
-                                        <img src="assets/img/girl-dynamic-color@3x.png" alt="여성">
+                                        <img src="../html/assets/img/girl-dynamic-color@3x.png" alt="여성">
                                         <span>여성</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="next">
-                                <a href="join4.html">다음으로</a>
-                            </div>
+                            <button class="join__Nbtn" type="submit">다음으로</button>
                         </div>
-                        <!-- <button class="next2" type="submit"><a href="join4.html">다음으로</a></button> -->
                     </fieldset>
                 </form>
             </div>
