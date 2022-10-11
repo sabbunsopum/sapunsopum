@@ -111,15 +111,10 @@
     margin-bottom: 20px;
 }
 
-.next {
-    text-align: center;
-}
-
-.next a {
-    padding: 1.2rem 8rem;
-    border-radius: 10px;
-    background-color: #4461f2;
-    color: #fff;
+.join__btn .btn.active {
+    border: 1px solid #4461f2;
+    background-color: #4461f258;
+    color: #4461f2;
 }
 
 /* join__agree */
@@ -160,6 +155,19 @@
     top: 25px;
     right: 1.5rem;
 
+}
+
+.join__Nbtn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.2rem 8rem;
+    border-radius: 10px;
+    background-color: #4461f2;
+    color: #fff;
+    margin: auto;
+    font-size: 1.1rem;
+    font-weight: 700;
 }
 
 /* join__inner */
