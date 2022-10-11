@@ -95,23 +95,17 @@
                                     <label for="joinCheck">동의합니다.</label>
                                 </div>
                             </div>
+                            <div class="next">
+                                <a href="#c">다음으로</a>
+                            </div>
                         </div>
-                        <div class="next">
-                    <a href="join2.html">다음으로</a>
-                </div>
                     </fieldset>
                 </form>
-
-
-
-
-
-                
-                
             </div>
         </section>
     </main>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         function joinChecks() {
             // 개인정보 동의 체크
