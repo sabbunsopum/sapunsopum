@@ -8,7 +8,7 @@
 }
 
 .login__left {
-    width: 65%;
+    width: 68%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -76,7 +76,7 @@
 }
 
 .login__inner {
-    width: 35%;
+    width: 32%;
     position: relative;
 }
 
