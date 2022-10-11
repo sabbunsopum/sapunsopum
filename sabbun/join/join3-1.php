@@ -65,22 +65,22 @@
                             </div>
                             <div class="storeInfo">
                                 <div>
-                                    <label for="storeName">가게(상호)명</label>
-                                    <input type="text" id="storeName" name="storeName" placeholder="가게(상호)명을 적어주세요!" required>
+                                    <label for="youShop">가게(상호)명</label>
+                                    <input type="text" id="youShop" name="youShop" placeholder="가게(상호)명을 적어주세요!" required>
                                 </div>
                                 <div>
-                                    <label for="storeAdr">가게 주소</label>
-                                    <input type="text" id="storeAdr" name="storeAdr" placeholder="가게 주소를 적어주세요!" required>
+                                    <label for="youAdress">가게 주소</label>
+                                    <input type="text" id="youAdress" name="youAdress" placeholder="가게 주소(xx시 xx구 xx동 xxx)를 적어주세요!" required>
                                 </div>
                                 <div>
-                                    <label for="storePhone">가게 전화번호</label>
-                                    <input type="text" id="storePhone" name="storePhone" placeholder="가게 전화번호를 적어주세요!" required>
+                                    <label for="youShopNum">가게 전화번호</label>
+                                    <input type="text" id="youShopNum" name="youShopNum" placeholder="가게 전화번호(000-0000-0000)를 적어주세요!" required>
                                 </div>
                             </div>
                             <div class="moreover">
                                 <div>
-                                    <label for="youImg">프로필 이미지</label>
-                                    <input type="text" id="youPhone" name="youPhone" placeholder="이미지를 첨부해주세요!" required>
+                                    <label for="youPhoto">프로필 이미지</label>
+                                    <input type="text" id="youPhoto" name="youPhoto" placeholder="이미지를 첨부해주세요!" required>
                                 </div>
                                 <div class="youGd">
                                     <label for="youGender">성별</label>
@@ -113,7 +113,7 @@
             } else {
                 $.ajax({
                     type: "POST",
-                    url: "adminJoinCheck.php",
+                    url: "JoinCheck3-1.php",
                     data: {
                         "youEmail": youEmail,
                         "type": "emailCheck"
@@ -143,7 +143,7 @@
             } else {
                 $.ajax({
                     type: "POST",
-                    url: "adminJoinCheck.php",
+                    url: "JoinCheck3-1.php",
                     data: {
                         "youNickName": youNickName,
                         "type": "nickCheck"
