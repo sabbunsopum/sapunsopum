@@ -39,6 +39,10 @@
                                     <input type="text" id="youName" name="youName" placeholder="이름을 적어주세요!" required>
                                 </div>
                                 <div>
+                                    <label for="youNickName">닉네임</label>
+                                    <input type="text" id="youNickName" name="youNickName" placeholder="닉네임을 적어주세요!" required>
+                                </div>
+                                <div>
                                     <label for="youEmail">이메일</label>
                                     <input type="email" id="youEmail" name="youEmail" placeholder="이메일을 적어주세요!" required>
                                 </div>
