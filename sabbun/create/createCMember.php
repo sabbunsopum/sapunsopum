@@ -1,7 +1,7 @@
 <?php
     include "../connect/connect.php";
 
-    $sql = "CREATE TABLE myBMember (";
+    $sql = "CREATE TABLE myCMember (";
     $sql .= "myMemberID int(10) unsigned auto_increment,";
     $sql .= "youEmail varchar(40) NOT NULL,";
     $sql .= "youNickName varchar(10) UNIQUE NULL,";

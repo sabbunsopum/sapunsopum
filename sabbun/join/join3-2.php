@@ -36,27 +36,31 @@
                             <div class="youInfo">
                                 <div>
                                     <label for="youName">이름</label>
-                                    <input type="text" id="youName" name="youName" placeholder="이름을 적어주세요!" required>
+                                    <input type="text" id="youName" name="youName" maxlength="5" placeholder="이름을 적어주세요!" required>
                                 </div>
                                 <div>
                                     <label for="youNickName">닉네임</label>
                                     <input type="text" id="youNickName" name="youNickName" placeholder="닉네임을 적어주세요!" required>
+                                    <a class="check" href="#c" onclick="nickChecking()">중복검사</a>
+                                    <p class="msg" id="youNickNameComment"><!-- * 닉네임이 존재합니다. --></p>
                                 </div>
                                 <div>
                                     <label for="youEmail">이메일</label>
                                     <input type="email" id="youEmail" name="youEmail" placeholder="이메일을 적어주세요!" required>
+                                    <a class="check" href="#c" onclick="emailChecking()">중복검사</a>
+                                    <p class="msg" id="youEmailComment"><!-- * 이메일이 존재합니다. --></p>
                                 </div>
                                 <div>
                                     <label for="youPass">비밀번호</label>
-                                    <input type="password" id="youPass" name="youPass" placeholder="비밀번호를 적어주세요!" required>
+                                    <input type="password" id="youPass" name="youPass" maxlength="20" placeholder="비밀번호를 적어주세요!" required>
                                 </div>
                                 <div>
                                     <label for="youPassC">비밀번호 확인</label>
-                                    <input type="password" id="youPassC" name="youPassC" placeholder="비밀번호를 한번 더 적어주세요!" required>
+                                    <input type="password" id="youPassC" name="youPassC" maxlength="20" placeholder="비밀번호를 한번 더 적어주세요!" required>
                                 </div>
                                 <div>
                                     <label for="youPhone">휴대폰 번호</label>
-                                    <input type="text" id="youPhone" name="youPhone" placeholder="휴대폰 번호를 적어주세요!" required>
+                                    <input type="text" id="youPhone" name="youPhone" maxlength="15" placeholder="휴대폰 번호(010-0000-0000)를 적어주세요!" required>
                                 </div>
                             </div>
                             <div class="moreover">
