@@ -53,8 +53,8 @@
                                     </div>
                                 </details>
                                 <div class="check">
-                                    <input type="checkbox" name="agreeCheck1" id="agreeCheck1">
-                                    <label for="agreeCheck1">동의합니다.</label>
+                                    <input type="checkbox" name="joinCheck" id="joinCheck">
+                                    <label for="joinCheck">동의합니다.</label>
                                 </div>
                             </div>
                             <div class="agree">
@@ -74,8 +74,8 @@
                                     </div>
                                 </details>
                                 <div class="check">
-                                    <input type="checkbox" name="agreeCheck1" id="agreeCheck1">
-                                    <label for="agreeCheck1">동의합니다.</label>
+                                    <input type="checkbox" name="joinCheck" id="joinCheck">
+                                    <label for="joinCheck">동의합니다.</label>
                                 </div>
                             </div>
                             <div class="agree">
@@ -91,11 +91,14 @@
                                     </div>
                                 </details>
                                 <div class="check">
-                                    <input type="checkbox" name="agreeCheck1" id="agreeCheck1">
-                                    <label for="agreeCheck1">동의합니다.</label>
+                                    <input type="checkbox" name="joinCheck" id="joinCheck">
+                                    <label for="joinCheck">동의합니다.</label>
                                 </div>
                             </div>
                         </div>
+                        <div class="next">
+                    <a href="join2.html">다음으로</a>
+                </div>
                     </fieldset>
                 </form>
 
@@ -104,9 +107,7 @@
 
 
                 
-                <div class="next">
-                    <a href="join2.html">다음으로</a>
-                </div>
+                
             </div>
         </section>
     </main>
@@ -114,7 +115,7 @@
     <script>
         function joinChecks() {
             // 개인정보 동의 체크
-            let joinCheck = $("#agreeCheck1").is(":checked");
+            let joinCheck = $("#joinCheck").is(":checked");
             if (joinCheck == false) {
                 alert("개인정보수집 및 동의를 체크해주세요");
                 return false;
