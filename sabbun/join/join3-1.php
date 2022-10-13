@@ -37,6 +37,7 @@
                                 <div>
                                     <label for="youName">이름</label>
                                     <input type="text" id="youName" name="youName" maxlength="5" placeholder="이름을 적어주세요!" required>
+                                    <p class="msg" id="youNameComment"><!-- * 닉네임이 존재합니다. --></p>
                                 </div>
                                 <div class="overlap">
                                     <label for="youNickName">닉네임</label>
@@ -53,14 +54,17 @@
                                 <div>
                                     <label for="youPass">비밀번호</label>
                                     <input type="password" id="youPass" name="youPass" maxlength="20" placeholder="비밀번호를 적어주세요!" required>
+                                    <p class="msg" id="youPassComment"><!-- * 닉네임이 존재합니다. --></p>
                                 </div>
                                 <div>
                                     <label for="youPassC">비밀번호 확인</label>
                                     <input type="password" id="youPassC" name="youPassC" maxlength="20" placeholder="비밀번호를 한번 더 적어주세요!" required>
+                                    <p class="msg" id="youPassCComment"><!-- * 닉네임이 존재합니다. --></p>
                                 </div>
                                 <div>
                                     <label for="youPhone">휴대폰 번호</label>
                                     <input type="text" id="youPhone" name="youPhone" maxlength="15" placeholder="휴대폰 번호(010-0000-0000)를 적어주세요!" required>
+                                    <p class="msg" id="youPhoneComment"><!-- * 닉네임이 존재합니다. --></p>
                                 </div>
                             </div>
                             <div class="storeInfo">
