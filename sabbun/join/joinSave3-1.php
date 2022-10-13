@@ -52,7 +52,7 @@
     $youPass = sha1("web".$youPass);
 
     // 회원가입
-    $sql = "INSERT INTO myBMember(youEmail, youNickName, youName, youPass, youPhone, youShop, youAdress, youShopNum, regTime) VALUES('$youEmail', '$youNickName', '$youName', '$youPass', '$youPhone', '$youPhone', '$youShop', '$youShopNum', '$regTime' )";
+    $sql = "INSERT INTO myBMember(youEmail, youNickName, youName, youPass, youPhone, youShop, youAdress, youShopNum, regTime) VALUES('$youEmail', '$youNickName', '$youName', '$youPass', '$youPhone', '$youShop', '$youAdress', '$youShopNum', '$regTime' )";
     $result = $connect -> query($sql);
     
     if($result){

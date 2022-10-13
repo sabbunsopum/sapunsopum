@@ -3,7 +3,7 @@
 
     // 변수 설정
     $type = $_POST['type'];
-    $sql = "SELECT youEmail, youNickName FROM myAdminMember ";
+    $sql = "SELECT youEmail, youNickName FROM myCMember ";
 
     if($type == "emailCheck"){
         $youEmail = $connect -> real_escape_string(trim($_POST['youEmail']));

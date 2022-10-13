@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입 페이지_4</title>
 
-    <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/join.css">
+    <link rel="stylesheet" href="../html/assets/css/fonts.css">
+    <link rel="stylesheet" href="../html/assets/css/reset.css">
+    <link rel="stylesheet" href="../html/assets/css/common.css">
+    <link rel="stylesheet" href="../html/assets/css/join.css">
 </head>
 <body>
     <header id="header" class="header">
         <div class="logo">
-            <img src="assets/img/temp_logo.svg" alt="사뿐소품 로고">
+            <img src="../html/assets/img/temp_logo.svg" alt="사뿐소품 로고">
         </div>
     </header>
     <main id="main">
@@ -28,7 +28,7 @@
                     함께 해주셔서 감사합니다 :)
                 </h1>
                 <p>로그인하시면 더욱 다양한 서비스와 혜택을 제공 받으실 수 있습니다.</p>
-<?php
+                <?php
     include "../connect/connect.php";
 
     $youEmail = $_POST['youEmail'];
@@ -46,7 +46,7 @@
     $youPass = sha1("web".$youPass);
 
     // 회원가입
-    $sql = "INSERT INTO myAdminMember(youEmail, youNickName, youName, youPass, youPhone, regTime) VALUES('$youEmail', '$youNickName', '$youName', '$youPass', '$youPhone', '$regTime' )";
+    $sql = "INSERT INTO myCMember(youEmail, youNickName, youName, youPass, youPhone, regTime) VALUES('$youEmail', '$youNickName', '$youName', '$youPass', '$youPhone', '$regTime' )";
     $result = $connect -> query($sql);
     
     if($result){
@@ -58,7 +58,7 @@
             </div>
             <div class="join__result">
                 <div class="img">
-                    <img src="assets/img/hand+heart 1@3x.png" alt="손으로 감싼 하트">
+                    <img src="../html/assets/img/hand+heart 1@3x.png" alt="손으로 감싼 하트">
                 </div>
                 <div class="btn">
                     <a href="main.html">홈으로 가기</a>
