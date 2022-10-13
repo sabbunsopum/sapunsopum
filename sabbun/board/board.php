@@ -12,71 +12,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>board</title>
-    <style>
 
-    </style>
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/board.css">
-    <!-- META -->
-    <meta name="author" content="webstoryboy">
-    <meta name="description" content="PHP 사이트 만들기입니다.">
-    <meta name="keyword" content="사이트, 만들기, 튜토리얼, 웹스토리보이">
-    <meta name="robots" content="all">
+    <link rel="stylesheet" href="../html/assets/css/fonts.css">
+    <link rel="stylesheet" href="../html/assets/css/common.css">
+    <link rel="stylesheet" href="../html/assets/css/reset.css">
+    <link rel="stylesheet" href="../html/assets/css/header.css">
+    <link rel="stylesheet" href="../html/assets/css/footer.css">
+    <link rel="stylesheet" href="../html/assets/css/board.css">
 
-    <!-- ICON -->
-    <link rel="icon" href="assets/img/icon_256.png" />
-    <link rel="shortcut icon" href="assets/img/icon_256.png" />
-    <link rel="icon" type="image/png" sizes="256x256" href="assets/img/icon_256.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon_192.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon_32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icon_16.png" />
 </head>
 
 <body>
-    <header id="headerType" class="header__wrap nanum">
-        <div class="header__inner">
-            <div class="header__logo">
-                <a href="main.html">사뿐소품</a>
-            </div>
-            <nav class="header__menu clearfix">
-                <ul>
-                    <li><a href="#sliderType">사뿐소품이란?</a></li>
-                    <li><a href="#imageType">소품샵 리스트</a></li>
-                    <li><a href="#imgTextType">커뮤니티</a></li>
-                    <li><a href="#cardType">마이페이지</a></li>
-                    <li><a href="#bannerType">고객센터</a></li>
-                </ul>
-            </nav>
-            <div class="header__member clearfix">
-                <ul>
-                    <li><a href="login.html">로그인</a></li>
-                    <li><a href="join1.html">회원가입</a></li>
-                </ul>
-            </div>
-            <div class="header__search clearfix">
-                <form action="headerSearch.php" name="headerSearch" method="get">
-                    <fieldset>
-                        <legend>검색 영역</legend>
-                        <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !" aria-label="search" required>
-                        <button type="submit" class="searchBtn">
-                            <img src="../assets/img/search_icon.svg" alt="검색버튼">
-                        </button>
-                    </fieldset>
-                </form>
-            </div>
-            <div class="header__ham">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
-    <!-- // headerType -->
+    <?php include "../include/header.php" ?>
+    <!-- // header -->
 
     <main id="main">
         <section id="board" class="board__wrap container">
@@ -118,7 +67,7 @@ if(isset($_GET['page'])){
 $viewNum = 10;
 $viewLimit = ($viewNum * $page) - $viewNum;
 
-    $sql = "SELECT b.myBoardID, b.boardTitle, m.youName, b.regTime, b.boardView FROM myBoard b JOIN myMember m ON (b.myMemberID = m.myMemberID) ORDER BY myBoardID DESC LIMIT {$viewLimit}, {$viewNum}";
+    $sql = "SELECT b.myBoardID, b.boardTitle, m.youName, b.regTime, b.boardView FROM myBoard b JOIN myBMember m ON (b.myMemberID = m.myMemberID) ORDER BY myBoardID DESC LIMIT {$viewLimit}, {$viewNum}";
     $result = $connect -> query($sql);
 
     if($result){
@@ -269,7 +218,7 @@ $viewLimit = ($viewNum * $page) - $viewNum;
                                 <input type="search" name="searchKeyword" id="searchKeyword" placeholder="Search"
                                     aria-label="search" required>
                                 <button type="submit" class="searchBtn">
-                                    <img src="../assets/img/search_icon.svg" alt="검색버튼">
+                                    <img src="../html/assets/img/search_icon.svg" alt="검색버튼">
                                 </button>
                                 <select name="searchOption" id="searchOption">
                                     <option value="title">제목</option>

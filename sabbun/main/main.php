@@ -25,52 +25,8 @@
     </style>
 </head>
 <body>
-    <header id="headerType" class="header__wrap nanum">
-        <div class="header__inner">
-            <div class="header__logo">
-                <a href="#">사뿐소품</a>
-            </div>
-            <nav class="header__menu clearfix">
-                <ul>
-                    <li><a href="#sliderType">사뿐소품이란?</a></li>
-                    <li><a href="#imageType">소품샵 리스트</a></li>
-                    <li><a href="#imgTextType">커뮤니티</a></li>
-                    <li><a href="#cardType">마이페이지</a></li>
-                    <li><a href="#bannerType">고객센터</a></li>
-                </ul>
-            </nav>
-            <div class="header__member clearfix">
-                <ul>
-                    <?php if( isset($_SESSION['myMemberID'])){ ?>
-                        <li><a href="../login/logout.php">로그아웃</a></li>
-                            <li><a href="#" class="black"><?=$_SESSION['youName']?>님 환영합니다:)</a></li>
-                    <?php }else {   ?>
-                            <li><a href="../login/login.php">로그인</a></li>
-                            <li><a href="../join/join1.php">회원가입</a></li>
-                    <?php  }   ?>
-                    <!-- <li><a href="login.html">로그인</a></li>
-                    <li><a href="join1.html">회원가입</a></li> -->
-                </ul>
-            </div>
-            <div class="header__search clearfix">
-                <form action="headerSearch.php" name="headerSearch" method="get">
-                    <fieldset>
-                        <legend>검색 영역</legend>
-                        <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !" aria-label="search" required>
-                        <button type="submit" class="searchBtn">
-                            <img src="../html/assets/img/search_icon.svg" alt="검색버튼">
-                        </button>
-                    </fieldset>
-                </form>
-            </div>
-            <div class="header__ham">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
-    <!-- // headerType -->
+    <?php include "../include/header.php" ?>
+    <!-- // header -->
 
     <footer id="footer__type" class="footer__wrap nanum">
         <div class="footer__inner container">
