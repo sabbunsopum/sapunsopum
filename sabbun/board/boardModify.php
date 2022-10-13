@@ -30,15 +30,14 @@
     <main id="main">
 
         <section id="board" class="">
-            <h2>게시판 영역입니다.</h2>
+            <h2>게시판 수정 영역입니다.</h2>
             <div class="board__inner">
                 <div class="board__title container">
                     <h3>게시글 수정하기 <span class="ir">네모네모</span></h3>
-
                 </div>
                 <div class="gray board__writeInner">
                     <div class="board__write container">
-                        <form action="boardWriteSave.php" name="boardWrite" method="post">
+                        <form action="boardModifySave.php" name="boardModify" method="post">
                             <fieldset>
                                 <legend>게시판 작성 영역</legend>
 <?php
@@ -83,7 +82,7 @@
                                 <div class="board__writteLine"></div>
 <?php
     // $myBoardID = $_GET['myBoardID'];
-    $sql = "SELECT boardContents,  FROM myBoard WHERE myBoardID = {$myBoardID}";
+    $sql = "SELECT boardContents FROM myBoard WHERE myBoardID = {$myBoardID}";
     $result = $connect -> query($sql);
 
     if($result){
@@ -125,11 +124,9 @@
                                     <span>비밀번호</span>
                                     <input class="text" placeholder="비밀번호를 입력해주세요">
                                 </div> -->
+                                <button type="submit" class="btn">글 수정하기</button>
                             </fieldset>
                         </form>
-                    </div>
-                    <div class="container">
-                        <a href="boardView.html"><button type="submit" class="btn">글 수정하기</button></a>
                     </div>
                 </div>
             </div>
