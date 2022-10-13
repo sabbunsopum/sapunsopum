@@ -44,7 +44,7 @@
     $sql = "UPDATE myBoard SET boardView = boardView + 1 WHERE myBoardID = {$myBoardID}";
     $connect -> query($sql);
 
-    $sql = "SELECT b.boardTitle, m.youName, b.regTime, b. boardView FROM myBoard b JOIN myMember m ON(m.myMemberID = b.myMemberID) WHERE b.myBoardID = {$myBoardID}";
+    $sql = "SELECT b.boardTitle, m.youName, b.regTime, b.boardView FROM myBoard b JOIN myBMember m ON(m.myMemberID = b.myMemberID) WHERE b.myBoardID = {$myBoardID}";
     $result = $connect -> query($sql);
 
     if($result){
@@ -67,7 +67,7 @@
 <?php
     // $myBoardID = $_GET['myBoardID'];
 
-    $sql = "SELECT boardContents, boardLike FROM myBoard WHERE b.myBoardID = {$myBoardID}";
+    $sql = "SELECT boardContents, boardLike FROM myBoard WHERE myBoardID = {$myBoardID}";
     $result = $connect -> query($sql);
 
     if($result){
@@ -158,9 +158,9 @@
                 </div> -->
 
                 <div class="board__view__btn">
-                    <a href="boardModify.php?myBoardID=<?=$myBoardID?>">수정하기</a>
-                    <a href="boardRemove.php?myBoardID=<?=$myBoardID?>" onclick="alert('정말 삭제하시겠습니까?')">삭제하기</a>
-                    <a href="board.php">목록보기</a>
+                    <a class="modify" href="boardModify.php?myBoardID=<?=$myBoardID?>">수정하기</a>
+                    <a class="delete" href="boardRemove.php?myBoardID=<?=$myBoardID?>" onclick="alert('정말 삭제하시겠습니까?')">삭제하기</a>
+                    <a class="list" href="board.php">목록보기</a>
                 </div>
             </div>
         </section>

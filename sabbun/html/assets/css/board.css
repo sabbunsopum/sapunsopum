@@ -313,7 +313,7 @@
 
 .board__view__btn a {
     margin: 5px;
-    display: block;
+    display: inline-block;
     right: 15px;
     bottom: 20px;
     background-color: #363636;
@@ -323,6 +323,7 @@
     height: 32px;
     line-height: 2.5;
     font-size: 13px;
+    margin-bottom: 60px;
 }
 
 .board__view__btn .modify {

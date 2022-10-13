@@ -12,7 +12,7 @@
     $regTime = time();
     $myMemberID = $_SESSION['myMemberID'];      //회원가입한 사람만 쓸 수 있도록
     
-    $sql = "INSERT INTO myboard(myMemberID, boardTitle, boardContents, boardView, boardLike, regTime) VALUES('$myMemberID','$boardTitle', '$boardContents', '$boardView', '$boardLike', '$regTime')";
+    $sql = "INSERT INTO myBoard(myMemberID, boardTitle, boardContents, boardView, boardLike, regTime) VALUES('$myMemberID','$boardTitle', '$boardContents', '$boardView', '$boardLike', '$regTime')";
     $connect -> query($sql);
 ?>
 <script>
