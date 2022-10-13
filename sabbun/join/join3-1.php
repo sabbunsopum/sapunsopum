@@ -188,27 +188,16 @@
         }
 
         function joinChecks() {
-            // 개인정보 동의 체크
-            let joinCheck = $("#joinCheck").is(":checked");
-            if (joinCheck == false) {
-                alert("개인정보수집 및 동의를 체크해주세요");
+            //이름 공백 확인
+            if ($("#youName").val() == "") {
+                $("#youNameComment").text("이름을 입력해주세요!");
                 return false;
             }
-            //이메일 공백 검사
-            if ($("#youEmail").val() == "") {
-                $("#youEmailComment").text("이메일을 입력해주세요!");
-                return false;
-            }
-            //이메일 유효성 검사
-            let getYouEmail = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
-            if (!getYouEmail.test($("#youEmail").val())) {
-                $("#youEmailComment").text("이메일을 형식에 맞게 작성해주세요!");
-                $("#youEmail").val("");
-                return false;
-            }
-            //이메일 중복 검사
-            if (emailCheck == false) {
-                $("#youEmailComment").text("이메일 중복 검사를 해주세요!");
+            //이름 유효성 검사
+            let getYouName = RegExp(/^[가-힣]+$/);
+            if (!getYouName.test($("#youName").val())) {
+                $("#youNameComment").text("이름은 한글만 사용 가능합니다.");
+                $("#youName").val("");
                 return false;
             }
             //닉네임 공백 검사
@@ -226,6 +215,23 @@
             //닉네임 중복 검사
             if (youNickName == false) {
                 $("#youNickNameComment").text("닉네임 중복 검사를 해주세요!");
+                return false;
+            }
+            //이메일 공백 검사
+            if ($("#youEmail").val() == "") {
+                $("#youEmailComment").text("이메일을 입력해주세요!");
+                return false;
+            }
+            //이메일 유효성 검사
+            let getYouEmail = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
+            if (!getYouEmail.test($("#youEmail").val())) {
+                $("#youEmailComment").text("이메일을 형식에 맞게 작성해주세요!");
+                $("#youEmail").val("");
+                return false;
+            }
+            //이메일 중복 검사
+            if (emailCheck == false) {
+                $("#youEmailComment").text("이메일 중복 검사를 해주세요!");
                 return false;
             }
             //비밀번호 공백 검사
@@ -256,29 +262,6 @@
             //비밀번호 동일한지 체크
             if ($("#youPass").val() !== $("#youPassC").val()) {
                 $("#youPassCComment").text("비밀번호가 동일하지 않습니다.");
-                return false;
-            }
-            //이름 공백 확인
-            if ($("#youName").val() == "") {
-                $("#youNameComment").text("이름을 입력해주세요!");
-                return false;
-            }
-            //이름 유효성 검사
-            let getYouName = RegExp(/^[가-힣]+$/);
-            if (!getYouName.test($("#youName").val())) {
-                $("#youNameComment").text("이름은 한글만 사용 가능합니다.");
-                $("#youName").val("");
-                return false;
-            }
-            //생년월일 공백 확인
-            if ($("#youBirth").val() == "") {
-                $("#youBirthComment").text("생년월일 (yyyy-mm-dd)입력해주세요!");
-                return false;
-            }
-            //생년월일 유효성 검사
-            let getYouBirth = RegExp(/^(19[0-9][0-9]|20\d{2})-(0[0-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/);
-            if (!getYouBirth.test($("#youBirth").val())) {
-                $("#youBirthComment").text("생년월일이 정확하지 않습니다. 올바른 생년월일(YYYY-MM-DD)을 적어주세요!");
                 return false;
             }
             //휴대폰번호 공백 확인
