@@ -48,7 +48,8 @@
 }
 
 .header__member {
-    width: 15%;
+    width: 25%;
+    margin-right: 10px;
 }
 
 .header__member li {
@@ -57,7 +58,7 @@
 }
 
 .header__member li a {
-    padding: 0 15px;
+    padding: 0 10px;
     margin: 0 5px;
     transition: all 0.3s;
     font-size: 0.875rem;
@@ -74,7 +75,6 @@
 .header__search {
     width: 30%;
     float: right;
-    margin-top: 20px;
     position: relative;
 }
 

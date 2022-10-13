@@ -49,7 +49,7 @@
     $youShop = $connect -> real_escape_string(trim($youShop));
     $youAdress = $connect -> real_escape_string(trim($youAdress));
     $youShopNum = $connect -> real_escape_string(trim($youShopNum));
-    $youPass = sha1("web".$youPass);
+    // $youPass = sha1("web".$youPass);
 
     // 회원가입
     $sql = "INSERT INTO myBMember(youEmail, youNickName, youName, youPass, youPhone, youShop, youAdress, youShopNum, regTime) VALUES('$youEmail', '$youNickName', '$youName', '$youPass', '$youPhone', '$youShop', '$youAdress', '$youShopNum', '$regTime' )";

@@ -1,34 +1,24 @@
-<?php
-    include "../connect/session.php";
-
-    echo "<pre>";
-    var_dump($_SESSION);
-    echo "</pre>";
-?>
-
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>사뿐소품</title>
+    <title>로그인 페이지</title>
 
     <link rel="stylesheet" href="../html/assets/css/fonts.css">
     <link rel="stylesheet" href="../html/assets/css/common.css">
     <link rel="stylesheet" href="../html/assets/css/reset.css">
     <link rel="stylesheet" href="../html/assets/css/header.css">
+    <link rel="stylesheet" href="../html/assets/css/login.css">
+    <link rel="stylesheet" href="../html/assets/css/find.css">
     <link rel="stylesheet" href="../html/assets/css/footer.css">
-
-    <style>
-        
-    </style>
 </head>
 <body>
     <header id="headerType" class="header__wrap nanum">
         <div class="header__inner">
             <div class="header__logo">
-                <a href="#">사뿐소품</a>
+                <a href="main.html">사뿐소품</a>
             </div>
             <nav class="header__menu clearfix">
                 <ul>
@@ -41,15 +31,8 @@
             </nav>
             <div class="header__member clearfix">
                 <ul>
-                    <?php if( isset($_SESSION['myMemberID'])){ ?>
-                        <li><a href="../login/logout.php">로그아웃</a></li>
-                            <li><a href="#" class="black"><?=$_SESSION['youName']?>님 환영합니다:)</a></li>
-                    <?php }else {   ?>
-                            <li><a href="../login/login.php">로그인</a></li>
-                            <li><a href="../join/join1.php">회원가입</a></li>
-                    <?php  }   ?>
-                    <!-- <li><a href="login.html">로그인</a></li>
-                    <li><a href="join1.html">회원가입</a></li> -->
+                    <li><a href="login.php">로그인</a></li>
+                    <li><a href="../join/join1.php">회원가입</a></li>
                 </ul>
             </div>
             <div class="header__search clearfix">
@@ -71,6 +54,62 @@
         </div>
     </header>
     <!-- // headerType -->
+
+    <main id="main">
+        <?php
+    include "../connect/connect.php";
+    include "../connect/session.php";
+
+    $youEmail = $_POST['youEmail'];
+    $youPass = $_POST['youPass'];
+
+    // echo $youEmail, $youPass; 
+    // 정보 ---> 쿠키(하루동안 보지 않기-->쿠키 폴더에 저장) / 세션(서버) / 리덕스(리액트)
+    
+    function msg($alert){
+        echo "<p class='alert'>{$alert}</p>";
+    }
+
+    // 이메일 검사
+    if( !filter_var($youEmail, FILTER_VALIDATE_EMAIL)){
+        msg("이메일이 잘못되었습니다.<br>올바른 이메일을 적어주세요!");
+        exit;
+    }
+
+    // 비밀번호 검사
+    if( $youPass == null || $youPass == ''){
+        msg("비밀번호를 입력해주세요!");
+        exit;
+    }
+
+    // 데이터 가져오기 --> 유효성 검사 --> 데이터 조회 --> 로그인
+    $sql = "SELECT myMemberID, youEmail, youName, youPass FROM myBMember WHERE youEmail = '$youEmail' AND youPass = '$youPass'";
+    
+    $result = $connect -> query($sql);
+
+    if($result){
+        $count = $result -> num_rows;
+        if($count == 0){
+            msg("이메일 또는 비밀번호가 틀렸습니다!");
+            // exit;
+        } else {
+            $info = $result -> fetch_array(MYSQLI_ASSOC);
+
+            $_SESSION['myMemberID'] = $info['myMemberID'];
+            $_SESSION['youEmail'] = $info['youEmail'];
+            $_SESSION['youName'] = $info['youName'];
+
+            // echo "<pre>";
+            // var_dump($info);
+            // echo "</pre>";
+
+            Header("Location: ../main/main.php");
+        }
+    } else {
+        msg("에러발생 - 관리자에게 문의해주세요!");
+    }
+?>
+    </main>
 
     <footer id="footer__type" class="footer__wrap nanum">
         <div class="footer__inner container">
@@ -111,10 +150,7 @@
                 <div class="footer__icon__img img5"><a href=""></a></div>
             </div>
         </div>
-
     </footer>
     <!-- // footer -->
-
-    <script src="../assets/js/custom.js"></script>
 </body>
 </html>
