@@ -29,7 +29,7 @@
                 <p>입력한 정보는 회원가입 외 다른 용도로 사용하지 않습니다!</p>
             </div>
             <div class="join__inner">
-                <form action="joinSave3-1.php" name="join" method="post">
+                <form action="joinSave3-1.php" name="join" method="post" onsubmit="return joinChecks()">
                     <fieldset>
                         <legend>회원가입</legend>
                         <div class="join__box">
@@ -124,6 +124,7 @@
 
         let emailCheck = false;
         let nickCheck = false;
+
         function emailChecking() {
             let youEmail = $("#youEmail").val();
             if (youEmail == null || youEmail == '') {
@@ -154,6 +155,7 @@
                 })
             }
         }
+
         function nickChecking() {
             let youNickName = $("#youNickName").val();
             if (youNickName == null || youNickName == '') {
@@ -184,6 +186,7 @@
                 })
             }
         }
+
         function joinChecks() {
             // 개인정보 동의 체크
             let joinCheck = $("#joinCheck").is(":checked");
