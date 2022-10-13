@@ -67,7 +67,7 @@ if(isset($_GET['page'])){
 $viewNum = 10;
 $viewLimit = ($viewNum * $page) - $viewNum;
 
-    $sql = "SELECT b.myBoardID, b.boardTitle, m.youName, b.regTime, b.boardView FROM myBoard b JOIN myBMember m ON (b.myMemberID = m.myMemberID) ORDER BY myBoardID DESC LIMIT {$viewLimit}, {$viewNum}";
+    $sql = "SELECT b.myBoardID, b.boardTitle, m.youName, b.regTime, b.boardView, b.boardLike FROM myBoard b JOIN myBMember m ON (b.myMemberID = m.myMemberID) ORDER BY myBoardID DESC LIMIT {$viewLimit}, {$viewNum}";
     $result = $connect -> query($sql);
 
     if($result){
@@ -82,130 +82,13 @@ $viewLimit = ($viewNum * $page) - $viewNum;
                 echo"<td>".$info['youName']."</td>";
                 echo"<td>".date('Y-m-d', $info['regTime'])."</td>";
                 echo"<td>".$info['boardView']."</td>";
+                echo"<td>".$info['boardLike']."</td>";
                 echo"</tr>";
             }
         }
     }
 ?>
-                            <!-- <tr class="notice">
-                                <td>⩥</td>
-                                <td class="title">공지사항입니다.</a></td>
-                                <td>도우너</td>
-                                <td>2022-03-04</td>
-                                <td>999</td>
-                                <td>0</td>
-                            </tr>
-                            <tr class="notice">
-                                <td>⩥</td>
-                                <td class="title">공지사항입니다.</a></td>
-                                <td>도우너</td>
-                                <td>2022-03-04</td>
-                                <td>999</td>
-                                <td>0</td>
-                            </tr>
-                            <tr class="notice">
-                                <td>⩥</td>
-                                <td class="title">공지사항입니다.</a></td>
-                                <td>도우너</td>
-                                <td>2022-03-04</td>
-                                <td>999</td>
-                                <td>0</td>
-                            </tr>
-                            <tr class="notice">
-                                <td>⩥</td>
-                                <td class="title">공지사항입니다.</a></td>
-                                <td>도우너</td>
-                                <td>2022-03-04</td>
-                                <td>999</td>
-                                <td>0</td>
-                            </tr>
-                            <tr class="notice">
-                                <td>⩥</td>
-                                <td class="title">공지사항입니다.</a></td>
-                                <td>도우너</td>
-                                <td>2022-03-04</td>
-                                <td>999</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td class="title"><a href="boardView.html">자유 게시판 제목입니다.</a></td>
-                                <td>도우너</td>
-                                <td>2022-03-04</td>
-                                <td>999</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td class="title">자유 게시판 제목입니다.</td>
-                                <td>도우너</td>
-                                <td>2022-03-04</td>
-                                <td>999</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td class="title">자유 게시판 제목입니다.</td>
-                                <td>도우너</td>
-                                <td>2022-03-04</td>
-                                <td>999</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td class="title">자유 게시판 제목입니다.</td>
-                                <td>도우너</td>
-                                <td>2022-03-04</td>
-                                <td>999</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td class="title">자유 게시판 제목입니다.</td>
-                                <td>도우너</td>
-                                <td>2022-03-04</td>
-                                <td>999</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td class="title">자유 게시판 제목입니다.</td>
-                                <td>도우너</td>
-                                <td>2022-03-04</td>
-                                <td>59</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td class="title">자유 게시판 제목입니다.</td>
-                                <td>도우너</td>
-                                <td>2022-03-04</td>
-                                <td>39</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td class="title">자유 게시판 제목입니다.</td>
-                                <td>도우너</td>
-                                <td>2022-03-04</td>
-                                <td>99</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td class="title">자유 게시판 제목입니다.</td>
-                                <td>도우너</td>
-                                <td>2022-03-04</td>
-                                <td>9</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td class="title">자유 게시판 제목입니다.</td>
-                                <td>도우너</td>
-                                <td>2022-03-04</td>
-                                <td>999</td>
-                                <td>0</td> -->
+
                             </tr>
                         </tbody>
                     </table>
@@ -233,14 +116,56 @@ $viewLimit = ($viewNum * $page) - $viewNum;
                     <div>
                         <form>
                             <fieldset>
-                                <a href="boardWrite.html" class="btn">글쓰기</a>
+                                <a href="boardWrite.php" class="btn">글쓰기</a>
                             </fieldset>
                         </form>
                     </div>
                 </div>
                 <div class="board__pages">
                     <ul>
-                        <li><a href="#">처음</a></li>
+<?php
+    $sql = "SELECT count(myBoardID) FROM myBoard";
+    $result = $connect -> query($sql);
+
+    $boardCount = $result -> fetch_array(MYSQLI_ASSOC);
+    $boardCount = $boardCount['count(myBoardID)'];
+
+    // 총 페이지 갯수
+    $boardCount = ceil($boardCount/$viewNum);
+
+    // echo $boardCount;
+
+    // 현재 페이지를 기준으로 보여주고 싶은 갯수
+    $pageCurrent = 5;
+    $startPage = $page - $pageCurrent;
+    $endPage = $page + $pageCurrent;
+
+    // 처음/마지막 페이지 초기화
+    if($startPage < 1) $startPage = 1;
+    if($endPage >= $boardCount) $endPage = $boardCount;
+
+    // 이전 페이지, 처음 페이지 (순서상 페이지 넘버 표시 전에 위치)
+    if($page != 1){
+        $prevPage = $page -1;
+        echo "<li><a href='board.php?page=1'>처음으로</a></li>";
+        echo "<li><a href='board.php?page={$prevPage}'>이전</a></li>";
+    }
+
+    // 페이지 넘버 표시
+    for($i=$startPage; $i<=$endPage; $i++){
+        $active = "";
+        if($i == $page) $active = "active";
+        echo "<li class='{$active}'><a href='board.php?page={$i}'>{$i}</a></li>";
+    }
+
+    // 다음 페이지, 마지막 페이지
+    if($page != $boardCount){
+        $nextPage = $page +1;
+        echo "<li><a href='board.php?page={$nextPage}'>다음</a></li>";
+        echo "<li><a href='board.php?page={$boardCount}'>마지막으로</a></li>";
+    }
+?>
+                        <!-- <li><a href="#">처음</a></li>
                         <li class="board__pages__prevbtn"><a href="#">&lt;</a></li>
                         <li class="active"><a href="#">1</a></li>
                         <li><a href="#">2</a></li>
@@ -250,7 +175,7 @@ $viewLimit = ($viewNum * $page) - $viewNum;
                         <li><a href="#">6</a></li>
                         <li><a href="#">7</a></li>
                         <li class="board__pages__nextbtn"><a href="#">></a></li>
-                        <li><a href="#">마지막</a></li>
+                        <li><a href="#">마지막</a></li> -->
                     </ul>
                 </div>
 
@@ -263,47 +188,8 @@ $viewLimit = ($viewNum * $page) - $viewNum;
     </main>
     <!-- //main -->
 
-    <footer id="footer__type" class="footer__wrap nanum">
-        <div class="footer__inner container">
-            <div class="footer__menu">
-                <ul>
-                    <h4>고객센터</h4>
-                    <div class="footer__cs">
-                        <li class="footer__cscenter">sabbunsopum@gmail.com</li>
-                        <li><span>홈페이지 내 1:1 상담 또는 이메일을 통해 문의를 받고 있습니다.</span></li>
-                    </div>
-                </ul>
-                <ul>
-                    <h4>사뿐소품</h4>
-                    <li><a href="#">브랜드스토리</a></li>
-                    <li><a href="#">이용안내</a></li>
-                    <li><a href="#">연혁</a></li>
-                </ul>
-                <ul>
-                    <h4>고객지원</h4>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">자주하는 질문</a></li>
-                    <li><a href="#">1:1 상담</a></li>
-                </ul>
-                <ul>
-                    <h4>개인정보</h4>
-                    <li><a href="#">이용약관</a></li>
-                    <li><a href="#">개인정보처리방침</a></li>
-                </ul>
-                <p>
-                    Copyright © 사뿐소품. All rights reserved.
-                </p>
-            </div>
-            <div class="footer__icon">
-                <div class="footer__icon__img img1"><a href=""></a></div>
-                <div class="footer__icon__img img2"><a href=""></a></div>
-                <div class="footer__icon__img img3"><a href=""></a></div>
-                <div class="footer__icon__img img4"><a href=""></a></div>
-                <div class="footer__icon__img img5"><a href=""></a></div>
-            </div>
-        </div>
+    <?php include "../include/footer.php" ?>
+    <!-- // footer -->
 
-    </footer>
 </body>
-
 </html>

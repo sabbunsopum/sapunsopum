@@ -21,7 +21,7 @@
                 <ul>
                     <li><a href="#sliderType">사뿐소품이란?</a></li>
                     <li><a href="#imageType">소품샵 리스트</a></li>
-                    <li><a href="#imgTextType">커뮤니티</a></li>
+                    <li><a href="../board/board.php">커뮤니티</a></li>
                     <li><a href="#cardType">마이페이지</a></li>
                     <li><a href="#bannerType">고객센터</a></li>
                 </ul>
@@ -45,7 +45,7 @@
                         <legend>검색 영역</legend>
                         <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !" aria-label="search" required>
                         <button type="submit" class="searchBtn">
-                            <img src="assets/img/search_icon.svg" alt="검색버튼">
+                            <img src="../html/assets/img/search_icon.svg" alt="검색버튼">
                         </button>
                     </fieldset>
                 </form>
