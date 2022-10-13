@@ -29,7 +29,7 @@
                 <p>입력한 정보는 회원가입 외 다른 용도로 사용하지 않습니다!</p>
             </div>
             <div class="join__inner">
-                <form action="joinSave.php" name="join" method="post">
+                <form action="joinSave3-1.php" name="join" method="post">
                     <fieldset>
                         <legend>회원가입</legend>
                         <div class="join__box">
@@ -127,7 +127,7 @@
             } else {
                 $.ajax({
                     type: "POST",
-                    url: "JoinCheck3-1.php",
+                    url: "joinCheck3-1.php",
                     data: {
                         "youEmail": youEmail,
                         "type": "emailCheck"
@@ -157,7 +157,7 @@
             } else {
                 $.ajax({
                     type: "POST",
-                    url: "JoinCheck3-1.php",
+                    url: "joinCheck3-1.php",
                     data: {
                         "youNickName": youNickName,
                         "type": "nickCheck"
