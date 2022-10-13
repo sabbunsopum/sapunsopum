@@ -82,6 +82,7 @@
     right: 10px;
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 
 .board__search .btn {
@@ -617,12 +618,12 @@
 
 .board__title h3 {
     display: flex;
-    margin: 10px 0;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 2rem;
     color: #000;
     /* text-shadow: -1px 0 #194330, 0 1px #194330, 1px 0 #194330, 0 -1px #194330; */
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+    font-weight: 800;
 }
 
 
@@ -635,7 +636,6 @@
 }
 
 .board__title p {
-    font-weight: 900;
     font-size: 19px;
     color: #194330;
     margin-bottom: 40px;
