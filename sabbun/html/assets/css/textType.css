@@ -1,0 +1,7 @@
+.text__wrap{}
+
+.text__inner{}
+.text__inner .text__article{
+    padding: 20px;
+}
+.text__inner .text__article .text__desc{}
