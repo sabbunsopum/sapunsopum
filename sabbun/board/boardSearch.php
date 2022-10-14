@@ -98,15 +98,10 @@
                         <tbody>
 
 <?php
-    if(isset($_GET['page'])){
-        $page = (int)$_GET['page'];
-    } else {
-        $page = 1;
-    }
     $viewNum = 10;
     $viewLimit = ($viewNum * $page) - $viewNum;
 
-    $sql = "SELECT b.myBoardID, b.boardTitle, m.youName, b.regTime, b.boardView, b.boardLike FROM myBoard b JOIN myBMember m ON (b.myMemberID = m.myMemberID) ORDER BY myBoardID DESC LIMIT {$viewLimit}, {$viewNum}";
+    $sql = $sql."LIMIT {$viewLimit}, {$viewNum}";
     $result = $connect -> query($sql);
 
     if($totalCount){
