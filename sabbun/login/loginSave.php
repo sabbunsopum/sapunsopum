@@ -18,7 +18,7 @@ include "../connect/session.php";
     <link rel="stylesheet" href="../html/assets/css/footer.css">
 </head>
 <body>
-<?php include "../include/header.php" ?>
+    <?php include "../include/header.php" ?>
     <!-- // header -->
     <main id="main">
         <section id="login" class="nanum">
@@ -122,7 +122,7 @@ include "../connect/session.php";
         </section>
         <!-- // login -->
     </main>
-<?php include "../include/footer.php" ?>
+    <?php include "../include/footer.php" ?>
     <!-- // footer -->
     <!-- 로그인 에러 팝업 -->
     <div class="findid__popup findid__error nanum open">

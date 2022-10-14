@@ -238,7 +238,7 @@
     align-items: center;
 }
 
-.board__view__contents .likes {
+.board__view__contents .likes img {
     width: 20px;
     margin-right: 10px;
 }
