@@ -30,7 +30,7 @@
             <h2>게시판 영역입니다.</h2>
             <div class="board__inner">
                 <div class="boardWrite__title container">
-                    <h3>게시글 작성하기 <span class="ir">네모네모</span></h3>
+                    <h3><span class="ir">네모네모</span>게시글 작성하기</h3>
                 </div>
                 <div class="gray board__writeInner">
                     <div class="board__write container">
@@ -71,7 +71,7 @@
                                     <textarea name="boardContents" id="boardContents" placeholder="글 내용을 입력해주세요!"
                                         rows="20"></textarea>
                                 </div>
-                                <div class="board__writteLine"></div>
+                                <div class="board__writteLine3"></div>
                                 <!-- 파일 업로드 -->
                                 <div class="filebox bs3-primary">
                                     <span>첨부파일1</span>
@@ -92,7 +92,7 @@
                                     <span>비밀번호</span>
                                     <input class="text" placeholder="비밀번호를 입력해주세요">
                                 </div> -->
-                                <button type="submit" class="btn">글 작성하기</button>
+                                <button type="submit" class="btn">업로드</button>
                             </fieldset>
                         </form>
                     </div>
