@@ -84,7 +84,7 @@
 <?php
     if($result){
         $info = $result->fetch_array(MYSQLI_ASSOC);
-        echo "<div><label for='boardContents'>내용</label><textarea name='boardContents' id='boardContents' rows='20'>".$info['boardContents']."</textarea></div>";
+        echo "<div><label class='ir' for='boardContents'>내용</label><textarea name='boardContents' id='boardContents' rows='20'>".$info['boardContents']."</textarea></div>";
     }
 ?>
                                 <!-- <div class="board__modify__fieldset__div">
