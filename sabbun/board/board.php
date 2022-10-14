@@ -33,7 +33,7 @@
             <div class="board__inner">
                 <div class="board__title">
                     <h3>Free Board</h3>
-                    <p>자유 게시판입니다.</p>
+                    <p>사뿐소품 회원분들의 생각을 자유롭게 나누는 공간입니다.</p>
                 </div>
 
                 <div class="board__table">

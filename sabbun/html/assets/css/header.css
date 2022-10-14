@@ -22,6 +22,12 @@
     text-transform: uppercase;
 }
 
+.header__logo img {
+    width: 80px;
+    align-items: center;
+    text-align: center;
+}
+
 .header__menu {
     width: 45%;
     text-align: center;
@@ -95,6 +101,7 @@
     font-size: 0.875rem;
     border-radius: 50px;
     box-sizing: border-box;
+    background: none;
 }
 
 .header__search .searchBtn img{

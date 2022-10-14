@@ -29,7 +29,7 @@
         <section id="board" class="">
             <h2>게시판 영역입니다.</h2>
             <div class="board__inner">
-                <div class="board__title container">
+                <div class="boardWrite__title container">
                     <h3>게시글 작성하기 <span class="ir">네모네모</span></h3>
                 </div>
                 <div class="gray board__writeInner">

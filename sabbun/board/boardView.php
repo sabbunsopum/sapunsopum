@@ -77,7 +77,7 @@
         $info = $result -> fetch_array(MYSQLI_ASSOC);
 
         echo "<p>".$info['boardContents']."</p>";
-        echo "<span><a href='#'>❤️</a>".$info['boardLike']."</span>";
+        echo "<span class='likes'><a href='#'><img src='../html/assets/img/boardView_disLike@3x.png' alt=''></a>".$info['boardLike']."</span>";
     }
 ?>
                         <!-- <p>
