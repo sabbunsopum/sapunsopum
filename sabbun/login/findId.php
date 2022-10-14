@@ -15,45 +15,8 @@
     <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 <body>
-    <header id="headerType" class="header__wrap nanum">
-        <div class="header__inner">
-            <div class="header__logo">
-                <a href="main.html">사뿐소품</a>
-            </div>
-            <nav class="header__menu clearfix">
-                <ul>
-                    <li><a href="#sliderType">사뿐소품이란?</a></li>
-                    <li><a href="#imageType">소품샵 리스트</a></li>
-                    <li><a href="#imgTextType">커뮤니티</a></li>
-                    <li><a href="#cardType">마이페이지</a></li>
-                    <li><a href="#bannerType">고객센터</a></li>
-                </ul>
-            </nav>
-            <div class="header__member clearfix">
-                <ul>
-                    <li><a href="login.html">로그인</a></li>
-                    <li><a href="join1.html">회원가입</a></li>
-                </ul>
-            </div>
-            <div class="header__search clearfix">
-                <form action="headerSearch.php" name="headerSearch" method="get">
-                    <fieldset>
-                        <legend>검색 영역</legend>
-                        <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !" aria-label="search" required>
-                        <button type="submit" class="searchBtn">
-                            <img src="assets/img/search_icon.svg" alt="검색버튼">
-                        </button>
-                    </fieldset>
-                </form>
-            </div>
-            <div class="header__ham">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
-    <!-- // headerType -->
+    <?php include "../include/header.php" ?>
+    <!-- // header -->
 
     <main id="main">
         <section id="login" class="nanum">
@@ -116,46 +79,7 @@
         <!-- // login -->
     </main>
 
-    <footer id="footer__type" class="footer__wrap nanum">
-        <div class="footer__inner container">
-            <div class="footer__menu">
-                <ul>
-                    <h4>고객센터</h4>
-                    <div class="footer__cs">
-                        <li class="footer__cscenter">sabbunsopum@gmail.com</li>
-                        <li><span>홈페이지 내 1:1 상담 또는 이메일을 통해 문의를 받고 있습니다.</span></li>
-                    </div>
-                </ul>
-                <ul>
-                    <h4>사뿐소품</h4>
-                    <li><a href="#">브랜드스토리</a></li>
-                    <li><a href="#">이용안내</a></li>
-                    <li><a href="#">연혁</a></li>
-                </ul>
-                <ul>
-                    <h4>고객지원</h4>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">자주하는 질문</a></li>
-                    <li><a href="#">1:1 상담</a></li>
-                </ul>
-                <ul>
-                    <h4>개인정보</h4>
-                    <li><a href="#">이용약관</a></li>
-                    <li><a href="#">개인정보처리방침</a></li>
-                </ul>
-                <p>
-                    Copyright © 사뿐소품. All rights reserved.
-                </p>
-            </div>
-            <div class="footer__icon">
-                <div class="footer__icon__img img1"><a href=""></a></div>
-                <div class="footer__icon__img img2"><a href=""></a></div>
-                <div class="footer__icon__img img3"><a href=""></a></div>
-                <div class="footer__icon__img img4"><a href=""></a></div>
-                <div class="footer__icon__img img5"><a href=""></a></div>
-            </div>
-        </div>
-    </footer>
+    <?php include "../include/footer.php" ?>
     <!-- // footer -->
 
     <!-- 아이디 찾기 팝업(찾을 방법 선택) -->
@@ -172,9 +96,9 @@
                 </p>
             </div>
             <div class="findid__footer">
-                <div type="button" class="btn btn_phone ac"><a href="findIdPhone.html">휴대폰 번호로 찾기</a></div>
+                <div type="button" class="btn btn_phone ac"><a href="findIdPhone.php">휴대폰 번호로 찾기</a></div>
             </div>
-            <button type="button" class="btn_close cb1"><a href="main.html"><span>닫기</span></a></button>
+            <button type="button" class="btn_close cb1"><a href="../main/main.php"><span>닫기</span></a></button>
         </div>
     </div>
 
