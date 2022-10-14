@@ -38,6 +38,8 @@
                 <div class="board__view">
                     <!-- <h3>[공지] 2021년 겨울 공지사항입니다.</h3> -->
                     <div class="board__view__head">
+                        <div class="prof"><img src="https://cdn.imweb.me/thumbnail/20220905/d0de34bf2fde8.jpg" alt=""></div>
+                        <div class="viewinfo">
 <?php
     $myBoardID = $_GET['myBoardID'];
                       
@@ -57,6 +59,7 @@
         echo "<span>조회수 ".$info['boardView']."</span>";
     }
 ?>
+                        </div>
                         <!-- <img src="https://cdn.imweb.me/thumbnail/20220905/d0de34bf2fde8.jpg" alt="">
                         <p>또우너</p>
                         <span>Free Board</span>
