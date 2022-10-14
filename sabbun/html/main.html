@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/slider.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/imgText.css">
 
     <style>
         
@@ -56,6 +59,126 @@
         </div>
     </header>
     <!-- // headerType -->
+    
+    <main id="mainType" class="nanum">
+        <section id="sliderType" class="slider__wrap nexon scroll">
+            <h2 class="ir">Hot Issue</h2>
+            <div class="slider__inner">
+                <!-- <div class="slider">
+                    <div class="slider__img">
+                        <div class="desc">
+                            <span>Dairy</span>
+                            <h3>Art of Dairy</h3>
+                            <p>
+                                다이어리는 이제 기록을 넘어선 문화 예술이 되었습니다.<br>
+                                다이어리 꾸미기의 매력에 빠져보세요
+                            </p>
+                            <div class="btn">
+                                <a href="#">자세히보기</a>
+                                <a href="#" class="black">사이트보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__arrow">
+                        <a href="#" class="left"><span class="ir">이전 이미지</span></a>
+                        <a href="#" class="right"><span class="ir">다음 이미지</span></a>
+                    </div>
+                    <div class="slider__dot">
+                        <a href="#" class="dot active"><span class="ir">1</span></a>
+                        <a href="#" class="dot"><span class="ir">2</span></a>
+                        <a href="#" class="dot"><span class="ir">3</span></a>
+                        <a href="#" class="play"><span class="ir">플레이</span></a>
+                        <a href="#" class="stop"><span class="ir">정지</span></a>
+
+                    </div>
+                </div> -->
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="desc">
+                                <span>사뿐소품1</span>
+                                <h3>사뿐소품1</h3>
+                                <p>
+                                    다이어리는 이제 기록을 넘어선 문화 예술이 되었습니다.<br>
+                                    다이어리 꾸미기의 매력에 빠져보세요
+                                </p>
+                                <div class="btn">
+                                    <a href="#">자세히보기</a>
+                                    <a href="#" class="black">사이트보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="desc">
+                                <span>사뿐소품2</span>
+                                <h3>사뿐소품2</h3>
+                                <p>
+                                    다이어리는 이제 기록을 넘어선 문화 예술이 되었습니다.<br>
+                                    다이어리 꾸미기의 매력에 빠져보세요
+                                </p>
+                                <div class="btn">
+                                    <a href="#">자세히보기</a>
+                                    <a href="#" class="black">사이트보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="desc">
+                                <span>사뿐소품3</span>
+                                <h3>사뿐소품3</h3>
+                                <p>
+                                    다이어리는 이제 기록을 넘어선 문화 예술이 되었습니다.<br>
+                                    다이어리 꾸미기의 매력에 빠져보세요
+                                </p>
+                                <div class="btn">
+                                    <a href="#">자세히보기</a>
+                                    <a href="#" class="black">사이트보기</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button">
+                        <div class="swiper-button-play"><span class="ir">play</span></div>
+                        <div class="swiper-button-stop"><span class="ir">stop</span></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
+                </div>
+            </div>
+        </section>
+        <!-- sliderType -->
+
+        <section id="imgTextType" class="imgText__wrap nexon section gray scroll">
+            <div class="imgText__inner container">
+                <div class="imgText__article1">
+                    <div class="imgText__text">
+                        <span>New!</span>
+                        <h3>집요하게 다듬은 예술가의 언어, 오민</h3>
+                    </div>
+                    <div class="imgText__img">
+                        <img src="../html/assets/img/imgtext__bg01.jpg" alt="">
+                    </div>
+                </div>
+                <div class="imgText__article2">
+                    <div class="imgText__text">
+                        <span>New!</span>
+                        <h3>집요하게 다듬은 예술가의 언어, 오민</h3>
+                    </div>
+                    <div class="imgText__img">
+                        <img src="../html/assets/img/imgtext__bg02.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- imgTextType -->
+
+
+    </main>
+    <!-- mainType -->
 
     <footer id="footer__type" class="footer__wrap nanum">
         <div class="footer__inner container">
@@ -99,5 +222,79 @@
 
     </footer>
     <!-- // footer -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                clickable: true,
+            },
+        });
+
+        const btnStop = document.querySelector(".swiper-button-stop");
+        const btnStart = document.querySelector(".swiper-button-stop");
+        const btnHam = document.querySelector(".header__ham");
+        const btnMenu = document.querySelector(".header__menu");
+        const btnMenuList = btnMenu.querySelectorAll("ul li a");
+
+        btnStart.style.display = "none";
+
+        document.querySelector(".swiper-button-stop").addEventListener("click", () => {
+            swiper.autoplay.stop();
+            btnStart.style.display = "block";
+            btnStop.style.display = "none";
+
+        });
+        document.querySelector(".swiper-button-play").addEventListener("click", () => {
+            swiper.autoplay.start();
+            btnStart.style.display = "none";
+            btnStop.style.display = "block";
+        });
+
+        btnHam.addEventListener("click", () => {
+            btnHam.classList.toggle("active");
+            btnMenu.classList.toggle("active");
+            document.body.classList.toggle("fixed");
+
+        })
+
+        btnMenuList.forEach((List)=>{
+            List.addEventListener("click", ()=>{
+                btnMenu.classList.remove("active");
+                btnHam.classList.remove("active");
+                document.body.classList.remove("fixed");
+            })
+        })
+
+        window.addEventListener("resize", () => {
+            let width = window.innerWidth;
+            if (width > 1300) {
+                document.body.classList.remove("fixed");
+                btnMenu.classList.remove("active");
+                btnHam.classList.remove("active");
+
+            }
+        });
+
+        document.querySelectorAll("a").forEach(li => {
+            li.addEventListener("click", (e) => {
+                e.preventDefault();
+                document.querySelector(li.getAttribute("href")).scrollIntoView({
+                    behavior:"smooth"
+                });
+            });
+        });
+    </script>
 </body>
 </html>
