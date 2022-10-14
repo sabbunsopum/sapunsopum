@@ -1,0 +1,34 @@
+.cardSlider__wrap h2 {
+    margin-top: 10px;
+}
+
+.cardSlider_inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 150px;
+}
+
+.cardSlider__article{
+
+}
+.cardSlider__article .cardSlider__img{
+    width: 380px;
+    height: 200px;
+    background: #666;
+    margin-bottom: 10px;
+}
+.cardSlider__article .cardSlider__desc {
+
+}
+.cardSlider__article .cardSlider__desc h3 {
+    box-sizing: border-box;
+    padding: 10px 0;
+    margin-bottom: 10px;
+
+}
+.cardSlider__article .cardSlider__desc span {
+    padding: 3px;
+    box-sizing: border-box;
+}
