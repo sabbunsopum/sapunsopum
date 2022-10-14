@@ -148,7 +148,6 @@
 
 .board__pages ul {
     text-align: center;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -163,18 +162,27 @@
     color: #fff;
 }
 
-.board__view h3 {
-    font-size: 19px;
-    color: #000;
-    margin-bottom: 20px;
-}
-
 .board__view__head {
-    align-items: center;
     display: flex;
+    align-items: center;
     padding-bottom: 18px;
     border-bottom: 1px solid #c6c6c6;
     position: relative;
+}
+
+.board__view__head .prof {
+    width: 10%;
+    border-radius: 50px;
+}
+
+.board__view__head .viewinfo {
+    width: 90%;
+}
+
+.viewinfo h3 {
+    font-size: 19px;
+    color: #000;
+    margin-bottom: 10px;
 }
 
 .board__view__head p {
