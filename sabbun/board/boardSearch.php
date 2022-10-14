@@ -36,7 +36,7 @@
                     <p>자유 게시판입니다.</p>
 <?php
     if(isset($_GET['page'])){
-        $page = (int) $_GET['page'];  //주소에 속성값이 있는 get 방식
+        $page = (int) $_GET['page'];
     } else {
         $page = 1; 
     }
@@ -47,8 +47,6 @@
 
     $searchKeyword = $_GET['searchKeyword'];
     $searchOption = $_GET['searchOption'];
-
-    // echo $searchKeyword, $searchOption;
 
     $searchKeyword = $connect -> real_escape_string(trim($searchKeyword));
     $searchOption = $connect -> real_escape_string(trim($searchOption));
@@ -98,35 +96,35 @@
                             </tr>
                         </thead>
                         <tbody>
-<?php
 
-if(isset($_GET['page'])){
-    $page = (int)$_GET['page'];
-} else {
-    $page = 1;
-}
-$viewNum = 10;
-$viewLimit = ($viewNum * $page) - $viewNum;
+<?php
+    if(isset($_GET['page'])){
+        $page = (int)$_GET['page'];
+    } else {
+        $page = 1;
+    }
+    $viewNum = 10;
+    $viewLimit = ($viewNum * $page) - $viewNum;
 
     $sql = "SELECT b.myBoardID, b.boardTitle, m.youName, b.regTime, b.boardView, b.boardLike FROM myBoard b JOIN myBMember m ON (b.myMemberID = m.myMemberID) ORDER BY myBoardID DESC LIMIT {$viewLimit}, {$viewNum}";
     $result = $connect -> query($sql);
 
-    if($result){
+    if($totalCount){
         $count = $result -> num_rows;
 
-        if($count > 0){
-            for($i=1; $i <= $count; $i++){
-                $info = $result -> fetch_array(MYSQLI_ASSOC);
-                echo"<tr>";
-                echo"<td>".$info['myBoardID']."</td>";
-                echo"<td><a href='boardView.php?myBoardID={$info['myBoardID']}'>".$info['boardTitle']."</td>";
-                echo"<td>".$info['youName']."</td>";
-                echo"<td>".date('Y-m-d', $info['regTime'])."</td>";
-                echo"<td>".$info['boardView']."</td>";
-                echo"<td>".$info['boardLike']."</td>";
-                echo"</tr>";
-            }
+        for($i=1; $i <= $count; $i++){
+            $info = $result -> fetch_array(MYSQLI_ASSOC);
+            echo "<tr>";
+            echo "<td>".$info['myBoardID']."</td>";
+            echo "<td><a href='boardView.php?myBoardID={$info['myBoardID']}'>".$info['boardTitle']."</a></td>";
+            echo "<td>".$info['youName']."</td>";
+            echo "<td>".date('Y-m-d', $info['regTime'])."</td>";
+            echo "<td>".$info['boardView']."</td>";
+            echo "<td>".$info['boardLike']."</td>";
+            echo "</tr>";
         }
+    } else {
+        echo "<tr><td colspan='6'>게시글이 없습니다.</td></tr>";
     }
 ?>
 
