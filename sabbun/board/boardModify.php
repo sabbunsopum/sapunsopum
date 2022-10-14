@@ -82,6 +82,8 @@
                                 </div>
                                 <div class="board__writteLine"></div>
 <?php
+    $result = $connect -> query($sql);
+
     if($result){
         $info = $result->fetch_array(MYSQLI_ASSOC);
         echo "<div><label class='ir' for='boardContents'>내용</label><textarea name='boardContents' id='boardContents' rows='20'>".$info['boardContents']."</textarea></div>";
@@ -109,6 +111,8 @@
                                     <input type="file" id="ex_filename" class="upload-hidden">
                                 </div>
 <?php
+    $result = $connect -> query($sql);
+
     if($result){
         $info = $result->fetch_array(MYSQLI_ASSOC);
         echo "<div><label for='youPass'>비밀번호</label><input type='password' name='youPass' id='youPass' placeholder='로그인 비밀번호를 입력해주세요!'autocomplete='off' required></input></div>";
