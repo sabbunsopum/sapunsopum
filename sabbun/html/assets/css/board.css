@@ -18,20 +18,11 @@
 
 .board__inner {
     position: relative;
-    /* padding: 120px 0; */
     padding: 120px 0 0 0;
 }
 
-/* .board__inner::before {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background: #000;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-} */
 
+/* board__search */
 .board__search {
     display: flex;
     flex-wrap: wrap;
@@ -94,6 +85,8 @@
     color: #fff;
 }
 
+
+/* board__table */
 .board__table table {
     border-top: 1px solid #000;
     width: 100%;
@@ -142,6 +135,7 @@
 }
 
 
+/* board__pages */
 .board__pages {
     margin: 30px 0 50px;
 }
@@ -162,12 +156,15 @@
     color: #fff;
 }
 
+
+/* board__view */
 .board__view__head {
     display: flex;
     align-items: center;
     padding-bottom: 18px;
     border-bottom: 1px solid #c6c6c6;
     position: relative;
+    padding: 10px 0 10px 0;
 }
 
 .board__view__head .prof {
@@ -182,10 +179,10 @@
 .viewinfo h3 {
     font-size: 19px;
     color: #000;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
-.board__view__head p {
+.viewinfo p {
     position: absolute;
     top: 3px;
     left: 57px;
@@ -194,20 +191,10 @@
     font-weight: 500;
 }
 
-.board__view__head span {
+.viewinfo span {
     font-size: 13px;
     margin-right: 10px;
-    padding-top: 15px;
     color: #666;
-}
-
-.board__view__head img {
-    width: 100%;
-    border-radius: 50%;
-    margin-right: 17px;
-    width: 40px;
-    height: 40px;
-    background-color: #000;
 }
 
 .board__view__contents {
@@ -228,7 +215,7 @@
 
 }
 
-.board__view__comment {
+/* .board__view__comment {
     display: flex;
     font-size: 13px;
     padding: 18px 0;
@@ -302,9 +289,9 @@
     height: 32px;
     line-height: 2.5;
     font-size: 13px;
-}
+} */
 
-.board__view__updownlist {
+/* .board__view__updownlist {
     border-top: 1px solid #c6c6c6;
     margin-bottom: 15px;
 }
@@ -318,7 +305,7 @@
     border-bottom: 1px solid #C6C6C6;
     padding: 10px 0;
     font-size: 14px;
-}
+} */
 
 .board__view__btn a {
     margin: 5px;
@@ -487,24 +474,6 @@
     margin-left: 10px;
 }
 
-
-
-.board__write .btn {
-    /* background: #F4F2FF;
-    border: 1px solid #C6C6C6;
-    color: #000;
-    padding: 13px 30px;
-    display: inline-block;
-    border-radius: 5px;
-    font-size: 1rem;
-    box-sizing: border-box;
-    margin-top: 20px;
-    float: right;
-    cursor: pointer;
-    margin-left: 10px; */
-
-}
-
 .board__writeInner .btn {
     width: 1140px;
     height: 50px;
@@ -544,7 +513,7 @@
 }
 
 
-
+/* board__modify */
 .board__modify legend {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -656,3 +625,4 @@
     background-color: #92a8d1;
     margin-left: 10px;
 }
+

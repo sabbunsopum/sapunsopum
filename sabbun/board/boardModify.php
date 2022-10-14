@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../html/assets/css/reset.css">
     <link rel="stylesheet" href="../html/assets/css/header.css">
     <link rel="stylesheet" href="../html/assets/css/footer.css">
-    <link rel="stylesheet" href="../html/assets/css/boardWrite.css">
+    <link rel="stylesheet" href="../html/assets/css/board.css">
 
 </head>
 
