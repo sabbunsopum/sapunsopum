@@ -42,12 +42,13 @@
                                 <legend>게시판 작성 영역</legend>
 <?php
     $myBoardID = $_GET['myBoardID'];
-    $sql = "SELECT boardTitle FROM myBoard WHERE myBoardID = {$myBoardID}";
+    $sql = "SELECT myBoardID, boardTitle, boardContents FROM myBoard WHERE myBoardID = {$myBoardID}";
     $result = $connect -> query($sql);
 
     if($result){
         $info = $result->fetch_array(MYSQLI_ASSOC);
-        echo "<div class='board__modify__fieldset__div'><input type='text' name='boardTitle' id='boardTitle' value='".$info['boardTitle']."'></div>";
+        echo "<div style='display:none'><label for='myBoardID'>번호</label><input type='text' name='myBoardID' id='myBoardID' value='".$info['myBoardID']."'></div>";
+        echo "<div><label for='boardTitle'>제목</label><input type='text' name='boardTitle' id='boardTitle' value='".$info['boardTitle']."'></div>";
     }
 ?>
                                 <!-- <div class="board__modify__fieldset__div">
@@ -81,13 +82,9 @@
                                 </div>
                                 <div class="board__writteLine"></div>
 <?php
-    // $myBoardID = $_GET['myBoardID'];
-    $sql = "SELECT boardContents FROM myBoard WHERE myBoardID = {$myBoardID}";
-    $result = $connect -> query($sql);
-
     if($result){
         $info = $result->fetch_array(MYSQLI_ASSOC);
-        echo "<div class='board__modify__fieldset__div'><textarea name='boardContents' id='boardContents' placeholder='글 내용을 입력해주세요!' rows='20'>".$info['boardContents']."</textarea></div>";
+        echo "<div><label for='boardContents'>내용</label><textarea name='boardContents' id='boardContents' rows='20'>".$info['boardContents']."</textarea></div>";
     }
 ?>
                                 <!-- <div class="board__modify__fieldset__div">
@@ -112,12 +109,9 @@
                                     <input type="file" id="ex_filename" class="upload-hidden">
                                 </div>
 <?php
-    // $myBoardID = $_GET['myBoardID'];
-    $result = $connect -> query($sql);
-
     if($result){
         $info = $result->fetch_array(MYSQLI_ASSOC);
-        echo "<div><label for='youPass'>비밀번호</label><input class='text' type='password' name='youPass' id='youPass' placeholder='로그인 비밀번호를 입력해주세요!'autocomplete='off' required></input></div>";
+        echo "<div><label for='youPass'>비밀번호</label><input type='password' name='youPass' id='youPass' placeholder='로그인 비밀번호를 입력해주세요!'autocomplete='off' required></input></div>";
     }
 ?>
                                 <!-- <div class="filebox bs3-primary">
