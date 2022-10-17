@@ -433,7 +433,7 @@
     margin-right: 20px;
     display: flex;
     justify-content: center;
-    width: 30%;
+    /* width: 30%; */
     align-items: center;
     background-color: #F4F2FF;
 }
@@ -687,6 +687,20 @@
     height: 20px;
     background-color: #92a8d1;
     margin-left: 10px;
+}
+
+#youPass {
+    border: 1px solid #c6c6c6;
+    width: 45%;
+    height: 25px;
+    padding: 20px;
+}
+.writepw {
+    display: flex;
+}
+.writepw > span {
+    display: inline;
+    margin: 20px;
 }
 
 
