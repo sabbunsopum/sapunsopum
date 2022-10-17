@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인 페이지</title>
 
-    <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/login.css">
-    <link rel="stylesheet" href="assets/css/find.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="../html/assets/css/fonts.css">
+    <link rel="stylesheet" href="../html/assets/css/common.css">
+    <link rel="stylesheet" href="../html/assets/css/reset.css">
+    <link rel="stylesheet" href="../html/assets/css/header.css">
+    <link rel="stylesheet" href="../html/assets/css/login.css">
+    <link rel="stylesheet" href="../html/assets/css/find.css">
+    <link rel="stylesheet" href="../html/assets/css/footer.css">
 </head>
 <body>
     <?php include "../include/header.php" ?>
@@ -24,21 +24,21 @@
                 <div class="login__desc">
                     <h3>사뿐소품과 함께 소품샵을 찾아보세요!</h3>
                     <p>아직도 계정이 없으신가요?<br>가입하고 더 많은 기능을 누려보세요 :)</p>
-                    <a href="join1.html">가입하러 가기 ></a>
+                    <a href="../join/join1.php">가입하러 가기 ></a>
                 </div>
                 <div class="imgs" aria-label="hidden">
                     <div class="i1"></div>
                     <div class="i2">
-                        <img src="assets/img/login_icon1.svg" alt="이미지1">
+                        <img src="../html/assets/img/login_icon1.svg" alt="이미지1">
                     </div>
                     <div class="i3">
-                        <img src="assets/img/login_icon2.svg" alt="이미지2">
+                        <img src="../html/assets/img/login_icon2.svg" alt="이미지2">
                     </div>
                     <div class="i4">
-                        <img src="assets/img/login_icon3.svg" alt="이미지3">
+                        <img src="../html/assets/img/login_icon3.svg" alt="이미지3">
                     </div>
                     <div class="i5">
-                        <img src="assets/img/login_icon4.svg" alt="이미지4">
+                        <img src="../html/assets/img/login_icon4.svg" alt="이미지4">
                     </div>
                 </div>
             </div>
@@ -58,10 +58,10 @@
                             <button type="submit" class="input__button">로그인</button>
                             <div class="sub__input">
                                 <button type="submit" class="input__button2">
-                                    <img class="kakaoBtn" src="assets/img/kakao.svg" alt="카카오톡 로그인">
+                                    <img class="kakaoBtn" src="../html/assets/img/kakao.svg" alt="카카오톡 로그인">
                                 </button>
                                 <button type="submit" class="input__button2">
-                                    <img class="googleBtn" src="assets/img/google.svg" alt="구글 로그인">
+                                    <img class="googleBtn" src="../html/assets/img/google.svg" alt="구글 로그인">
                                 </button>
                             </div>
                         </fieldset>
@@ -69,9 +69,9 @@
                 </div>
                 <div class="login__footer">
                     <div class="btn">
-                        <a class="btnJoin" href="join1.html">회원가입</a>
-                        <a class="findId" href="#">아이디 찾기</a>
-                        <a class="findPw" href="#">비밀번호 찾기</a>
+                        <a class="btnJoin" href="../join/join1.php">회원가입</a>
+                        <a class="findId" href="../login/findId.php">아이디 찾기</a>
+                        <a class="findPw" href="../login/findPw.php">비밀번호 찾기</a>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@
                     가입시 입력했던<br>
                     휴대폰 번호를 입력해주세요.
                 </p>
-                <form name="login" action="loginSave.php" method="post">
+                <form name="login" action="findIdPhoneSave.php" method="post">
                     <fieldset>
                         <legend>아이디 찾기 입력폼</legend>
                         <div>
@@ -110,4 +110,12 @@
     </div>
 
 </body>
+<script>
+    const findidPhone = document.querySelector(".findid__phone");
+    const findidClose2 = document.querySelector(".findid__inner .cb2");
+
+    findidClose2.addEventListener("click", ()=>{
+        findidPhone.classList.remove("open");
+    });
+</script>
 </html>

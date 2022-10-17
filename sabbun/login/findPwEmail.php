@@ -82,33 +82,40 @@
     <?php include "../include/footer.php" ?>
     <!-- // footer -->
 
-    <!-- 아이디 찾기 팝업(찾을 방법 선택) -->
-    <div class="findid__popup nanum open">
-        <div class="findid__inner">
-            <div class="findid__header">
-                <h3>아이디 찾기</h3>
+    <!-- 비밀번호 찾기 팝업(이메일로 찾기) -->
+    <div class="findpw__popup findpw__email nanum open">
+        <div class="findpw__inner">
+            <div class="findpw__header">
+                <h3>비밀번호 찾기</h3>
             </div>
-            <div class="findid__contents">
-                <img src="../html/assets/img/find_icon@3x.png" alt="아이디 찾기">
+            <div class="findpw__contents">
+                <img src="../html/assets/img/find_icon@3x.png" alt="비밀번호 찾기">
                 <p>
-                    아이디를 잊으셨나요?<br>
-                    아래의 방법을 통해 찾으실 수 있습니다.
+                    가입시 입력했던<br>
+                    이메일 주소를 입력해주세요.
                 </p>
+                <form name="login" action="loginSave.php" method="post">
+                    <fieldset>
+                        <legend>비밀번호 찾기 입력폼</legend>
+                        <div>
+                            <label for="youEmail" class="ir">이메일 주소</label>
+                            <input type="text" name="youEmail" id="youEmail" placeholder="이메일 주소를 입력해주세요!" class="input__style" required>
+                        </div>
+                        <button type="submit" class="btn input_email">입력</button>
+                    </fieldset>
+                </form>
             </div>
-            <div class="findid__footer">
-                <div type="button" class="btn btn_phone ac"><a href="findIdPhone.php">휴대폰 번호로 찾기</a></div>
-            </div>
-            <button type="button" class="btn_close cb1"><a href="#"><span>닫기</span></a></button>
+            <button type="button" class="btn_close cb6"><span>닫기</span></button>
         </div>
     </div>
 
 </body>
 <script>
-    const findidPopup = document.querySelector(".findid__popup");
-    const findidClose1 = document.querySelector(".findid__inner .cb1");
+    const findpwEmail = document.querySelector(".findpw__email");
+    const findpwClose2 = document.querySelector(".findpw__inner .cb6");
 
-    findidClose1.addEventListener("click", ()=>{
-        findidPopup.classList.remove("open");
+    findpwClose2.addEventListener("click", ()=>{
+        findpwEmail.classList.remove("open");
     });
 </script>
 </html>

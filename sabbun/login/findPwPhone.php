@@ -82,33 +82,40 @@
     <?php include "../include/footer.php" ?>
     <!-- // footer -->
 
-    <!-- 아이디 찾기 팝업(찾을 방법 선택) -->
-    <div class="findid__popup nanum open">
-        <div class="findid__inner">
-            <div class="findid__header">
-                <h3>아이디 찾기</h3>
+    <!-- 비밀번호 찾기 팝업(휴대폰 번호로 찾기) -->
+    <div class="findpw__popup findpw__phone nanum open">
+        <div class="findpw__inner">
+            <div class="findpw__header">
+                <h3>비밀번호 찾기</h3>
             </div>
-            <div class="findid__contents">
-                <img src="../html/assets/img/find_icon@3x.png" alt="아이디 찾기">
+            <div class="findpw__contents">
+                <img src="../html/assets/img/find_icon@3x.png" alt="비밀번호 찾기">
                 <p>
-                    아이디를 잊으셨나요?<br>
-                    아래의 방법을 통해 찾으실 수 있습니다.
+                    가입시 입력했던<br>
+                    휴대폰 번호를 입력해주세요.
                 </p>
+                <form name="login" action="loginSave.php" method="post">
+                    <fieldset>
+                        <legend>비밀번호 찾기 입력폼</legend>
+                        <div>
+                            <label for="youPhone" class="ir">이메일 주소</label>
+                            <input type="text" name="youPhone" id="youPhone" placeholder="휴대폰 번호를 입력해주세요!" class="input__style" required>
+                        </div>
+                        <button type="submit" class="btn input_phonePw">입력</button>
+                    </fieldset>
+                </form>
             </div>
-            <div class="findid__footer">
-                <div type="button" class="btn btn_phone ac"><a href="findIdPhone.php">휴대폰 번호로 찾기</a></div>
-            </div>
-            <button type="button" class="btn_close cb1"><a href="#"><span>닫기</span></a></button>
+            <button type="button" class="btn_close cb7"><span>닫기</span></button>
         </div>
     </div>
 
 </body>
 <script>
-    const findidPopup = document.querySelector(".findid__popup");
-    const findidClose1 = document.querySelector(".findid__inner .cb1");
+    const findpwPhone = document.querySelector(".findpw__phone");
+    const findpwClose3 = document.querySelector(".findpw__inner .cb7");
 
-    findidClose1.addEventListener("click", ()=>{
-        findidPopup.classList.remove("open");
+    findpwClose3.addEventListener("click", ()=>{
+        findpwPhone.classList.remove("open");
     });
 </script>
 </html>

@@ -82,33 +82,34 @@
     <?php include "../include/footer.php" ?>
     <!-- // footer -->
 
-    <!-- 아이디 찾기 팝업(찾을 방법 선택) -->
-    <div class="findid__popup nanum open">
-        <div class="findid__inner">
-            <div class="findid__header">
-                <h3>아이디 찾기</h3>
+    <!-- 비밀번호 찾기 팝업(찾을 방법 선택) -->
+    <div class="findpw__popup nanum open">
+        <div class="findpw__inner">
+            <div class="findpw__header">
+                <h3>비밀번호 찾기</h3>
             </div>
-            <div class="findid__contents">
-                <img src="../html/assets/img/find_icon@3x.png" alt="아이디 찾기">
+            <div class="findpw__contents">
+                <img src="../html/assets/img/find_icon@3x.png" alt="비밀번호 찾기">
                 <p>
-                    아이디를 잊으셨나요?<br>
+                    비밀번호를 잊으셨나요?<br>
                     아래의 방법을 통해 찾으실 수 있습니다.
                 </p>
             </div>
-            <div class="findid__footer">
-                <div type="button" class="btn btn_phone ac"><a href="findIdPhone.php">휴대폰 번호로 찾기</a></div>
+            <div class="findpw__footer">
+                <button type="button" class="btn btn_email ac"><a href="findPwEmail.php">이메일로 찾기</a></button>
+                <button type="button" class="btn btn_phonePw ac"><a href="findPwPhone.php">휴대폰 번호로 찾기</a></button>
             </div>
-            <button type="button" class="btn_close cb1"><a href="#"><span>닫기</span></a></button>
+            <button type="button" class="btn_close cb5"><span>닫기</span></button>
         </div>
     </div>
 
 </body>
 <script>
-    const findidPopup = document.querySelector(".findid__popup");
-    const findidClose1 = document.querySelector(".findid__inner .cb1");
+    const findpwPopup = document.querySelector(".findpw__popup");
+    const findpwClose1 = document.querySelector(".findpw__inner .cb5");
 
-    findidClose1.addEventListener("click", ()=>{
-        findidPopup.classList.remove("open");
+    findpwClose1.addEventListener("click", ()=>{
+        findpwPopup.classList.remove("open");
     });
 </script>
 </html>

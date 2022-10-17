@@ -71,7 +71,7 @@
                     <div class="btn">
                         <a class="btnJoin" href="../join/join1.php">회원가입</a>
                         <a class="findId" href="../login/findId.php">아이디 찾기</a>
-                        <a class="findPw" href="#">비밀번호 찾기</a>
+                        <a class="findPw" href="../login/findPw.php">비밀번호 찾기</a>
                     </div>
                 </div>
             </div>
