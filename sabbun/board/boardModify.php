@@ -115,7 +115,7 @@
 
     if($result){
         $info = $result->fetch_array(MYSQLI_ASSOC);
-        echo "<div><label for='youPass'>비밀번호</label><input type='password' name='youPass' id='youPass' placeholder='로그인 비밀번호를 입력해주세요!'autocomplete='off' required></input></div>";
+        echo "<div class='writepw'><span>비밀번호</span><label class='ir' for='youPass'>비밀번호</label><input class='pw' type='password' name='youPass' id='youPass' placeholder='로그인 비밀번호를 입력해주세요!'autocomplete='off' required></input></div>";
     }
 ?>
                                 <!-- <div class="filebox bs3-primary">
