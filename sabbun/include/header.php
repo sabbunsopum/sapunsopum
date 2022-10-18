@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>헤더영역</title>
     
-    <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="../html/assets/css/fonts.css">
+    <link rel="stylesheet" href="../html/assets/css/header.css">
+    <link rel="stylesheet" href="../html/assets/css/common.css">
+    <link rel="stylesheet" href="../html/assets/css/reset.css">
 </head>
 <body>
     <header id="headerType" class="header__wrap nanum">
@@ -24,7 +24,7 @@
                     <li><a href="#sliderType">사뿐소품이란?</a></li>
                     <li><a href="#imageType">소품샵 리스트</a></li>
                     <li><a href="../board/board.php">커뮤니티</a></li>
-                    <li><a href="../myPage/myCpage.php">마이페이지</a></li>
+                    <li><a href="../mypage/myCpage.php">마이페이지</a></li>
                     <li><a href="#bannerType">고객센터</a></li>
                 </ul>
             </nav>
