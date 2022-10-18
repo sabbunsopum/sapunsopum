@@ -10,7 +10,7 @@
 
 .slider__img .desc {
 
-    width: 1160px;
+    width: 1160px !important ;
     margin: 0 auto;
     padding: 100px 20px;
 }

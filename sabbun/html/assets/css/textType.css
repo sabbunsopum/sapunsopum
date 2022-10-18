@@ -20,25 +20,3 @@
     box-sizing: border-box;
 }
 
-/* text2 */
-
-.text__wrap2{}
-
-.text__inner2{
-    margin-bottom: 100px;
-}
-.text__inner2 .text__article2{
-    padding: 30px;
-    text-align: left;
-    border-bottom: 1px solid #DDDDDD;
-}
-.text__inner2 .text__article2 .text__desc2{}
-.text__inner2 .text__article2 .text__desc2 h3 {
-    font-size: 24px;
-    font-weight: 700;
-}
-.text__inner2 .text__article2 .text__desc2 span{
-    display: inline-block;
-    padding: 10px 0;
-    box-sizing: border-box;
-}
