@@ -94,7 +94,7 @@
                     가입시 입력했던<br>
                     이메일 주소를 입력해주세요.
                 </p>
-                <form name="login" action="loginSave.php" method="post">
+                <form name="login" action="findPwEmailSave.php" method="post">
                     <fieldset>
                         <legend>비밀번호 찾기 입력폼</legend>
                         <div>

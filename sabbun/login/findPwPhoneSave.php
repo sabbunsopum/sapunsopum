@@ -5,6 +5,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +19,7 @@
     <link rel="stylesheet" href="../html/assets/css/find.css">
     <link rel="stylesheet" href="../html/assets/css/footer.css">
 </head>
+
 <body>
     <?php include "../include/header.php" ?>
     <!-- // header -->
@@ -52,11 +54,13 @@
                             <legend>로그인 입력폼</legend>
                             <div>
                                 <label for="youEmail">이메일</label>
-                                <input type="email" name="youEmail" id="youEmail" placeholder="이메일" class="input__style" required>
+                                <input type="email" name="youEmail" id="youEmail" placeholder="이메일" class="input__style"
+                                    required>
                             </div>
                             <div>
                                 <label for="youPass">비밀번호</label>
-                                <input type="password" name="youPass" id="youPass" placeholder="비밀번호" class="input__style" required>
+                                <input type="password" name="youPass" id="youPass" placeholder="비밀번호"
+                                    class="input__style" required>
                             </div>
                             <button type="submit" class="input__button">로그인</button>
                             <div class="sub__input">
@@ -84,17 +88,18 @@
     <?php include "../include/footer.php" ?>
     <!-- // footer -->
 
-
-
-    <!-- 아이디 찾기 완료 팝업 -->
-    <div class="findid__popup findid__success nanum open">
-        <div class="findid__inner">
-            <div class="findid__header">
-                <h3>아이디 찾기 성공</h3>
+    <!-- 비밀번호 찾기 완료 팝업 -->
+    <div class="findpw__popup findpw__success nanum open">
+        <div class="findpw__inner">
+            <div class="findpw__header">
+                <h3>비밀번호 찾기 성공</h3>
             </div>
-            <div class="findid__contents">
-                <img src="../html/assets/img/success_icon@3x.png" alt="아이디 찾기 성공">
+            <div class="findpw__contents">
+                <img src="assets/img/success_icon@3x.png" alt="비밀번호 찾기 성공">
                 <p>
+                    <!-- 등록된 비밀번호는<br>
+                    <em>0987zxy</em><br>
+                    입니다. -->
 <?php
     $youPhone = $_POST['youPhone'];
     function msg($alert){
@@ -105,7 +110,7 @@
     if($result){
         $count = $result -> num_rows;
         if($count == 0){
-            Header("Location: ../login/findIdPhoneFalse.php");
+            Header("Location: ../login/findPwPhoneFalse.php");
         } else {
             $info = $result -> fetch_array(MYSQLI_ASSOC);
             $_SESSION['youPhone'] = $info['youPhone'];
@@ -117,35 +122,39 @@
         msg("에러발생 - 관리자에게 문의해주세요!");
     }
 ?>
+
                 </p>
             </div>
-            <div class="findid__footer">
-                <div class="ac"><a href="login.php">로그인 하기</a></div>
-                <button type="button" class="btn btn_pw">비밀번호 찾기</button>
+            <div class="findpw__footer">
+                <div class="ac"><a href="login.html">로그인 하기</a></div>
+                <button type="button" class="btn btn_id">아이디 찾기</button>
             </div>
             <button type="button" class="btn_close cb3"><span>닫기</span></button>
         </div>
     </div>
 
 
+
+
 </body>
 
 
 <script>
-    const findidPhone = document.querySelector(".findid__popup");
-    const findidClose2 = document.querySelector(".findid__inner .cb3");
-    const findidPw = document.querySelector(".btn_pw");
-    
-    findidClose2.addEventListener("click", ()=>{
-        findidPhone.classList.remove("open");
-        location.replace("login.php");
+const findidPhone = document.querySelector(".findpw__popup");
+const findidClose2 = document.querySelector(".findid__inner .cb3");
+const findidPw = document.querySelector(".btn_id");
 
-    });
+findidClose2.addEventListener("click", () => {
+    findidPhone.classList.remove("open");
+    location.replace("login.php");
 
-    findidPw.addEventListener("click", ()=>{
-        findidPhone.classList.remove("open");
-        location.replace("findPw.php");
+});
 
-    });
+findidPw.addEventListener("click", () => {
+    findidPhone.classList.remove("open");
+    location.replace("findPw.php");
+
+});
 </script>
+
 </html>
