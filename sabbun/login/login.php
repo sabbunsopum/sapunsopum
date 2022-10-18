@@ -389,73 +389,73 @@
 
 
 
-    findidBtn.addEventListener("click", ()=>{
-        findidPopup.classList.add("open");
-    });
-    findidClose1.addEventListener("click", ()=>{
-        findidPopup.classList.remove("open");
-    });
-    idPhoneBtn.addEventListener("click", ()=>{
-        findidPopup.classList.remove("open");
-        findidPhone.classList.add("open");
-    });
-    findidClose2.addEventListener("click", ()=>{
-        findidPhone.classList.remove("open");
-    });
-    inputPhone.addEventListener("click", ()=>{
-        findidPhone.classList.remove("open");
-        findidSuccess.classList.add("open");
-    });
-    findPw.addEventListener("click", ()=>{
-        findidSuccess.classList.remove("open");
-        findpwPopup.classList.add("open");
-    });
-    findidClose3.addEventListener("click", ()=>{
-        findidSuccess.classList.remove("open");
-    });
+    // findidBtn.addEventListener("click", ()=>{
+    //     findidPopup.classList.add("open");
+    // });
+    // findidClose1.addEventListener("click", ()=>{
+    //     findidPopup.classList.remove("open");
+    // });
+    // idPhoneBtn.addEventListener("click", ()=>{
+    //     findidPopup.classList.remove("open");
+    //     findidPhone.classList.add("open");
+    // });
+    // findidClose2.addEventListener("click", ()=>{
+    //     findidPhone.classList.remove("open");
+    // });
+    // inputPhone.addEventListener("click", ()=>{
+    //     findidPhone.classList.remove("open");
+    //     findidSuccess.classList.add("open");
+    // });
+    // findPw.addEventListener("click", ()=>{
+    //     findidSuccess.classList.remove("open");
+    //     findpwPopup.classList.add("open");
+    // });
+    // findidClose3.addEventListener("click", ()=>{
+    //     findidSuccess.classList.remove("open");
+    // });
 
-    findpwBtn.addEventListener("click", ()=>{
-        findpwPopup.classList.add("open");
-    });
-    findpwClose1.addEventListener("click", ()=>{
-        findpwPopup.classList.remove("open");
-    });
-    pwEmailBtn.addEventListener("click", ()=>{
-        findpwPopup.classList.remove("open");
-        findpwEmail.classList.add("open");
-    });
-    findpwClose2.addEventListener("click", ()=>{
-        findpwEmail.classList.remove("open");
-    });
-    inputEmail.addEventListener("click", ()=>{
-        findpwEmail.classList.remove("open");
-        findpwError.classList.add("open");
-    });
-    pwPhoneBtn.addEventListener("click", ()=>{
-        findpwPopup.classList.remove("open");
-        findpwPhone.classList.add("open");
-    });
-    findpwAgain.addEventListener("click", ()=>{
-        findpwError.classList.remove("open");
-        findpwPopup.classList.add("open");
-    });
-    findpwClose3.addEventListener("click", ()=>{
-        findpwPhone.classList.remove("open");
-    });
-    findpwClose4.addEventListener("click", ()=>{
-        findpwError.classList.remove("open");
-    });
-    inputPhonePw.addEventListener("click", ()=>{
-        findpwPhone.classList.remove("open");
-        findpwSuccess.classList.add("open");
-    });
-    findId.addEventListener("click", ()=>{
-        findpwSuccess.classList.remove("open");
-        findidPopup.classList.add("open");
-    });
-    findpwClose5.addEventListener("click", ()=>{
-        findpwSuccess.classList.remove("open");
-    });
+    // findpwBtn.addEventListener("click", ()=>{
+    //     findpwPopup.classList.add("open");
+    // });
+    // findpwClose1.addEventListener("click", ()=>{
+    //     findpwPopup.classList.remove("open");
+    // });
+    // pwEmailBtn.addEventListener("click", ()=>{
+    //     findpwPopup.classList.remove("open");
+    //     findpwEmail.classList.add("open");
+    // });
+    // findpwClose2.addEventListener("click", ()=>{
+    //     findpwEmail.classList.remove("open");
+    // });
+    // inputEmail.addEventListener("click", ()=>{
+    //     findpwEmail.classList.remove("open");
+    //     findpwError.classList.add("open");
+    // });
+    // pwPhoneBtn.addEventListener("click", ()=>{
+    //     findpwPopup.classList.remove("open");
+    //     findpwPhone.classList.add("open");
+    // });
+    // findpwAgain.addEventListener("click", ()=>{
+    //     findpwError.classList.remove("open");
+    //     findpwPopup.classList.add("open");
+    // });
+    // findpwClose3.addEventListener("click", ()=>{
+    //     findpwPhone.classList.remove("open");
+    // });
+    // findpwClose4.addEventListener("click", ()=>{
+    //     findpwError.classList.remove("open");
+    // });
+    // inputPhonePw.addEventListener("click", ()=>{
+    //     findpwPhone.classList.remove("open");
+    //     findpwSuccess.classList.add("open");
+    // });
+    // findId.addEventListener("click", ()=>{
+    //     findpwSuccess.classList.remove("open");
+    //     findidPopup.classList.add("open");
+    // });
+    // findpwClose5.addEventListener("click", ()=>{
+    //     findpwSuccess.classList.remove("open");
+    // });
 
 
 </script>
