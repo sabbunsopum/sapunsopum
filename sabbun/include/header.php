@@ -24,7 +24,7 @@
                     <li><a href="#sliderType">사뿐소품이란?</a></li>
                     <li><a href="#imageType">소품샵 리스트</a></li>
                     <li><a href="../board/board.php">커뮤니티</a></li>
-                    <li><a href="#cardType">마이페이지</a></li>
+                    <li><a href="../myPage/myCpage.php">마이페이지</a></li>
                     <li><a href="#bannerType">고객센터</a></li>
                 </ul>
             </nav>
