@@ -116,6 +116,7 @@
 
     findpwClose3.addEventListener("click", ()=>{
         findpwPhone.classList.remove("open");
+        location.replace("login.php");
     });
 </script>
 </html>

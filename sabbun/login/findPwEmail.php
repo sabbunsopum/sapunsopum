@@ -116,6 +116,7 @@
 
     findpwClose2.addEventListener("click", ()=>{
         findpwEmail.classList.remove("open");
+        location.replace("login.php");
     });
 </script>
 </html>

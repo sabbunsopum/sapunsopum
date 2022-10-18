@@ -83,68 +83,32 @@
     </main>
     <?php include "../include/footer.php" ?>
     <!-- // footer -->
-
-
-
-    <!-- 아이디 찾기 완료 팝업 -->
-    <div class="findid__popup findid__success nanum open">
+    <!-- 아이디 찾기 에러 팝업 -->
+    <div class="findid__popup findid__error nanum open">
         <div class="findid__inner">
             <div class="findid__header">
-                <h3>아이디 찾기 성공</h3>
+                <h3>아이디 찾기 실패</h3>
             </div>
             <div class="findid__contents">
-                <img src="../html/assets/img/success_icon@3x.png" alt="아이디 찾기 성공">
+                <img src="../html/assets/img/error_icon@3x.png" alt="아이디 찾기 실패">
                 <p>
-<?php
-    $youPhone = $_POST['youPhone'];
-    function msg($alert){
-        echo "<p class='alert'>{$alert}</p>";
-    }
-    $sql = "SELECT youEmail, youPhone FROM myBMember WHERE youPhone = '$youPhone'";
-    $result = $connect -> query($sql);
-    if($result){
-        $count = $result -> num_rows;
-        if($count == 0){
-            Header("Location: ../login/findIdPhoneFalse.php");
-        } else {
-            $info = $result -> fetch_array(MYSQLI_ASSOC);
-            $_SESSION['youPhone'] = $info['youPhone'];
-            echo "회원님의 아이디는 <br>";
-            echo ($info['youEmail']);
-            echo "입니다.";
-        }
-    } else {
-        msg("에러발생 - 관리자에게 문의해주세요!");
-    }
-?>
                 </p>
             </div>
             <div class="findid__footer">
-                <div class="ac"><a href="login.php">로그인 하기</a></div>
-                <button type="button" class="btn btn_pw">비밀번호 찾기</button>
+                <div class="btn btn_login ac"> <a href="findIdPhone.php">다시 입력하기</a></div>
+                <div class="ac"><a href="../join/join1.php">회원가입</a></div>
             </div>
-            <button type="button" class="btn_close cb3"><span>닫기</span></button>
+            <button type="button" class="btn_close cb4"><span>닫기</span></button>
         </div>
     </div>
-
-
 </body>
-
-
 <script>
     const findidPhone = document.querySelector(".findid__popup");
-    const findidClose2 = document.querySelector(".findid__inner .cb3");
-    const findidPw = document.querySelector(".btn_pw");
+    const findidClose2 = document.querySelector(".findid__inner .cb4");
     
     findidClose2.addEventListener("click", ()=>{
         findidPhone.classList.remove("open");
         location.replace("login.php");
-
-    });
-
-    findidPw.addEventListener("click", ()=>{
-        findidPhone.classList.remove("open");
-        location.replace("findPw.php");
 
     });
 </script>
