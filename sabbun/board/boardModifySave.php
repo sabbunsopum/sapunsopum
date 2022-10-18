@@ -44,7 +44,7 @@
         $sql = "UPDATE myBoard SET boardTitle = '{$boardTitle}', boardContents = '{$boardContents}' WHERE myBoardID = '{$myBoardID}'";
         $connect -> query($sql);
     } else {
-        echo "<script>alert('내가 작성한 글이 아니거나 비밀번호가 일치하지 않습니다. 다시 한번 확인해주세요 !')</script>";
+        echo "<script>alert('내가 작성한 글이 아니거나 비밀번호가 일치하지 않습니다. 다시 한번 확인해주세요!')</script>";
     }
 ?>
 <script>
