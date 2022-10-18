@@ -15,8 +15,6 @@
 <body>
     
 <?php
-
-
     $myBoardID = $_POST['myBoardID'];
     $boardTitle = $_POST['boardTitle'];
     $boardContents = $_POST['boardContents'];
@@ -26,25 +24,16 @@
     $boardTitle = $connect -> real_escape_string($boardTitle);
     $boardContents = $connect -> real_escape_string($boardContents);
 
-
-    
-    
-    $sql = "SELECT myMemberID FROM myBoard WHERE myBoardID = {$myBoardID}";
-    $result2 = $connect -> query($sql);
-    $myBoardMember = $result2 -> fetch_array(MYSQLI_ASSOC);
-
-
-
-
     $sql = "SELECT youPass, myMemberID FROM myBMember WHERE myMemberID = {$myMemberID}";
     $result = $connect -> query($sql);
+
     $memberInfo = $result -> fetch_array(MYSQLI_ASSOC);
 
-    if($memberInfo['youPass'] === $youPass && $memberInfo['myMemberID'] === $myMemberID && $myBoardMember['myMemberID'] === $myMemberID ){
+    if($memberInfo['youPass'] === $youPass && $memberInfo['myMemberID'] === $myMemberID){
         $sql = "UPDATE myBoard SET boardTitle = '{$boardTitle}', boardContents = '{$boardContents}' WHERE myBoardID = '{$myBoardID}'";
         $connect -> query($sql);
     } else {
-        echo "<script>alert('내가 작성한 글이 아니거나 비밀번호가 일치하지 않습니다. 다시 한번 확인해주세요 !')</script>";
+        echo "<script>alert('비밀번호가 일치하지 않습니다. 다시 한번 확인해주세요 !')</script>";
     }
 ?>
 <script>
