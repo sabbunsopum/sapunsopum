@@ -109,6 +109,7 @@
 
     findidClose1.addEventListener("click", ()=>{
         findidPopup.classList.remove("open");
+        location.replace("login.php");
     });
 </script>
 </html>

@@ -105,8 +105,11 @@
 <script>
     const findidPhone = document.querySelector(".findid__popup");
     const findidClose2 = document.querySelector(".findid__inner .cb4");
+    
     findidClose2.addEventListener("click", ()=>{
         findidPhone.classList.remove("open");
+        location.replace("login.php");
+
     });
 </script>
 </html>

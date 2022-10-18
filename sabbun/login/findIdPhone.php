@@ -116,6 +116,7 @@
 
     findidClose2.addEventListener("click", ()=>{
         findidPhone.classList.remove("open");
+        location.replace("login.php");
     });
 </script>
 </html>
