@@ -83,28 +83,34 @@
     </main>
     <?php include "../include/footer.php" ?>
     <!-- // footer -->
-    <!-- 아이디 찾기 에러 팝업 -->
-    <div class="findid__popup findid__error nanum open">
-        <div class="findid__inner">
-            <div class="findid__header">
-                <h3>아이디 찾기 실패</h3>
+    <!-- 비밀번호 찾기 에러 팝업 -->
+    <div class="findpw__popup findpw__error nanum open">
+        <div class="findpw__inner">
+            <div class="findpw__header">
+                <h3>비밀번호 찾기 실패</h3>
             </div>
-            <div class="findid__contents">
-                <img src="../html/assets/img/error_icon@3x.png" alt="아이디 찾기 실패">
+            <div class="findpw__contents">
+                <img src="../html/assets/img/error_icon@3x.png" alt="비밀번호 찾기 실패">
                 <p>
+                    등록된 회원정보를 찾을 수 없습니다.<br>
+                    계정이 없으시다면<br>
+                    회원가입을 진행해주세요!
                 </p>
             </div>
-            <div class="findid__footer">
-                <div class="btn btn_login ac"> <a href="findIdPhone.php">다시 입력하기</a></div>
+            <div class="findpw__footer">
+                <button type="button" class="btn btn_againPw ac"><a href="findPwEmail.php">다시 입력하기</a></button>
                 <div class="ac"><a href="../join/join1.php">회원가입</a></div>
             </div>
-            <button type="button" class="btn_close cb4"><span>닫기</span></button>
+            <button type="button" class="btn_close cb8"><span>닫기</span></button>
         </div>
     </div>
+
+
+ 
 </body>
 <script>
-    const findidPhone = document.querySelector(".findid__popup");
-    const findidClose2 = document.querySelector(".findid__inner .cb4");
+    const findidPhone = document.querySelector(".findpw__popup");
+    const findidClose2 = document.querySelector(".cb8");
     
     findidClose2.addEventListener("click", ()=>{
         findidPhone.classList.remove("open");

@@ -95,7 +95,7 @@
                 <h3>비밀번호 찾기 성공</h3>
             </div>
             <div class="findpw__contents">
-                <img src="assets/img/success_icon@3x.png" alt="비밀번호 찾기 성공">
+                <img src="../html/assets/img/success_icon@3x.png" alt="비밀번호 찾기 성공">
                 <p>
                     <!-- 등록된 비밀번호는<br>
                     <em>0987zxy</em><br>
@@ -105,7 +105,7 @@
     function msg($alert){
         echo "<p class='alert'>{$alert}</p>";
     }
-    $sql = "SELECT youEmail, youPhone FROM myBMember WHERE youPhone = '$youPhone'";
+    $sql = "SELECT youEmail, youPhone, youPass FROM myBMember WHERE youPhone = '$youPhone'";
     $result = $connect -> query($sql);
     if($result){
         $count = $result -> num_rows;
@@ -114,8 +114,8 @@
         } else {
             $info = $result -> fetch_array(MYSQLI_ASSOC);
             $_SESSION['youPhone'] = $info['youPhone'];
-            echo "회원님의 아이디는 <br>";
-            echo ($info['youEmail']);
+            echo "회원님의 비밀번호는 <br>";
+            echo ($info['youPass']);
             echo "입니다.";
         }
     } else {
@@ -126,7 +126,7 @@
                 </p>
             </div>
             <div class="findpw__footer">
-                <div class="ac"><a href="login.html">로그인 하기</a></div>
+                <div class="ac"><a href="login.php">로그인 하기</a></div>
                 <button type="button" class="btn btn_id">아이디 찾기</button>
             </div>
             <button type="button" class="btn_close cb3"><span>닫기</span></button>
@@ -141,7 +141,7 @@
 
 <script>
 const findidPhone = document.querySelector(".findpw__popup");
-const findidClose2 = document.querySelector(".findid__inner .cb3");
+const findidClose2 = document.querySelector(".cb3");
 const findidPw = document.querySelector(".btn_id");
 
 findidClose2.addEventListener("click", () => {
@@ -152,7 +152,7 @@ findidClose2.addEventListener("click", () => {
 
 findidPw.addEventListener("click", () => {
     findidPhone.classList.remove("open");
-    location.replace("findPw.php");
+    location.replace("findId.php");
 
 });
 </script>
