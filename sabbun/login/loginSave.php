@@ -1,6 +1,8 @@
 <?php
 include "../connect/connect.php";
 include "../connect/session.php";
+ob_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -18,7 +20,7 @@ include "../connect/session.php";
     <link rel="stylesheet" href="../html/assets/css/footer.css">
 </head>
 <body>
-    <?php include "../include/header.php" ?>
+<?php include "../include/header.php" ?>
     <!-- // header -->
     <main id="main">
         <section id="login" class="nanum">
@@ -26,7 +28,7 @@ include "../connect/session.php";
                 <div class="login__desc">
                     <h3>사뿐소품과 함께 소품샵을 찾아보세요!</h3>
                     <p>아직도 계정이 없으신가요?<br>가입하고 더 많은 기능을 누려보세요 :)</p>
-                    <?php
+<?php
     $youEmail = $_POST['youEmail'];
     $youPass = $_POST['youPass'];
     // echo $youEmail, $youPass;
@@ -146,5 +148,15 @@ include "../connect/session.php";
             <button type="button" class="btn_close cb4"><span>닫기</span></button>
         </div>
     </div>
+    <script>
+        const findidPhone = document.querySelector(".findid__popup");
+        const findidClose2 = document.querySelector(".cb4");
+
+        findidClose2.addEventListener("click", () => {
+        findidPhone.classList.remove("open");
+        location.replace("login.php");
+
+});
+    </script>
 </body>
 </html>
