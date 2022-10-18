@@ -118,14 +118,15 @@ ob_start();
     </div>
 
     <script>
+        
     const findidPhone = document.querySelector(".findid__popup");
     const findidClose2 = document.querySelector(".cb4");
 
     findidClose2.addEventListener("click", () => {
         findidPhone.classList.remove("open");
         location.replace("login.php");
-
     });
+
     </script>
 </body>
 
