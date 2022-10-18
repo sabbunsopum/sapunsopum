@@ -95,7 +95,7 @@
                 </p>
             </div>
             <div class="findid__footer">
-                <div class="btn btn_login ac"> <a href="login.php">다시 입력하기</a></div>
+                <div class="btn btn_login ac"> <a href="findIdPhone.php">다시 입력하기</a></div>
                 <div class="ac"><a href="../join/join1.php">회원가입</a></div>
             </div>
             <button type="button" class="btn_close cb4"><span>닫기</span></button>
