@@ -134,11 +134,18 @@
 <script>
     const findidPhone = document.querySelector(".findid__popup");
     const findidClose2 = document.querySelector(".findid__inner .cb3");
+    const findidPw = document.querySelector(".btn btn_pw");
     
     findidClose2.addEventListener("click", ()=>{
         findidPhone.classList.remove("open");
         location.replace("login.php");
 
     });
+
+    findidPw.addEventListener("click", ()=>{
+        findidPhone.classList.remove("open");
+        location.replace("findidPw.php");
+
+    }
 </script>
 </html>
