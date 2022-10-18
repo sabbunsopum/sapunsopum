@@ -6,6 +6,7 @@ ob_start();
 ?>
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,8 +20,9 @@ ob_start();
     <link rel="stylesheet" href="../html/assets/css/find.css">
     <link rel="stylesheet" href="../html/assets/css/footer.css">
 </head>
+
 <body>
-<?php include "../include/header.php" ?>
+    <?php include "../include/header.php" ?>
     <!-- // header -->
     <main id="main">
         <section id="login" class="nanum">
@@ -28,46 +30,7 @@ ob_start();
                 <div class="login__desc">
                     <h3>사뿐소품과 함께 소품샵을 찾아보세요!</h3>
                     <p>아직도 계정이 없으신가요?<br>가입하고 더 많은 기능을 누려보세요 :)</p>
-<?php
-    $youEmail = $_POST['youEmail'];
-    $youPass = $_POST['youPass'];
-    // echo $youEmail, $youPass;
-    // 정보 ---> 쿠키(하루동안 보지 않기-->쿠키 폴더에 저장) / 세션(서버) / 리덕스(리액트)
-    function msg($alert){
-        echo "<p class='alert'>{$alert}</p>";
-    }
-    // 이메일 검사
-    if( !filter_var($youEmail, FILTER_VALIDATE_EMAIL)){
-        msg("이메일이 잘못되었습니다.<br>올바른 이메일을 적어주세요!");
-        exit;
-    }
-    // 비밀번호 검사
-    if( $youPass == null || $youPass == ''){
-        msg("비밀번호를 입력해주세요!");
-        exit;
-    }
-    // 데이터 가져오기 --> 유효성 검사 --> 데이터 조회 --> 로그인
-    $sql = "SELECT myMemberID, youEmail, youName, youPass FROM myBMember WHERE youEmail = '$youEmail' AND youPass = '$youPass'";
-    $result = $connect -> query($sql);
-    if($result){
-        $count = $result -> num_rows;
-        if($count == 0){
-            msg("이메일 또는 비밀번호가 틀렸습니다!");
-            // exit;
-        } else {
-            $info = $result -> fetch_array(MYSQLI_ASSOC);
-            $_SESSION['myMemberID'] = $info['myMemberID'];
-            $_SESSION['youEmail'] = $info['youEmail'];
-            $_SESSION['youName'] = $info['youName'];
-            // echo "<pre>";
-            // var_dump($info);
-            // echo "</pre>";
-            Header("Location: ../main/main.php");
-        }
-    } else {
-        msg("에러발생 - 관리자에게 문의해주세요!");
-    }
-?>
+
                     <a href="join1.html">가입하러 가기 ></a>
                 </div>
                 <div class="imgs" aria-label="hidden">
@@ -135,9 +98,14 @@ ob_start();
             <div class="findid__contents">
                 <img src="../html/assets/img/error_icon@3x.png" alt="로그인 실패">
                 <p>
-                    <!-- 등록된 회원정보를 찾을 수 없습니다.<br>
-                    계정이 없으시다면<br>
-                    회원가입을 진행해주세요! -->
+<?php
+    $youEmail = $_POST['youEmail'];
+    $youPass = $_POST['youPass'];
+    // echo $youEmail, $youPass;
+    // 정보 ---> 쿠키(하루동안 보지 않기-->쿠키 폴더에 저장) / 세션(서버) / 리덕스(리액트)
+    function msg($alert){
+        echo "<p class='alert'>{$alert}</p>";}
+?>
                 </p>
             </div>
             <div class="findid__footer">
@@ -148,15 +116,51 @@ ob_start();
             <button type="button" class="btn_close cb4"><span>닫기</span></button>
         </div>
     </div>
-    <script>
-        const findidPhone = document.querySelector(".findid__popup");
-        const findidClose2 = document.querySelector(".cb4");
 
-        findidClose2.addEventListener("click", () => {
+    <script>
+    const findidPhone = document.querySelector(".findid__popup");
+    const findidClose2 = document.querySelector(".cb4");
+
+    findidClose2.addEventListener("click", () => {
         findidPhone.classList.remove("open");
         location.replace("login.php");
 
-});
+    });
     </script>
 </body>
+
 </html>
+
+<?php 
+    // 이메일 검사
+    if( !filter_var($youEmail, FILTER_VALIDATE_EMAIL)){
+        msg("이메일이 잘못되었습니다.<br>올바른 이메일을 적어주세요!");
+        exit;
+    }
+    // 비밀번호 검사
+    if( $youPass == null || $youPass == ''){
+        msg("비밀번호를 입력해주세요!");
+        exit;
+    }
+    // 데이터 가져오기 --> 유효성 검사 --> 데이터 조회 --> 로그인
+    $sql = "SELECT myMemberID, youEmail, youName, youPass FROM myBMember WHERE youEmail = '$youEmail' AND youPass = '$youPass'";
+    $result = $connect -> query($sql);
+    if($result){
+        $count = $result -> num_rows;
+        if($count == 0){
+            msg("이메일 또는 비밀번호가 틀렸습니다!");
+            // exit;
+        } else {
+            $info = $result -> fetch_array(MYSQLI_ASSOC);
+            $_SESSION['myMemberID'] = $info['myMemberID'];
+            $_SESSION['youEmail'] = $info['youEmail'];
+            $_SESSION['youName'] = $info['youName'];
+            // echo "<pre>";
+            // var_dump($info);
+            // echo "</pre>";
+            Header("Location: ../main/main.php");
+        }
+    } else {
+        msg("에러발생 - 관리자에게 문의해주세요!");
+    }
+?>
