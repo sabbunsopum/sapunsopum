@@ -103,8 +103,8 @@
     </div>
 </body>
 <script>
-    const findidPhone = document.querySelector(".findid__phone");
-    const findidClose2 = document.querySelector(".findid__inner .cb2");
+    const findidPhone = document.querySelector(".findid__popup");
+    const findidClose2 = document.querySelector(".findid__inner .cb4");
     findidClose2.addEventListener("click", ()=>{
         findidPhone.classList.remove("open");
     });

@@ -83,24 +83,9 @@
     </main>
     <?php include "../include/footer.php" ?>
     <!-- // footer -->
-    <!-- 아이디 찾기 에러 팝업 -->
-    <div class="findid__popup findid__error nanum">
-        <div class="findid__inner">
-            <div class="findid__header">
-                <h3>아이디 찾기 실패</h3>
-            </div>
-            <div class="findid__contents">
-                <img src="../html/assets/img/error_icon@3x.png" alt="아이디 찾기 실패">
-                <p>
-                </p>
-            </div>
-            <div class="findid__footer">
-                <div class="btn btn_login ac"><a href="login.php">다시 입력하기</a></div>
-                <div class="ac"><a href="../join/join1.php">회원가입</a></div>
-            </div>
-            <button type="button" class="btn_close cb4"><span>닫기</span></button>
-        </div>
-    </div>
+
+
+
     <!-- 아이디 찾기 완료 팝업 -->
     <div class="findid__popup findid__success nanum open">
         <div class="findid__inner">
@@ -141,10 +126,14 @@
             <button type="button" class="btn_close cb3"><span>닫기</span></button>
         </div>
     </div>
+
+
 </body>
+
+
 <script>
-    const findidPhone = document.querySelector(".findid__phone");
-    const findidClose2 = document.querySelector(".findid__inner .cb2");
+    const findidPhone = document.querySelector(".findid__popup");
+    const findidClose2 = document.querySelector(".findid__inner .cb3");
     findidClose2.addEventListener("click", ()=>{
         findidPhone.classList.remove("open");
     });
