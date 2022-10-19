@@ -24,7 +24,7 @@
                 <div class="login__desc">
                     <h3>사뿐소품과 함께 소품샵을 찾아보세요!</h3>
                     <p>아직도 계정이 없으신가요?<br>가입하고 더 많은 기능을 누려보세요 :)</p>
-                    <a href="join1.html">가입하러 가기 ></a>
+                    <a href="../join/join1.php">가입하러 가기 ></a>
                 </div>
                 <div class="imgs" aria-label="hidden">
                     <div class="i1"></div>
