@@ -16,6 +16,11 @@
     $sql .= "youShopNum varchar(20) NOT NULL,";
     // $sql .= "youIntro varchar(255) DEFAULT NULL,";
     // $sql .= "youSite varchar(255) DEFAULT NULL,";
+
+    $sql .= "blogImgFile varchar(100) DEFAULT NULL,";
+    $sql .= "blogImgSize varchar(100) DEFAULT NULL,";
+
+    
     $sql .= "regTime int(20) NOT NULL,";
     $sql .= "PRIMARY KEY (myMemberID)";
     $sql .= ") charset=utf8;";

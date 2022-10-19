@@ -41,12 +41,11 @@
     $youShopNum = $_POST['youShopNum'];
     $regTime = time();
 
-
-
-
-   
-    
-
+    $blogImgFile = $_FILES['blogFile'];
+    $blogImgSize = $_FILES['blogFile']['size'];
+    $blogImgType = $_FILES['blogFile']['type'];
+    $blogImgName = $_FILES['blogFile']['name'];
+    $blogImgTmp = $_FILES['blogFile']['tmp_name'];
 
 
 
@@ -60,19 +59,9 @@
     $youShopNum = $connect -> real_escape_string(trim($youShopNum));
     // $youPass = sha1("web".$youPass);
 
-    // 회원가입
-    $sql = "INSERT INTO myBBMember(youEmail, youNickName, youName, youPass, youPhone, youShop, youAdress, youShopNum, regTime, blogImgFile, blogImgSize) VALUES('$youEmail', '$youNickName', '$youName', '$youPass', '$youPhone', '$youShop', '$youAdress', '$youShopNum', '$regTime', '$blogImgName', '$blogImgSize')";
+    
     
 
-    $blogImgFile = $_FILES['blogFile'];
-    $blogImgSize = $_FILES['blogFile']['size'];
-    $blogImgType = $_FILES['blogFile']['type'];
-    $blogImgName = $_FILES['blogFile']['name'];
-    $blogImgTmp = $_FILES['blogFile']['tmp_name'];
-
-    echo "<pre>";
-    var_dump($blogImgFile);
-    echo "</pre>";
 
     if($blogImgType){
         $fileTypeExtension = explode("/", $blogImgType);
@@ -81,16 +70,19 @@
         //이미지 타입 확인
         if($fileType == "image"){
             if($fileExtension == "jpg" || $fileExtension == "jpeg" || $fileExtension == "png" || $fileExtension == "gif"){
-                $blogImgDir = "../assets/img/blog/";
+                $blogImgDir = "../html/assets/img/profile/";
                 $blogImgName = "Img_".time().rand(1,99999)."."."{$fileExtension}";
                 //echo "이미지 파일이 맞네요!";
- 
+                $sql = "INSERT INTO myBBMember(youEmail, youNickName, youName, youPass, youPhone, youShop, youAdress, youShopNum, regTime, blogImgFile, blogImgSize) VALUES('$youEmail', '$youNickName', '$youName', '$youPass', '$youPhone', '$youShop', '$youAdress', '$youShopNum', '$regTime', '$blogImgName', '$blogImgSize' )";
             } else {
                 echo "<script>alert('지원하는 이미지 파일이 아닙니다.'); history.back(1)</script>";
             }
         }
     } else {
         echo "이미지 파일이 첨부하지 않았습니다.";
+        $sql = "INSERT INTO myBBMember(youEmail, youNickName, youName, youPass, youPhone, youShop, youAdress, youShopNum, regTime, blogImgFile, blogImgSize) VALUES('$youEmail', '$youNickName', '$youName', '$youPass', '$youPhone', '$youShop', '$youAdress', '$youShopNum', '$regTime', 'Img_default.jpg', '$blogImgSize')";
+        
+    
     }
     //이미지 사이즈 확인
     if($blogImgSize > 1000000){
@@ -99,9 +91,10 @@
     }
 
 
+    // 회원가입
     $result = $connect -> query($sql);
     $result = move_uploaded_file($blogImgTmp, $blogImgDir.$blogImgName);
-    
+
     
     if($result){
         echo "회원가입을 축하합니다. 로그인을 해주세요!";
@@ -115,8 +108,8 @@
                     <img src="../html/assets/img/hand+heart 1@3x.png" alt="손으로 감싼 하트">
                 </div>
                 <div class="btn">
-                    <a href="main.html">홈으로 가기</a>
-                    <a href="login.html">로그인 하기</a>
+                    <a href="../main/main.php">홈으로 가기</a>
+                    <a href="../login/login.php">로그인 하기</a>
                 </div>
             </div>
         </section>
