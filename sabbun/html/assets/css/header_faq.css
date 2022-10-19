@@ -47,15 +47,15 @@
     margin: 0 5px;
     transition: all 0.3s;
     font-size: 0.875rem;
-    color: #fff;
+    color: rgba(255,255,255,0.5);
 }
 
 .header__menu li a:hover {
-    color: #64789F;
+    color: #fff;
 }
 
 .header__menu ul li.active a {
-    color: #64789F;
+    color: #fff;
 }
 
 .header__member {
@@ -73,15 +73,15 @@
     margin: 0 5px;
     transition: all 0.3s;
     font-size: 0.875rem;
-    color: #fff;
+    color: rgba(255,255,255,0.5);
 }
 
 .header__member li a:hover {
-    color: #64789F;
+    color: #fff;
 }
 
 .header__member ul li.active a {
-    color: #64789F;
+    color: #fff;
 }
 
 .header__search {
