@@ -29,7 +29,7 @@
                 <p>입력한 정보는 회원가입 외 다른 용도로 사용하지 않습니다!</p>
             </div>
             <div class="join__inner">
-                <form action="joinSave3-1 copy.php" name="join" method="post" onsubmit="return joinChecks()">
+                <form action="joinSave3-1 copy.php" name="join" method="post" enctype="multipart/form-data" onsubmit="return joinChecks()">
                     <fieldset>
                         <legend>회원가입</legend>
                         <div class="join__box">
@@ -82,15 +82,13 @@
                                 </div>
                             </div>
                             <div class="moreover">
-                                <div>
-                                    <label for="youPhoto">프로필 이미지</label>
-                                    <input type="text" id="youPhoto" name="youPhoto" placeholder="이미지를 첨부해주세요!">
-                                </div>
+                                
 
                                 <div>
-                                    <label for="blogFile">파일</label>
+                                    <label for="blogFile">프로필 이미지</label>
                                     <input type="file" name="blogFile" id="blogFile" accept=".jpg, .jpeg, .png, .gif" placeholder="jpg, jpeg, png, gif 파일만 넣어주세요!">
                                 </div>
+
 
                                 <div class="youGd">
                                     <label for="youGender">성별</label>
@@ -138,7 +136,7 @@
             } else {
                 $.ajax({
                     type: "POST",
-                    url: "joinCheck3-1.php",
+                    url: "joinCheck3-1 copy.php",
                     data: {
                         "youEmail": youEmail,
                         "type": "emailCheck"
@@ -169,7 +167,7 @@
             } else {
                 $.ajax({
                     type: "POST",
-                    url: "joinCheck3-1.php",
+                    url: "joinCheck3-1 copy.php",
                     data: {
                         "youNickName": youNickName,
                         "type": "nickCheck"

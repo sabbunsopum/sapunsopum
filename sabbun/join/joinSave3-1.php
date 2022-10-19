@@ -41,6 +41,14 @@
     $youShopNum = $_POST['youShopNum'];
     $regTime = time();
 
+    $blogImgFile = $_FILES['blogFile'];
+    $blogImgSize = $_FILES['blogFile']['size'];
+    $blogImgType = $_FILES['blogFile']['type'];
+    $blogImgName = $_FILES['blogFile']['name'];
+    $blogImgTmp = $_FILES['blogFile']['tmp_name'];
+
+
+
     $youEmail = $connect -> real_escape_string(trim($youEmail));
     $youNickName = $connect -> real_escape_string(trim($youNickName));
     $youName = $connect -> real_escape_string(trim($youName));
@@ -51,15 +59,48 @@
     $youShopNum = $connect -> real_escape_string(trim($youShopNum));
     // $youPass = sha1("web".$youPass);
 
-    // 회원가입
-    $sql = "INSERT INTO myBMember(youEmail, youNickName, youName, youPass, youPhone, youShop, youAdress, youShopNum, regTime) VALUES('$youEmail', '$youNickName', '$youName', '$youPass', '$youPhone', '$youShop', '$youAdress', '$youShopNum', '$regTime' )";
-    $result = $connect -> query($sql);
     
-    if($result){
-        echo "회원가입을 축하합니다. 로그인을 해주세요!";
+    
+
+
+    if($blogImgType){
+        $fileTypeExtension = explode("/", $blogImgType);
+        $fileType = $fileTypeExtension[0];      //image
+        $fileExtension = $fileTypeExtension[1]; //png
+        //이미지 타입 확인
+        if($fileType == "image"){
+            if($fileExtension == "jpg" || $fileExtension == "jpeg" || $fileExtension == "png" || $fileExtension == "gif"){
+                $blogImgDir = "../html/assets/img/profile/";
+                $blogImgName = "Img_".time().rand(1,99999)."."."{$fileExtension}";
+                //echo "이미지 파일이 맞네요!";
+                $sql = "INSERT INTO myBMember(youEmail, youNickName, youName, youPass, youPhone, youShop, youAdress, youShopNum, regTime, blogImgFile, blogImgSize) VALUES('$youEmail', '$youNickName', '$youName', '$youPass', '$youPhone', '$youShop', '$youAdress', '$youShopNum', '$regTime', '$blogImgName', '$blogImgSize' )";
+            } else {
+                echo "<script>alert('지원하는 이미지 파일이 아닙니다.'); history.back(1)</script>";
+            }
+        }
     } else {
-        echo "에러발생 -- 관리자에게 문의하세요!";
+        echo "<p>프로필 사진을 첨부하지 않았습니다. <br> 마이 페이지에서 추가 해주세요!</p>";
+        $sql = "INSERT INTO myBMember(youEmail, youNickName, youName, youPass, youPhone, youShop, youAdress, youShopNum, regTime, blogImgFile, blogImgSize) VALUES('$youEmail', '$youNickName', '$youName', '$youPass', '$youPhone', '$youShop', '$youAdress', '$youShopNum', '$regTime', 'Img_default.jpg', '$blogImgSize')";
+        
+    
     }
+    //이미지 사이즈 확인
+    if($blogImgSize > 1000000){
+        echo "<script>alert('이미지 용량이 1메가를 초과했습니다.'); history.back(1)</script>";
+        exit;
+    }
+    $result = $connect -> query($sql);
+    $result = move_uploaded_file($blogImgTmp, $blogImgDir.$blogImgName);
+
+
+    // 회원가입
+    // if($result){
+    //     echo "회원가입을 축하합니다. 로그인을 해주세요!";
+    // } else {
+    //     echo "에러발생 -- 관리자에게 문의하세요!";
+    //     var_dump($sql);
+    // }
+
 ?>
             </div>
             <div class="join__result">
