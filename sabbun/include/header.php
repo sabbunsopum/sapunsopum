@@ -14,7 +14,7 @@
 <body>
     <header id="headerType" class="header__wrap nanum">
         <div class="header__inner">
-            <div class="header__logo">
+            <div class="header__logo clearfix">
                 <a href="../main/main.php">
                     <img src="../html/assets/img/temp_logo.svg" alt="사뿐소품 로고">
                 </a>
