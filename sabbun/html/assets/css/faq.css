@@ -8,11 +8,15 @@
     background-color: #F9FAFC;
     border-radius: 20px;
     box-sizing: border-box;
+    transition: all 0.3s;
     position: relative;
 }
 .faq__contents details[open] {
     background-color: #fff;
     border: 1px solid #E3E6EB;
+}
+.faq__contents details:hover {
+    box-shadow: 5px 5px 30px 3px #4461f22f;
 }
 .faq__contents details summary {
     cursor: pointer;
