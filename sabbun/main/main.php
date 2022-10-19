@@ -276,7 +276,7 @@
         const btnStart = document.querySelector(".swiper-button-stop");
         const btnHam = document.querySelector(".header__ham");
         const btnMenu = document.querySelector(".header__menu");
-        const btnMenuList = btnMenu.querySelectorAll("ul li a");
+        //const btnMenuList = btnMenu.querySelectorAll("ul li a");
 
         btnStart.style.display = "none";
 
