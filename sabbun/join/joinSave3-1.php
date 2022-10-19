@@ -67,8 +67,8 @@
                     <img src="../html/assets/img/hand+heart 1@3x.png" alt="손으로 감싼 하트">
                 </div>
                 <div class="btn">
-                    <a href="main.html">홈으로 가기</a>
-                    <a href="login.html">로그인 하기</a>
+                    <a href="../main/main.html">홈으로 가기</a>
+                    <a href="../login/login.html">로그인 하기</a>
                 </div>
             </div>
         </section>
