@@ -79,7 +79,7 @@
             }
         }
     } else {
-        echo "이미지 파일이 첨부하지 않았습니다.";
+        echo "<p>프로필 사진을 첨부하지 않았습니다. <br> 마이 페이지에서 추가 해주세요!</p>";
         $sql = "INSERT INTO myBMember(youEmail, youNickName, youName, youPass, youPhone, youShop, youAdress, youShopNum, regTime, blogImgFile, blogImgSize) VALUES('$youEmail', '$youNickName', '$youName', '$youPass', '$youPhone', '$youShop', '$youAdress', '$youShopNum', '$regTime', 'Img_default.jpg', '$blogImgSize')";
         
     
@@ -89,18 +89,18 @@
         echo "<script>alert('이미지 용량이 1메가를 초과했습니다.'); history.back(1)</script>";
         exit;
     }
-
-
-    // 회원가입
     $result = $connect -> query($sql);
     $result = move_uploaded_file($blogImgTmp, $blogImgDir.$blogImgName);
 
-    
-    if($result){
-        echo "회원가입을 축하합니다. 로그인을 해주세요!";
-    } else {
-        echo "에러발생 -- 관리자에게 문의하세요!";
-    }
+
+    // 회원가입
+    // if($result){
+    //     echo "회원가입을 축하합니다. 로그인을 해주세요!";
+    // } else {
+    //     echo "에러발생 -- 관리자에게 문의하세요!";
+    //     var_dump($sql);
+    // }
+
 ?>
             </div>
             <div class="join__result">
