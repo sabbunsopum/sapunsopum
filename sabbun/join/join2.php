@@ -66,7 +66,7 @@
             if(bossBtn.classList.contains('active')){
                 window.location.href = 'join3-1.php';
             } else {
-                window.location.href = 'join3-2.php';
+                window.location.href = 'join3-1.php';
             }
         });
 
