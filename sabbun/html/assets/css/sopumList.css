@@ -179,10 +179,16 @@
 .list {
     margin-bottom: 40px;
     border-radius: 10px;
-    border-bottom: 1px solid #999;
-    border-right: 1px solid #999;
+
     padding: 15px 20px;
     box-sizing: border-box;
+    transition: all 0.3s;
+
+}
+.list:hover {
+    /* border-bottom: 1px solid #999;
+    border-right: 1px solid #999; */
+    box-shadow: 5px 5px 30px 3px #4461f22f;
 }
 
 .list_title {
