@@ -94,13 +94,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 30px;
+    padding: 50px 30px;
     box-sizing: border-box;
 }
 .list .card {
-    width: 32%;
-    margin-bottom: 20px;
+    width: 31%;
+    margin-bottom: 30px;
     border-radius: 20px;
+    transition: all 0.3s;
+}
+.list .card:hover {
+    box-shadow: 5px 5px 30px 3px #4461f22f;
 }
 .list .card img {
     width: 100%;
