@@ -76,11 +76,11 @@
     margin-bottom: 20px;
 }
 
-form input {
+.qna__btn form input {
     display: none;
 }
 
-form button {
+.qna__btn form button {
     font-weight: 600;
     font-size: 1.1rem;
     background-color: #fff;
