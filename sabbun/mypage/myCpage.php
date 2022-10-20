@@ -2,6 +2,13 @@
     include "../connect/connect.php";
     include "../connect/session.php";
     include "../connect/sessionCheck.php";
+
+    $myMemberID = $_SESSION['myMemberID'];
+    $myPageSql = "SELECT * FROM myBMember WHERE myMemberID = {$myMemberID}";
+    $myPageResult = $connect -> query($myPageSql);
+    $myPageInfo = $myPageResult -> fetch_array(MYSQLI_ASSOC);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -31,8 +38,8 @@
         <section id="myPage" class="nanum container">
             <div class="myPage__header">
                 <div class="right">
-                    <img src="../html/assets/img/cardSlider__bg02.jpg" alt="">
-                    <h2><?=$sql['youName']?> 님</h2>
+                    <img src="../html/assets/img/profile/<?=$myPageInfo['blogImgFile']?>" alt="">
+                    <h2><?=$myPageInfo['youName']?> 님</h2>
                     <a href="myPageSetting.php"></a>
                 </div>
                 <div class="left">

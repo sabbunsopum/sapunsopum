@@ -179,7 +179,7 @@
 .list {
     margin-bottom: 40px;
     border-radius: 10px;
-
+    border: 1px solid #eee;
     padding: 15px 20px;
     box-sizing: border-box;
     transition: all 0.3s;

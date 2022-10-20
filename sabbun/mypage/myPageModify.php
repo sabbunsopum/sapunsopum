@@ -1,12 +1,18 @@
 <?php 
-include "../connect/connect.php";
-include "../connect/session.php";
-include "../connect/sessionCheck.php";
+    include "../connect/connect.php";
+    include "../connect/session.php";
+    include "../connect/sessionCheck.php";
 
     $youPhone = $_POST['youPhone'];
     $youPass = $_POST['youPass'];
     $myMemberID = $_SESSION['myMemberID'];
     $youEmail = $_SESSION['youEmail'];
+
+    // 데이터 가져오기 --> 유효성 검사 --> 데이터 조회 --> 로그인
+    $sql = "SELECT myMemberID, youName, youNickName, youEmail, youPass, youPhone, blogImgFile, blogImgSize FROM myBMember WHERE myMemberID = {$myMemberID}";
+    $result = $connect -> query($sql);
+    $info = $result -> fetch_array(MYSQLI_ASSOC);
+
 
     function msg($alert){
         echo "<p class='alert'>{$alert}</p>";
@@ -15,46 +21,21 @@ include "../connect/sessionCheck.php";
    // 비밀번호 검사
 
    if($info['youPass'] == $youPass){
-        msg("비밀번호 일치");
-        
+        echo "비밀번호 일치";
+        $sql = "UPDATE myBMember SET youPhone = '{$youPhone}' WHERE myMemberID = '{$myMemberID}'";
+        $connect -> query($sql);  
 
     }else{
-        msg("비밀번호가 틀렸습니다.");
+        echo "<script>alert('비밀번호가 틀렸습니다.'); history.back(1)</script>";
         exit;
     }
 
   
-
-    // 데이터 가져오기 --> 유효성 검사 --> 데이터 조회 --> 로그인
-    $sql = "SELECT myMemberID, youName, youNickName, youEmail, youPass, youPhone, blogImgFile, blogImgSize FROM myBMember WHERE myMemberID = {$myMemberID}";
-    $result = $connect -> query($sql);
-    $info = $result -> fetch_array(MYSQLI_ASSOC);
-?>
-
-
-
-<?php
-     
-
-   
-    
-    
-    
-
     $blogImgFile = $_FILES['blogFile'];
     $blogImgSize = $_FILES['blogFile']['size'];
     $blogImgType = $_FILES['blogFile']['type'];
     $blogImgName = $_FILES['blogFile']['name'];
     $blogImgTmp = $_FILES['blogFile']['tmp_name'];
-
-
-    // if($memberInfo['youPass'] === $youPass && $memberInfo['myMemberID'] === $myMemberID){
-    //     $sql = "UPDATE myBoard SET boardTitle = '{$boardTitle}', boardContents = '{$boardContents}' WHERE myBoardID = '{$myBoardID}'";
-    //     $connect -> query($sql);        
-    // }else{
-    //     echo"<script>alert('비밀번호가 일치하지 않습니다. 다시 한번 확인해주세요!!')</script>";
-    // }
-    
 
 
     //이미지 파일명 확인
@@ -78,6 +59,7 @@ include "../connect/sessionCheck.php";
         }
     }else {
         echo "<p>프로필 사진을 첨부하지 않았습니다. <br> 마이 페이지에서 추가 해주세요!</p>";
+        
     }
 
     //이미지 사이즈 확인
@@ -89,7 +71,17 @@ include "../connect/sessionCheck.php";
    
     
 
-    header("Location: ../main/main.php");
-
 
 ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
+
+<script>
+   
+Swal.fire('회원 정보가 수정 되었습니다.');
+setTimeout(() => {
+        window.location.href = "../main/main.php";
+    }, 2000);
+
+
+</script>

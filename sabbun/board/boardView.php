@@ -173,6 +173,15 @@
     </main>
     <!-- //main -->
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
+    <script>
+        Swal.fire({
+          'Alert가 실행되었습니다.',         // Alert 제목
+          '이곳은 내용이 나타나는 곳입니다.',  // Alert 내용
+          'success',                         // Alert 타입
+        });
+    </script>
     <?php include "../include/footer.php" ?>
     <!-- // footer -->
 </body>
