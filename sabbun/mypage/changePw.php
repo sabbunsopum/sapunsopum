@@ -124,7 +124,7 @@
                 <p>
                     아래 정보를 입력해주세요!
                 </p>
-                <form name="changePw" action="changePwCheck copy.php" method="post" onSubmit="return pwCheck()">
+                <form name="changePw" action="changePwCheck.php" method="post" onSubmit="return pwCheck()">
                     <fieldset>
                         <legend>비밀번호 변경 입력폼</legend>
                         <div>
