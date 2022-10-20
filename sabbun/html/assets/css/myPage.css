@@ -105,6 +105,7 @@
 }
 .list .card:hover {
     box-shadow: 5px 5px 30px 3px #4461f22f;
+    scale: 1.02;
 }
 .list .card img {
     width: 100%;
