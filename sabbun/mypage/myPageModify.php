@@ -69,9 +69,13 @@
     }
 
    
-    echo "<script>alert('회원 정보가 수정 되었습니다.');</script>";
-
-    header("Location: ../main/main.php");
+    
 
 
 ?>
+<script>
+alert('회원 정보가 수정 되었습니다.');
+
+location.href = "../main/main.php";
+
+</script>
