@@ -2,19 +2,15 @@
     include "../connect/connect.php";
     include "../connect/session.php";
     include "../connect/sessionCheck.php";
-?>
 
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>비밀번호 변경 체크</title>
-</head>
-<body>
-        
-</body>
+    $youPass = $_POST['youPass'];
+    $myMemberID = $_SESSION['myMemberID'];
+
+    $sql = "UPDATE myBMember SET youPass = '{$youPass}' WHERE myMemberID = '{$myMemberID}'";
+    $connect -> query($sql);
+    
+?>
 <script>
-    location.href="../php/changePwSave.php";
+    alert("수정 되었습니다. ");
+    location.href = "myPageSetting.php";
 </script>
-</html>
