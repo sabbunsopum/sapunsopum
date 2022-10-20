@@ -94,6 +94,7 @@
                                     <label for="blogFile">프로필 이미지</label>
                                     <input type="file" name="blogFile" id="blogFile" accept=".jpg, .jpeg, .png, .gif" placeholder="jpg, jpeg, png, gif 파일만 넣어주세요!" >
                                 </div>
+                              
                                 <div class="youGd">
                                     <label for="youGender">성별</label>
                                     <div class="btn men">
