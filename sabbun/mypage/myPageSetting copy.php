@@ -64,7 +64,7 @@
                                 <div class="overlap">
                                     <label for="youPass">비밀번호</label>
                                     <input type="password" id="youPass" name="youPass" maxlength="20"
-                                        placeholder="<?=$memberInfo{'youPass'}?>" required>
+                                        placeholder="" required>
                                     <a class="check" href="changePw.php">변경하기</a>
                                     <p class="msg" id="youPassComment">
                                         <!-- * 비밀번호는 특수기호, 숫자가 필수로 들어가야 합니다. -->
@@ -81,7 +81,9 @@
                                 <div>
                                     <label for="youPhone">휴대폰 번호</label>
                                     <input type="text" id="youPhone" name="youPhone" maxlength="15"
-                                        placeholder="<?=$memberInfo{'youPhone'}?>" required>
+                                        placeholder="<?=$memberInfo{'youPhone'}?>" value="<?=$memberInfo{'youPhone'}?>" required>
+                                    
+                                    </input>
                                     <p class="msg" id="youPhoneComment">
                                         <!-- * 형식이 맞지 않습니다.(010-0000-0000) -->
                                     </p>
@@ -90,7 +92,7 @@
                             <div class="moreover">
                                 <div>
                                     <label for="blogFile">프로필 이미지</label>
-                                    <input type="file" name="blogFile" id="blogFile" accept=".jpg, .jpeg, .png, .gif" placeholder="jpg, jpeg, png, gif 파일만 넣어주세요!">
+                                    <input type="file" name="blogFile" id="blogFile" accept=".jpg, .jpeg, .png, .gif" placeholder="jpg, jpeg, png, gif 파일만 넣어주세요!" >
                                 </div>
                                 <div class="youGd">
                                     <label for="youGender">성별</label>

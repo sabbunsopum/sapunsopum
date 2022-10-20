@@ -6,6 +6,7 @@
 
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,9 +22,13 @@
     <link rel="stylesheet" href="../html/assets/css/change.css">
 
     <style>
-        
+    body {
+        height: 100%;
+        overflow: hidden;
+    }
     </style>
 </head>
+
 <body>
     <?php include "../include/header.php" ?>
     <!-- // header -->
@@ -41,31 +46,43 @@
                             <div class="youInfo">
                                 <div class="disabled">
                                     <label for="youName">이름</label>
-                                    <input type="text" id="youName" name="youName" maxlength="5" placeholder="<?=$member{'youName'}?>" disabled>
+                                    <input type="text" id="youName" name="youName" maxlength="5"
+                                        placeholder="<?=$member{'youName'}?>" disabled>
                                 </div>
                                 <div class="disabled">
                                     <label for="youNickName">닉네임</label>
-                                    <input type="text" id="youNickName" name="youNickName" placeholder="<?=$member{'youNickName'}?>" disabled>
+                                    <input type="text" id="youNickName" name="youNickName"
+                                        placeholder="<?=$member{'youNickName'}?>" disabled>
                                 </div>
                                 <div class="disabled">
                                     <label for="youEmail">이메일</label>
-                                    <input type="email" id="youEmail" name="youEmail" placeholder="<?=$member{'youEmail'}?>" disabled>
+                                    <input type="email" id="youEmail" name="youEmail"
+                                        placeholder="<?=$member{'youEmail'}?>" disabled>
                                 </div>
                                 <div class="overlap">
                                     <label for="youPass">비밀번호</label>
-                                    <input type="password" id="youPass" name="youPass" maxlength="20" placeholder="비밀번호를 적어주세요!" required>
+                                    <input type="password" id="youPass" name="youPass" maxlength="20"
+                                        placeholder="비밀번호를 적어주세요!" required>
                                     <a class="check" href="changePW.php">변경하기</a>
-                                    <p class="msg" id="youPassComment"><!-- * 비밀번호는 특수기호, 숫자가 필수로 들어가야 합니다. --></p>
+                                    <p class="msg" id="youPassComment">
+                                        <!-- * 비밀번호는 특수기호, 숫자가 필수로 들어가야 합니다. -->
+                                    </p>
                                 </div>
                                 <div>
                                     <label for="youPassC">비밀번호 확인</label>
-                                    <input type="password" id="youPassC" name="youPassC" maxlength="20" placeholder="비밀번호를 한번 더 적어주세요!" required>
-                                    <p class="msg" id="youPassCComment"><!-- * 비밀번호가 일치하지 않습니다. --></p>
+                                    <input type="password" id="youPassC" name="youPassC" maxlength="20"
+                                        placeholder="비밀번호를 한번 더 적어주세요!" required>
+                                    <p class="msg" id="youPassCComment">
+                                        <!-- * 비밀번호가 일치하지 않습니다. -->
+                                    </p>
                                 </div>
                                 <div>
                                     <label for="youPhone">휴대폰 번호</label>
-                                    <input type="text" id="youPhone" name="youPhone" maxlength="15" placeholder="휴대폰 번호(010-0000-0000)를 적어주세요!" required>
-                                    <p class="msg" id="youPhoneComment"><!-- * 형식이 맞지 않습니다.(010-0000-0000) --></p>
+                                    <input type="text" id="youPhone" name="youPhone" maxlength="15"
+                                        placeholder="휴대폰 번호(010-0000-0000)를 적어주세요!" required>
+                                    <p class="msg" id="youPhoneComment">
+                                        <!-- * 형식이 맞지 않습니다.(010-0000-0000) -->
+                                    </p>
                                 </div>
                             </div>
                             <div class="moreover">
@@ -89,7 +106,7 @@
                         </div>
                     </fieldset>
                 </form>
-            </div>   
+            </div>
         </section>
     </main>
 
@@ -107,16 +124,18 @@
                 <p>
                     아래 정보를 입력해주세요!
                 </p>
-                <form name="changePw" action="changePwCheck.php" method="post" onSubmit="return pwCheck()">
+                <form name="changePw" action="changePwCheck copy.php" method="post" onSubmit="return pwCheck()">
                     <fieldset>
                         <legend>비밀번호 변경 입력폼</legend>
                         <div>
                             <label for="youPhone" class="ir">변경할 비밀번호</label>
-                            <input type="password" name="youPass" id="youPass" placeholder="변경할 비밀번호를 입력해주세요!" class="input__style" required>
+                            <input type="password" name="youPass" id="youPass" placeholder="변경할 비밀번호를 입력해주세요!"
+                                class="input__style" required>
                         </div>
                         <div>
                             <label for="youPhone" class="ir">변경 비밀번호 확인</label>
-                            <input type="password" name="youPassC" id="youPassC" placeholder="변경할 비밀번호를 한번 더 입력해주세요!" class="input__style" required>
+                            <input type="password" name="youPassC" id="youPassC" placeholder="변경할 비밀번호를 한번 더 입력해주세요!"
+                                class="input__style" required>
                             <p class="msg" id="youPassCComment">
                         </div>
                         <button type="submit" class="btn input_phone">입력</button>
@@ -131,19 +150,47 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script>
-        const changePw = document.querySelector(".changepw__popup");
-        const findidClose2 = document.querySelector(".changepw__popup .cb2");
+    const changePw = document.querySelector(".changepw__popup");
+    const findidClose2 = document.querySelector(".changepw__popup .cb2");
 
-        findidClose2.addEventListener("click", ()=>{
-            changePw.classList.remove("open");
-        });
+    findidClose2.addEventListener("click", () => {
+        changePw.classList.remove("open");
+        location.replace("myPageSetting.php");
+    });
 
-        function pwCheck(){
-            if($("#youPass").val() !== $("#youPassC").val()){
-                alert("비밀번호가 동일하지않습니다.");
-                return false;
-            }
+    function pwCheck() {
+        //비밀번호 공백 검사
+        if ($("#youPass").val() == "") {
+            $("#youPassComment").text("비밀번호를 입력해주세요!");
+            return false;
         }
+        //비밀번호 유효성 검사
+        let getYouPass = $("#youPass").val(); 
+        let getYouPassNum = getYouPass.search(/[0-9]/g);
+        let getYouPassEng = getYouPass.search(/[a-z]/ig);
+        let getYouPassSpe = getYouPass.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/ig);
+        if (getYouPass.length < 8 || getYouPass < 20) {
+            $("#youPassComment").text("8~20자리 이내로 입력해주세요~");
+            return false;
+        } else if (getYouPass.search(/\s/) != -1) {
+            $("#youPassComment").text("비밀번호는 공백없이 입력해주세요!");
+            return false;
+        } else if (getYouPassNum < 0 || getYouPassEng < 0 || getYouPassSpe < 0) {
+            $("#youPassComment").text("영문, 숫자, 특수문자를 혼합하여 입력해주세요!");
+            return false;
+        }
+        //확인 비밀번호 공백 검사
+        if ($("#youPassC").val() == "") {
+            $("#youPassCComment").text("확인 비밀번호를 입력해주세요!");
+            return false;
+        }
+        //비밀번호 동일한지 체크
+        if ($("#youPass").val() !== $("#youPassC").val()) {
+            $("#youPassCComment").text("비밀번호가 동일하지 않습니다.");
+            return false;
+        }
+    }
     </script>
 </body>
+
 </html>
