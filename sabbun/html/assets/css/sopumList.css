@@ -213,6 +213,8 @@
 }
 .list__img a img {
     border-radius: 10px;
+    width: 275px;
+    height: 270px;
 }
 
 .list__icon img {
@@ -261,7 +263,7 @@
 
 
 .Post__title {
-        max-width: 1400px;
+    max-width: 1400px;
     margin: 0 auto;
     margin-bottom: 30px;
 
@@ -293,7 +295,7 @@
 }
 
 .postWrite {
-    width: 1160px;
+    width: 1120px;
     /* height: 1000px; */
     margin: 0 auto;
     padding: 70px;
@@ -313,7 +315,11 @@
     width: 472px;
     height: 472px;
     background: #F7F7F7;
+    border-radius: 10px;
 
+}
+.img img {
+    border-radius: 10px;
 }
 
 .img__button{
@@ -355,11 +361,12 @@ margin-top: 185px;
 }
 
 .shop__info > div > input {
-    width: 374px;
-    height: 30px;
+    max-width: 374px;
+    min-width: 374px;
+    min-height: 30px;
     border: 2px solid #E9E9E9;
     background: #dadada;
-    margin-left: 30px;
+    margin-left: 20px;
     margin-bottom: 20px;
     padding: 10px;
     box-sizing: border-box;
@@ -393,5 +400,129 @@ margin-top: 185px;
 }
 
 .tag {
-    border-top: 1px solid #666;
+    border-top: 1px solid #d9d9d9;
+    margin-top: 50px;
+}
+.tag__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+    display: block;
+}
+.tag label{
+    display: block;
+    border: 0px;
+    
+}
+.tag input {
+    min-width: 40px;
+    height: 30px;
+    border: 0px;
+    border-radius: 50px;
+    background: #c7c7c7;
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.tag input::placeholder {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.post__box .btn {
+    width: 100%;
+    padding: 12px 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #999;
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin: 20px 0;
+    transition: all 0.3s;
+}
+
+.post__box .btn:hover {
+    background-color: #64789f;
+}
+
+/* sopumListView */
+
+.info {
+    text-align: left;
+    display: inline-block;
+    max-width: 374px;
+    min-width: 374px;
+    min-height: 30px;
+    border: 2px solid #E9E9E9;
+    background: #fff;
+    color: #666;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 5px 20px;
+    box-sizing: border-box;
+}
+.tag__desc {
+    display: inline-block;
+    min-width: 40px;
+    height: 30px;
+    border-radius: 50px;
+    background: #c7c7c7;
+    margin-top: 10px;
+    padding: 7px 10px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #4461F2;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.post__btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.post__box .post__btn .post__btn__left .btn1 {
+    width: 130px;
+    height: 40px;
+    
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #7B7468;
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin: 20px 0;
+    transition: all 0.3s;
+}
+
+.post__box .post__btn .post__btn__right .btn2 {
+    width: 130px;
+    height: 40px;
+    
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #EC5656;
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin: 20px 0;
+    transition: all 0.3s;
+}
+.post__box .post__btn .post__btn__right .btn3 {
+    width: 130px;
+    height: 40px;
+    
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #64789F;
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin: 20px 0;
+    transition: all 0.3s;
 }
