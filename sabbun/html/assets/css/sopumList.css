@@ -294,7 +294,7 @@
 
 .postWrite {
     width: 1160px;
-    height: 1000px;
+    /* height: 1000px; */
     margin: 0 auto;
     padding: 70px;
     box-sizing: border-box;
@@ -390,4 +390,8 @@ margin-top: 185px;
     float: right;
     padding: 20px;
     box-sizing: border-box;
+}
+
+.tag {
+    border-top: 1px solid #666;
 }
