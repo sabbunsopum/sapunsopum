@@ -116,7 +116,17 @@
                                 </div>
 
                                 <div class="shop__map">
-                                    <div class="map ir">지도 들어갈 자리</div>
+                                    <div id="map" style="width:500px;height:400px;"></div>
+                                    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9d3637cebd20b21457c4e0c648d59d32"></script>
+                                    <script>
+                                        var container = document.getElementById('map');
+                                        var options = {
+                                            center: new kakao.maps.LatLng(33.450701, 126.570667),
+                                            level: 3
+                                        };
+                                
+                                        var map = new kakao.maps.Map(container, options);
+                                    </script>
                                 </div>
                             </div>
                         </div>
