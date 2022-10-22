@@ -370,6 +370,7 @@ margin-top: 185px;
     margin-bottom: 20px;
     padding: 10px;
     box-sizing: border-box;
+    border-radius: 5px;
 }
 
 .map {
@@ -409,19 +410,17 @@ margin-top: 185px;
     margin-top: 10px;
     display: block;
 }
-.tag label{
-    display: block;
-    border: 0px;
-    
-}
 .tag input {
-    min-width: 40px;
+    font-size: 14px;
+    min-width: 10px;
     height: 30px;
     border: 0px;
     border-radius: 50px;
+    color: #fff;
     background: #c7c7c7;
     margin-top: 10px;
-    padding: 10px;
+    padding: 0 3px;
+    text-align: center;
     box-sizing: border-box;
 }
 .tag input::placeholder {
@@ -430,6 +429,7 @@ margin-top: 185px;
     font-size: 14px;
     font-weight: 500;
 }
+
 
 .post__box .btn {
     width: 100%;
@@ -464,6 +464,7 @@ margin-top: 185px;
     margin-bottom: 20px;
     padding: 5px 20px;
     box-sizing: border-box;
+    border-radius: 5px;
 }
 .tag__desc {
     display: inline-block;
