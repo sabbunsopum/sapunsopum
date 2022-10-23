@@ -194,6 +194,32 @@
     color: #333;
     margin-bottom: 30px;
 }
+.myTip .more {
+	text-align: center;
+	margin-top: 50px;
+	position: relative;
+}
+.myTip .more a {
+	color: #999;
+	transition: all 0.3s;
+}
+.myTip .more a:hover {
+	color: #000;
+}
+.myTip .more span {
+	position: absolute;
+	/* display: block; */
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%);
+	margin: 0 auto;
+	width: 84px;
+	height: 32px;
+	background-image: url(../img/more__icon.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0.5;
+}
 .myTip__inner {
 	width: 98%;
 	margin: 0 auto;
