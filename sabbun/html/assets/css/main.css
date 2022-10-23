@@ -197,22 +197,21 @@
 .myTip .more {
 	text-align: center;
 	margin-top: 50px;
-	position: relative;
 }
 .myTip .more a {
 	color: #999;
 	transition: all 0.3s;
+	position: relative;
+	padding-right: 21px;
 }
 .myTip .more a:hover {
 	color: #000;
 }
-.myTip .more span {
+.myTip .more a::before {
 	position: absolute;
-	/* display: block; */
-	left: 50%;
-	top: 50%;
-	transform: translateX(-50%);
-	margin: 0 auto;
+	content: '';
+	right: 0;
+	top: 10px;
 	width: 84px;
 	height: 32px;
 	background-image: url(../img/more__icon.svg);
@@ -259,5 +258,82 @@
 }
 .tipBox p:hover {
 	box-shadow: 5px 5px 30px 3px #4461f22f;
+}
+
+/* goto */
+#goto {
+	margin-top: 170px;
+    margin-bottom: 170px;
+	padding: 0 10rem;
+}
+.goto h2 {
+	font-size: 28px;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 50px;
+}
+.goto__inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.goto__inner .box {
+	text-align: center;
+	box-shadow: 5px 5px 30px 3px #4461f22f;
+	border-radius: 20px;
+	box-sizing: border-box;
+	margin-bottom: 40px;
+	padding: 10px;
+	padding-bottom: 40px;
+	transition: all 0.3s;
+}
+.goto__inner .box:hover {
+	transform: translateY(-5px);
+	box-shadow: 5px 5px 30px 3px #4461f26e;
+}
+.goto__inner .box:hover a::before {
+	rotate: 360deg;
+}
+.goto__inner .box img {
+	width: 200px;
+	padding: 20px;
+}
+.goto__inner .box h3 {
+	font-size: 22px;
+	font-weight: 700;
+	margin: 5px 0 20px 0;
+}
+.goto__inner .box a {
+	font-weight: 600;
+	color: #333;
+	padding-right: 23px;
+	position: relative;
+}
+.goto__inner .box a::before {
+	position: absolute;
+	content: '';
+	top: -1px;
+	right: 0;
+	width: 20px;
+	height: 20px;
+	background-image: url(../img/goto__icon.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: all 1s;
+}
+.goto__inner .b1 {
+	width: 66%;
+}
+.goto__inner .b2 {
+	width: 30%;
+}
+.goto__inner .b3 {
+	width: 30%;
+}
+.goto__inner .b4 {
+	width: 66%;
+}
+.goto__inner .b4 img {
+	scale: 0.9;
 }
 
