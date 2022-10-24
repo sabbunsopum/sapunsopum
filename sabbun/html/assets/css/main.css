@@ -84,7 +84,11 @@
 	height: 400px;
     overflow: hidden;
     border-radius: 20px;
+	transition: all 0.3s;
     position: relative;
+}
+.store .image:hover img {
+    transform: scale(1.1);
 }
 .image img {
     filter: grayscale(100%);
@@ -306,8 +310,12 @@
 	transform: translateY(-5px);
 	box-shadow: 5px 5px 30px 3px #4461f26e;
 }
+.goto__inner .box:hover a {
+	color: #333;
+}
 .goto__inner .box:hover a::before {
 	rotate: 360deg;
+	opacity: 1;
 }
 .goto__inner .box img {
 	width: 200px;
@@ -320,7 +328,7 @@
 }
 .goto__inner .box a {
 	font-weight: 600;
-	color: #333;
+	color: #999;
 	padding-right: 23px;
 	position: relative;
 }
@@ -334,6 +342,7 @@
 	background-image: url(../img/goto__icon.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	opacity: 0.3;
 	transition: all 1s;
 }
 .goto__inner .b1 {
