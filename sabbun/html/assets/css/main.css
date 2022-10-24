@@ -27,6 +27,7 @@
     background-color:transparent;
     color: #ccc;
 	position: relative;
+	cursor: pointer;
 }
 .slider__tab li.active button {
 	color: #000;
