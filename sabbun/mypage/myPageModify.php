@@ -55,6 +55,7 @@
 
             } else {
                 echo "<script>alert('지원하는 이미지 파일이 아닙니다.'); history.back(1)</script>";
+                exit;
             }
         }
     }else {
@@ -67,7 +68,7 @@
         echo "<script>alert('이미지 용량이 1메가를 초과했습니다.'); history.back(1)</script>";
         exit;
     }else{
-        "<script>alert('회원 정보가 수정됐습니다.'); history.back(1)</script>";
+        "<script>alert('회원 정보가 수정됐습니다.');</script>";
         Header("Location: ../main/main.php");
     }
 
