@@ -66,29 +66,19 @@
     display: none;
 }
 
-.list {
+.list,
+.list__like {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     box-sizing: border-box;
-    /* padding: 35px;
-    border-radius: 20px;
-    box-shadow: 5px 5px 30px 3px #4461f22f;
-    margin-bottom: 40px; */
-}
-
-.list h2 {
-    width: 100%;
-    font-size: 24px;
-    font-weight: 800;
-    margin-bottom: 50px;
 }
 
 .list .card {
     width: 100%;
     height: 200px;
     border-radius: 20px;
-    background-color: #4461f22f;
+    background-color: #fff;
     margin-bottom: 30px;
     border-radius: 20px;
     box-shadow: 5px 5px 30px 3px #4461f22f;
@@ -148,6 +138,107 @@
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+}
+
+.list__like .card {
+    width: 30%;
+    height: 200px;
+    border-radius: 20px;
+    background-color: #4461f22f;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px 3px #4461f22f;
+    margin-bottom: 40px;
+    transition: all 0.3s;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.list__like .card a::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.list__like .card p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #f9fafc65;
+    border-radius: 50%;
+    padding: 10px;
+    color: #f9fafc65;
+    font-size: 18px;
+    font-weight: 800;
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.list__like .card span {
+    position: absolute;
+    right: 5px;
+    bottom: 0px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/like__eyes.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
+
+.list__like .card:hover {
+    transform: translateY(-5px);
+}
+
+.list__like .card a:hover::before {
+    display: block;
+}
+
+.list__like .card a:hover p {
+    color: #F9FAFC;
+    border: 2px solid #F9FAFC;
+}
+
+.list__like .card a:hover span {
+    display: block;
+    animation: wobble 1s infinite;
+}
+
+@keyframes wobble {
+    from {
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+    15% {
+        transform: translate3d(-75%, -50%, 0) rotate3d(0, 0, 1, -5deg);
+    }
+
+    30% {
+        transform: translate3d(-30%, -50%, 0) rotate3d(0, 0, 1, 3deg);
+    }
+
+    45% {
+        transform: translate3d(-65%, -50%, 0) rotate3d(0, 0, 1, -3deg);
+    }
+
+    60% {
+        transform: translate3d(-40%, -50%, 0) rotate3d(0, 0, 1, 2deg);
+    }
+
+    75% {
+        transform: translate3d(-55%, -50%, 0) rotate3d(0, 0, 1, -1deg);
+    }
+
+    to {
+        transform: translate3d(-50%, -50%, 0);
+    }
 }
 
 .myPageModify {
