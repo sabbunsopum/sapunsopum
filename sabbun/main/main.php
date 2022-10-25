@@ -36,7 +36,7 @@
                     <li class="store swiper-slide">
                         <a href="#">
                             <div class="image">
-                                <img src="assets/img/store1.jpg" alt="미미도넛" />
+                                <img src="../html/assets/img/store1.jpg" alt="미미도넛" />
                                 <div>
                                     <p class="tag">
                                         <span>#홍대</span>
@@ -53,7 +53,7 @@
                     <li class="BEST store swiper-slide">
                         <a href="#">
                             <div class="image">
-                                <img src="assets/img/store2.jpg" alt="오브젝트" />
+                                <img src="../html/assets/img/store2.jpg" alt="오브젝트" />
                                 <div>
                                     <p class="tag">
                                         <span>#홍대</span>
@@ -70,7 +70,7 @@
                     <li class="BEST store swiper-slide">
                         <a href="#">
                             <div class="image">
-                                <img src="assets/img/store3.jpg" alt="메이드모먼" />
+                                <img src="../html/assets/img/store3.jpg" alt="메이드모먼" />
                                 <div>
                                     <p class="tag">
                                         <span>#홍대</span>
@@ -87,7 +87,7 @@
                     <li class="NEW store swiper-slide">
                         <a href="#">
                             <div class="image">
-                                <img src="assets/img/store4.jpg" alt="잼머의집" />
+                                <img src="../html/assets/img/store4.jpg" alt="잼머의집" />
                                 <div>
                                     <p class="tag">
                                         <span>#홍대</span>
@@ -104,7 +104,7 @@
                     <li class="BEST store swiper-slide">
                         <a href="#">
                             <div class="image">
-                                <img src="assets/img/store5.jpg" alt="어프어프" />
+                                <img src="../html/assets/img/store5.jpg" alt="어프어프" />
                                 <div>
                                     <p class="tag">
                                         <span>#홍대</span>
@@ -121,7 +121,7 @@
                     <li class="NEW store swiper-slide">
                         <a href="#">
                             <div class="image">
-                                <img src="assets/img/store6.jpg" alt="오월상점" />
+                                <img src="../html/assets/img/store6.jpg" alt="오월상점" />
                                 <div>
                                     <p class="tag">
                                         <span>#홍대</span>
@@ -138,7 +138,7 @@
                     <li class="store swiper-slide">
                         <a href="#">
                             <div class="image">
-                                <img src="assets/img/store7.jpg" alt="알로하거제" />
+                                <img src="../html/assets/img/store7.jpg" alt="알로하거제" />
                                 <div>
                                     <p class="tag">
                                         <span>#거제</span>
@@ -155,7 +155,7 @@
                     <li class="BEST store swiper-slide">
                         <a href="#">
                             <div class="image">
-                                <img src="assets/img/store8.jpg" alt="만두상점" />
+                                <img src="../html/assets/img/store8.jpg" alt="만두상점" />
                                 <div>
                                     <p class="tag">
                                         <span>#제주</span>
@@ -172,7 +172,7 @@
                     <li class="BEST store swiper-slide">
                         <a href="#">
                             <div class="image">
-                                <img src="assets/img/store9.jpg" alt="디자인에이비" />
+                                <img src="../html/assets/img/store9.jpg" alt="디자인에이비" />
                                 <div>
                                     <p class="tag">
                                         <span>#제주</span>
@@ -189,7 +189,7 @@
                     <li class="BEST store swiper-slide">
                         <a href="#">
                             <div class="image">
-                                <img src="assets/img/store10.jpg" alt="수풀" />
+                                <img src="../html/assets/img/store10.jpg" alt="수풀" />
                                 <div>
                                     <p class="tag">
                                         <span>#제주</span>
@@ -206,7 +206,7 @@
                     <li class="NEW store swiper-slide">
                         <a href="#">
                             <div class="image">
-                                <img src="assets/img/store11.jpg" alt="메리아일랜드" />
+                                <img src="../html/assets/img/store11.jpg" alt="메리아일랜드" />
                                 <div>
                                     <p class="tag">
                                         <span>#제주</span>
@@ -223,7 +223,7 @@
                     <li class="store swiper-slide">
                         <a href="#">
                             <div class="image">
-                                <img src="assets/img/store12.jpg" alt="블리홈" />
+                                <img src="../html/assets/img/store12.jpg" alt="블리홈" />
                                 <div>
                                     <p class="tag">
                                         <span>#상수동</span>
