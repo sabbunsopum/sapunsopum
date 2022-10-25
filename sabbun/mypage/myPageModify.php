@@ -66,6 +66,9 @@
     if($blogImgSize > 1000000){
         echo "<script>alert('이미지 용량이 1메가를 초과했습니다.'); history.back(1)</script>";
         exit;
+    }else{
+        "<script>alert('회원 정보가 수정됐습니다.'); history.back(1)</script>";
+        Header("Location: ../main/main.php");
     }
 
    
@@ -77,11 +80,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
 
 <script>
-   
-Swal.fire('회원 정보가 수정 되었습니다.');
-setTimeout(() => {
-        window.location.href = "../main/main.php";
-    }, 2000);
+
 
 
 </script>
