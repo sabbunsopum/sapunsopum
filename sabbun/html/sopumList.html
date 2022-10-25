@@ -96,7 +96,7 @@
                         </div>
                         <div class="list__icon">
                             <span class="ir heart">
-                                <img src="../html/assets/img/List_heart.svg" alt="">
+
                                 heart</span>
                             <span class="ir share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
@@ -114,7 +114,7 @@
                         </div>
                         <div class="list__icon">
                             <span class="ir heart">
-                                <img src="../html/assets/img/List_heart.svg" alt="">
+                                
                                 heart</span>
                             <span class="ir share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
@@ -131,7 +131,7 @@
                         </div>
                         <div class="list__icon">
                             <span class="ir heart">
-                                <img src="../html/assets/img/List_heart.svg" alt="">
+                                
                                 heart</span>
                             <span class="ir share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
@@ -148,7 +148,7 @@
                         </div>
                         <div class="list__icon">
                             <span class="ir heart">
-                                <img src="../html/assets/img/List_heart.svg" alt="">
+                                
                                 heart</span>
                             <span class="ir share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
@@ -165,7 +165,7 @@
                         </div>
                         <div class="list__icon">
                             <span class="ir heart">
-                                <img src="../html/assets/img/List_heart.svg" alt="">
+                                
                                 heart</span>
                             <span class="ir share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
@@ -182,7 +182,7 @@
                         </div>
                         <div class="list__icon">
                             <span class="ir heart">
-                                <img src="../html/assets/img/List_heart.svg" alt="">
+                                
                                 heart</span>
                             <span class="ir share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
@@ -199,7 +199,7 @@
                         </div>
                         <div class="list__icon">
                             <span class="ir heart">
-                                <img src="../html/assets/img/List_heart.svg" alt="">
+                                
                                 heart</span>
                             <span class="ir share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
@@ -216,7 +216,7 @@
                         </div>
                         <div class="list__icon">
                             <span class="ir heart">
-                                <img src="../html/assets/img/List_heart.svg" alt="">
+                                
                                 heart</span>
                             <span class="ir share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
@@ -233,7 +233,7 @@
                         </div>
                         <div class="list__icon">
                             <span class="ir heart">
-                                <img src="../html/assets/img/List_heart.svg" alt="">
+                                
                                 heart</span>
                             <span class="ir share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
@@ -250,7 +250,7 @@
                         </div>
                         <div class="list__icon">
                             <span class="ir heart">
-                                <img src="../html/assets/img/List_heart.svg" alt="">
+                                
                                 heart</span>
                             <span class="ir share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
@@ -267,7 +267,7 @@
                         </div>
                         <div class="list__icon">
                             <span class="ir heart">
-                                <img src="../html/assets/img/List_heart.svg" alt="">
+                                
                                 heart</span>
                             <span class="ir share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
@@ -284,7 +284,7 @@
                         </div>
                         <div class="list__icon">
                             <span class="ir heart">
-                                <img src="../html/assets/img/List_heart.svg" alt="">
+                                
                                 heart</span>
                             <span class="ir share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
@@ -385,6 +385,17 @@
         </div>
 
     </footer>
+
+    <script>
+        const LikeBtn = document.querySelectorAll(".heart");
+
+        LikeBtn.forEach((e)=>{
+            e.addEventListener("click", () => {
+                e.classList.toggle("red")
+            })
+        })
+
+    </script>
 </body>
 
 </html>

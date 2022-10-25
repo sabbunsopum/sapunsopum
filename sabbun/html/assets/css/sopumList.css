@@ -240,15 +240,23 @@
 }
 
 .heart {
+    background: url(../img/LikeSplite.svg);
     cursor: pointer;
     display: inline-block;
-    margin-left: 197px;
+    margin-left: 200px;
+    width: 26px;
+    height: 26px;
+}
+.heart.red {
+    background: url(../img/LikeSplite.svg);
+    background-position: -26px 0;
+    transition: all 0.3 ease;
 }
 
 .share {
     cursor: pointer;
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 15px;
 
 }
 
@@ -416,7 +424,7 @@
 
 .tag {
     border-top: 1px solid #d9d9d9;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .tag__title {
@@ -545,4 +553,8 @@
     font-size: 18px;
     margin: 20px 0;
     transition: all 0.3s;
+}
+
+.list__icon {
+    float: right;    
 }
