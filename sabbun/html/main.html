@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>사뿐소품</title>
-    
+
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/reset.css">
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/js/test/swiper.min.css">
 </head>
+
 <body>
     <header id="headerType" class="header__wrap nanum">
         <div class="header__inner">
@@ -41,7 +43,8 @@
                 <form action="headerSearch.php" name="headerSearch" method="get">
                     <fieldset>
                         <legend>검색 영역</legend>
-                        <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !" aria-label="search" required>
+                        <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !"
+                            aria-label="search" required>
                         <button type="submit" class="searchBtn">
                             <img src="assets/img/search_icon.svg" alt="검색버튼">
                         </button>
@@ -327,7 +330,7 @@
                     <span>😶‍🌫️</span>
                 </div>
             </div>
-            <div class="more"><a href="tip.html">더보기</a></div>
+            <div class="more"><a href="myTip.html">더보기</a></div>
         </section>
         <!-- // myTip -->
 
@@ -407,9 +410,9 @@
     </footer>
     <!-- // footer -->
 
-    
 
-    
+
+
 </body>
 
 <script src="assets/js/test/jquery-3.4.1.min.js"></script>
@@ -474,21 +477,21 @@
     }
 </script>
 <script>
-    $(window).scroll(function(){
+    $(window).scroll(function () {
         var scroll = $(this).scrollTop(),
             scrollVal = scroll / 1.3,
             scrollTxt = $('.intro__moveText');
-        
-        TweenMax.to(scrollTxt, .5, {x:-scrollVal})
+
+        TweenMax.to(scrollTxt, .5, { x: -scrollVal })
     });
 </script>
 <script>
     // myTip
-    function scroll(){
+    function scroll() {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.screenY;
 
         document.querySelectorAll(".tipBox").forEach(item => {
-            if(scrollTop > item.offsetTop - window.innerHeight/2){
+            if (scrollTop > item.offsetTop - window.innerHeight / 2) {
                 item.classList.add("show");
             }
         });
@@ -504,7 +507,7 @@
         let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
 
         // 02
-        if(scrollTop >= (document.body.scrollHeight - window.innerHeight)){
+        if (scrollTop >= (document.body.scrollHeight - window.innerHeight)) {
             document.querySelector(".goTop").classList.add("show");
         } else {
             document.querySelector(".goTop").classList.remove("show");
@@ -513,8 +516,9 @@
     });
 
     document.querySelector(".goTop").addEventListener("click", () => {
-        window.scrollTo({left: 0, top: 0, behavior: "smooth"});
+        window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
     });
 
 </script>
+
 </html>

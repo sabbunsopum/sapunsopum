@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>사뿐소품</title>
-    
+
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/reset.css">
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/myPage2.css">
 </head>
+
 <body>
     <header id="headerType" class="header__wrap nanum">
         <div class="header__inner">
@@ -40,7 +42,8 @@
                 <form action="headerSearch.php" name="headerSearch" method="get">
                     <fieldset>
                         <legend>검색 영역</legend>
-                        <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !" aria-label="search" required>
+                        <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !"
+                            aria-label="search" required>
                         <button type="submit" class="searchBtn">
                             <img src="assets/img/search_icon.svg" alt="검색버튼">
                         </button>
@@ -72,7 +75,8 @@
                 </div>
                 <div id="myPageModify" class="myPageModify">
                     <div class="myPage__inner">
-                        <form action="myPageModify.php" name="modify" method="post" enctype="multipart/form-data" onsubmit="return modifyChecks()">
+                        <form action="myPageModify.php" name="modify" method="post" enctype="multipart/form-data"
+                            onsubmit="return modifyChecks()">
                             <fieldset>
                                 <legend class="ir">회원정보수정</legend>
                                 <div class="modify__box">
@@ -103,7 +107,8 @@
                                         </div>
                                         <div>
                                             <label for="youPassC">비밀번호 확인</label>
-                                            <input type="password" id="youPassC" name="youPassC" maxlength="20" placeholder="" required>
+                                            <input type="password" id="youPassC" name="youPassC" maxlength="20"
+                                                placeholder="" required>
                                             <p class="msg" id="youPassCComment">
                                                 <!-- * 비밀번호가 일치하지 않습니다. -->
                                             </p>
@@ -111,7 +116,8 @@
                                         <div>
                                             <label for="youPhone">휴대폰 번호</label>
                                             <input type="text" id="youPhone" name="youPhone" maxlength="15"
-                                                placeholder="<?=$memberInfo{'youPhone'}?>" value="<?=$memberInfo{'youPhone'}?>" required>
+                                                placeholder="<?=$memberInfo{'youPhone'}?>"
+                                                value="<?=$memberInfo{'youPhone'}?>" required>
                                             <p class="msg" id="youPhoneComment">
                                                 <!-- * 형식이 맞지 않습니다.(010-0000-0000) -->
                                             </p>
@@ -120,7 +126,9 @@
                                     <div class="moreover">
                                         <div class="youImg">
                                             <label for="blogFile">프로필 이미지</label>
-                                            <input type="file" name="blogFile" id="blogFile" accept=".jpg, .jpeg, .png, .gif" placeholder="jpg, jpeg, png, gif 파일만 넣어주세요!" >
+                                            <input type="file" name="blogFile" id="blogFile"
+                                                accept=".jpg, .jpeg, .png, .gif"
+                                                placeholder="jpg, jpeg, png, gif 파일만 넣어주세요!">
                                         </div>
                                         <div class="youGd">
                                             <label for="youGender">성별</label>
@@ -144,7 +152,7 @@
             <section id="aside">
                 <div class="goWrite">
                     <p>나만 알고 있는 나만의 팁이 있다면 함께 공유하고 새로운 팁도 얻어가세요 !</p>
-                    <a href="tip.html"></a>
+                    <a href="myTip.html"></a>
                 </div>
                 <div class="goMenu">
                     <h3>마이페이지</h3>
@@ -207,8 +215,9 @@
     </footer>
     <!-- // footer -->
 
-    
 
-    
+
+
 </body>
+
 </html>
