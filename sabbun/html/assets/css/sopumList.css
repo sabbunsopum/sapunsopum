@@ -2,6 +2,11 @@
     font-family: 'NanumSquare';
 }
 
+#board {
+    margin-top: 170px;
+    margin-bottom: 250px;
+}
+
 #board h2 {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -18,7 +23,7 @@
 
 .board__inner {
     position: relative;
-    padding: 120px 0 0 0;
+    /* padding: 120px 0 0 0; */
 }
 
 
@@ -119,15 +124,20 @@
     font-weight: 700;
 }
 
+.board__title {
+    padding: 0 10rem;
+}
 
 .board__title h3 {
     display: flex;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 3rem;
     color: #4461f2;
     /* text-shadow: -1px 0 #194330, 0 1px #194330, 1px 0 #194330, 0 -1px #194330; */
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     font-weight: 800;
+    justify-content: center;
+    text-align: center;
 }
 
 .board__title h4 {
@@ -142,7 +152,8 @@
     font-size: 16px;
     color: #555;
     margin-bottom: 90px;
-
+    text-align: center;
+    justify-content: center;
 }
 
 .board__title span {
@@ -185,10 +196,12 @@
     transition: all 0.3s;
 
 }
+
 .list:hover {
     /* border-bottom: 1px solid #999;
     border-right: 1px solid #999; */
     box-shadow: 5px 5px 30px 3px #4461f22f;
+    transform: translateY(-5px);
 }
 
 .list_title {
@@ -197,6 +210,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    margin-top: 7px;
 }
 
 .list_title span {
@@ -211,6 +225,7 @@
 .list__img {
     margin-bottom: 13px;
 }
+
 .list__img a img {
     border-radius: 10px;
     width: 275px;
@@ -221,8 +236,7 @@
     display: block;
     width: 26px;
     height: 26px;
-    margin-top: 20px;
-
+    margin-top: 5px;
 }
 
 .heart {
@@ -251,9 +265,7 @@
     overflow: hidden;
 }
 
-.Post__wrap {
-
-}
+.Post__wrap {}
 
 .Post__inner {
     position: relative;
@@ -302,7 +314,6 @@
     box-sizing: border-box;
     background: #fff;
     border-radius: 10px;
-    
 }
 
 .post__info {
@@ -318,14 +329,16 @@
     border-radius: 10px;
 
 }
+
 .img img {
     border-radius: 10px;
 }
 
-.img__button{
-margin-top: 185px;
+.img__button {
+    margin-top: 185px;
 }
-.img label > p {
+
+.img label>p {
     font-size: 18px;
     font-weight: 500;
     text-align: center;
@@ -337,7 +350,7 @@ margin-top: 185px;
     background: url(../img/imgUploadbutton.svg);
     margin: 15px auto;
     cursor: pointer;
-  }
+}
 
 #file {
     display: none;
@@ -345,7 +358,7 @@ margin-top: 185px;
 
 
 
-.text > div {
+.text>div {
     text-align: right;
     margin-right: 10px;
 }
@@ -360,7 +373,7 @@ margin-top: 185px;
     color: #4461F2;
 }
 
-.shop__info > div > input {
+.shop__info>div>input {
     max-width: 374px;
     min-width: 374px;
     min-height: 30px;
@@ -390,6 +403,7 @@ margin-top: 185px;
     padding: 20px;
     box-sizing: border-box;
 }
+
 .post__share {
     width: 31px;
     height: 31px;
@@ -404,12 +418,14 @@ margin-top: 185px;
     border-top: 1px solid #d9d9d9;
     margin-top: 50px;
 }
+
 .tag__title {
     font-size: 18px;
     font-weight: 600;
     margin-top: 10px;
     display: block;
 }
+
 .tag input {
     font-size: 14px;
     min-width: 10px;
@@ -423,6 +439,7 @@ margin-top: 185px;
     text-align: center;
     box-sizing: border-box;
 }
+
 .tag input::placeholder {
     text-align: center;
     color: #fff;
@@ -466,6 +483,7 @@ margin-top: 185px;
     box-sizing: border-box;
     border-radius: 5px;
 }
+
 .tag__desc {
     display: inline-block;
     min-width: 40px;
@@ -490,7 +508,7 @@ margin-top: 185px;
 .post__box .post__btn .post__btn__left .btn1 {
     width: 130px;
     height: 40px;
-    
+
     border-radius: 10px;
     cursor: pointer;
     background-color: #7B7468;
@@ -504,7 +522,7 @@ margin-top: 185px;
 .post__box .post__btn .post__btn__right .btn2 {
     width: 130px;
     height: 40px;
-    
+
     border-radius: 10px;
     cursor: pointer;
     background-color: #EC5656;
@@ -514,10 +532,11 @@ margin-top: 185px;
     margin: 20px 0;
     transition: all 0.3s;
 }
+
 .post__box .post__btn .post__btn__right .btn3 {
     width: 130px;
     height: 40px;
-    
+
     border-radius: 10px;
     cursor: pointer;
     background-color: #64789F;
