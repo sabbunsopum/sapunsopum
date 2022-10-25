@@ -250,7 +250,6 @@
 .heart.red {
     background: url(../img/LikeSplite.svg);
     background-position: -26px 0;
-    transition: all 0.3 ease;
 }
 
 .share {
@@ -259,6 +258,54 @@
     margin-left: 15px;
 
 }
+
+@media (max-width : 1300px) {
+    .list__inner {
+        justify-content: space-evenly;
+    }
+    .board__search {
+        justify-content: space-around
+    }
+}
+
+@media (max-width : 768px) {
+
+    .board__title {
+        padding: 0;
+    }
+
+    .board__title h3 {
+        font-size: 2.5rem;
+    }
+    
+}
+@media (max-width : 545px) {
+
+    .list__inner {
+        /* margin: 0 70px; */
+    }
+    .board__search {
+        display: block;
+    }
+    fieldset {
+        text-align: center;
+    }
+    .board__search .left #searchKeyword {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+    .board__search .btn {
+        width: 300px;
+    }
+
+    .board__pages ul li a {
+        padding: 15px 5px;
+        
+    }
+    
+}
+
+
 
 /* 소품샵 글 */
 
@@ -331,9 +378,6 @@
 }
 
 .img {
-    width: 472px;
-    height: 472px;
-    background: #F7F7F7;
     border-radius: 10px;
 
 }
@@ -473,6 +517,12 @@
     background-color: #64789f;
 }
 
+.post__info .shop__map #map {
+    width: 420px;
+    height: 230px;
+    margin-left: 50px;
+}
+
 /* sopumListView */
 
 .info {
@@ -557,4 +607,92 @@
 
 .list__icon {
     float: right;    
+}
+
+@media (max-width: 1300px) {
+    .postWrite {
+        width: 95%;
+        padding: 40px;
+    }
+    .post__info {
+        /* display: flex; */
+        flex-wrap: nowrap;
+        /* justify-content: space-around; */
+    }   
+    .shop__map {
+        align-items: center;
+    }
+}
+
+/* @media (max-width: 780px){
+    .post__box {
+        padding: 20px;
+    }
+    .postWrite {
+        padding: 30px;
+    }
+    .shop__info {
+        text-align: center;
+        justify-content: normal
+    }
+    .info {
+        
+        text-align: left;
+        display: inline-block;
+        max-width: 300px;
+        min-width: 300px;
+        min-height: 30px;
+        margin-left: 0;
+
+    }
+    .info__desc {
+        flex-wrap: nowrap;
+        display: block;
+        padding: 0 100px;
+        
+    }
+
+    .info__desc > span {
+        display: block;
+        margin-bottom: 15px;
+        text-align: left;
+        font-size: 20px;
+    }
+} */
+
+@media (max-width: 480px){
+    .post__box {
+        padding: 20px;
+    }
+    .postWrite {
+        padding: 30px;
+    }
+    .shop__info {
+        /* display: block; */
+        text-align: center;
+        justify-content: normal
+    }
+    .info {
+        
+        text-align: left;
+        display: inline-block;
+        max-width: 300px;
+        min-width: 300px;
+        min-height: 30px;
+        margin-left: 0;
+
+    }
+    .info__desc {
+        flex-wrap: nowrap;
+        display: block;
+        padding: 0 100px;
+        
+    }
+
+    .info__desc > span {
+        display: block;
+        margin-bottom: 15px;
+        text-align: left;
+        font-size: 20px;
+    }
 }
