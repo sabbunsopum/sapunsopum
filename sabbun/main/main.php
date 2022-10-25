@@ -397,22 +397,6 @@
         });
     </script>
     <script>
-        // myTip
-        function scroll() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.screenY;
-
-            document.querySelectorAll(".tipBox").forEach(item => {
-                if (scrollTop > item.offsetTop - window.innerHeight / 2) {
-                    item.classList.add("show");
-                }
-            });
-
-            requestAnimationFrame(scroll);
-
-        }
-        scroll();
-    </script>
-    <script>
         // top버튼
         window.addEventListener("scroll", () => {
             let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
@@ -430,6 +414,20 @@
             window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
         });
 
+    </script>
+    <script>
+        // myTip
+        function scroll() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.screenY;
+
+            document.querySelectorAll(".tipBox").forEach(item => {
+                if (scrollTop > item.offsetTop - window.innerHeight / 2) {
+                    item.classList.add("show");
+                }
+            });
+            requestAnimationFrame(scroll);
+        }
+        scroll();
     </script>
 
 
