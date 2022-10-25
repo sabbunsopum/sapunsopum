@@ -326,9 +326,9 @@
     <?php include "../include/footer.php" ?>
     <!-- // footer -->
 
-    <script src="assets/js/test/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/test/swiper.min.js"></script>
-    <script src="assets/js/test/TweenMax.min.js"></script>
+    <script src="../html/assets/js/test/jquery-3.4.1.min.js"></script>
+    <script src="../html/assets/js/test/swiper.min.js"></script>
+    <script src="../html/assets/js/test/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 
     <script>
