@@ -2,23 +2,26 @@
 
 #myTip {
 	margin-top: 170px;
-    margin-bottom: 250px;
+	margin-bottom: 250px;
 	padding: 0 10rem;
 }
+
 .myTip h2 {
 	text-align: center;
-	font-size: 50px;
-    font-weight: 800;
-    color: #4461F2;
-    margin-bottom: 30px;
+	font-size: 3rem;
+	font-weight: 800;
+	color: #4461F2;
+	margin-bottom: 30px;
 }
-.myTip > p {
+
+.myTip>p {
 	margin-top: 30px;
 	margin-bottom: 60px;
 	text-align: center;
 	font-size: 17px;
 	line-height: 1.5;
 }
+
 /* .myTip .more {
 	text-align: center;
 	margin-top: 50px;
@@ -49,6 +52,7 @@
 	width: 98%;
 	margin: 0 auto;
 }
+
 .tipBox {
 	width: 100%;
 	display: flex;
@@ -58,18 +62,23 @@
 	box-sizing: border-box;
 	/* display: none; */
 }
+
 .tipBox.show {
 	display: flex;
 }
-.t2, .t4 {
+
+.t2,
+.t4 {
 	justify-content: right;
 }
+
 .tipBox span {
 	display: inline-block;
 	box-sizing: border-box;
 	font-size: 80px;
 	padding: 30px;
 }
+
 .tipBox p {
 	display: inline-block;
 	/* border: 1px solid #4461f29f; */
@@ -82,6 +91,7 @@
 	background-color: #4461F2;
 	color: #F9FAFC;
 }
+
 .tipBox p:hover {
 	box-shadow: 5px 5px 30px 3px #4461f22f;
 }
@@ -90,10 +100,10 @@
 	border-top: 1px solid #d9d9d9;
 	width: 100%;
 	margin-bottom: 50px;
-	
+
 }
 
-.myTip__wirte{
+.myTip__wirte {
 	margin-top: 50px;
 	float: right;
 
@@ -114,21 +124,22 @@ input[type=text] {
 	color: #F9FAFC;
 	border: 0;
 }
+
 input[type=text]::placeholder {
 	color: #bebebe;
 
 }
 
-.profile__Img {
-
-}
+.profile__Img {}
 
 .profile__select {
 	display: inline;
 }
-.profile__select > label {
+
+.profile__select>label {
 	font-size: 25px;
 }
+
 .profile__Upload {
 	display: inline;
 }
@@ -136,31 +147,33 @@ input[type=text]::placeholder {
 .myTip__profileImg__Upload {
 	display: inline-block;
 	width: 25px;
-    height: 25px;
-    background: url(../img/uploadIcon10x10.svg) no-repeat center;
+	height: 25px;
+	background: url(../img/uploadIcon10x10.svg) no-repeat center;
 	margin-top: 15px;
-    cursor: pointer;	
+	cursor: pointer;
 }
 
-.profile__Upload > #myTip__profileImg__Upload {
-    display: none;
+.profile__Upload>#myTip__profileImg__Upload {
+	display: none;
 
 }
+
 .profile__Upload button {
 	display: inline;
 	width: 130px;
-    height: 40px;
-    background-color: #92A8D1;
-    border-radius: 10px;
-    cursor: pointer;
-    color: #fff;
-    box-sizing: border-box;
-    font-size: 18px;
-    margin: 20px 0;
+	height: 40px;
+	background-color: #92A8D1;
+	border-radius: 10px;
+	cursor: pointer;
+	color: #fff;
+	box-sizing: border-box;
+	font-size: 18px;
+	margin: 20px 0;
 	transition: all 0.3s;
 	margin-left: 100px;
 }
+
 .profile__Upload button:hover {
-    background-color: #64789F;
+	background-color: #64789F;
 
 }
