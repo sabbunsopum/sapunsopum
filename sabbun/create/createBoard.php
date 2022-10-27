@@ -10,8 +10,8 @@
     $sql .= "boardLike int(10) NOT NULL,";
     $sql .= "regTime int(20) NOT NULL,";
 
-    $sql .= "blogImgFile varchar(100) DEFAULT NULL,";
-    $sql .= "blogImgSize varchar(100) DEFAULT NULL,";
+    $sql .= "boardImgFile varchar(100) DEFAULT NULL,";
+    $sql .= "boardImgSize varchar(100) DEFAULT NULL,";
     
     $sql .= "PRIMARY KEY (myBoardID)";
     $sql .= ") charset=utf8;";
