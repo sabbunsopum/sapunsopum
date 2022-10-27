@@ -7,16 +7,16 @@
     <title>헤더영역</title>
     
     <link rel="stylesheet" href="../html/assets/css/fonts.css">
-    <link rel="stylesheet" href="../html/assets/css/header.css">
     <link rel="stylesheet" href="../html/assets/css/common.css">
     <link rel="stylesheet" href="../html/assets/css/reset.css">
+    <link rel="stylesheet" href="../html/assets/css/header2.css">
 </head>
 <body>
     <header id="headerType" class="header__wrap nanum">
         <div class="header__inner">
-            <div class="header__logo clearfix">
-                <a href="../main/main.php">
-                    <img src="../html/assets/img/temp_logo.svg" alt="사뿐소품 로고">
+            <div class="header__logo">
+                <a href="main.html">
+                    <img src="../html/assets/img/header__icon1-1.png" alt="사뿐소품 로고">
                 </a>
             </div>
             <nav class="header__menu clearfix">
