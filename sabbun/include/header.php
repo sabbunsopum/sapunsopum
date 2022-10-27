@@ -44,7 +44,7 @@
                 </ul>
             </div>
             <div class="header__search clearfix">
-                <form action="headerSearch.php" name="headerSearch" method="get">
+                <form action="../board/boardSearch.php" name="headerSearch" method="get">
                     <fieldset>
                         <legend>검색 영역</legend>
                         <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !"
