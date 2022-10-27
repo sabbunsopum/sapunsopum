@@ -619,6 +619,10 @@
   .shop__info {
     margin-top: 30px;
   }
+  .post__info .shop__map {
+    width: 400px;
+    margin: 0 auto;
+  }
   .post__info .shop__map > #map {
     width: 100%;
     margin-left: 0;
@@ -691,8 +695,8 @@
     text-align: left;
     font-size: 20px;
   }
-  .post__info .shop__map > #map {
-    padding: 0 100px;
-    box-sizing: border-box;
+  .post__info .shop__map {
+    width: 300px;
+    margin: 0 auto;
   }
 }
