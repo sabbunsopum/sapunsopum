@@ -69,7 +69,7 @@
         exit;
     }else{
         "<script>alert('회원 정보가 수정됐습니다.');</script>";
-        Header("Location: ../main/main.php");
+        Header("Location: ../mypage/mypage.php");
     }
 
    

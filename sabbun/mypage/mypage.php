@@ -91,8 +91,8 @@
                                         <div>
                                             <label for="youPhone">휴대폰 번호</label>
                                             <input type="text" id="youPhone" name="youPhone" maxlength="15"
-                                                placeholder="<?=$memberInfo{'youPhone'}?>"
-                                                value="<?=$memberInfo{'youPhone'}?>" required>
+                                                placeholder="<?=$myPageInfo{'youPhone'}?>"
+                                                value="<?=$myPageInfo{'youPhone'}?>" required>
                                             <p class="msg" id="youPhoneComment">
                                                 <!-- * 형식이 맞지 않습니다.(010-0000-0000) -->
                                             </p>
