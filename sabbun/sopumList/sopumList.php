@@ -14,12 +14,12 @@
 
     </style>
     <!-- CSS -->
+    <link rel="stylesheet" href="../html/assets/css/sopumList.css">
     <link rel="stylesheet" href="../html/assets/css/fonts.css">
     <link rel="stylesheet" href="../html/assets/css/common.css">
     <link rel="stylesheet" href="../html/assets/css/reset.css">
     <link rel="stylesheet" href="../html/assets/css/header.css">
     <link rel="stylesheet" href="../html/assets/css/footer.css">
-    <link rel="stylesheet" href="../html/assets/css/sopumList.css">
     <!-- <link rel="stylesheet" href="assets/css/board.css"> -->
     <!-- META -->
     <meta name="author" content="webstoryboy">
@@ -59,12 +59,10 @@
                             <a href="sopumListView.php"><img src="../html/assets/img/sopumList__bg01.jpg" alt=""></a>
                         </div>
                         <div class="list__icon">
-                            <span class="ir heart">
-
-                                heart</span>
-                            <span class="ir share">
+                            <span class="heart"></span>
+                            <span class="share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
-                                share</span>
+                                </span>
                         </div>
                     </div>
                     <div class="list">
@@ -76,12 +74,12 @@
                             <a href="sopumListView.php"><img src="../html/assets/img/sopumListView_bg01.jpg" alt=""></a>
                         </div>
                         <div class="list__icon">
-                            <span class="ir heart">
+                            <span class="heart">
 
-                                heart</span>
-                            <span class="ir share">
+                               </span>
+                            <span class="share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
-                                share</span>
+                                </span>
                         </div>
                     </div>
                     <div class="list">
@@ -93,12 +91,12 @@
                             <a href="sopumListView.php"><img src="../html/assets/img/sopumList__bg03.jpg" alt=""></a>
                         </div>
                         <div class="list__icon">
-                            <span class="ir heart">
+                            <span class=" heart">
 
-                                heart</span>
-                            <span class="ir share">
+                               </span>
+                            <span class=" share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
-                                share</span>
+                                </span>
                         </div>
                     </div>
                     <div class="list">
@@ -110,12 +108,12 @@
                             <a href="sopumListView.php"><img src="../html/assets/img/sopumList__bg04.jpg" alt=""></a>
                         </div>
                         <div class="list__icon">
-                            <span class="ir heart">
+                            <span class=" heart">
 
-                                heart</span>
-                            <span class="ir share">
+                                </span>
+                            <span class=" share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
-                                share</span>
+                                </span>
                         </div>
                     </div>
                     <div class="list">
@@ -127,12 +125,12 @@
                             <a href="sopumListView.php"><img src="../html/assets/img/sopumList__bg05.jpg" alt=""></a>
                         </div>
                         <div class="list__icon">
-                            <span class="ir heart">
+                            <span class=" heart">
 
-                                heart</span>
-                            <span class="ir share">
+                                </span>
+                            <span class=" share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
-                                share</span>
+                                </span>
                         </div>
                     </div>
                     <div class="list">
@@ -144,12 +142,12 @@
                             <a href="/"><img src="../html/assets/img/sopumList__bg06.jpg" alt=""></a>
                         </div>
                         <div class="list__icon">
-                            <span class="ir heart">
+                            <span class=" heart">
 
-                                heart</span>
-                            <span class="ir share">
+                                </span>
+                            <span class=" share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
-                                share</span>
+                                </span>
                         </div>
                     </div>
                     <div class="list">
@@ -161,12 +159,12 @@
                             <a href="/"><img src="../html/assets/img/sopumList__bg07.jpg" alt=""></a>
                         </div>
                         <div class="list__icon">
-                            <span class="ir heart">
+                            <span class=" heart">
 
-                                heart</span>
-                            <span class="ir share">
+                                </span>
+                            <span class=" share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
-                                share</span>
+                                </span>
                         </div>
                     </div>
                     <div class="list">
@@ -178,12 +176,12 @@
                             <a href="/"><img src="../html/assets/img/sopumList__bg08.jpg" alt=""></a>
                         </div>
                         <div class="list__icon">
-                            <span class="ir heart">
+                            <span class=" heart">
 
-                                heart</span>
-                            <span class="ir share">
+                                </span>
+                            <span class=" share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
-                                share</span>
+                                </span>
                         </div>
                     </div>
                     <div class="list">
@@ -195,12 +193,12 @@
                             <a href="/"><img src="../html/assets/img/sopumList__bg09.jpg" alt=""></a>
                         </div>
                         <div class="list__icon">
-                            <span class="ir heart">
+                            <span class=" heart">
 
-                                heart</span>
-                            <span class="ir share">
+                                </span>
+                            <span class=" share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
-                                share</span>
+                                </span>
                         </div>
                     </div>
                     <div class="list">
@@ -212,12 +210,12 @@
                             <a href="/"><img src="../html/assets/img/sopumList__bg10.jpg" alt=""></a>
                         </div>
                         <div class="list__icon">
-                            <span class="ir heart">
+                            <span class=" heart">
 
-                                heart</span>
-                            <span class="ir share">
+                                </span>
+                            <span class=" share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
-                                share</span>
+                                </span>
                         </div>
                     </div>
                     <div class="list">
@@ -229,12 +227,12 @@
                             <a href="/"><img src="../html/assets/img/sopumList__bg11.jpg" alt=""></a>
                         </div>
                         <div class="list__icon">
-                            <span class="ir heart">
+                            <span class=" heart">
 
-                                heart</span>
-                            <span class="ir share">
+                                </span>
+                            <span class=" share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
-                                share</span>
+                                </span>
                         </div>
                     </div>
                     <div class="list">
@@ -246,12 +244,12 @@
                             <a href="/"><img src="../html/assets/img/sopumList__bg12.jpg" alt=""></a>
                         </div>
                         <div class="list__icon">
-                            <span class="ir heart">
+                            <span class=" heart">
 
-                                heart</span>
-                            <span class="ir share">
+                                </span>
+                            <span class=" share">
                                 <img src="../html/assets/img/List_share.svg" alt="">
-                                share</span>
+                                </span>
                         </div>
                     </div>
                 </div>
