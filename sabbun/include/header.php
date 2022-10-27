@@ -22,10 +22,10 @@
             <nav class="header__menu clearfix">
                 <ul>
                     <li><a href="#sliderType">사뿐소품이란?</a></li>
-                    <li><a href="#imageType">소품샵 리스트</a></li>
+                    <li><a href="../list/sopumList.php">소품샵 리스트</a></li>
                     <li><a href="../board/board.php">커뮤니티</a></li>
-                    <li><a href="../mypage/myCpage.php">마이페이지</a></li>
-                    <li><a href="#bannerType">고객센터</a></li>
+                    <li><a href="../mypage/mypage.php">마이페이지</a></li>
+                    <li><a href="../faq/faq.php">고객센터</a></li>
                 </ul>
             </nav>
             <div class="header__member clearfix">
