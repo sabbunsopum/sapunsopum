@@ -14,12 +14,12 @@
 
     </style>
     <!-- CSS -->
-    <link rel="stylesheet" href="../assets/css/fonts.css">
-    <link rel="stylesheet" href="../assets/css/common.css">
-    <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/header.css">
-    <link rel="stylesheet" href="../assets/css/footer.css">
-    <link rel="stylesheet" href="../assets/css/sopumList.css">
+    <link rel="stylesheet" href="../html/assets/css/fonts.css">
+    <link rel="stylesheet" href="../html/assets/css/common.css">
+    <link rel="stylesheet" href="../html/assets/css/reset.css">
+    <link rel="stylesheet" href="../html/assets/css/header.css">
+    <link rel="stylesheet" href="../html/assets/css/footer.css">
+    <link rel="stylesheet" href="../html/assets/css/sopumList.css">
     <!-- <link rel="stylesheet" href="assets/css/board.css"> -->
     <!-- META -->
     <meta name="author" content="webstoryboy">
@@ -28,35 +28,35 @@
     <meta name="robots" content="all">
 
     <!-- ICON -->
-    <link rel="icon" href="assets/img/icon_256.png" />
-    <link rel="shortcut icon" href="assets/img/icon_256.png" />
-    <link rel="icon" type="image/png" sizes="256x256" href="assets/img/icon_256.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon_192.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon_32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icon_16.png" />
+    <link rel="icon" href="../html/assets/img/icon_256.png" />
+    <link rel="shortcut icon" href="../html/assets/img/icon_256.png" />
+    <link rel="icon" type="image/png" sizes="256x256" href="../html/assets/img/icon_256.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../html/assets/img/icon_192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../html/assets/img/icon_32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../html/assets/img/icon_16.png" />
 </head>
 
 <body>
     <header id="headerType" class="header__wrap nanum">
         <div class="header__inner">
             <div class="header__logo">
-                <a href="main.html">
-                    <img src="assets/img/temp_logo.svg" alt="사뿐소품 로고">
+                <a href="main.php">
+                    <img src="../html/assets/img/temp_logo.svg" alt="사뿐소품 로고">
                 </a>
             </div>
             <nav class="header__menu clearfix">
                 <ul>
                     <li><a href="#sliderType">사뿐소품이란?</a></li>
-                    <li><a href="sopumList.html">소품샵 리스트</a></li>
-                    <li><a href="board.html">커뮤니티</a></li>
-                    <li><a href="myPage.html">마이페이지</a></li>
-                    <li><a href="faq.html">고객센터</a></li>
+                    <li><a href="sopumList.php">소품샵 리스트</a></li>
+                    <li><a href="board.php">커뮤니티</a></li>
+                    <li><a href="myPage.php">마이페이지</a></li>
+                    <li><a href="faq.php">고객센터</a></li>
                 </ul>
             </nav>
             <div class="header__member clearfix">
                 <ul>
-                    <li><a href="login.html">로그인</a></li>
-                    <li><a href="join1.html">회원가입</a></li>
+                    <li><a href="login.php">로그인</a></li>
+                    <li><a href="join1.php">회원가입</a></li>
                 </ul>
             </div>
             <div class="header__search clearfix">
@@ -66,7 +66,7 @@
                         <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !"
                             aria-label="search" required>
                         <button type="submit" class="searchBtn">
-                            <img src="assets/img/search_icon.svg" alt="검색버튼">
+                            <img src="../html/assets/img/search_icon.svg" alt="검색버튼">
                         </button>
                     </fieldset>
                 </form>
@@ -91,12 +91,12 @@
                 <!-- 소품샵 리스트 -->
                 <div class="list__inner">
                     <div class="list">
-                        <a href="sopumListView.html">
+                        <a href="sopumListView.php">
                             <h4 class="list_title">모던소품<span>모던한 감성 소품샵</span></h4>
                         </a>
 
                         <div class="list__img">
-                            <a href="sopumListView.html"><img src="../html/assets/img/sopumList__bg01.jpg" alt=""></a>
+                            <a href="sopumListView.php"><img src="../html/assets/img/sopumList__bg01.jpg" alt=""></a>
                         </div>
                         <div class="list__icon">
                             <span class="ir heart">
@@ -108,13 +108,12 @@
                         </div>
                     </div>
                     <div class="list">
-                        <a href="sopumListView.html">
+                        <a href="sopumListView.php">
                             <h4 class="list_title">소르르<span>제주도 제로웨이스트 맛집!</span></h4>
                         </a>
 
                         <div class="list__img">
-                            <a href="sopumListView.html"><img src="../html/assets/img/sopumListView_bg01.jpg"
-                                    alt=""></a>
+                            <a href="sopumListView.php"><img src="../html/assets/img/sopumListView_bg01.jpg" alt=""></a>
                         </div>
                         <div class="list__icon">
                             <span class="ir heart">
@@ -126,12 +125,12 @@
                         </div>
                     </div>
                     <div class="list">
-                        <a href="sopumListView.html">
+                        <a href="sopumListView.php">
                             <h4 class="list_title">모디터<span>모던 인테리어 소품샵</span></h4>
                         </a>
 
                         <div class="list__img">
-                            <a href="sopumListView.html"><img src="../html/assets/img/sopumList__bg03.jpg" alt=""></a>
+                            <a href="sopumListView.php"><img src="../html/assets/img/sopumList__bg03.jpg" alt=""></a>
                         </div>
                         <div class="list__icon">
                             <span class="ir heart">
@@ -143,12 +142,12 @@
                         </div>
                     </div>
                     <div class="list">
-                        <a href="sopumListView.html">
+                        <a href="sopumListView.php">
                             <h4 class="list_title">산타마켓<span>크리스마스 선물은?</span></h4>
                         </a>
 
                         <div class="list__img">
-                            <a href="sopumListView.html"><img src="../html/assets/img/sopumList__bg04.jpg" alt=""></a>
+                            <a href="sopumListView.php"><img src="../html/assets/img/sopumList__bg04.jpg" alt=""></a>
                         </div>
                         <div class="list__icon">
                             <span class="ir heart">
@@ -160,12 +159,12 @@
                         </div>
                     </div>
                     <div class="list">
-                        <a href="sopumListView.html">
+                        <a href="sopumListView.php">
                             <h4 class="list_title">Good Mode<span>멋진 데이트코스</span></h4>
                         </a>
 
                         <div class="list__img">
-                            <a href="sopumListView.html"><img src="../html/assets/img/sopumList__bg05.jpg" alt=""></a>
+                            <a href="sopumListView.php"><img src="../html/assets/img/sopumList__bg05.jpg" alt=""></a>
                         </div>
                         <div class="list__icon">
                             <span class="ir heart">
@@ -177,7 +176,7 @@
                         </div>
                     </div>
                     <div class="list">
-                        <a href="sopumListView.html">
+                        <a href="sopumListView.php">
                             <h4 class="list_title">HelloWorld<span>다양한 다이어리 용품</span></h4>
                         </a>
 
@@ -194,7 +193,7 @@
                         </div>
                     </div>
                     <div class="list">
-                        <a href="sopumListView.html">
+                        <a href="sopumListView.php">
                             <h4 class="list_title">양말상점<span>양말도 패션이야!</span></h4>
                         </a>
 
@@ -299,7 +298,7 @@
                 <!-- //소품샵 리스트 -->
                 <div class="board__search">
                     <div class="left">
-                        <form action="boardSearch.php" name="boardSearch" method="get">
+                        <form action="sopumListSearch.php" name="boardSearch" method="get">
                             <fieldset>
                                 <legend>게시판 검색 영역</legend>
                                 <input type="search" name="searchKeyword" id="searchKeyword" placeholder="Search"
@@ -318,7 +317,7 @@
                     <div>
                         <form>
                             <fieldset>
-                                <a href="boardWrite.html" class="btn">글쓰기</a>
+                                <a href="sopumListWrite.php" class="btn">글쓰기</a>
                             </fieldset>
                         </form>
                     </div>

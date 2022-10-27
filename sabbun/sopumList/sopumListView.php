@@ -14,12 +14,12 @@
 
     </style>
     <!-- CSS -->
-    <link rel="stylesheet" href="../assets/css/fonts.css">
-    <link rel="stylesheet" href="../assets/css/common.css">
-    <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/header.css">
-    <link rel="stylesheet" href="../assets/css/footer.css">
-    <link rel="stylesheet" href="../assets/css/sopumList.css">
+    <link rel="stylesheet" href="../html/assets/css/fonts.css">
+    <link rel="stylesheet" href="../html/assets/css/common.css">
+    <link rel="stylesheet" href="../html/assets/css/reset.css">
+    <link rel="stylesheet" href="../html/assets/css/header.css">
+    <link rel="stylesheet" href="../html/assets/css/footer.css">
+    <link rel="stylesheet" href="../html/assets/css/sopumList.css">
     <!-- <link rel="stylesheet" href="assets/css/board.css"> -->
     <!-- META -->
     <meta name="author" content="webstoryboy">
@@ -28,12 +28,12 @@
     <meta name="robots" content="all">
 
     <!-- ICON -->
-    <link rel="icon" href="assets/img/icon_256.png" />
-    <link rel="shortcut icon" href="assets/img/icon_256.png" />
-    <link rel="icon" type="image/png" sizes="256x256" href="assets/img/icon_256.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon_192.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon_32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icon_16.png" />
+    <link rel="icon" href="../html/assets/img/icon_256.png" />
+    <link rel="shortcut icon" href="../html/assets/img/icon_256.png" />
+    <link rel="icon" type="image/png" sizes="256x256" href="../html/assets/img/icon_256.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../html/assets/img/icon_192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../html/assets/img/icon_32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../html/assets/img/icon_16.png" />
 </head>
 
 <body>
@@ -41,7 +41,7 @@
         <div class="header__inner">
             <div class="header__logo">
                 <a href="main.html">
-                    <img src="assets/img/temp_logo.svg" alt="사뿐소품 로고">
+                    <img src="../html/assets/img/temp_logo.svg" alt="사뿐소품 로고">
                 </a>
             </div>
             <nav class="header__menu clearfix">
@@ -66,7 +66,7 @@
                         <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !"
                             aria-label="search" required>
                         <button type="submit" class="searchBtn">
-                            <img src="assets/img/search_icon.svg" alt="검색버튼">
+                            <img src="../html/assets/img/search_icon.svg" alt="검색버튼">
                         </button>
                     </fieldset>
                 </form>
