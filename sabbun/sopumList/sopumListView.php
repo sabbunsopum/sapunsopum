@@ -117,11 +117,11 @@
                     <div class="container">
                         <div class="post__btn">
                             <div class="post__btn__left">
-                                <a href="sopumList.html"><button type="submit" class="btn1">목록으로</button></a>
+                                <a href="sopumList.php"><button type="submit" class="btn1">목록으로</button></a>
                             </div>
                             <div class="post__btn__right">
-                                <a href="sopumListDelete.html"><button type="submit" class="btn2">삭제하기</button></a>
-                                <a href="sopumListModify.html"><button type="submit" class="btn3">수정하기</button></a>
+                                <a href="sopumListDelete.php"><button type="submit" class="btn2">삭제하기</button></a>
+                                <a href="sopumListModify.php"><button type="submit" class="btn3">수정하기</button></a>
                             </div>
                         </div>
                     </div>
