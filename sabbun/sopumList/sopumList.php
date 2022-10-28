@@ -260,13 +260,17 @@
                         </div>
                     </div> -->
 
+
+                    <?php
+                    foreach($result as $info){  ?>
                     <div class="list">
                         <a href="/">
-                            <h4 class="list_title">Snow Snow<span>아기자기한 미니어처 소품들 </span></h4>
+                            <h4 class="list_title"><?=$info['shopName']?><span><?=$info['goodsList']?></span></h4>
                         </a>
 
                         <div class="list__img">
-                            <a href="/"><img src="../html/assets/img/sopumList__bg12.jpg" alt=""></a>
+                            <a href="sopumListView.php?shopListID<?=$info['shopListID']?>">
+                                <img src="img/<?=$info['shopImgFile']?>" alt=""></a>
                         </div>
                         <div class="list__icon">
                             <span class=" heart">
@@ -277,6 +281,7 @@
                             </span>
                         </div>
                     </div>
+                    <?php               }   ?>
 
                 </div>
                 <!-- //소품샵 리스트 -->
