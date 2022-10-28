@@ -293,7 +293,7 @@
                     <span>😶‍🌫️</span>
                 </div>
             </div>
-            <div class="more"><a href="myTip.html">더보기</a></div>
+            <div class="more"><a href="../html/myTip.html">더보기</a></div>
         </section>
         <!-- // myTip -->
 
@@ -303,22 +303,22 @@
                 <div class="box b1">
                     <img src="../html/assets/img/list__icon.svg" alt="소품샵 리스트">
                     <h3>소품샵 리스트</h3>
-                    <a href="sopumList.html">바로가기</a>
+                    <a href="../sopumList/sopumList.php">바로가기</a>
                 </div>
                 <div class="box b2">
                     <img src="../html/assets/img/board__icon.svg" alt="소품샵 리스트">
                     <h3>자유게시판</h3>
-                    <a href="board.html">바로가기</a>
+                    <a href="../board/board.php">바로가기</a>
                 </div>
                 <div class="box b3">
                     <img src="../html/assets/img/myPage__icon.svg" alt="소품샵 리스트">
                     <h3>마이페이지</h3>
-                    <a href="myPage.html">바로가기</a>
+                    <a href="../mypage/mypage.php">바로가기</a>
                 </div>
                 <div class="box b4">
                     <img src="../html/assets/img/faq__icon.svg" alt="소품샵 리스트">
                     <h3>고객센터</h3>
-                    <a href="faq.html">바로가기</a>
+                    <a href="../html/faq.html">바로가기</a>
                 </div>
             </div>
         </section>
