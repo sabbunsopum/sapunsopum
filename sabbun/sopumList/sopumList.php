@@ -6,8 +6,6 @@
     $sql = "SELECT * FROM sopumShopList WHERE myMemberID = {$myMemberID}";
     $result = $connect -> query($sql);
     $info = $result -> fetch_array(MYSQLI_ASSOC);
-
-
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -264,12 +262,13 @@
                     <?php
                     foreach($result as $info){  ?>
                     <div class="list">
-                        <a href="/">
-                            <h4 class="list_title"><?=$info['shopName']?><span><?=$info['goodsList']?></span></h4>
+                        <a href="sopumListView.php?shopListID=<?=$info['shopListID']?>">
+                            <h4 class="list_title"><?=$info['shopName']?><span><?=$info['shopListContents']?></span>
+                            </h4>
                         </a>
 
                         <div class="list__img">
-                            <a href="sopumListView.php?shopListID<?=$info['shopListID']?>">
+                            <a href="sopumListView.php?shopListID=<?=$info['shopListID']?>">
                                 <img src="img/<?=$info['shopImgFile']?>" alt=""></a>
                         </div>
                         <div class="list__icon">
@@ -281,7 +280,8 @@
                             </span>
                         </div>
                     </div>
-                    <?php               }   ?>
+                    <?php
+                    }   ?>
 
                 </div>
                 <!-- //소품샵 리스트 -->
