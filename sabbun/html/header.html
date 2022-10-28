@@ -26,7 +26,7 @@
                     <li><a href="#sliderType">사뿐소품이란?</a></li>
                     <li><a href="#imageType">소품샵 리스트</a></li>
                     <li><a href="board.html">커뮤니티
-                            <ul>
+                            <ul class="subMenu">
                                 <li><a href="board.html">자유게시판</a></li>
                                 <li><a href="board.html">나만의 팁</a></li>
                             </ul>
@@ -63,5 +63,13 @@
     </header>
     <!-- // headerType -->
 </body>
+<script>
+    document.querySelector(".header__menu li:nth-child(3)").addEventListener("mouseover", () => {
+        document.querySelector(".subMenu").classList.add("show");
+    })
+    document.querySelector(".header__menu li:nth-child(3)").addEventListener("mouseout", () => {
+        document.querySelector(".subMenu").classList.remove("show");
+    })
+</script>
 
 </html>
