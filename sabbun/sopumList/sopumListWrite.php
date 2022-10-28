@@ -122,7 +122,7 @@
                         <div class="post__heart ir">좋아요</div> -->
                                 <div class="tag">
                                     <span class="tag__title">키워드 태그</span>
-                                    <input type="text" id="tag" placeholder="태그를 입력해주세요">
+                                    <input type="text" name="shopTag" id="shopTag" placeholder="태그를 입력해주세요">
                                 </div>
                             </div>
                             <div class="container">

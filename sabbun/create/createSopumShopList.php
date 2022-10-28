@@ -17,6 +17,10 @@
     
     $sql .= "shopImgFile varchar(100) DEFAULT NULL,";
     $sql .= "shopImgSize varchar(100) DEFAULT NULL,";
+    $sql .= "shopTag varchar(100) DEFAULT NULL,";
+
+
+    
     
     $sql .= "PRIMARY KEY (shopListID)";
     $sql .= ") charset=utf8;";

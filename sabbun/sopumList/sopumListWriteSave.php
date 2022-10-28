@@ -22,6 +22,7 @@
     $shopNum = $_POST['shopNum'];
     $goodsList = $_POST['goodsList'];
     $shopAdress = $_POST['shopAdress'];
+    $shopTag = $_POST['shopTag'];
 
     $shopName = $connect -> real_escape_string($shopName);
     $shopHours = $connect -> real_escape_string($shopHours);
@@ -48,7 +49,7 @@
                 $shopImgName = "Img_".time().rand(1,99999)."."."{$fileExtension}";
                 
                 //echo "이미지 파일이 맞네요!";
-                $sql = "INSERT INTO sopumShopList(myMemberID, shopListContents, shopListView, shopListLike, regTime, shopName, shopHours, shopNum, goodsList, shopAdress, shopImgFile, shopImgSize) VALUES('$myMemberID','$shopListContents', '$shopListView', '$shopListLike', '$regTime', '$shopName' , '$shopHours', '$shopNum', '$goodsList', '$shopAdress', '$shopImgName', '$shopImgSize')";
+                $sql = "INSERT INTO sopumShopList(myMemberID, shopListContents, shopListView, shopListLike, regTime, shopName, shopHours, shopNum, goodsList, shopAdress, shopImgFile, shopImgSize, shopTag) VALUES('$myMemberID','$shopListContents', '$shopListView', '$shopListLike', '$regTime', '$shopName' , '$shopHours', '$shopNum', '$goodsList', '$shopAdress', '$shopImgName', '$shopImgSize', '$shopTag')";
             } 
         }else {
             echo "<script>alert('지원하는 이미지 파일이 아닙니다.'); history.back(1)</script>";
@@ -56,7 +57,7 @@
         }
     } else {
         echo "<p>사진을 첨부하지 않았습니다.</p>";
-        $sql = "INSERT INTO sopumShopList(myMemberID, shopListContents, shopListView, shopListLike, regTime, shopName, shopHours, shopNum, goodsList, shopAdress, shopImgFile, shopImgSize) VALUES('$myMemberID','$shopListContents', '$shopListView', '$shopListLike', '$regTime', '$shopName' , '$shopHours', '$shopNum', '$goodsList', '$shopAdress', 'Img_default.jpg', '$shopImgSize')";
+        $sql = "INSERT INTO sopumShopList(myMemberID, shopListContents, shopListView, shopListLike, regTime, shopName, shopHours, shopNum, goodsList, shopAdress, shopImgFile, shopImgSize, shopTag) VALUES('$myMemberID','$shopListContents', '$shopListView', '$shopListLike', '$regTime', '$shopName' , '$shopHours', '$shopNum', '$goodsList', '$shopAdress', 'Img_default.jpg', '$shopImgSize', '$shopTag')";
     }
     //이미지 사이즈 확인
     if($shopImgSize > 1000000){
