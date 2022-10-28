@@ -24,7 +24,7 @@
             <nav class="header__menu">
                 <ul>
                     <li><a href="#sliderType">사뿐소품이란?</a></li>
-                    <li><a href="../sopumlist/sopumList.php">소품샵 리스트</a></li>
+                    <li><a href="../sopumList/sopumList.php">소품샵 리스트</a></li>
                     <li><a href="../board/board.php">커뮤니티</a></li>
                     <li><a href="../mypage/myPage.php">마이페이지</a></li>
                     <li><a href="../service/faq.php">고객센터</a></li>
