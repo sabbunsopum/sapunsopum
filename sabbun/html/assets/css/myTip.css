@@ -217,8 +217,12 @@ input[type="text"]::placeholder {
   .tipBox {
     margin-bottom: 30px;
   }
+  .tipBox img {
+    width: 14vw;
+    height: 14vw;
+  }
   .tipBox p {
-    max-width: 300px;
+    max-width: 265px;
     font-size: 13px;
   }
 }
@@ -237,8 +241,8 @@ input[type="text"]::placeholder {
     flex-wrap: nowrap;
   }
   .tipBox p {
-    padding: 20px;
-    max-width: 250px;
+    padding: 15px;
+    max-width: 200px;
     font-size: 12px;
   }
 

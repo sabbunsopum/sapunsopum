@@ -41,7 +41,7 @@
     <!-- // header -->
 
     <main id="main">
-        <section id="board" class="board__wrap container nanum">
+        <section id="board" class="board__wrap nanum">
             <h2>소품샵 리스트</h2>
             <div class="board__inner">
                 <div class="board__title">
