@@ -25,7 +25,12 @@
                 <ul>
                     <li><a href="#sliderType">사뿐소품이란?</a></li>
                     <li><a href="../sopumList/sopumList.php">소품샵 리스트</a></li>
-                    <li><a href="../board/board.php">커뮤니티</a></li>
+                    <li><a href="../board/board.php">커뮤니티
+                        <ul class="subMenu">
+                            <li><a href="../board/board.php">자유게시판</a></li>
+                            <li><a href="../myTip/myTip.php">나만의 팁</a></li>
+                        </ul>
+                    </a></li>
                     <li><a href="../mypage/myPage.php">마이페이지</a></li>
                     <li><a href="../service/faq.php">고객센터</a></li>
                 </ul>
@@ -91,6 +96,12 @@ window.addEventListener("resize", () => {
         btnHam.classList.remove("active");
     }
 });
+document.querySelector(".header__menu li:nth-child(3)").addEventListener("mouseover", () => {
+        document.querySelector(".subMenu").classList.add("show");
+    })
+    document.querySelector(".header__menu li:nth-child(3)").addEventListener("mouseout", () => {
+        document.querySelector(".subMenu").classList.remove("show");
+    })
 </script>
 
 </html>
