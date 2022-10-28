@@ -180,14 +180,18 @@
                         <?php
     
 
-    $sql = "SELECT boardContents, boardLike FROM myBoard WHERE myBoardID = {$myBoardID}";
+    $sql = "SELECT * FROM myBoard WHERE myBoardID = {$myBoardID}";
     $bresult = $connect -> query($sql);
 
     if($bresult){
         $binfo = $bresult -> fetch_array(MYSQLI_ASSOC);
 
         echo "<p>".$binfo['boardContents']."</p>";
+        if ($binfo['boardImgFile'] !== "Img_default.jpg"){
+            echo "<p><img src='img/".$binfo['boardImgFile']."'></p>";
+        }
         echo "<span class='likes'><a href='#'><img src='../html/assets/img/boardView_disLike@3x.png' alt=''></a>".$binfo['boardLike']."</span>";
+
     }
 ?>
 
