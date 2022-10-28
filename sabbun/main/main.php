@@ -8,6 +8,7 @@
 
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +18,7 @@
     <?php include "../include/link.php" ?>
 
 </head>
+
 <body>
     <?php include "../include/header.php" ?>
     <!-- // header -->
@@ -34,7 +36,7 @@
             <div class="slider__list__wrap swiper">
                 <ul class="slider__list swiper-wrapper">
                     <li class="store swiper-slide">
-                        <a href="#">
+                        <a href="../sopumList/sopumListView.php">
                             <div class="image">
                                 <img src="../html/assets/img/store1.jpg" alt="미미도넛" />
                                 <div>
@@ -51,7 +53,7 @@
                         </a>
                     </li>
                     <li class="BEST store swiper-slide">
-                        <a href="#">
+                        <a href="../sopumList/sopumListView.php">
                             <div class="image">
                                 <img src="../html/assets/img/store2.jpg" alt="오브젝트" />
                                 <div>
@@ -68,7 +70,7 @@
                         </a>
                     </li>
                     <li class="BEST store swiper-slide">
-                        <a href="#">
+                        <a href="../sopumList/sopumListView.php">
                             <div class="image">
                                 <img src="../html/assets/img/store3.jpg" alt="메이드모먼" />
                                 <div>
@@ -85,7 +87,7 @@
                         </a>
                     </li>
                     <li class="NEW store swiper-slide">
-                        <a href="#">
+                        <a href="../sopumList/sopumListView.php">
                             <div class="image">
                                 <img src="../html/assets/img/store4.jpg" alt="잼머의집" />
                                 <div>
@@ -102,7 +104,7 @@
                         </a>
                     </li>
                     <li class="BEST store swiper-slide">
-                        <a href="#">
+                        <a href="../sopumList/sopumListView.php">
                             <div class="image">
                                 <img src="../html/assets/img/store5.jpg" alt="어프어프" />
                                 <div>
@@ -119,7 +121,7 @@
                         </a>
                     </li>
                     <li class="NEW store swiper-slide">
-                        <a href="#">
+                        <a href="../sopumList/sopumListView.php">
                             <div class="image">
                                 <img src="../html/assets/img/store6.jpg" alt="오월상점" />
                                 <div>
@@ -136,7 +138,7 @@
                         </a>
                     </li>
                     <li class="store swiper-slide">
-                        <a href="#">
+                        <a href="../sopumList/sopumListView.php">
                             <div class="image">
                                 <img src="../html/assets/img/store7.jpg" alt="알로하거제" />
                                 <div>
@@ -153,7 +155,7 @@
                         </a>
                     </li>
                     <li class="BEST store swiper-slide">
-                        <a href="#">
+                        <a href="../sopumList/sopumListView.php">
                             <div class="image">
                                 <img src="../html/assets/img/store8.jpg" alt="만두상점" />
                                 <div>
@@ -170,7 +172,7 @@
                         </a>
                     </li>
                     <li class="BEST store swiper-slide">
-                        <a href="#">
+                        <a href="../sopumList/sopumListView.php">
                             <div class="image">
                                 <img src="../html/assets/img/store9.jpg" alt="디자인에이비" />
                                 <div>
@@ -187,7 +189,7 @@
                         </a>
                     </li>
                     <li class="BEST store swiper-slide">
-                        <a href="#">
+                        <a href="../sopumList/sopumListView.php">
                             <div class="image">
                                 <img src="../html/assets/img/store10.jpg" alt="수풀" />
                                 <div>
@@ -204,7 +206,7 @@
                         </a>
                     </li>
                     <li class="NEW store swiper-slide">
-                        <a href="#">
+                        <a href="../sopumList/sopumListView.php">
                             <div class="image">
                                 <img src="../html/assets/img/store11.jpg" alt="메리아일랜드" />
                                 <div>
@@ -221,7 +223,7 @@
                         </a>
                     </li>
                     <li class="store swiper-slide">
-                        <a href="#">
+                        <a href="../sopumList/sopumListView.php">
                             <div class="image">
                                 <img src="../html/assets/img/store12.jpg" alt="블리홈" />
                                 <div>
@@ -291,7 +293,7 @@
                     <span>😶‍🌫️</span>
                 </div>
             </div>
-            <div class="more"><a href="myTip.html">더보기</a></div>
+            <div class="more"><a href="../html/myTip.html">더보기</a></div>
         </section>
         <!-- // myTip -->
 
@@ -301,22 +303,22 @@
                 <div class="box b1">
                     <img src="../html/assets/img/list__icon.svg" alt="소품샵 리스트">
                     <h3>소품샵 리스트</h3>
-                    <a href="sopumList.html">바로가기</a>
+                    <a href="../sopumList/sopumList.php">바로가기</a>
                 </div>
                 <div class="box b2">
                     <img src="../html/assets/img/board__icon.svg" alt="소품샵 리스트">
                     <h3>자유게시판</h3>
-                    <a href="board.html">바로가기</a>
+                    <a href="../board/board.php">바로가기</a>
                 </div>
                 <div class="box b3">
                     <img src="../html/assets/img/myPage__icon.svg" alt="소품샵 리스트">
                     <h3>마이페이지</h3>
-                    <a href="myPage.html">바로가기</a>
+                    <a href="../mypage/mypage.php">바로가기</a>
                 </div>
                 <div class="box b4">
                     <img src="../html/assets/img/faq__icon.svg" alt="소품샵 리스트">
                     <h3>고객센터</h3>
-                    <a href="faq.html">바로가기</a>
+                    <a href="../html/faq.html">바로가기</a>
                 </div>
             </div>
         </section>
@@ -332,105 +334,112 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 
     <script>
-        $(document).ready(function () {
-            sliderWidth();
-            var sliderWrap = new Swiper(".slider__list__wrap", {
-                slidesPerView: "auto",
-                spaceBetween: 30,
-                freeMode: true,
-                mousewheel: true,
-                scrollbar: {
-                    el: ".slider__scroll__wrap .swiper-scrollbar",
-                    hide: false,
-                },
-            });
-            $(".slider__tab > li > button").on("click", function () {
-                $(".slider__tab > li").removeClass("active");
-                $(this).parents("li").addClass("active");
-                var filter = $(this).attr("data-filter");
-                if (filter == "all") {
-                    $(".slider__list > li").css("display", "");
-                    sliderWrap.update();
-                    sliderWrap.scrollbar.updateSize();
-                    sliderWrap.slideTo(0);
-                } else {
-                    $(".slider__list > li").css("display", "none");
-                    $(".slider__list > li." + filter).css("display", "");
-                    sliderWrap.update();
-                    sliderWrap.scrollbar.updateSize();
-                    sliderWrap.slideTo(0);
-                }
-            });
-            $(".slider__list").hover(
-                function () {
-                    $(".cursor").addClass("drag");
-                },
-                function () {
-                    $(".cursor").removeClass("drag");
-                }
-            );
+    $(document).ready(function() {
+        sliderWidth();
+        var sliderWrap = new Swiper(".slider__list__wrap", {
+            slidesPerView: "auto",
+            spaceBetween: 30,
+            freeMode: true,
+            mousewheel: true,
+            scrollbar: {
+                el: ".slider__scroll__wrap .swiper-scrollbar",
+                hide: false,
+            },
         });
-        $(window).resize(function () {
-            sliderWidth();
-            if ($(window).outerWidth() < 1200) {
-                $(".slider__scroll__wrap").css("padding-left", "0");
-            }
-        });
-        function sliderWidth() {
-            var minusWidth = 0;
-            if ($(".wrap").outerHeight() > $(window).innerHeight()) {
-                minusWidth = ($(window).outerWidth() - 1200) / 2 - 8;
+        $(".slider__tab > li > button").on("click", function() {
+            $(".slider__tab > li").removeClass("active");
+            $(this).parents("li").addClass("active");
+            var filter = $(this).attr("data-filter");
+            if (filter == "all") {
+                $(".slider__list > li").css("display", "");
+                sliderWrap.update();
+                sliderWrap.scrollbar.updateSize();
+                sliderWrap.slideTo(0);
             } else {
-                minusWidth = ($(window).outerWidth() - 1200) / 2;
+                $(".slider__list > li").css("display", "none");
+                $(".slider__list > li." + filter).css("display", "");
+                sliderWrap.update();
+                sliderWrap.scrollbar.updateSize();
+                sliderWrap.slideTo(0);
             }
-
-            // $(".slider__scroll__wrap").css("padding-left", minusWidth + "px");
-        }
-    </script>
-    <script>
-        $(window).scroll(function () {
-            var scroll = $(this).scrollTop(),
-                scrollVal = scroll / 1.3,
-                scrollTxt = $('.intro__moveText');
-
-            TweenMax.to(scrollTxt, .5, { x: -scrollVal })
         });
-    </script>
-    <script>
-        // top버튼
-        window.addEventListener("scroll", () => {
-            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
-
-            // 02
-            if (scrollTop >= (document.body.scrollHeight - window.innerHeight)) {
-                document.querySelector(".goTop").classList.add("show");
-            } else {
-                document.querySelector(".goTop").classList.remove("show");
+        $(".slider__list").hover(
+            function() {
+                $(".cursor").addClass("drag");
+            },
+            function() {
+                $(".cursor").removeClass("drag");
             }
+        );
+    });
+    $(window).resize(function() {
+        sliderWidth();
+        if ($(window).outerWidth() < 1200) {
+            $(".slider__scroll__wrap").css("padding-left", "0");
+        }
+    });
 
-        });
+    function sliderWidth() {
+        var minusWidth = 0;
+        if ($(".wrap").outerHeight() > $(window).innerHeight()) {
+            minusWidth = ($(window).outerWidth() - 1200) / 2 - 8;
+        } else {
+            minusWidth = ($(window).outerWidth() - 1200) / 2;
+        }
 
-        document.querySelector(".goTop").addEventListener("click", () => {
-            window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
-        });
-
+        // $(".slider__scroll__wrap").css("padding-left", minusWidth + "px");
+    }
     </script>
     <script>
-        // myTip
-        function scroll() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.screenY;
+    $(window).scroll(function() {
+        var scroll = $(this).scrollTop(),
+            scrollVal = scroll / 1.3,
+            scrollTxt = $('.intro__moveText');
 
-            document.querySelectorAll(".tipBox").forEach(item => {
-                if (scrollTop > item.offsetTop - window.innerHeight / 2) {
-                    item.classList.add("show");
-                }
-            });
-            requestAnimationFrame(scroll);
+        TweenMax.to(scrollTxt, .5, {
+            x: -scrollVal
+        })
+    });
+    </script>
+    <script>
+    // top버튼
+    window.addEventListener("scroll", () => {
+        let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+
+        // 02
+        if (scrollTop >= (document.body.scrollHeight - window.innerHeight)) {
+            document.querySelector(".goTop").classList.add("show");
+        } else {
+            document.querySelector(".goTop").classList.remove("show");
         }
-        scroll();
+
+    });
+
+    document.querySelector(".goTop").addEventListener("click", () => {
+        window.scrollTo({
+            left: 0,
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+    </script>
+    <script>
+    // myTip
+    function scroll() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.screenY;
+
+        document.querySelectorAll(".tipBox").forEach(item => {
+            if (scrollTop > item.offsetTop - window.innerHeight / 2) {
+                item.classList.add("show");
+            }
+        });
+        requestAnimationFrame(scroll);
+    }
+    scroll();
     </script>
 
 
 
 </body>
+
 </html>
