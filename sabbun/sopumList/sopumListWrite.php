@@ -1,6 +1,7 @@
 <?php 
     include "../connect/connect.php";
     include "../connect/session.php";
+    include "../connect/sessionCheck.php";
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -50,6 +51,7 @@
                     <p>다양한 소품샵을 사뿐소품에서 확인해보세요!</p>
                 </div>
                 <!-- 소품샵 리스트 게시판 -->
+
                 <div class="post__box">
                     <div class="postWrite">
                         <div class="post__info">
