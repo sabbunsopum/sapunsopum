@@ -1,6 +1,13 @@
 <?php 
     include "../connect/connect.php";
     include "../connect/session.php";
+
+    $myMemberID = $_SESSION['myMemberID'];
+    $sql = "SELECT * FROM sopumShopList WHERE myMemberID = {$myMemberID}";
+    $result = $connect -> query($sql);
+    $info = $result -> fetch_array(MYSQLI_ASSOC);
+
+
 ?>
 <!DOCTYPE html>
 <html lang="ko">
