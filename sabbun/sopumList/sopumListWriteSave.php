@@ -11,11 +11,12 @@
     $shopImgName = $_FILES['shopProfile']['name'];
     $shopImgTmp = $_FILES['shopProfile']['tmp_name'];
 
-    $shopListContents = '';
     $shopListView = 1;
     $shopListLike = 0;
 
     $regTime = time();
+
+    $shopListContents = $_POST['shopListContents'];
 
     $shopName = $_POST['shopName'];
     $shopHours = $_POST['shopHours'];

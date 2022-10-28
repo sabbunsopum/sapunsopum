@@ -263,7 +263,8 @@
                     foreach($result as $info){  ?>
                     <div class="list">
                         <a href="sopumListView.php?shopListID=<?=$info['shopListID']?>">
-                            <h4 class="list_title"><?=$info['shopName']?><span><?=$info['goodsList']?></span></h4>
+                            <h4 class="list_title"><?=$info['shopName']?><span><?=$info['shopListContents']?></span>
+                            </h4>
                         </a>
 
                         <div class="list__img">

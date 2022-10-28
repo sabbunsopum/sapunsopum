@@ -84,6 +84,10 @@
                                                 placeholder="소품샵 이름을 입력해주세요">
                                         </div>
                                         <div>
+                                            <span>소품샵 소개</span><input type="text" name="shopListContents"
+                                                id="shopListContents" placeholder="간단한 소품샵 소개를 입력 해 주세요">
+                                        </div>
+                                        <div>
                                             <span>영업시간</span>
                                             <input class="time" type="text" name="shopHours" id="shopHours"
                                                 placeholder="영업일/시간을 입력하세요">
