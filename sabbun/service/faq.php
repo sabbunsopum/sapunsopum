@@ -103,5 +103,8 @@
     <!-- // footer -->
 
     <script src="../assets/js/custom.js"></script>
+    <script>
+        document.querySelector(".faq__header .link .faq").classList.add("active");
+    </script>
 </body>
 </html>
