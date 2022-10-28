@@ -50,7 +50,7 @@
                 </div>
                 <!-- 소품샵 리스트 -->
                 <div class="list__inner">
-                    <div class="list">
+                    <!-- <div class="list">
                         <a href="sopumListView.php">
                             <h4 class="list_title">모던소품<span>모던한 감성 소품샵</span></h4>
                         </a>
@@ -251,7 +251,26 @@
                                 <img src="../html/assets/img/List_share.svg" alt="">
                                 </span>
                         </div>
+                    </div> -->
+
+                    <div class="list">
+                        <a href="/">
+                            <h4 class="list_title">Snow Snow<span>아기자기한 미니어처 소품들 </span></h4>
+                        </a>
+
+                        <div class="list__img">
+                            <a href="/"><img src="../html/assets/img/sopumList__bg12.jpg" alt=""></a>
+                        </div>
+                        <div class="list__icon">
+                            <span class=" heart">
+
+                            </span>
+                            <span class=" share">
+                                <img src="../html/assets/img/List_share.svg" alt="">
+                            </span>
+                        </div>
                     </div>
+
                 </div>
                 <!-- //소품샵 리스트 -->
                 <div class="board__search">

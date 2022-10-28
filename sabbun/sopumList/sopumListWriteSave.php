@@ -35,7 +35,6 @@
     
 
     
-    //$result = $connect -> query($sql);
 
 
     if($shopImgType){
@@ -67,8 +66,8 @@
     $result = $connect -> query($sql);
     $result = move_uploaded_file($shopImgTmp, $shopImgDir.$shopImgName);
     
-    //Header("Location: board.php");
+    Header("Location: sopumList.php");
 
-    
+    // var_dump($shopTag);
     
     ?>
