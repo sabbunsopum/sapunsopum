@@ -1,6 +1,12 @@
 <?php 
     include "../connect/connect.php";
     include "../connect/session.php";
+
+    $shopListID = $_GET['shopListID'];
+    //var_dump($shopListID);
+    $sql = "SELECT * FROM sopumShopList WHERE shopListID = {$shopListID}";
+    $result = $connect -> query($sql);
+    $info = $result -> fetch_array(MYSQLI_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -54,31 +60,30 @@
                     <div class="postWrite">
                         <div class="post__info">
                             <div class="img">
-                                <img src="../html/assets/img/sopumListView_bg01.jpg" alt="">
+                                <img src="img/<?=$info['shopImgFile']?>" alt="">
 
                             </div>
                             <div class="shop__info">
 
                                 <div class="info__desc">
                                     <span>업체명</span>
-                                    <div class="info">소르르</div>
+                                    <div class="info"><?=$info['shopName']?></div>
                                 </div>
                                 <div class="info__desc">
                                     <span>영업시간</span>
-                                    <div class="info">화, 수, 목, 금, 토 / 9:00 AM ~ 18:00 PM</div>
+                                    <div class="info"><?=$info['shopHours']?></div>
                                 </div>
                                 <div class="info__desc">
                                     <span>연락처</span>
-                                    <div class="info">010 - 1234 - 5678 / soruru@abc.com</div>
+                                    <div class="info"><?=$info['shopNum']?></div>
                                 </div>
                                 <div class="info__desc">
                                     <span>상품종류</span>
-                                    <div class="info">패브릭, 제로웨이스트, 인테리어</div>
+                                    <div class="info"><?=$info['goodsList']?></div>
                                 </div>
                                 <div class="info__desc">
                                     <span>위치</span>
-                                    <div class="info">
-                                        제주특별자치도 제주시 OO로 OO길 100, 1층 붉은색 문의 건물입니다.</div>
+                                    <div class="info"><?=$info['shopAdress']?></div>
                                 </div>
 
                                 <div class="shop__map">
