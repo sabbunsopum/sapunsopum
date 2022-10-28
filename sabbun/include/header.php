@@ -19,7 +19,7 @@
                     <img src="../html/assets/img/temp_logo.svg" alt="사뿐소품 로고">
                 </a>
             </div>
-            <nav class="header__menu clearfix">
+            <nav class="header__menu">
                 <ul>
                     <li><a href="#sliderType">사뿐소품이란?</a></li>
                     <li><a href="../list/sopumList.php">소품샵 리스트</a></li>
@@ -61,4 +61,32 @@
     </header>
     <!-- // headerType -->
 </body>
+<script>
+    const btnHam = document.querySelector(".header__ham");
+    const btnMenu = document.querySelector(".header__menu");
+    const btnMenuList = btnMenu.querySelectorAll("ul li a");
+
+    btnHam.addEventListener("click", () => {
+        btnHam.classList.toggle("active");
+        btnMenu.classList.toggle("active");
+        document.body.classList.toggle("fixed");
+    });
+
+    btnMenuList.forEach((list) => {
+            list.addEventListener("click", () => {
+                document.body.classList.remove("fixed");
+                btnMenu.classList.remove("active");
+                btnHam.classList.remove("active");
+            });
+        });
+
+    window.addEventListener("resize", () => {
+        let width = window.innerWidth;
+        if (width > 1300) {
+            document.body.classList.remove("fixed");
+            btnMenu.classList.remove("active");
+            btnHam.classList.remove("active");
+        }
+    });
+</script>
 </html>

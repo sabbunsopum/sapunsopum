@@ -3,10 +3,10 @@
     include "../connect/session.php";
     include "../connect/sessionCheck.php";
 
-    $myMemberID = $_SESSION['myMemberID'];
-    $myPageSql = "SELECT * FROM myBMember WHERE myMemberID = {$myMemberID}";
-    $myPageResult = $connect -> query($myPageSql);
-    $myPageInfo = $myPageResult -> fetch_array(MYSQLI_ASSOC);
+    // $myMemberID = $_SESSION['myMemberID'];
+    // $myPageSql = "SELECT * FROM myBMember WHERE myMemberID = {$myMemberID}";
+    // $myPageResult = $connect -> query($myPageSql);
+    // $myPageInfo = $myPageResult -> fetch_array(MYSQLI_ASSOC);
 
 
 ?>
@@ -38,6 +38,26 @@
         <div id="myPage__inner" class="myPage__inner">
             <section id="contents">
                 <div class="list">
+
+<?php
+    // $sql = "SELECT * FROM myBoard WHERE myMemberID = 0 ORDER BY myBoardID DESC";
+    $sql = "SELECT b.myBoardID, b.myMemberID, b.boardTitle, b.boardContents, m.myMemberID FROM myBoard b JOIN myBMember m ON (b.myMemberID = m.myMemberID) ORDER BY myBoardID DESC";
+    // $sql = "SELECT * FROM myBoard WHERE myMemberID = `{$myBMember['myMemberID']}` ORDER BY myBoardID DESC";
+    $result = $connect -> query($sql);
+    foreach($result as $board){  ?>
+        <div class="card">
+            <a href="boardView.php?myBoardID<?=$board['myBoardID']?>">
+                <figure>
+                    <img src="../html/assets/img/basic__icon.png" alt="게시글1">
+                </figure>
+                <div class="desc">
+                    <h3><?=$board['boardTitle']?></h3>
+                    <p><?=$board['boardContents']?></p>
+                </div>
+            </a>
+        </div>
+<?php } ?>
+
                     <div class="card">
                         <a href="#">
                             <figure>
