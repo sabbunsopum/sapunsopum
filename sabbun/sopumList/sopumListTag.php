@@ -2,18 +2,16 @@
     include "../connect/connect.php";
     include "../connect/session.php";
 
-    $category = $_GET['Tag'];
-
     
-
-    $sql = "SELECT * FROM sopumShopList WHERE myMemberID = {$myMemberID}";
-    $result = $connect -> query($sql);
-    $info = $result -> fetch_array(MYSQLI_ASSOC);
-
-    $categorySql = "SELECT * FROM myBlog WHERE blogDelete = 0 AND blogCategory = '$category' ORDER BY myBlogID DESC LIMIT 10";
-    $categoryResult = $connect -> query($categorySql);
-    $categoryInfo = $categoryResult -> fetch_array(MYSQLI_ASSOC);
-    $categoryCount = $categoryResult -> num_rows;
+    // $sql = "SELECT * FROM sopumShopList ORDER BY shopListID DESC";
+    // $result = $connect -> query($sql);
+    // $info = $result -> fetch_array(MYSQLI_ASSOC);
+    
+    $shopTag = $_GET['Tag'];
+    $shopTagSql = "SELECT * FROM sopumShopList WHERE shopTag = '$shopTag' ORDER BY ShopListID DESC LIMIT 10";
+    $shopTagResult = $connect -> query($shopTagSql);
+    $shopTagInfo = $shopTagResult -> fetch_array(MYSQLI_ASSOC);
+    $shopTagCount = $shopTagResult -> num_rows;
 
 
 ?>
@@ -62,31 +60,24 @@
                 <div class="board__title">
                     <h3>소품#</h3>
                     <p>다양한 소품샵을 사뿐소품에서 확인해보세요!</p>
-                    <?php
-                    foreach($result as $info){    ?>
-                    <a href="sopumListTag.php?Tag=<?=$info['shopTag']?>"><?=$info['shopTag']?></a>
-                    <?php
-                    }  
-                    ?>
 
-
-                    <br><br>
                 </div>
 
                 <!-- 소품샵 리스트 -->
                 <div class="list__inner">
 
                     <?php
-                    foreach($result as $info){  ?>
+                    foreach($shopTagResult as $shopTagInfo){  ?>
                     <div class="list">
-                        <a href="sopumListView.php?shopListID=<?=$info['shopListID']?>">
-                            <h4 class="list_title"><?=$info['shopName']?><span><?=$info['shopListContents']?></span>
+                        <a href="sopumListView.php?shopListID=<?=$shopTagInfo['shopListID']?>">
+                            <h4 class="list_title">
+                                <?=$shopTagInfo['shopName']?><span><?=$shopTagInfo['shopListContents']?></span>
                             </h4>
                         </a>
 
                         <div class="list__img">
-                            <a href="sopumListView.php?shopListID=<?=$info['shopListID']?>">
-                                <img src="img/<?=$info['shopImgFile']?>" alt=""></a>
+                            <a href="sopumListView.php?shopListID=<?=$shopTagInfo['shopListID']?>">
+                                <img src="img/<?=$shopTagInfo['shopImgFile']?>" alt=""></a>
                         </div>
                         <div class="list__icon">
                             <span class=" heart">
