@@ -1,3 +1,13 @@
+<?php 
+    include "../connect/connect.php";
+    include "../connect/session.php";
+
+    // $shopListID = $_GET['shopListID'];
+    // //var_dump($shopListID);
+    // $sql = "SELECT * FROM sopumShopList WHERE shopListID = {$shopListID}";
+    // $result = $connect -> query($sql);
+    // $info = $result -> fetch_array(MYSQLI_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -10,12 +20,12 @@
 
     </style>
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/sopumListView.css">
+    <link rel="stylesheet" href="../html/assets/css/fonts.css">
+    <link rel="stylesheet" href="../html/assets/css/common.css">
+    <link rel="stylesheet" href="../html/assets/css/reset.css">
+    <link rel="stylesheet" href="../html/assets/css/header.css">
+    <link rel="stylesheet" href="../html/assets/css/footer.css">
+    <link rel="stylesheet" href="../html/assets/css/sopumListView.css">
 
     <!-- META -->
     <meta name="author" content="webstoryboy">
@@ -24,60 +34,21 @@
     <meta name="robots" content="all">
 
     <!-- ICON -->
-    <link rel="icon" href="assets/img/icon_256.png" />
-    <link rel="shortcut icon" href="assets/img/icon_256.png" />
-    <link rel="icon" type="image/png" sizes="256x256" href="assets/img/icon_256.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon_192.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon_32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icon_16.png" />
+    <link rel="icon" href="../html/assets/img/icon_256.png" />
+    <link rel="shortcut icon" href="../html/assets/img/icon_256.png" />
+    <link rel="icon" type="image/png" sizes="256x256" href="../html/assets/img/icon_256.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../html/assets/img/icon_192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../html/assets/img/icon_32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../html/assets/img/icon_16.png" />
 </head>
 
 <body>
-    <header id="headerType" class="header__wrap nanum">
-        <div class="header__inner">
-            <div class="header__logo">
-                <a href="main.html">
-                    <img src="assets/img/temp_logo.svg" alt="사뿐소품 로고">
-                </a>
-            </div>
-            <nav class="header__menu clearfix">
-                <ul>
-                    <li><a href="#sliderType">사뿐소품이란?</a></li>
-                    <li><a href="sopumList.html">소품샵 리스트</a></li>
-                    <li><a href="board.html">커뮤니티</a></li>
-                    <li><a href="myPage.html">마이페이지</a></li>
-                    <li><a href="faq.html">고객센터</a></li>
-                </ul>
-            </nav>
-            <div class="header__member clearfix">
-                <ul>
-                    <li><a href="login.html">로그인</a></li>
-                    <li><a href="join1.html">회원가입</a></li>
-                </ul>
-            </div>
-            <div class="header__search clearfix">
-                <form action="headerSearch.php" name="headerSearch" method="get">
-                    <fieldset>
-                        <legend>검색 영역</legend>
-                        <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !"
-                            aria-label="search" required>
-                        <button type="submit" class="searchBtn">
-                            <img src="assets/img/search_icon.svg" alt="검색버튼">
-                        </button>
-                    </fieldset>
-                </form>
-            </div>
-            <div class="header__ham">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
-    <!-- // headerType -->
+    <?php include "../include/header.php" ?>
+    <!-- // header -->
+
 
     <main id="main">
-        <section id="store__wrap" class="store__wrap nanum">
+    <section id="store__wrap" class="store__wrap nanum">
             <div class="store__inner">
                 <!-- 소품샵 리스트 게시판 -->
                 <div class="visual">
@@ -174,63 +145,22 @@
 
             </div>
         </section>
-        <!-- //board -->
 
 
     </main>
     <!-- //main -->
 
-    <footer id="footer__type" class="footer__wrap nanum">
-        <div class="footer__inner container">
-            <div class="footer__menu">
-                <ul>
-                    <h4>고객센터</h4>
-                    <div class="footer__cs">
-                        <li class="footer__cscenter">sabbunsopum@gmail.com</li>
-                        <li><span>홈페이지 내 1:1 상담 또는 이메일을 통해 문의를 받고 있습니다.</span></li>
-                    </div>
-                </ul>
-                <ul>
-                    <h4>사뿐소품</h4>
-                    <li><a href="#">브랜드스토리</a></li>
-                    <li><a href="#">이용안내</a></li>
-                    <li><a href="#">연혁</a></li>
-                </ul>
-                <ul>
-                    <h4>고객지원</h4>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">자주하는 질문</a></li>
-                    <li><a href="#">1:1 상담</a></li>
-                </ul>
-                <ul>
-                    <h4>개인정보</h4>
-                    <li><a href="#">이용약관</a></li>
-                    <li><a href="#">개인정보처리방침</a></li>
-                </ul>
-                <p>
-                    Copyright © 사뿐소품. All rights reserved.
-                </p>
-            </div>
-            <div class="footer__icon">
-                <div class="footer__icon__img img1"><a href=""></a></div>
-                <div class="footer__icon__img img2"><a href=""></a></div>
-                <div class="footer__icon__img img3"><a href=""></a></div>
-                <div class="footer__icon__img img4"><a href=""></a></div>
-                <div class="footer__icon__img img5"><a href=""></a></div>
-            </div>
-        </div>
-
-    </footer>
+    <?php include "../include/footer.php" ?>
+    <!-- // footer -->
 
     <script>
-        const LikeBtn = document.querySelectorAll(".heart");
+    const LikeBtn = document.querySelectorAll(".heart");
 
-        LikeBtn.forEach((e) => {
-            e.addEventListener("click", () => {
-                e.classList.toggle("red")
-            })
+    LikeBtn.forEach((e) => {
+        e.addEventListener("click", () => {
+            e.classList.toggle("red")
         })
-
+    })
     </script>
 </body>
 
