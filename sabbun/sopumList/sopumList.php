@@ -52,7 +52,17 @@
                 <div class="board__title">
                     <h3>소품#</h3>
                     <p>다양한 소품샵을 사뿐소품에서 확인해보세요!</p>
+                    <?php
+                    foreach($result as $info){    ?>
+                    <a href="sopumListTag.php?Tag=<?=$info['shopTag']?>"><?=$info['shopTag']?></a>
+                    <?php
+                    }  
+                    ?>
+
+
+                    <br><br>
                 </div>
+
                 <!-- 소품샵 리스트 -->
                 <div class="list__inner">
                     <!-- <div class="list">
