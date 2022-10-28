@@ -68,34 +68,37 @@
                                 <div class="post__info">
                                     <div class="img">
                                         <div class="img__button">
-                                            <label for="sopumListFile">
+                                            <label for="shopProfile">
                                                 <div class="btn-upload">
                                                 </div>
                                                 <p>사진을 업로드해주세요!</p>
                                             </label>
-                                            <input type="file" name="sopumListFile" id="sopumListFile"
+                                            <input type="file" name="shopProfile" id="shopProfile"
                                                 accept=".jpg, .jpeg, .png, .gif">
                                         </div>
 
                                     </div>
                                     <div class="shop__info">
-
                                         <div>
-                                            <span>업체명</span><input type="text" placeholder="소품샵 이름을 입력해주세요">
+                                            <span>업체명</span><input type="text" name="shopName" id="shopName"
+                                                placeholder="소품샵 이름을 입력해주세요">
                                         </div>
                                         <div>
-                                            <span>영업시간</span><input class="time" type="text"
+                                            <span>영업시간</span>
+                                            <input class="time" type="text" name="shopHours" id="shopHours"
                                                 placeholder="영업일/시간을 입력하세요">
                                         </div>
                                         <div>
-                                            <span>연락처</span><input class="phone" type="text"
+                                            <span>연락처</span><input class="phone" type="text" name="shopNum" id="shopNum"
                                                 placeholder="소품샵 연락처를 입력하세요">
                                         </div>
                                         <div>
-                                            <span>상품종류</span><input type="text" placeholder="판매하는 상품 종류를 입력해주세요">
+                                            <span>상품종류</span><input type="text" name="goodsList" id="goodsList"
+                                                placeholder="판매하는 상품 종류를 입력해주세요">
                                         </div>
                                         <div>
-                                            <span>위치</span><input type="text" placeholder="소품샵 주소를 입력하세요">
+                                            <span>위치</span><input type="text" name="shopAdress" id="shopAdress"
+                                                placeholder="소품샵 주소를 입력하세요">
                                         </div>
 
                                         <div class="shop__map">
