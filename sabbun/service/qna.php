@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="../html/assets/css/common.css">
     <link rel="stylesheet" href="../html/assets/css/reset.css">
     <link rel="stylesheet" href="../html/assets/css/header_faq.css">
-    <link rel="stylesheet" href="../html/assets/css/faq.css">
+    <link rel="stylesheet" href="../html/assets/css/qna.css">
     <link rel="stylesheet" href="../html/assets/css/footer.css">
 </head>
 <body>
@@ -60,5 +60,8 @@
     <!-- // footer -->
 
     <script src="../assets/js/custom.js"></script>
+    <script>
+        document.querySelector(".faq__header .link .qna").classList.add("active");
+    </script>
 </body>
 </html>

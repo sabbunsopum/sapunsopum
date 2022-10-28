@@ -15,7 +15,7 @@
     <header id="headerType" class="header__wrap nanum">
         <div class="header__inner">
             <div class="header__logo">
-                <a href="main.html">
+                <a href="../main/main.php">
                     <img src="../html/assets/img/header__icon1-1.png" alt="사뿐소품 로고">
                 </a>
             </div>
@@ -56,6 +56,16 @@
                 <span></span>
                 <span></span>
                 <span></span>
+            </div>
+        </div>
+        <div class="faq__header">
+            <h2>FAQ</h2>
+            <span>FAQ</span>
+            <div class="link">
+                <ul>
+                    <li class="faq"><a href="../service/faq.php">자주묻는질문</a></li>
+                    <li class="qna"><a href="../service/qna.php">1:1문의</a></li>
+                </ul>
             </div>
         </div>
     </header>
