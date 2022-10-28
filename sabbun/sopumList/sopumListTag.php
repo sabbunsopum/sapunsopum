@@ -76,7 +76,7 @@
             <div class="board__inner">
                 <div class="board__title">
                     <h3>소품#</h3>
-                    <p><?=$shopTagInfo['shopTag']?></p>
+                    <p>다양한 소품샵을 사뿐소품에서 확인해보세요!</p>
                     <a><?=$shopTagInfo['shopTag']?>와 관련된 글이 <?=$shopTagCount?>개 있습니다.</a>
                 </div>
 
