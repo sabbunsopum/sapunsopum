@@ -18,6 +18,7 @@
     <style>
     .board__title {
         text-align: center;
+        margin-bottom: 50px;
     }
 
     .board__title p {
@@ -68,9 +69,11 @@
                 <div class="board__title">
                     <h3>소품#</h3>
                     <p>다양한 소품샵을 사뿐소품에서 확인해보세요!</p>
+
                     <?php
                     foreach($result as $info){    ?>
-                    <a href="sopumListTag.php?Tag=<?=$info['shopTag']?>"><?=$info['shopTag']?></a>
+                    <a href="sopumListTag.php?Tag=<?=$info['shopTag']?>"><?=
+                    $info['shopTag']?></a>
                     <?php
                     }  
                     ?>

@@ -24,7 +24,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>board</title>
     <style>
+    .board__title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
 
+    .board__title p {
+        margin-bottom: 50px !important;
+    }
+
+    .board__title a {
+        color: #fff;
+        margin: 0 10px;
+        padding: 5px;
+        font-size: 14px;
+        font-weight: 500;
+        background: #4461f2;
+        border-radius: 10px;
+    }
     </style>
     <!-- CSS -->
     <link rel="stylesheet" href="../html/assets/css/sopumList.css">
@@ -59,8 +76,8 @@
             <div class="board__inner">
                 <div class="board__title">
                     <h3>소품#</h3>
-                    <p>다양한 소품샵을 사뿐소품에서 확인해보세요!</p>
-
+                    <p><?=$shopTagInfo['shopTag']?></p>
+                    <a><?=$shopTagInfo['shopTag']?>와 관련된 글이 <?=$shopTagCount?>개 있습니다.</a>
                 </div>
 
                 <!-- 소품샵 리스트 -->
