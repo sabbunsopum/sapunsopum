@@ -3,7 +3,7 @@
     include "../connect/session.php";
 
     $myMemberID = $_SESSION['myMemberID'];
-    $sql = "SELECT * FROM sopumShopList WHERE myMemberID = {$myMemberID} ORDER BY shopListID DESC";
+    $sql = "SELECT * FROM sopumShopList ORDER BY shopListID DESC";
     $result = $connect -> query($sql);
     $info = $result -> fetch_array(MYSQLI_ASSOC);
 ?>
@@ -16,7 +16,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>board</title>
     <style>
+    .board__title {
+        text-align: center;
+    }
 
+    .board__title p {
+        margin-bottom: 50px !important;
+    }
+
+    .board__title a {
+        color: #fff;
+        margin: 0 10px;
+        padding: 5px;
+        font-size: 14px;
+        font-weight: 500;
+        background: #4461f2;
+        border-radius: 10px;
+    }
     </style>
     <!-- CSS -->
     <link rel="stylesheet" href="../html/assets/css/sopumList.css">

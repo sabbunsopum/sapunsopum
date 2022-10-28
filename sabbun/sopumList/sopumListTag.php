@@ -2,10 +2,20 @@
     include "../connect/connect.php";
     include "../connect/session.php";
 
-    $myMemberID = $_SESSION['myMemberID'];
+    $category = $_GET['Tag'];
+
+    
+
     $sql = "SELECT * FROM sopumShopList WHERE myMemberID = {$myMemberID}";
     $result = $connect -> query($sql);
     $info = $result -> fetch_array(MYSQLI_ASSOC);
+
+    $categorySql = "SELECT * FROM myBlog WHERE blogDelete = 0 AND blogCategory = '$category' ORDER BY myBlogID DESC LIMIT 10";
+    $categoryResult = $connect -> query($categorySql);
+    $categoryInfo = $categoryResult -> fetch_array(MYSQLI_ASSOC);
+    $categoryCount = $categoryResult -> num_rows;
+
+
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -65,209 +75,6 @@
 
                 <!-- 소품샵 리스트 -->
                 <div class="list__inner">
-                    <!-- <div class="list">
-                        <a href="sopumListView.php">
-                            <h4 class="list_title">모던소품<span>모던한 감성 소품샵</span></h4>
-                        </a>
-
-                        <div class="list__img">
-                            <a href="sopumListView.php"><img src="../html/assets/img/sopumList__bg01.jpg" alt=""></a>
-                        </div>
-                        <div class="list__icon">
-                            <span class="heart"></span>
-                            <span class="share">
-                                <img src="../html/assets/img/List_share.svg" alt="">
-                                </span>
-                        </div>
-                    </div>
-                    <div class="list">
-                        <a href="sopumListView.php">
-                            <h4 class="list_title">소르르<span>제주도 제로웨이스트 맛집!</span></h4>
-                        </a>
-
-                        <div class="list__img">
-                            <a href="sopumListView.php"><img src="../html/assets/img/sopumListView_bg01.jpg" alt=""></a>
-                        </div>
-                        <div class="list__icon">
-                            <span class="heart">
-
-                               </span>
-                            <span class="share">
-                                <img src="../html/assets/img/List_share.svg" alt="">
-                                </span>
-                        </div>
-                    </div>
-                    <div class="list">
-                        <a href="sopumListView.php">
-                            <h4 class="list_title">모디터<span>모던 인테리어 소품샵</span></h4>
-                        </a>
-
-                        <div class="list__img">
-                            <a href="sopumListView.php"><img src="../html/assets/img/sopumList__bg03.jpg" alt=""></a>
-                        </div>
-                        <div class="list__icon">
-                            <span class=" heart">
-
-                               </span>
-                            <span class=" share">
-                                <img src="../html/assets/img/List_share.svg" alt="">
-                                </span>
-                        </div>
-                    </div>
-                    <div class="list">
-                        <a href="sopumListView.php">
-                            <h4 class="list_title">산타마켓<span>크리스마스 선물은?</span></h4>
-                        </a>
-
-                        <div class="list__img">
-                            <a href="sopumListView.php"><img src="../html/assets/img/sopumList__bg04.jpg" alt=""></a>
-                        </div>
-                        <div class="list__icon">
-                            <span class=" heart">
-
-                                </span>
-                            <span class=" share">
-                                <img src="../html/assets/img/List_share.svg" alt="">
-                                </span>
-                        </div>
-                    </div>
-                    <div class="list">
-                        <a href="sopumListView.php">
-                            <h4 class="list_title">Good Mode<span>멋진 데이트코스</span></h4>
-                        </a>
-
-                        <div class="list__img">
-                            <a href="sopumListView.php"><img src="../html/assets/img/sopumList__bg05.jpg" alt=""></a>
-                        </div>
-                        <div class="list__icon">
-                            <span class=" heart">
-
-                                </span>
-                            <span class=" share">
-                                <img src="../html/assets/img/List_share.svg" alt="">
-                                </span>
-                        </div>
-                    </div>
-                    <div class="list">
-                        <a href="sopumListView.php">
-                            <h4 class="list_title">HelloWorld<span>다양한 다이어리 용품</span></h4>
-                        </a>
-
-                        <div class="list__img">
-                            <a href="/"><img src="../html/assets/img/sopumList__bg06.jpg" alt=""></a>
-                        </div>
-                        <div class="list__icon">
-                            <span class=" heart">
-
-                                </span>
-                            <span class=" share">
-                                <img src="../html/assets/img/List_share.svg" alt="">
-                                </span>
-                        </div>
-                    </div>
-                    <div class="list">
-                        <a href="sopumListView.php">
-                            <h4 class="list_title">양말상점<span>양말도 패션이야!</span></h4>
-                        </a>
-
-                        <div class="list__img">
-                            <a href="/"><img src="../html/assets/img/sopumList__bg07.jpg" alt=""></a>
-                        </div>
-                        <div class="list__icon">
-                            <span class=" heart">
-
-                                </span>
-                            <span class=" share">
-                                <img src="../html/assets/img/List_share.svg" alt="">
-                                </span>
-                        </div>
-                    </div>
-                    <div class="list">
-                        <a href="/">
-                            <h4 class="list_title">캔들캔들<span>향기로운 감성 캔들</span></h4>
-                        </a>
-
-                        <div class="list__img">
-                            <a href="/"><img src="../html/assets/img/sopumList__bg08.jpg" alt=""></a>
-                        </div>
-                        <div class="list__icon">
-                            <span class=" heart">
-
-                                </span>
-                            <span class=" share">
-                                <img src="../html/assets/img/List_share.svg" alt="">
-                                </span>
-                        </div>
-                    </div>
-                    <div class="list">
-                        <a href="/">
-                            <h4 class="list_title">P-for-Y<span>소중한 널 위한 선물</span></h4>
-                        </a>
-
-                        <div class="list__img">
-                            <a href="/"><img src="../html/assets/img/sopumList__bg09.jpg" alt=""></a>
-                        </div>
-                        <div class="list__icon">
-                            <span class=" heart">
-
-                                </span>
-                            <span class=" share">
-                                <img src="../html/assets/img/List_share.svg" alt="">
-                                </span>
-                        </div>
-                    </div>
-                    <div class="list">
-                        <a href="/">
-                            <h4 class="list_title">Merry-Go-Round<span>레트로 감성 소품샵</span></h4>
-                        </a>
-
-                        <div class="list__img">
-                            <a href="/"><img src="../html/assets/img/sopumList__bg10.jpg" alt=""></a>
-                        </div>
-                        <div class="list__icon">
-                            <span class=" heart">
-
-                                </span>
-                            <span class=" share">
-                                <img src="../html/assets/img/List_share.svg" alt="">
-                                </span>
-                        </div>
-                    </div>
-                    <div class="list">
-                        <a href="/">
-                            <h4 class="list_title">Post for You<span>인디 작가들의 엽서 모음전</span></h4>
-                        </a>
-
-                        <div class="list__img">
-                            <a href="/"><img src="../html/assets/img/sopumList__bg11.jpg" alt=""></a>
-                        </div>
-                        <div class="list__icon">
-                            <span class=" heart">
-
-                                </span>
-                            <span class=" share">
-                                <img src="../html/assets/img/List_share.svg" alt="">
-                                </span>
-                        </div>
-                    </div>
-                    <div class="list">
-                        <a href="/">
-                            <h4 class="list_title">Snow Snow<span>아기자기한 미니어처 소품들 </span></h4>
-                        </a>
-
-                        <div class="list__img">
-                            <a href="/"><img src="../html/assets/img/sopumList__bg12.jpg" alt=""></a>
-                        </div>
-                        <div class="list__icon">
-                            <span class=" heart">
-
-                                </span>
-                            <span class=" share">
-                                <img src="../html/assets/img/List_share.svg" alt="">
-                                </span>
-                        </div>
-                    </div> -->
-
 
                     <?php
                     foreach($result as $info){  ?>
