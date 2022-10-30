@@ -1,13 +1,17 @@
 <?php
     include "../connect/connect.php";
     include "../connect/session.php";
-    include "../connect/sessionCheck.php";
 
     $myMemberID = $_SESSION['myMemberID'];
-    $myPageSql = "SELECT * FROM myBMember WHERE myMemberID = {$myMemberID}";
-    $myPageResult = $connect -> query($myPageSql);
-    $myPageInfo = $myPageResult -> fetch_array(MYSQLI_ASSOC);
 
+    $mySql = "SELECT * FROM myBMember";
+    $myResult = $connect -> query($mySql);
+    $myInfo = $myResult -> fetch_array(MYSQLI_ASSOC);
+
+
+    $tipSql = "SELECT * FROM myTip ORDER BY myTipID DESC";
+    $tipResult = $connect -> query($tipSql);
+    $tipInfo = $tipResult -> fetch_array(MYSQLI_ASSOC);
 
 ?>
 
@@ -39,7 +43,26 @@
           공유하세요!
         </p>
         <div class="myTip__inner">
-          <div class="tipBox t1">
+        <?php
+        foreach($tipResult as $tip){?>
+        <div class="tipBox t<?echo $tip['rcvSlct']?>">
+            <span
+              ><img src="../html/assets/img/myTip_icon<?echo $tip['rcvSlct']?>.svg" alt="icon1"
+            /></span>
+
+            <p>
+              <?echo $tip['tipMsg']?>
+            </p>
+           
+          <button id="tipDeleteButton">❎</button>
+          
+            
+         
+
+          </div>
+        <?php
+        }?>
+          <!-- <div class="tipBox t1">
             <span
               ><img src="../html/assets/img/myTip_icon.svg" alt="icon1"
             /></span>
@@ -75,7 +98,7 @@
             <span
               ><img src="../html/assets/img/myTip_icon4.svg" alt="icon4"
             /></span>
-          </div>
+          </div> -->
 
           <div class="myTip__Write__inner">
             <div class="myTip__wirte">
@@ -85,32 +108,30 @@
                 type="text"
                 placeholder="자신만의 팁을 마음껏 적어주세요!"
               />
-
               <div class="profile__Img">
                 <div class="profile__select">
                   <!-- <span class="myTip__profileImg__Select">프로필 선택</span> -->
                   <label for="myTip__profileImg__Select"
-                    ><input type="radio" name="emoji" /><img
+                    ><input type="radio" name="radio"  value="1"/><img
                       src="../html/assets/img/myTip_icon.svg"
-                      alt="icon1"
+                      alt="icon1" 
                   /></label>
                   <label for="myTip__profileImg__Select"
-                    ><input type="radio" name="emoji" /><img
+                    ><input type="radio" name="radio"  value="2"/><img
                       src="../html/assets/img/myTip_icon2.svg"
-                      alt="icon2"
+                      alt="icon2" 
                   /></label>
                   <label for="myTip__profileImg__Select"
-                    ><input type="radio" name="emoji" /><img
+                    ><input type="radio" name="radio"  value="3"/><img
                       src="../html/assets/img/myTip_icon3.svg"
-                      alt="icon3"
+                      alt="icon3" 
                   /></label>
                   <label for="myTip__profileImg__Select"
-                    ><input type="radio" name="emoji" /><img
+                    ><input type="radio" name="radio"  value="4"/><img
                       src="../html/assets/img/myTip_icon4.svg"
-                      alt="icon4"
+                      alt="icon4" 
                   /></label>
                 </div>
-
                 <div class="profile__Upload">
                   <label for="myTip__profileImg__Upload">
                     <!-- <span>프로필 직접 지정</span> -->
@@ -118,7 +139,7 @@
                   </label>
                   <input id="myTip__profileImg__Upload" type="file" />
                 </div>
-                <button type="submit">글쓰기</button>
+                <button type="submit" id="tipBtn">글쓰기</button>
               </div>
             </div>
           </div>
@@ -131,5 +152,44 @@
     <!-- // footer -->
 
     <script src="../assets/js/custom.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+
+
+    
+
+    const myTip__Write = $("#myTip__Write"); //댓글 내용
+
+    let commentID = "";
+
+  
+    // 댓글 쓰기
+    $("#tipBtn").click(() => {
+        if ($("#myTip__Write").val() == "") {
+            alert("댓글을 써주세요!")
+            $("#myTip__Write").focus();
+        } else {
+            $.ajax({
+                url: "myTipWrite.php",
+                method: "POST",
+                dataType: "json",
+                data: {
+                    "msg": myTip__Write.val(),
+                    "rcvSlct": $('[name=radio]:checked').val()
+
+                },
+                success: function(data) {
+                    console.log(data);
+                    location.reload();
+                },
+                error: function(request, status, error) {
+                    console.log("request" + request);
+                    console.log("status" + status);
+                    console.log("error" + error);
+                }
+            });
+        }
+    });
+    </script>
 </body>
 </html>
