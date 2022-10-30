@@ -3,12 +3,11 @@
     include "../connect/session.php";
     include "../connect/sessionCheck.php";
 
-    // $myMemberID = $_SESSION['myMemberID'];
-    // $myPageSql = "SELECT * FROM myBMember WHERE myMemberID = {$myMemberID}";
-    // $myPageResult = $connect -> query($myPageSql);
-    // $myPageInfo = $myPageResult -> fetch_array(MYSQLI_ASSOC);
-
-
+    $myMemberID = $_SESSION['myMemberID'];
+    $myPageSql = "SELECT * FROM myBMember WHERE myMemberID = '$myMemberID' ORDER BY myBoardID DESC";
+    $myPageResult = $connect -> query($myPageSql);
+    $myPageInfo = $myPageResult -> fetch_array(MYSQLI_ASSOC);
+    // $myPageCount = $myPageResult -> num_rows;
 ?>
 
 <!DOCTYPE html>
@@ -40,10 +39,11 @@
                 <div class="list">
 
 <?php
+    // $sql = "SELECT * FROM myTips WHERE myMemberID = '$myMemberID' ORDER BY myTipsID DESC ";
     // $sql = "SELECT * FROM myBoard WHERE myMemberID = 0 ORDER BY myBoardID DESC";
-    $sql = "SELECT b.myBoardID, b.myMemberID, b.boardTitle, b.boardContents, m.myMemberID FROM myBoard b JOIN myBMember m ON (b.myMemberID = m.myMemberID) ORDER BY myBoardID DESC";
-    // $sql = "SELECT * FROM myBoard WHERE myMemberID = `{$myBMember['myMemberID']}` ORDER BY myBoardID DESC";
-    $result = $connect -> query($sql);
+    // $sql = "SELECT b.myBoardID, b.myMemberID, b.boardTitle, b.boardContents, m.myMemberID FROM myBoard b JOIN myBMember m ON (b.myMemberID = m.myMemberID) ORDER BY myBoardID DESC";
+    $myPageSql = "SELECT * FROM myBoard WHERE myMemberID = '$myMemberID' ORDER BY myBoardID DESC";
+    $myPageResult = $connect -> query($myPageSql);
     foreach($result as $board){  ?>
         <div class="card">
             <a href="boardView.php?myBoardID<?=$board['myBoardID']?>">
