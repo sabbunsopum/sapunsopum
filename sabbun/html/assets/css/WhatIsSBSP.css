@@ -78,3 +78,66 @@
 }
 
 /* sliderIntro */
+.sliderIntro__slide {
+  overflow:hidden;
+  width: 100%;
+  padding: 30px;
+  background: #666;
+
+}
+.slider__box {
+  width: 600vh;
+  display: flex;
+  flex-wrap: wrap;
+  animation: bannermove 15s linear infinite;
+}
+@keyframes bannermove {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(-50%, 0);
+  }
+}
+
+.sliderIntro__slide .slider__box .slide1{
+  background: url(../img/store1.jpg);
+  width: 50vh;
+  height: 50vh;
+  background-size: contain;
+  border-radius: 10px;
+  margin: 5vh;
+}
+.sliderIntro__slide .slider__box .slide2{
+  background: url(../img/store2.jpg);
+  width: 50vh;
+  height: 50vh;
+  background-size: contain;
+  border-radius: 10px;
+  margin: 5vh;
+}
+.sliderIntro__slide .slider__box .slide3{
+  background: url(../img/store3.jpg);
+  width: 50vh;
+  height: 50vh;
+  background-size: contain;
+  border-radius: 10px;
+  margin: 5vh;
+}
+.sliderIntro__slide .slider__box .slide4{
+  background: url(../img/store4.jpg);
+  width: 50vh;
+  height: 50vh;
+  background-size: contain;
+  border-radius: 10px;
+  margin: 5vh;
+}
+.sliderIntro__slide .slider__box .slide5{
+  background: url(../img/store5.jpg);
+  width: 50vh;
+  height: 50vh;
+  background-size: contain;
+  border-radius: 10px;
+  margin: 5vh;
+}
+
