@@ -4,7 +4,7 @@
 .intro__inner {
   width: 100%;
   background: #4461f2;
-  margin: 75px 0;
+  margin-top: 75px;
 }
 .intro__cont {
   padding: 100px 0;
@@ -78,18 +78,39 @@
 }
 
 /* sliderIntro */
+.sliderIntro__inner {
+  margin-top: 100px;
+}
 .sliderIntro__slide {
   overflow:hidden;
   width: 100%;
-  padding: 30px;
-  background: #666;
+  padding: 50px;
 
+}
+
+.sliderIntro__desc h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #4461F2;
+  text-align: right;
+}
+
+.sliderIntro__desc p {
+  float: right;
+  width: 600px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 80px;
+  color: #4461F2;
+  text-align: right;
+  line-height: 1.5;
 }
 .slider__box {
   width: 600vh;
   display: flex;
   flex-wrap: wrap;
-  animation: bannermove 15s linear infinite;
+  animation: bannermove 20s linear infinite;
 }
 @keyframes bannermove {
   0% {
