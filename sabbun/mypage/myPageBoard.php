@@ -39,15 +39,9 @@
                 <div class="list">
 
 <?php
-    // $sql = "SELECT * FROM myTips WHERE myMemberID = '$myMemberID' ORDER BY myTipsID DESC ";
-    // $sql = "SELECT * FROM myBoard WHERE myMemberID = 0 ORDER BY myBoardID DESC";
-    // $sql = "SELECT b.myBoardID, b.myMemberID, b.boardTitle, b.boardContents, m.myMemberID FROM myBoard b JOIN myBMember m ON (b.myMemberID = m.myMemberID) ORDER BY myBoardID DESC";
-    $myPageSql = "SELECT * FROM myBoard WHERE myMemberID = '$myMemberID' ORDER BY myBoardID DESC ";
-    $myPageResult = $connect -> query($myPageSql);
-
     foreach($myPageResult as $board){  ?>
         <div class="card">
-            <a href="boardView.php?myBoardID<?=$board['myBoardID']?>">
+            <a href="http://sabbun.dothome.co.kr/sabbun/board/boardView.php?myBoardID=<?=$board['myBoardID']?>">
                 <figure>
                     <img src="../html/assets/img/basic__icon.png" alt="게시글1">
                 </figure>
