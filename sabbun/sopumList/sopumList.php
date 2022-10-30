@@ -6,6 +6,9 @@
     $sql = "SELECT * FROM sopumShopList ORDER BY shopListID DESC";
     $result = $connect -> query($sql);
     $info = $result -> fetch_array(MYSQLI_ASSOC);
+
+   
+    
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -71,11 +74,23 @@
                     <p>다양한 소품샵을 사뿐소품에서 확인해보세요!</p>
 
                     <?php
-                    foreach($result as $info){    ?>
-                    <a href="sopumListTag.php?Tag=<?=$info['shopTag']?>"><?=
-                    $info['shopTag']?></a>
+
+                    foreach($result as $info){
+                        $infoTag[] = $info['shopTag'];};
+                        $infoTag = array_unique($infoTag);
+                        foreach($infoTag as $i){ 
+                        ?>
+                    <a href="sopumListTag.php?Tag=<?=$i;?>">#
+                    
+                    <?=
+                   $i;
+                        
+                    ?></a>
                     <?php
-                    }  
+                    };
+  
+    // var_dump($infoTag);
+  
                     ?>
 
 
