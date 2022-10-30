@@ -219,6 +219,8 @@
         padding: 20px;
         text-align: right;
         transition: right 0.4s ease-in;
+        background: #fff;
+        z-index: 9999;
     }
 
     .header__menu ul {

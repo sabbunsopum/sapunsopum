@@ -103,5 +103,12 @@ document.querySelector(".header__menu li:nth-child(3)").addEventListener("mouseo
         document.querySelector(".subMenu").classList.remove("show");
     })
 </script>
-
+<script>
+    document.querySelector(".header__menu li:nth-child(3)").addEventListener("mouseover", () => {
+        document.querySelector(".subMenu").classList.add("show");
+    })
+    document.querySelector(".header__menu li:nth-child(3)").addEventListener("mouseout", () => {
+        document.querySelector(".subMenu").classList.remove("show");
+    })
+</script>
 </html>

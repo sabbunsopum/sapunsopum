@@ -156,10 +156,10 @@
         <section id="board" class="board__wrap container">
             <h2>게시판 보기 영역입니다.</h2>
             <div class="board__inner">
-                <div class="board__title">
+                <!-- <div class="board__title">
                     <h3>Free Board</h3>
                     <p>자유 게시판 게시글 보기입니다.</p>
-                </div>
+                </div> -->
                 <div class="board__view">
                     <!-- <h3>[공지] 2021년 겨울 공지사항입니다.</h3> -->
                     <div class="board__view__head">
