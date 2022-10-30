@@ -162,3 +162,83 @@
   margin: 5vh;
 }
 
+/* progressIntro */
+
+.progressIntro__wrap {}
+.progressIntro__inner {
+  width: 100%;
+  background: #4461f2;
+  margin-top: 75px;
+  padding: 20px 0;
+}
+.progressIntro__cont {
+  padding: 140px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.progressIntro__desc {
+  width: 35%;
+  color: #fff;
+}
+.progressIntro__desc h2 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+.progressIntro__desc p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.progressIntro__img {
+  width: 60%;
+  position: relative;
+
+}
+
+.progressIntro__img .img1 {
+  position: absolute;
+  background: url(../img/intro_img/Progress_calendar.svg) no-repeat;
+  background-size: contain;
+  width: 364px;
+  height: 364px;
+  bottom: -90px;
+  right: 313px;
+  
+}
+.progressIntro__img .img2 {
+  position: absolute;
+  background: url(../img/intro_img/Progress_arrow.svg) no-repeat;
+  background-size: contain;
+  width: 380px;
+  height: 380px;
+  bottom: 1px;
+  right: 1px;
+}
+.progressIntro__img .img3 {
+  position: absolute;
+  background: url(../img/intro_img/Progress_cup.svg) no-repeat;
+  background-size: contain;
+  width: 185px;
+  height: 185px;
+  bottom: -75px;
+  right: 150px;
+}
+
+/* progress Bar */
+.progress__bar {
+  
+  margin: 50px auto;
+}
+.progress__bar .progress__dot{
+  display: inline-block;
+  width: 3vh;
+  height: 3vh;
+  background: #fff;
+  border-radius: 50%;
+  margin-right: 150px;
+}
+.progress__bar .progress__border{
+  width: 100%;
+  border-bottom: 3px solid #fff;
+}
