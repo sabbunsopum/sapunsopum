@@ -4,7 +4,7 @@
     include "../connect/sessionCheck.php";
 
     $myMemberID = $_SESSION['myMemberID'];
-    $myPageSql = "SELECT * FROM myBMember WHERE myMemberID = '$myMemberID' ORDER BY myBoardID DESC";
+    $myPageSql = "SELECT * FROM myBoard WHERE myMemberID = '$myMemberID' ORDER BY myBoardID DESC";
     $myPageResult = $connect -> query($myPageSql);
     $myPageInfo = $myPageResult -> fetch_array(MYSQLI_ASSOC);
     // $myPageCount = $myPageResult -> num_rows;
