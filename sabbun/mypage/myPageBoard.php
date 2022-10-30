@@ -43,7 +43,7 @@
         <div class="card">
             <a href="http://sabbun.dothome.co.kr/sabbun/board/boardView.php?myBoardID=<?=$board['myBoardID']?>">
                 <figure>
-                    <img src="../html/assets/img/basic__icon.png" alt="게시글1">
+                    <img src="../board/img/<?=$board['boardImgFile']?>" alt="<?=$board['boardImgFile']?>">
                 </figure>
                 <div class="desc">
                     <h3><?=$board['boardTitle']?></h3>
@@ -57,7 +57,7 @@
             <section id="aside">
                 <div class="myInfo">
                     <img src="../html/assets/img/board__icon.svg" alt="">
-                    <h3><a href="myPage.html">권규비</a> 님</h3>
+                    <h3><a href="myPage.html"><?=$_SESSION['youName']?></a> 님</h3>
                 </div>
                 <div class="goMenu">
                     <h3>마이페이지</h3>

@@ -293,7 +293,7 @@
                     <span>😶‍🌫️</span>
                 </div>
             </div>
-            <div class="more"><a href="../html/myTip.html">더보기</a></div>
+            <div class="more"><a href="../myTip/myTip.php">더보기</a></div>
         </section>
         <!-- // myTip -->
 
