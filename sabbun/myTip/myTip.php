@@ -44,8 +44,10 @@
         </p>
         <div class="myTip__inner">
         <?php
-        foreach($tipResult as $tip){?>
-        <div class="tipBox t<?echo $tip['rcvSlct']?>">
+        foreach($tipResult as $tip){
+          $i += 1; 
+          if($i == 3){$i = 1;}?>
+        <div class="tipBox t<?echo $i;?>">
             <span
               ><img src="../html/assets/img/myTip_icon<?echo $tip['rcvSlct']?>.svg" alt="icon1"
             /></span>
@@ -113,7 +115,7 @@
                   <!-- <span class="myTip__profileImg__Select">프로필 선택</span> -->
                   <label for="myTip__profileImg__Select"
                     ><input type="radio" name="radio"  value="1"/><img
-                      src="../html/assets/img/myTip_icon.svg"
+                      src="../html/assets/img/myTip_icon1.svg"
                       alt="icon1" 
                   /></label>
                   <label for="myTip__profileImg__Select"
