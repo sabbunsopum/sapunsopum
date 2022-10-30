@@ -1,9 +1,16 @@
 <?php
     include "../connect/session.php";
+    include "../connect/connect.php";
 
     // echo "<pre>";
     // var_dump($_SESSION);
     // echo "</pre>";
+
+    $listsql = "SELECT * FROM sopumShopList ORDER BY shopListID DESC";
+    $listresult = $connect -> query($listsql);
+    $listinfo = $listresult -> fetch_array(MYSQLI_ASSOC);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -35,8 +42,27 @@
             </div>
             <div class="slider__list__wrap swiper">
                 <ul class="slider__list swiper-wrapper">
+                    <?php foreach($listresult as $info){    ?>
                     <li class="store swiper-slide">
-                        <a href="../sopumList/sopumListView.php">
+                        <a href="../sopumList/sopumListView.php?shopListID=<?=$info['shopListID']?>">
+                            <div class="image">
+                                <img src="../sopumList/img/<?=$info['shopImgFile']?>" alt="<?=$info['shopName']?>" />
+                                <div>
+                                    <p class="tag">
+                                        <span>#<?=$info['shopTag']?></span>
+                                       
+                                    </p>
+                                    <p class="name"><?=$info['shopName']?></p>
+                                </div>
+                            </div>
+                            <p class="location"><span></span><?=$info['shopAdress']?></p>
+                        </a>
+                    </li>
+                    <?php
+                    }   ?>
+                    <!-- 키덜트 -->
+                    <!-- <li class="store swiper-slide">
+                        <a href="../sopumList/sopumListView.php?shopListID=">
                             <div class="image">
                                 <img src="../html/assets/img/store1.jpg" alt="미미도넛" />
                                 <div>
@@ -52,6 +78,7 @@
                             <p class="location"><span></span>서울특별시 마포구 동교동 177-4</p>
                         </a>
                     </li>
+                    
                     <li class="BEST store swiper-slide">
                         <a href="../sopumList/sopumListView.php">
                             <div class="image">
@@ -238,7 +265,8 @@
                             </div>
                             <p class="location"><span></span>서울 마포구 와우산로13길 43</p>
                         </a>
-                    </li>
+                    </li> -->
+                    <!-- 상수동 포토스팟 -->
                 </ul>
             </div>
             <div class="slider__scroll__wrap">

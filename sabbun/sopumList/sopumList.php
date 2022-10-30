@@ -80,7 +80,7 @@
                         $infoTag = array_unique($infoTag);
                         foreach($infoTag as $i){ 
                         ?>
-                    <a href="sopumListTag.php?Tag=<?=$i;?>">
+                    <a href="sopumListTag.php?Tag=<?=$i;?>">#
                     
                     <?=
                    $i;
