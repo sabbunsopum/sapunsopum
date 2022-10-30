@@ -10,6 +10,10 @@
     $listresult = $connect -> query($listsql);
     $listinfo = $listresult -> fetch_array(MYSQLI_ASSOC);
 
+    $tipSql = "SELECT * FROM myTip ORDER BY myTipID DESC";
+    $tipResult = $connect -> query($tipSql);
+    $tipInfo = $tipResult -> fetch_array(MYSQLI_ASSOC);
+
 
 ?>
 
@@ -304,7 +308,20 @@
         <section id="myTip" class="myTip">
             <h2>나만의 팁</h2>
             <div class="myTip__inner">
-                <div class="tipBox t1">
+                <?php
+                foreach($tipResult as $tip){
+                    $i += 1; 
+                    if($i == 3){$i = 1;}
+                ?>
+                <div class="tipBox t<?echo $i;?>">
+                    <span>
+                        <img src="../html/assets/img/myTip_icon<?echo $tip['rcvSlct']?>.svg" alt="icon1"/>
+                    </span>
+                    <p><?=$tip['tipMsg']?></p>
+                </div>
+                <?php
+                }?>
+                <!-- <div class="tipBox t1">
                     <span>🤓</span>
                     <p>나만의 팁을 적어야 하는데 아는게 없어서 일단은 채우기 용으로...</p>
                 </div>
@@ -319,7 +336,8 @@
                 <div class="tipBox t4">
                     <p>나만의 팁을 적어야 하는데 아는게 없어서 일단은 채우기 용으로...<br>이번엔 길게 두줄로 써보기 룰루루룰루</p>
                     <span>😶‍🌫️</span>
-                </div>
+                </div> -->
+
             </div>
             <div class="more"><a href="../myTip/myTip.php">더보기</a></div>
         </section>
