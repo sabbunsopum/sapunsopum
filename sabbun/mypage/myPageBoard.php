@@ -4,10 +4,10 @@
     include "../connect/sessionCheck.php";
 
     $myMemberID = $_SESSION['myMemberID'];
-    $myPageSql = "SELECT * FROM myBoard WHERE myMemberID = '$myMemberID' ORDER BY myBoardID DESC";
+    $myPageSql = "SELECT * FROM myBoard WHERE myMemberID = '$myMemberID' ORDER BY myBoardID DESC ";
     $myPageResult = $connect -> query($myPageSql);
     $myPageInfo = $myPageResult -> fetch_array(MYSQLI_ASSOC);
-    // $myPageCount = $myPageResult -> num_rows;
+    $myPageCount = $myPageResult -> num_rows;
 ?>
 
 <!DOCTYPE html>
@@ -42,9 +42,10 @@
     // $sql = "SELECT * FROM myTips WHERE myMemberID = '$myMemberID' ORDER BY myTipsID DESC ";
     // $sql = "SELECT * FROM myBoard WHERE myMemberID = 0 ORDER BY myBoardID DESC";
     // $sql = "SELECT b.myBoardID, b.myMemberID, b.boardTitle, b.boardContents, m.myMemberID FROM myBoard b JOIN myBMember m ON (b.myMemberID = m.myMemberID) ORDER BY myBoardID DESC";
-    $myPageSql = "SELECT * FROM myBoard WHERE myMemberID = '$myMemberID' ORDER BY myBoardID DESC";
+    $myPageSql = "SELECT * FROM myBoard WHERE myMemberID = '$myMemberID' ORDER BY myBoardID DESC ";
     $myPageResult = $connect -> query($myPageSql);
-    foreach($result as $board){  ?>
+
+    foreach($myPageResult as $board){  ?>
         <div class="card">
             <a href="boardView.php?myBoardID<?=$board['myBoardID']?>">
                 <figure>
@@ -57,77 +58,6 @@
             </a>
         </div>
 <?php } ?>
-
-                    <div class="card">
-                        <a href="#">
-                            <figure>
-                                <img src="../html/assets/img/basic__icon.png" alt="게시글1">
-                            </figure>
-                            <div class="desc">
-                                <h3>제목 불러오기</h3>
-                                <p>
-                                    글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기
-                                    글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="#">
-                            <figure>
-                                <img src="../html/assets/img/basic__icon.png" alt="게시글1">
-                            </figure>
-                            <div class="desc">
-                                <h3>제목 불러오기</h3>
-                                <p>
-                                    글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기
-                                    글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="#">
-                            <figure>
-                                <img src="../html/assets/img/basic__icon.png" alt="게시글1">
-                            </figure>
-                            <div class="desc">
-                                <h3>제목 불러오기</h3>
-                                <p>
-                                    글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기
-                                    글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="#">
-                            <figure>
-                                <img src="../html/assets/img/basic__icon.png" alt="게시글1">
-                            </figure>
-                            <div class="desc">
-                                <h3>제목 불러오기</h3>
-                                <p>
-                                    글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기
-                                    글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="#">
-                            <figure>
-                                <img src="../html/assets/img/basic__icon.png" alt="게시글1">
-                            </figure>
-                            <div class="desc">
-                                <h3>제목 불러오기</h3>
-                                <p>
-                                    글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기
-                                    글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기 글 내용 불러오기
-                                </p>
-                            </div>
-                        </a>
-                    </div>
                 </div>
             </section>
             <section id="aside">
