@@ -218,6 +218,11 @@
   font-size: 14px;
   font-weight: 400;
   color: #4461f2;
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
 }
 
 .list__img {

@@ -69,14 +69,25 @@
     background: #fff;
 }
 
+.contents .tit {
+    display: flex;
+    align-items: center;
+}
+
+.contents .tit h4 {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.contents .tit .heart {
+    width: 50px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
 .contents .info {
     display: flex;
     justify-content: space-between;
-}
-
-.contents h4 {
-    font-weight: 700;
-    font-size: 30px;
 }
 
 .contents .info .card {
@@ -116,7 +127,7 @@
     display: flex;
     box-sizing: border-box;
     justify-content: space-between;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .store__inner .store__map .img {
