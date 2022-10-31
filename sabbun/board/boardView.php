@@ -1,6 +1,8 @@
 <?php
     include "../connect/connect.php";
-    include "../connect/session.php"; 
+    include "../connect/session.php";
+    include "../connect/sessionCheck.php";
+
     
     $myBoardID = $_GET['myBoardID'];
 
