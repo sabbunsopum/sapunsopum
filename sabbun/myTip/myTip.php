@@ -56,7 +56,7 @@
                         <?echo $tip['tipMsg']?>
                     </p>
 
-                    <button id="tipDeleteButton">❎</button>
+                    <!-- <button id="tipDeleteButton">❎</button> -->
 
 
 
@@ -141,8 +141,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
     const myTip__Write = $("#myTip__Write"); //댓글 내용
-    let commentID = "";
-
 
 
 
@@ -156,7 +154,7 @@
                 method: "POST",
                 dataType: "json",
                 data: {
-                    "commentID": number
+                    "myMemberID": <?=$myMemberID;?>
                 },
                 success: function(data) {
                     console.log(data);
