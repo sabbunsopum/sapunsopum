@@ -81,8 +81,8 @@
                         foreach($infoTag as $i){ 
                         ?>
                     <a href="sopumListTag.php?Tag=<?=$i;?>">#
-                    
-                    <?=
+
+                        <?=
                    $i;
                         
                     ?></a>
