@@ -3,10 +3,10 @@
     include "../connect/session.php";
     //include "../connect/sessionCheck.php";
 
-    $myMemberID = $_SESSION['myMemberID'];
-    $myPageSql = "SELECT * FROM myBMember WHERE myMemberID = {$myMemberID}";
-    $myPageResult = $connect -> query($myPageSql);
-    $myPageInfo = $myPageResult -> fetch_array(MYSQLI_ASSOC);
+    // $myMemberID = $_SESSION['myMemberID'];
+    // $myPageSql = "SELECT * FROM myBMember WHERE myMemberID = {$myMemberID}";
+    // $myPageResult = $connect -> query($myPageSql);
+    // $myPageInfo = $myPageResult -> fetch_array(MYSQLI_ASSOC);
 
 
 ?>
