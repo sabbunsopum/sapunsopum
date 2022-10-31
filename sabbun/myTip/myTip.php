@@ -18,12 +18,13 @@
 
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자주묻는질문</title>
-    
+
     <link rel="stylesheet" href="../html/assets/css/fonts.css">
     <link rel="stylesheet" href="../html/assets/css/common.css">
     <link rel="stylesheet" href="../html/assets/css/reset.css">
@@ -31,40 +32,39 @@
     <link rel="stylesheet" href="../html/assets/css/myTip.css">
     <link rel="stylesheet" href="../html/assets/css/footer.css">
 </head>
+
 <body>
     <?php include "../include/header.php" ?>
     <!-- // header -->
 
     <main>
-    <section id="myTip" class="myTip nanum">
-        <h2>나만의 팁</h2>
-        <p class="container">
-          나만의 팁 게시판에서 여러분들이 원하는 정보를 자유롭게 얻고, 자유롭게
-          공유하세요!
-        </p>
-        <div class="myTip__inner">
-        <?php
+        <section id="myTip" class="myTip nanum">
+            <h2>나만의 팁</h2>
+            <p class="container">
+                나만의 팁 게시판에서 여러분들이 원하는 정보를 자유롭게 얻고, 자유롭게
+                공유하세요!
+            </p>
+            <div class="myTip__inner">
+                <?php
         foreach($tipResult as $tip){
           $i += 1; 
           if($i == 3){$i = 1;}?>
-        <div class="tipBox t<?echo $i;?>">
-            <span
-              ><img src="../html/assets/img/myTip_icon<?echo $tip['rcvSlct']?>.svg" alt="icon1"
-            /></span>
+                <div class="tipBox t<?echo $i;?>">
+                    <span><img src="../html/assets/img/myTip_icon<?echo $tip['rcvSlct']?>.svg" alt="icon1" /></span>
 
-            <p>
-              <?echo $tip['tipMsg']?>
-            </p>
-           
-          <button id="tipDeleteButton">❎</button>
-          
-            
-         
+                    <p>
+                        <?echo $tip['tipMsg']?>
+                    </p>
 
-          </div>
-        <?php
+                    <button id="tipDeleteButton">❎</button>
+
+
+
+
+                </div>
+                <?php
         }?>
-          <!-- <div class="tipBox t1">
+                <!-- <div class="tipBox t1">
             <span
               ><img src="../html/assets/img/myTip_icon.svg" alt="icon1"
             /></span>
@@ -102,52 +102,36 @@
             /></span>
           </div> -->
 
-          <div class="myTip__Write__inner">
-            <div class="myTip__wirte">
-              <label for="myTip__Write"></label>
-              <input
-                id="myTip__Write"
-                type="text"
-                placeholder="자신만의 팁을 마음껏 적어주세요!"
-              />
-              <div class="profile__Img">
-                <div class="profile__select">
-                  <!-- <span class="myTip__profileImg__Select">프로필 선택</span> -->
-                  <label for="myTip__profileImg__Select"
-                    ><input type="radio" name="radio"  value="1"/><img
-                      src="../html/assets/img/myTip_icon1.svg"
-                      alt="icon1" 
-                  /></label>
-                  <label for="myTip__profileImg__Select"
-                    ><input type="radio" name="radio"  value="2"/><img
-                      src="../html/assets/img/myTip_icon2.svg"
-                      alt="icon2" 
-                  /></label>
-                  <label for="myTip__profileImg__Select"
-                    ><input type="radio" name="radio"  value="3"/><img
-                      src="../html/assets/img/myTip_icon3.svg"
-                      alt="icon3" 
-                  /></label>
-                  <label for="myTip__profileImg__Select"
-                    ><input type="radio" name="radio"  value="4"/><img
-                      src="../html/assets/img/myTip_icon4.svg"
-                      alt="icon4" 
-                  /></label>
+                <div class="myTip__Write__inner">
+                    <div class="myTip__wirte">
+                        <label for="myTip__Write"></label>
+                        <input id="myTip__Write" type="text" placeholder="자신만의 팁을 마음껏 적어주세요!" />
+                        <div class="profile__Img">
+                            <div class="profile__select">
+                                <!-- <span class="myTip__profileImg__Select">프로필 선택</span> -->
+                                <label for="myTip__profileImg__Select"><input type="radio" name="radio" value="1" /><img
+                                        src="../html/assets/img/myTip_icon1.svg" alt="icon1" /></label>
+                                <label for="myTip__profileImg__Select"><input type="radio" name="radio" value="2" /><img
+                                        src="../html/assets/img/myTip_icon2.svg" alt="icon2" /></label>
+                                <label for="myTip__profileImg__Select"><input type="radio" name="radio" value="3" /><img
+                                        src="../html/assets/img/myTip_icon3.svg" alt="icon3" /></label>
+                                <label for="myTip__profileImg__Select"><input type="radio" name="radio" value="4" /><img
+                                        src="../html/assets/img/myTip_icon4.svg" alt="icon4" /></label>
+                            </div>
+                            <div class="profile__Upload">
+                                <label for="myTip__profileImg__Upload">
+                                    <!-- <span>프로필 직접 지정</span> -->
+                                    <div class="myTip__profileImg__Upload"></div>
+                                </label>
+                                <input id="myTip__profileImg__Upload" type="file" />
+                            </div>
+                            <button type="submit" id="tipBtn">글쓰기</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="profile__Upload">
-                  <label for="myTip__profileImg__Upload">
-                    <!-- <span>프로필 직접 지정</span> -->
-                    <div class="myTip__profileImg__Upload"></div>
-                  </label>
-                  <input id="myTip__profileImg__Upload" type="file" />
-                </div>
-                <button type="submit" id="tipBtn">글쓰기</button>
-              </div>
             </div>
-          </div>
-        </div>
-        <!-- <div class="more"><a href="#c">더보기<span></span></a></div> -->
-      </section>
+            <!-- <div class="more"><a href="#c">더보기<span></span></a></div> -->
+        </section>
     </main>
 
     <?php include "../include/footer.php" ?>
@@ -156,15 +140,37 @@
     <script src="../assets/js/custom.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
-
-
-    
-
     const myTip__Write = $("#myTip__Write"); //댓글 내용
-
     let commentID = "";
 
-  
+
+
+
+    // 삭제 버튼 클릭시
+    $("#tipDeleteButton").click(() => {
+        if (<?=$myMemberID?> !== <?=$tipInfo['myMemberID']?>) {
+            alert("내가 쓴 글이 아닙니다!")
+        } else {
+            $.ajax({
+                url: "myTipDelete.php",
+                method: "POST",
+                dataType: "json",
+                data: {
+                    "commentID": number
+                },
+                success: function(data) {
+                    console.log(data);
+                    location.reload();
+                },
+                error: function(request, status, error) {
+                    console.log("request" + request);
+                    console.log("status" + status);
+                    console.log("error" + error);
+                }
+            });
+        }
+    });
+
     // 댓글 쓰기
     $("#tipBtn").click(() => {
         if ($("#myTip__Write").val() == "") {
@@ -194,4 +200,5 @@
     });
     </script>
 </body>
+
 </html>
