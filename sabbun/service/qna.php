@@ -1,7 +1,7 @@
 <?php
     include "../connect/connect.php";
     include "../connect/session.php";
-    include "../connect/sessionCheck.php";
+    //include "../connect/sessionCheck.php";
 
     $myMemberID = $_SESSION['myMemberID'];
     $myPageSql = "SELECT * FROM myBMember WHERE myMemberID = {$myMemberID}";
@@ -14,12 +14,13 @@
 
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자주묻는질문</title>
-    
+
     <link rel="stylesheet" href="../html/assets/css/fonts.css">
     <link rel="stylesheet" href="../html/assets/css/common.css">
     <link rel="stylesheet" href="../html/assets/css/reset.css">
@@ -27,6 +28,7 @@
     <link rel="stylesheet" href="../html/assets/css/qna.css">
     <link rel="stylesheet" href="../html/assets/css/footer.css">
 </head>
+
 <body>
     <?php include "../include/header2.php" ?>
     <!-- // header -->
@@ -61,7 +63,8 @@
 
     <script src="../assets/js/custom.js"></script>
     <script>
-        document.querySelector(".faq__header .link .qna").classList.add("active");
+    document.querySelector(".faq__header .link .qna").classList.add("active");
     </script>
 </body>
+
 </html>
