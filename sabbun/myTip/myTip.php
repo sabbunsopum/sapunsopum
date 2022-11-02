@@ -109,8 +109,8 @@
                         <div class="profile__Img">
                             <div class="profile__select">
                                 <!-- <span class="myTip__profileImg__Select">프로필 선택</span> -->
-                                <label for="myTip__profileImg__Select"><input type="radio" name="radio" value="1" /><img
-                                        src="../html/assets/img/myTip_icon1.svg" alt="icon1" /></label>
+                                <label for="myTip__profileImg__Select"><input type="radio" name="radio" value="1"
+                                        checked /><img src="../html/assets/img/myTip_icon1.svg" alt="icon1" /></label>
                                 <label for="myTip__profileImg__Select"><input type="radio" name="radio" value="2" /><img
                                         src="../html/assets/img/myTip_icon2.svg" alt="icon2" /></label>
                                 <label for="myTip__profileImg__Select"><input type="radio" name="radio" value="3" /><img
