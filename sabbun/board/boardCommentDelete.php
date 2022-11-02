@@ -1,5 +1,7 @@
 <?php
     include "../connect/connect.php";
+    include "../connect/session.php";
+
 
     $commentPass = $_POST['pass'];
     $commentID = $_POST['commentID'];
