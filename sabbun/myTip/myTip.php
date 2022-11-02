@@ -32,6 +32,24 @@
     <link rel="stylesheet" href="../html/assets/css/myTip.css">
     <link rel="stylesheet" href="../html/assets/css/footer.css">
 </head>
+<style>
+.tipBox #tipDeleteButton {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+
+.tipBox>span {
+    position: relative;
+}
+
+.tipBox>span:hover #tipDeleteButton {
+    display: block;
+    cursor: pointer;
+}
+</style>
 
 <body>
     <?php include "../include/header.php" ?>
@@ -50,17 +68,14 @@
           $i += 1; 
           if($i == 3){$i = 1;}?>
                 <div class="tipBox t<?echo $i;?>">
-                    <span><img src="../html/assets/img/myTip_icon<?echo $tip['rcvSlct']?>.svg" alt="icon1" /></span>
+                    <span><img src="../html/assets/img/myTip_icon<?echo $tip['rcvSlct']?>.svg" alt="icon1" />
+                        <a href="myTipDelete.php?myTipID=<?=$tipInfo['myTipID']?>" id="tipDeleteButton">❎</a>
+
+                    </span>
 
                     <p>
                         <?echo $tip['tipMsg']?>
                     </p>
-
-                    <!-- <button id="tipDeleteButton">❎</button> -->
-
-
-
-
                 </div>
                 <?php
         }?>
@@ -116,15 +131,15 @@
                                 <label for="myTip__profileImg__Select"><input type="radio" name="radio" value="3" /><img
                                         src="../html/assets/img/myTip_icon3.svg" alt="icon3" /></label>
                                 <label for="myTip__profileImg__Select"><input type="radio" name="radio" value="4" /><img
-                                        src="../html/assets/img/myTip_icon4.svg" alt="icon4" /></label>
+                                        src="../html/assets/img/myTip_icon4.svg" alt="icon4" /></label>`
                             </div>
-                            <div class="profile__Upload">
-                                <label for="myTip__profileImg__Upload">
-                                    <!-- <span>프로필 직접 지정</span> -->
-                                    <div class="myTip__profileImg__Upload"></div>
+                            <!-- <div class="profile__Upload">
+                                <label for="myTip__profileImg__Upload"> -->
+                            <!-- <span>프로필 직접 지정</span> -->
+                            <!-- <div class="myTip__profileImg__Upload"></div>
                                 </label>
                                 <input id="myTip__profileImg__Upload" type="file" />
-                            </div>
+                            </div> -->
                             <button type="submit" id="tipBtn">글쓰기</button>
                         </div>
                     </div>
@@ -145,29 +160,32 @@
 
 
     // 삭제 버튼 클릭시
-    $("#tipDeleteButton").click(() => {
-        if (<?=$myMemberID?> !== <?=$tipInfo['myMemberID']?>) {
-            alert("내가 쓴 글이 아닙니다!")
-        } else {
-            $.ajax({
-                url: "myTipDelete.php",
-                method: "POST",
-                dataType: "json",
-                data: {
-                    "myMemberID": <?=$myMemberID;?>
-                },
-                success: function(data) {
-                    console.log(data);
-                    location.reload();
-                },
-                error: function(request, status, error) {
-                    console.log("request" + request);
-                    console.log("status" + status);
-                    console.log("error" + error);
-                }
-            });
-        }
-    });
+    // $("#tipDeleteButton").click((e) => {
+    //     // e.preventDefault();
+    //     // myTipID = $(this).parent().parent();
+
+    //     if (<?=$myMemberID?> !== <?=$tipInfo['myMemberID']?>) {
+    //         alert("내가 쓴 글이 아닙니다!")
+    //         // } else {
+    //         //     $.ajax({
+    //         //         url: "myTipDelete.php",
+    //         //         method: "GET",
+    //         //         dataType: "json",
+    //         //         data: {
+    //         //             "myTipID": $('#tipDeleteButton').val()
+    //         //         },
+    //         //         success: function(data) {
+    //         //             console.log(data);
+    //         //             location.reload();
+    //         //         },
+    //         //         error: function(request, status, error) {
+    //         //             console.log("request" + request);
+    //         //             console.log("status" + status);
+    //         //             console.log("error" + error);
+    //         //         }
+    //         //     });
+    //     }
+    // });
 
     // 댓글 쓰기
     $("#tipBtn").click(() => {
@@ -191,7 +209,7 @@
                 error: function(request, status, error) {
                     console.log("request" + request);
                     console.log("status" + status);
-                    console.log("error" + error);
+                    alert("로그인이 필요합니다.");
                 }
             });
         }
