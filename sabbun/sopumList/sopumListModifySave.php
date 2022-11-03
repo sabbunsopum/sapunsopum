@@ -2,9 +2,12 @@
     include "../connect/connect.php";
     include "../connect/session.php";
     include "../connect/sessionCheck.php";
-    echo "<pre>";
-    var_dump($_POST);
-    echo "</pre>";
+
+ 
+    $myMemberID = $_SESSION['myMemberID'];
+
+    $shopListID = $_GET['shopListID'];
+
     $shopName = $_POST['shopName'];
     $shopListContents = $_POST['shopListContents'];
     $shopHours = $_POST['shopHours'];
@@ -13,64 +16,55 @@
     $shopAdress = $_POST['shopAdress'];
     $shopTag = $_POST['shopTag'];
 
-
-    $myMemberID = $_SESSION['myMemberID'];
-    $youEmail = $_SESSION['youEmail'];
-
-    // 데이터 가져오기 --> 유효성 검사 --> 데이터 조회 --> 로그인
-    $sql = "UPDATE sopumShopList SET youPhone = '{$youPhone}' WHERE myMemberID = '{$myMemberID}'";
-    $result = $connect -> query($sql);
-    $info = $result -> fetch_array(MYSQLI_ASSOC);
-
-
-    function msg($alert){
-        echo "<p class='alert'>{$alert}</p>";
-    }
-
-   // 비밀번호 검사
-
-   if($info['youPass'] == $youPass){
-        echo "비밀번호 일치";
-        $sql = "UPDATE myBMember SET youPhone = '{$youPhone}' WHERE myMemberID = '{$myMemberID}'";
-        $connect -> query($sql);  
-
-    }else{
-        echo "<script>alert('비밀번호가 틀렸습니다.'); history.back(1)</script>";
-        exit;
-    }
-
-  
     $sopumImgFile = $_FILES['shopProfile'];
     $sopumImgSize = $_FILES['shopProfile']['size'];
     $sopumImgType = $_FILES['shopProfile']['type'];
     $sopumImgName = $_FILES['shopProfile']['name'];
     $sopumImgTmp = $_FILES['shopProfile']['tmp_name'];
 
+    
+    $sql = "SELECT myMemberID FROM sopumShopList WHERE shopListID = {$shopListID}";
+    $result = $connect -> query($sql);
+    $info = $result -> fetch_array(MYSQLI_ASSOC);
 
-    //이미지 파일명 확인
-    if($sopumImgType){
-        $fileTypeExtension = explode("/", $sopumImgType);
-        $fileType = $fileTypeExtension[0];      //image
-        $fileExtension = $fileTypeExtension[1]; //png
-        //이미지 타입 확인
-        if($fileType == "image"){
-            if($fileExtension == "jpg" || $fileExtension == "jpeg" || $fileExtension == "png" || $fileExtension == "gif"){
-                $sopumImgDir = "../html/assets/img/profile/";
-                $sopumImgName = "Img_".time().rand(1,99999)."."."{$fileExtension}";
-                //echo "이미지 파일이 맞네요!";
-                $sql = "UPDATE myBMember SET sopumImgFile = '{$sopumImgName}', sopumImgSize = '{$sopumImgSize}' WHERE myMemberID = '{$myMemberID}'";
-                $result2 = $connect -> query($sql);
-                $result2 = move_uploaded_file($sopumImgTmp, $sopumImgDir.$sopumImgName);
+    $mysql = "SELECT myMemberID FROM myBMember WHERE myMemberID = {$myMemberID}";
+    $myresult = $connect -> query($mysql);
+    $myinfo = $myresult -> fetch_array(MYSQLI_ASSOC);
+   
 
-            } else {
-                echo "<script>alert('지원하는 이미지 파일이 아닙니다.'); history.back(1)</script>";
-                exit;
+    if($myMemberID == $info['myMemberID'] && $myMemberID == $myinfo['myMemberID']){
+        $shopsql = "UPDATE sopumShopList SET shopName = '{$shopName}', shopListContents = '{$shopListContents}', shopHours = '{$shopHours}', shopNum = '{$shopNum}', goodsList = '{$goodsList}', shopAdress = '{$shopAdress}', shopTag = '{$shopTag}' WHERE shopListID = '{$shopListID}'";
+        $shopresult = $connect -> query($shopsql);    
+    
+        //이미지 파일명 확인
+        if($sopumImgType){
+            $fileTypeExtension = explode("/", $sopumImgType);
+            $fileType = $fileTypeExtension[0];      //image
+            $fileExtension = $fileTypeExtension[1]; //png
+            //이미지 타입 확인
+            if($fileType == "image"){
+                if($fileExtension == "jpg" || $fileExtension == "jpeg" || $fileExtension == "png" || $fileExtension == "gif"){
+                    $sopumImgDir = "img/";
+                    $sopumImgName = "Img_".time().rand(1,99999)."."."{$fileExtension}";
+                    //echo "이미지 파일이 맞네요!";
+                    $sql = "UPDATE sopumShopList SET shopImgFile = '{$sopumImgName}', shopImgSize = '{$sopumImgSize}' WHERE shopListID = '{$shopListID}'";
+                    $result2 = $connect -> query($sql);
+                    $result2 = move_uploaded_file($sopumImgTmp, $sopumImgDir.$sopumImgName);
+    
+                } else {
+                    echo "<script>alert('지원하는 이미지 파일이 아닙니다.'); history.back(1)</script>";
+                }
             }
+        }else {
+            echo "<p>프로필 사진을 첨부하지 않았습니다. <br> 마이 페이지에서 추가 해주세요!</p>";
+            
         }
-    }else {
-        echo "<p>프로필 사진을 첨부하지 않았습니다. <br> 마이 페이지에서 추가 해주세요!</p>";
-        
+ 
+    
+    }else{
+        echo "<script>alert('내가 작성한 글이 아닙니다.'); history.back(1)</script>";
     }
+    
 
     //이미지 사이즈 확인
     if($sopumImgSize > 1000000){

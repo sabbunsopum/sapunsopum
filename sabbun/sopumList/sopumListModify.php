@@ -15,7 +15,7 @@
     $sql = "SELECT * FROM sopumShopList WHERE shopListID = {$shopListID}";
     $result = $connect -> query($sql);
     $info = $result -> fetch_array(MYSQLI_ASSOC);
-
+    
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -65,8 +65,8 @@
                     <p>다양한 소품샵을 사뿐소품에서 확인해보세요!</p>
                 </div>
                 <!-- 소품샵 리스트 게시판 -->
-                <form action="sopumListModifySave.php" name="modify" method="post" enctype="multipart/form-data"
-                    onsubmit="return modifyChecks()">
+                <form action="sopumListModifySave.php?shopListID=<?=$shopListID ?>" name="modify" method="post"
+                    enctype="multipart/form-data">
                     <fieldset>
                         <div class="post__box">
                             <div class="postWrite">
@@ -124,15 +124,11 @@
                                     </div>
                                 </div>
                                 <!-- <div class="post__share ir">공유</div>
-                        <div class="post__heart ir">좋아요</div> -->
+                                <div class="post__heart ir">좋아요</div> -->
                                 <div class="tag">
                                     <span class="tag__title">키워드 태그</span>
-                                    <input type="text" id="tag" value=<?=$info['shopTag']?> placeholder="태그를 입력해주세요">
-                                    <!-- <input type="text" id="tag" value="패브릭" placeholder="태그를 입력해주세요">
-                            <input type="text" id="tag" value="코지" placeholder="태그를 입력해주세요">
-                            <input type="text" id="tag" value="에코프렌들리" placeholder="태그를 입력해주세요">
-                            <input type="text" id="tag" value="인테리어" placeholder="태그를 입력해주세요"> -->
-
+                                    <input type="text" value=<?=$info['shopTag']?> placeholder="소품샵 주소를 입력하세요"
+                                        name="shopTag" id="shopTag">
                                 </div>
                             </div>
                             <div class="container">
