@@ -29,7 +29,7 @@
    
 
     
-    
+     
     //Header("Location: myTip.php");
     //echo json_encode(array("info" => $myTipID));
 ?>

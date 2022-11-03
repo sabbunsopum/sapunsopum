@@ -15,6 +15,17 @@
     $sql = "SELECT * FROM sopumShopList WHERE shopListID = {$shopListID}";
     $result = $connect -> query($sql);
     $info = $result -> fetch_array(MYSQLI_ASSOC);
+
+    
+    $mysql = "SELECT myMemberID FROM myBMember WHERE myMemberID = {$myMemberID}";
+    $myresult = $connect -> query($mysql);
+    $myinfo = $myresult -> fetch_array(MYSQLI_ASSOC);
+   
+
+    if($myMemberID !== $info['myMemberID']){
+        echo "<script>alert('내가 작성한 글이 아닙니다.'); history.back(1)</script>";
+        exit;
+    }
     
 ?>
 <!DOCTYPE html>
