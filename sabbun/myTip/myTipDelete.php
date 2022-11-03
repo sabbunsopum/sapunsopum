@@ -1,7 +1,7 @@
 <?php
     include "../connect/connect.php";
     include "../connect/session.php";
-    //include "../connect/sessionCheck.php";
+    include "../connect/sessionCheck.php";
     
     $myTipID = $_GET['myTipID'];
     $myMemberID = $_SESSION['myMemberID'];
@@ -44,7 +44,7 @@
     } else {
         echo '<script type="text/javascript">'; 
         echo 'alert("내가 작성한 글이 아닙니다.");'; 
-       // echo 'window.location.href = "myTip.php";';
+        echo 'window.location.href = "myTip.php";';
         echo '</script>';
     } 
 
