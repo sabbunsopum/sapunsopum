@@ -10,7 +10,7 @@
     $myInfo = $myResult -> fetch_array(MYSQLI_ASSOC);
 
 
-    $tipName = $myInfo['youName'];
+    $tipName = $myInfo['youNickName'];
     $tipMsg = $_POST['msg'];
     $rcvSlct = $_POST['rcvSlct'];
     $tipPass =  $myInfo['youPass'];

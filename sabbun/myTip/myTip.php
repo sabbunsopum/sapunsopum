@@ -45,6 +45,12 @@
     position: relative;
 }
 
+.tipBox>span>i {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .tipBox>span:hover #tipDeleteButton {
     display: block;
     cursor: pointer;
@@ -68,9 +74,13 @@
           $i += 1; 
           if($i == 3){$i = 1;}?>
                 <div class="tipBox t<?echo $i;?>">
-                    <span><img src="../html/assets/img/myTip_icon<?echo $tip['rcvSlct']?>.svg" alt="icon1" />
-                        <a href="myTipDelete.php?myTipID=<?=$tipInfo['myTipID']?>" id="tipDeleteButton">❎</a>
 
+                    <span>
+                        <img src="../html/assets/img/myTip_icon<?echo $tip['rcvSlct']?>.svg" alt="icon1" />
+                        <a href="myTipDelete.php?myTipID=<?echo $tip['myTipID']?>" id="tipDeleteButton">❎</a>
+                        <i>
+                            <?echo $tip['tipName']?>
+                        </i>
                     </span>
 
                     <p>
