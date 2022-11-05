@@ -15,6 +15,9 @@
     $goodsList = $_POST['goodsList'];
     $shopAdress = $_POST['shopAdress'];
     $shopTag = $_POST['shopTag'];
+    $best = $_POST['best'];
+    $new = $_POST['new'];
+
 
     $sopumImgFile = $_FILES['shopProfile'];
     $sopumImgSize = $_FILES['shopProfile']['size'];
@@ -33,7 +36,7 @@
    
 
     if($myMemberID == $info['myMemberID'] && $myMemberID == $myinfo['myMemberID']){
-        $shopsql = "UPDATE sopumShopList SET shopName = '{$shopName}', shopListContents = '{$shopListContents}', shopHours = '{$shopHours}', shopNum = '{$shopNum}', goodsList = '{$goodsList}', shopAdress = '{$shopAdress}', shopTag = '{$shopTag}' WHERE shopListID = '{$shopListID}'";
+        $shopsql = "UPDATE sopumShopList SET shopName = '{$shopName}', shopListContents = '{$shopListContents}', shopHours = '{$shopHours}', shopNum = '{$shopNum}', goodsList = '{$goodsList}', shopAdress = '{$shopAdress}', shopTag = '{$shopTag}', best = '{$best}', new = '{$new}' WHERE shopListID = '{$shopListID}'";
         $shopresult = $connect -> query($shopsql);    
     
         //이미지 파일명 확인

@@ -143,10 +143,10 @@
                                 </div>
                                 <div class="tag">
                                     <span class="tag__title">Best New</span>
-                                    <input type="checkbox" value='Best' placeholder="베스트 소품샵"
-                                        name="Best" id="Best">
-                                    <input type="checkbox" value='New' placeholder="뉴 소품샵"
-                                    name="New" id="New">
+                                    <input type="checkbox" value='BEST' placeholder="베스트 소품샵"  name="best" id="best">
+                                    <label for="best">Best</label>
+                                    <input type="checkbox" value='NEW' placeholder="뉴 소품샵" name="new" id="new">
+                                    <label for="new">New</label>
                                 </div>
                             </div>
                             <div class="container">

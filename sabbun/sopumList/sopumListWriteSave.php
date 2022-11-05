@@ -24,6 +24,9 @@
     $goodsList = $_POST['goodsList'];
     $shopAdress = $_POST['shopAdress'];
     $shopTag = $_POST['shopTag'];
+    $best = $_POST['best'];
+    $new = $_POST['new'];
+
 
     $shopName = $connect -> real_escape_string($shopName);
     $shopHours = $connect -> real_escape_string($shopHours);
@@ -34,6 +37,7 @@
    
 
     
+    var_dump($_POST);
 
     
 
@@ -49,7 +53,7 @@
                 $shopImgName = "Img_".time().rand(1,99999)."."."{$fileExtension}";
                 
                 //echo "이미지 파일이 맞네요!";
-                $sql = "INSERT INTO sopumShopList(myMemberID, shopListContents, shopListView, shopListLike, regTime, shopName, shopHours, shopNum, goodsList, shopAdress, shopImgFile, shopImgSize, shopTag) VALUES('$myMemberID','$shopListContents', '$shopListView', '$shopListLike', '$regTime', '$shopName' , '$shopHours', '$shopNum', '$goodsList', '$shopAdress', '$shopImgName', '$shopImgSize', '$shopTag')";
+                $sql = "INSERT INTO sopumShopList(myMemberID, shopListContents, shopListView, shopListLike, regTime, shopName, shopHours, shopNum, goodsList, shopAdress, shopImgFile, shopImgSize, shopTag, best, new) VALUES('$myMemberID','$shopListContents', '$shopListView', '$shopListLike', '$regTime', '$shopName' , '$shopHours', '$shopNum', '$goodsList', '$shopAdress', '$shopImgName', '$shopImgSize', '$shopTag', '$best', '$new')";
             } 
         }else {
             echo "<script>alert('지원하는 이미지 파일이 아닙니다.'); history.back(1)</script>";
@@ -57,7 +61,7 @@
         }
     } else {
         echo "<p>사진을 첨부하지 않았습니다.</p>";
-        $sql = "INSERT INTO sopumShopList(myMemberID, shopListContents, shopListView, shopListLike, regTime, shopName, shopHours, shopNum, goodsList, shopAdress, shopImgFile, shopImgSize, shopTag) VALUES('$myMemberID','$shopListContents', '$shopListView', '$shopListLike', '$regTime', '$shopName' , '$shopHours', '$shopNum', '$goodsList', '$shopAdress', 'Img_default.jpg', '$shopImgSize', '$shopTag')";
+        $sql = "INSERT INTO sopumShopList(myMemberID, shopListContents, shopListView, shopListLike, regTime, shopName, shopHours, shopNum, goodsList, shopAdress, shopImgFile, shopImgSize, shopTag, best, new) VALUES('$myMemberID','$shopListContents', '$shopListView', '$shopListLike', '$regTime', '$shopName' , '$shopHours', '$shopNum', '$goodsList', '$shopAdress', 'Img_default.jpg', '$shopImgSize', '$shopTag' '$best', '$new')";
     }
     //이미지 사이즈 확인
     if($shopImgSize > 1000000){
@@ -67,8 +71,7 @@
     $result = $connect -> query($sql);
     $result = move_uploaded_file($shopImgTmp, $shopImgDir.$shopImgName);
     
-    Header("Location: sopumList.php");
+    //Header("Location: sopumList.php");
 
-    // var_dump($shopTag);
     
     ?>

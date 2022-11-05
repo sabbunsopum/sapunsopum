@@ -128,6 +128,13 @@
                                     <span class="tag__title">키워드 태그</span>
                                     <input type="text" name="shopTag" id="shopTag" placeholder="태그를 입력해주세요">
                                 </div>
+                                <div class="tag">
+                                    <span class="tag__title">Best New</span>
+                                    <input type="checkbox" value='BEST' placeholder="베스트 소품샵"  name="best" id="best">
+                                    <label for="best">Best</label>
+                                    <input type="checkbox" value='NEW' placeholder="뉴 소품샵" name="new" id="new">
+                                    <label for="new">New</label>
+                                </div>
                             </div>
                             <div class="container">
                                 <button type="submit" class="btn">글 작성하기</button>
