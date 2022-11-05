@@ -141,7 +141,7 @@
                                 <label for="myTip__profileImg__Select"><input type="radio" name="radio" value="3" /><img
                                         src="../html/assets/img/myTip_icon3.svg" alt="icon3" /></label>
                                 <label for="myTip__profileImg__Select"><input type="radio" name="radio" value="4" /><img
-                                        src="../html/assets/img/myTip_icon4.svg" alt="icon4" /></label>`
+                                        src="../html/assets/img/myTip_icon4.svg" alt="icon4" /></label>
                             </div>
                             <!-- <div class="profile__Upload">
                                 <label for="myTip__profileImg__Upload"> -->
