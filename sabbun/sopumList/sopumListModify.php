@@ -138,8 +138,15 @@
                                 <div class="post__heart ir">좋아요</div> -->
                                 <div class="tag">
                                     <span class="tag__title">키워드 태그</span>
-                                    <input type="text" value=<?=$info['shopTag']?> placeholder="소품샵 주소를 입력하세요"
+                                    <input type="text" value=<?=$info['shopTag']?> placeholder="소품샵 키워드 태그를 입력하세요"
                                         name="shopTag" id="shopTag">
+                                </div>
+                                <div class="tag">
+                                    <span class="tag__title">Best New</span>
+                                    <input type="checkbox" value='Best' placeholder="베스트 소품샵"
+                                        name="Best" id="Best">
+                                    <input type="checkbox" value='New' placeholder="뉴 소품샵"
+                                    name="New" id="New">
                                 </div>
                             </div>
                             <div class="container">
