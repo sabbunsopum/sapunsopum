@@ -22,7 +22,7 @@
             <nav class="header__menu clearfix">
                 <ul>
                     <li><a href="#sliderType">사뿐소품이란?</a></li>
-                    <li><a href="../list/sopumList.php">소품샵 리스트</a></li>
+                    <li><a href="../sopumList/sopumList.php">소품샵 리스트</a></li>
                     <li><a href="../board/board.php">커뮤니티
                             <ul class="subMenu">
                                 <li><a href="../board/board.php">자유게시판</a></li>
@@ -47,10 +47,11 @@
                 </ul>
             </div>
             <div class="header__search clearfix">
-                <form action="headerSearch.php" name="headerSearch" method="get">
+                <form action="../board/boardSearch.php" name="headerSearch" method="get">
                     <fieldset>
                         <legend>검색 영역</legend>
-                        <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !" aria-label="search" required>
+                        <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !"
+                            aria-label="search" required>
                         <button type="submit" class="searchBtn">
                             <img src="../html/assets/img/search_icon.svg" alt="검색버튼">
                         </button>
