@@ -21,7 +21,7 @@
             </div>
             <nav class="header__menu clearfix">
                 <ul>
-                    <li><a href="#sliderType">사뿐소품이란?</a></li>
+                    <li><a href="../WhatisSBSP/WhatisSBSP.php">사뿐소품이란?</a></li>
                     <li><a href="../sopumList/sopumList.php">소품샵 리스트</a></li>
                     <li><a href="../board/board.php">커뮤니티
                             <ul class="subMenu">
