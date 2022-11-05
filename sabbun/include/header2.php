@@ -36,7 +36,7 @@
             <div class="header__member clearfix">
                 <ul>
 <?php if( isset($_SESSION['myMemberID'])){ ?>
-        <li><a href="#" class="black"><?=$_SESSION['youName']?>님 환영합니다:)</a></li>
+        <li><a href="../mypage/myPage.php" class="black"><?=$_SESSION['youName']?>님 환영합니다:)</a></li>
         <li><a href="../login/logout.php">로그아웃</a></li>
 <?php }else {   ?>
         <li><a href="../login/login.php">로그인</a></li>
