@@ -47,7 +47,7 @@
             <div class="slider__list__wrap swiper">
                 <ul class="slider__list swiper-wrapper">
                     <?php foreach($listresult as $info){    ?>
-                    <li class="<?=$info['best']?> store swiper-slide">
+                    <li class="<?=$info['best'].' '.$info['new']?> store swiper-slide">
                         <a href="../sopumList/sopumListView.php?shopListID=<?=$info['shopListID']?>">
                             <div class="image">
                                 <img src="../sopumList/img/<?=$info['shopImgFile']?>" alt="<?=$info['shopName']?>" />
