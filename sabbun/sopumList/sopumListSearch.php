@@ -88,10 +88,10 @@
             $sql .= "WHERE shopName LIKE '%{$searchKeyword}%' ORDER BY shopListID DESC";
             break;
         case "content":
-            $sql .= "WHERE goodsList LIKE '%{$searchKeyword}%' ORDER BY shopListID DESC";
+            $sql .= "WHERE shopAdress LIKE '%{$searchKeyword}%' ORDER BY shopListID DESC";
             break;
         case "name":
-            $sql .= "WHERE shopAdress LIKE '%{$searchKeyword}%' ORDER BY shopListID DESC";
+            $sql .= "WHERE goodsList LIKE '%{$searchKeyword}%' ORDER BY shopListID DESC";
             break;
     }
     
