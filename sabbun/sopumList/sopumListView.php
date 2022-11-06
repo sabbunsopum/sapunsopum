@@ -57,10 +57,7 @@
                     </div>
                     <div class="tit">
                         <p class="tag">
-                            <span>#홍대</span>
-                            <span>#키덜트</span>
-                            <span>#귀여운</span>
-                            <span>#통통튀는</span>
+                            <span><?=$info['shopTag']?></span>
                         </p>
                         <p class="name">"<?=$info['shopName']?>"</p>
                     </div>

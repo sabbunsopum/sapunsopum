@@ -7,6 +7,9 @@
     $sql = "SELECT * FROM sopumShopList WHERE shopListID = {$shopListID}";
     $result = $connect -> query($sql);
     $info = $result -> fetch_array(MYSQLI_ASSOC);
+
+    $sopumLikesql = "SELECT count(*) FROM sopumLike WHERE service_code = 'XXX'";
+
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -68,7 +71,15 @@
                 <div class="contents">
                     <div class="tit">
                         <h4><?=$info['shopName']?>을 소개합니다!</h4>
-                        <img class="heart" src="../html/assets/img/heart_empty.png" alt="빈하트">
+                        <!-- <img class="heart" src="../html/assets/img/heart_empty.png" alt="빈하트"> -->
+<?php 
+    while($row = mysqli_fetch_array($res)) {
+        $seq = $row['seq'];
+        echo "<img class='heart' src='../html/assets/img/heart_empty.png' alt='빈하트'>"
+        '<td class="like-container"><button type="button" class="btn-like" data-article-id="'.$seq.'">'
+            .'<span class="heart-shape">♡</span> <span class="like-count">'.$row['like_count'].'</span></button></td>'
+    }
+?>
                     </div>
                     <div class="store__map">
                         <div class="img">
