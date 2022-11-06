@@ -2,6 +2,11 @@
     include "../connect/connect.php";
     include "../connect/session.php";
     include "../connect/sessionCheck.php";
+
+
+    
+    $myMemberID = $_SESSION['myMemberID'];
+    
 ?>
 
 <!DOCTYPE html>
@@ -42,11 +47,16 @@
                                 <legend>게시판 작성 영역</legend>
 <?php
     $myBoardID = $_GET['myBoardID'];
-    $sql = "SELECT myBoardID, boardTitle, boardContents FROM myBoard WHERE myBoardID = {$myBoardID}";
+    $sql = "SELECT myBoardID, boardTitle, boardContents, myMemberID FROM myBoard WHERE myBoardID = {$myBoardID}";
     $result = $connect -> query($sql);
+    $info = $result->fetch_array(MYSQLI_ASSOC);
+    
+    if($myMemberID !== $info['myMemberID']){
+        echo "<script>alert('내가 작성한 글이 아닙니다.'); history.back(1)</script>";
+        exit;
+    }
 
     if($result){
-        $info = $result->fetch_array(MYSQLI_ASSOC);
         echo "<div style='display:none'><label class='ir' for='myBoardID'>번호</label><input type='text' name='myBoardID' id='myBoardID' value='".$info['myBoardID']."'></div>";
         echo "<div><label class='ir' for='boardTitle'>제목</label><input type='text' name='boardTitle' id='boardTitle' value='".$info['boardTitle']."'></div>";
     }
