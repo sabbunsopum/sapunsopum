@@ -71,7 +71,7 @@
     $result = $connect -> query($sql);
     $result = move_uploaded_file($shopImgTmp, $shopImgDir.$shopImgName);
     
-    //Header("Location: sopumList.php");
+    Header("Location: sopumList.php");
 
     
     ?>

@@ -10,7 +10,7 @@
     $listresult = $connect -> query($listsql);
     $listinfo = $listresult -> fetch_array(MYSQLI_ASSOC);
 
-    $tipSql = "SELECT * FROM myTip ORDER BY myTipID DESC";
+    $tipSql = "SELECT * FROM myTip ORDER BY myTipID DESC LIMIT 5";
     $tipResult = $connect -> query($tipSql);
     $tipInfo = $tipResult -> fetch_array(MYSQLI_ASSOC);
 
