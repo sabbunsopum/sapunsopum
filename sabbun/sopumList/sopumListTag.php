@@ -75,7 +75,7 @@
             <h2>소품샵 리스트</h2>
             <div class="board__inner">
                 <div class="board__title">
-                    <h3><a href="sopumList.php">소품#</a></h3>
+                    <h3>소품#</h3>
                     <p>다양한 소품샵을 사뿐소품에서 확인해보세요!</p>
                     <a><?=$shopTagInfo['shopTag']?>와 관련된 글이 <?=$shopTagCount?>개 있습니다.</a>
                 </div>

@@ -33,14 +33,8 @@
     $shopNum = $connect -> real_escape_string($shopNum);
     $goodsList = $connect -> real_escape_string($goodsList);
     $shopAdress = $connect -> real_escape_string($shopAdress);
-
-   
-
-    
+ 
     var_dump($_POST);
-
-    
-
 
     if($shopImgType){
         $fileTypeExtension = explode("/", $shopImgType);
@@ -60,7 +54,7 @@
             exit;
         }
     } else {
-        echo "<p>사진을 첨부하지 않았습니다.</p>";
+        echo "<script>alert('사진을 첨부하지 않았습니다.'); history.back(1)</script>";
         $sql = "INSERT INTO sopumShopList(myMemberID, shopListContents, shopListView, shopListLike, regTime, shopName, shopHours, shopNum, goodsList, shopAdress, shopImgFile, shopImgSize, shopTag, best, new) VALUES('$myMemberID','$shopListContents', '$shopListView', '$shopListLike', '$regTime', '$shopName' , '$shopHours', '$shopNum', '$goodsList', '$shopAdress', 'Img_default.jpg', '$shopImgSize', '$shopTag' '$best', '$new')";
     }
     //이미지 사이즈 확인
@@ -68,6 +62,7 @@
         echo "<script>alert('이미지 용량이 1메가를 초과했습니다.'); history.back(1)</script>";
         exit;
     }
+
     $result = $connect -> query($sql);
     $result = move_uploaded_file($shopImgTmp, $shopImgDir.$shopImgName);
     
