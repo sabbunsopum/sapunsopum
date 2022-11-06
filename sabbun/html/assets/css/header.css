@@ -142,7 +142,7 @@
 .header__search .searchBtn img {
     position: absolute;
     content: '';
-    right: 20px;
+    right: -25px;
     top: 11px;
     width: 20px;
     height: 20px;
