@@ -2,12 +2,22 @@
     include "../connect/connect.php";
     include "../connect/session.php";
 
+    if(isset($_GET['page'])){
+        $page = (int)$_GET['page'];
+    } else {
+        $page = 1;
+    }
+    $viewNum = 8;
+    $viewLimit = ($viewNum * $page) - $viewNum;
+
+
+
     $myMemberID = $_SESSION['myMemberID'];
-    $sql = "SELECT * FROM sopumShopList ORDER BY shopListID DESC";
+    $sql = "SELECT * FROM sopumShopList ORDER BY shopListID DESC LIMIT {$viewLimit}, {$viewNum}";
     $result = $connect -> query($sql);
     $info = $result -> fetch_array(MYSQLI_ASSOC);
 
-   
+    
     
 ?>
 <!DOCTYPE html>
@@ -340,9 +350,9 @@
                                     <img src="../html/assets/img/search_icon.svg" alt="검색버튼">
                                 </button>
                                 <select name="searchOption" id="searchOption">
-                                    <option value="title">제목</option>
-                                    <option value="content">내용</option>
-                                    <option value="name">등록자</option>
+                                    <option value="title">샵이름</option>
+                                    <option value="content">샵주소</option>
+                                    <option value="name">상품종류</option>
                                 </select>
                             </fieldset>
                         </form>
@@ -360,19 +370,13 @@
                     <?php
 
     
-if(isset($_GET['page'])){
-    $page = (int)$_GET['page'];
-} else {
-    $page = 1;
-}
-$viewNum = 10;
-$viewLimit = ($viewNum * $page) - $viewNum;
 
 
-    $sql = "SELECT count(shopListID) FROM sopumShopList";
-    $result = $connect -> query($sql);
 
-    $boardCount = $result -> fetch_array(MYSQLI_ASSOC);
+    $pagesql = "SELECT count(shopListID) FROM sopumShopList";
+    $pageresult = $connect -> query($pagesql);
+
+    $boardCount = $pageresult -> fetch_array(MYSQLI_ASSOC);
     $boardCount = $boardCount['count(shopListID)'];
 
     // 총 페이지 갯수
