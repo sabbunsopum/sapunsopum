@@ -38,6 +38,11 @@
     position: absolute;
     top: 20px;
     left: 0;
+    background: #4461f2;
+    font-size: 20px;
+    padding: 6px 10px;
+    color: #fff;
+    border-radius: 10px;
 }
 
 
@@ -46,9 +51,12 @@
 }
 
 .tipBox>span>i {
-    position: absolute;
-    top: 0;
-    left: 0;
+    font-style: normal;
+    padding: 10px 15px;
+    background: #4461f2;
+    color: #fff;
+    font-family: "NanumSquare";
+    border-radius: 5px;
 }
 
 .tipBox>span:hover #tipDeleteButton {
@@ -77,7 +85,7 @@
 
                     <span>
                         <img src="../html/assets/img/myTip_icon<?echo $tip['rcvSlct']?>.svg" alt="icon1" />
-                        <a href="myTipDelete.php?myTipID=<?echo $tip['myTipID']?>" id="tipDeleteButton">❎</a>
+                        <a href="myTipDelete.php?myTipID=<?echo $tip['myTipID']?>" id="tipDeleteButton">X</a>
                         <i>
                             <?echo $tip['tipName']?>
                         </i>
