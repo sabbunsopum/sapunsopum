@@ -118,22 +118,22 @@
                 </div>
                 <div class="progress2">
                   <span>22.08</span>
-                  <p>조 결성</p>
+                  <p>주제 선정 / 프로토타입 프레임워크</p>
                   <div class="progress__dot"></div>
                 </div>
                 <div class="progress3">
-                  <span>22.08</span>
-                  <p>조 결성</p>
+                  <span>22.09</span>
+                  <p>디자인 리뉴얼</p>
                   <div class="progress__dot"></div>
                 </div>
                 <div class="progress4">
-                  <span>22.08</span>
-                  <p>조 결성</p>
+                  <span>22.10</span>
+                  <p>사뿐소품 완성</p>
                   <div class="progress__dot"></div>
                 </div>
                 <div class="progress5">
-                  <span>22.08</span>
-                  <p>조 결성</p>
+                  <span>22.11</span>
+                  <p>사뿐소품은 계속 발전중!</p>
                   <div class="progress__dot"></div>
                 </div>
               </div>
@@ -152,8 +152,8 @@
               선물같은 사이트를 목표로 하는 사뿐소품
             </h3>
             <div class="SBSPISPresetn__img">
-              <div class="img_bulb"></div>
-              <div class="img_heart"></div>
+              <!-- <div class="img_bulb"></div>
+              <div class="img_heart"></div> -->
               <div class="img_box"></div>
             </div>
             <a href="../main/main.php">이용하러 가기</a>
