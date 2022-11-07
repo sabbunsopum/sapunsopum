@@ -46,7 +46,7 @@
                         <span>문의글 작성하기</span>
                     </div>
                     <form>
-                        <input type="EmailBtn" id="EmailBtn" NAME="" value="sabbunsopum@gmail.com">
+                        <input id="EmailBtn" value="sabbunsopum@gmail.com">
                         <button class="copyBtn" onclick="copy_to_clipboard()">
                             <img src="../html/assets/img/QnA_icon2@3x.png" alt="이메일 작성하기">
                             <span>이메일 주소 복사하기</span>
@@ -63,7 +63,20 @@
 
     <script src="../assets/js/custom.js"></script>
     <script>
+    function copy_to_clipboard() {
+        var copyText = document.getElementById("EmailBtn");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        document.execCommand("Copy");
+        alert("이메일 주소를 복사했습니다.");
+    }
+
     document.querySelector(".faq__header .link .qna").classList.add("active");
+
+    document.querySelector(".qna__btn .btn").addEventListener("click", () => {
+        alert("카카오톡 상담원 모집중에 있습니다. 빠른 시일내에 서비스를 제공하도록 하겠습니다.");
+    })
+
     </script>
 </body>
 

@@ -57,7 +57,7 @@
                     </div>
                     <div class="tit">
                         <p class="tag">
-                            <span><?=$info['shopTag']?></span>
+                            <span>#<?=$info['shopTag']?></span>
                         </p>
                         <p class="name">"<?=$info['shopName']?>"</p>
                     </div>

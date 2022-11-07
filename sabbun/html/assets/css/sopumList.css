@@ -184,7 +184,7 @@
 .list__inner {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .list {
@@ -194,6 +194,7 @@
   padding: 15px 20px;
   box-sizing: border-box;
   transition: all 0.3s;
+  margin: 15px;
 }
 
 .list:hover {

@@ -34,9 +34,9 @@
 <style>
 .blog__contents__comment h3 {
     display: inline-block;
-    background: #000;
-    color: #fff;
-    margin-bottom: 50px;
+    color: #000;
+    font-weight: 700;
+    margin-top: 10px;
     padding: 1px 10px
 }
 
@@ -96,7 +96,6 @@
 
 .comment__write {
     padding: 20px;
-    background: #e5e5e5;
 }
 
 .comment__write label {
@@ -111,12 +110,13 @@
 .comment__write input {
     border: 0;
     padding: 15px 20px;
-    border-radius: 50px
+    border-radius: 50px;
+    background-color: #f5f5f5;
 }
 
 .comment__write button {
     border: 0;
-    background: #000;
+    background: #4461f2;
     color: #fff;
     border-radius: 30px;
     cursor: pointer
@@ -191,7 +191,7 @@
         if ($binfo['boardImgFile'] !== "Img_default.jpg"){
             echo "<p><img src='img/".$binfo['boardImgFile']."'></p>";
         }
-        echo "<span class='likes'><a href='#'><img src='../html/assets/img/boardView_disLike@3x.png' alt=''></a>".$binfo['boardLike']."</span>";
+        // echo "<span class='likes'><a href='#'><img src='../html/assets/img/boardView_disLike@3x.png' alt=''></a>".$binfo['boardLike']."</span>";
 
     }
 ?>
