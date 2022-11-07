@@ -45,13 +45,13 @@
                     Copyright © 사뿐소품. All rights reserved.
                 </p>
             </div>
-            <div class="footer__icon">
+            <!-- <div class="footer__icon">
                 <div class="footer__icon__img img1"><a href="#"></a></div>
                 <div class="footer__icon__img img2"><a href="#"></a></div>
                 <div class="footer__icon__img img3"><a href="#"></a></div>
                 <div class="footer__icon__img img4"><a href="#"></a></div>
                 <div class="footer__icon__img img5"><a href="#"></a></div>
-            </div>
+            </div> -->
         </div>
 
     </footer>

@@ -17,11 +17,6 @@
     <link rel="stylesheet" href="../html/assets/css/header.css">
     <link rel="stylesheet" href="../html/assets/css/common.css">
     <link rel="stylesheet" href="../html/assets/css/reset.css">
-    <style>
-    #searchOption {
-        display: none;
-    }
-    </style>
 </head>
 
 <body>
@@ -68,9 +63,6 @@
                         <button type="submit" class="searchBtn">
                             <img src="../html/assets/img/search_icon.svg" alt="검색버튼">
                         </button>
-                        <select name="searchOption" id="searchOption">
-                            <option value="title"></option>
-                        </select>
                     </fieldset>
                 </form>
             </div>
