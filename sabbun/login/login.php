@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../html/assets/css/find.css">
     <link rel="stylesheet" href="../html/assets/css/footer.css">
 
-    
+
 </head>
 
 <body>
@@ -66,14 +66,14 @@
                                     class="input__style" required>
                             </div>
                             <button type="submit" class="input__button">로그인</button>
-                            <div class="sub__input">
+                            <!-- <div class="sub__input">
                                 <button type="submit" class="input__button2">
                                     <img class="kakaoBtn" src="../html/assets/img/kakao.svg" alt="카카오톡 로그인">
                                 </button>
                                 <button type="submit" class="input__button2">
                                     <img class="googleBtn" src="../html/assets/img/google.svg" alt="구글 로그인">
                                 </button>
-                            </div>
+                            </div> -->
                         </fieldset>
                     </form>
                 </div>

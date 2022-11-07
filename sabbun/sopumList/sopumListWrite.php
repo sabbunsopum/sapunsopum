@@ -3,6 +3,18 @@
     include "../connect/session.php";
     include "../connect/sessionCheck.php";
 ?>
+<?php
+    if($_SESSION['myMemberID']==6){
+        // 로그인 페이지 이동
+        
+    }else{
+        echo '<script type="text/javascript">'; 
+        echo 'alert("소품샵 등록은 관리자 아이디로 가능합니다.");'; 
+        echo 'window.location.href = "../login/login.php";';
+        echo '</script>';
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <style>
@@ -107,46 +119,49 @@
 
                                         <div class="shop__map">
                                             <div id="map" style="width:420px;height:230px;margin-left: 50px;"></div>
-                                            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9d3637cebd20b21457c4e0c648d59d32&libraries=services,clusterer,drawing"></script>
+                                            <script type="text/javascript"
+                                                src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9d3637cebd20b21457c4e0c648d59d32&libraries=services,clusterer,drawing">
+                                            </script>
                                             <script>
-                                        var container = document.getElementById('map');
-                                        var options = {
-                                            center: new kakao.maps.LatLng(33.450701, 126.570667),
-                                            level: 3
-                                        };
+                                            var container = document.getElementById('map');
+                                            var options = {
+                                                center: new kakao.maps.LatLng(33.450701, 126.570667),
+                                                level: 3
+                                            };
 
-                                        var map = new kakao.maps.Map(container, options);
-                                        
-                                        
-                                        // 주소-좌표 변환 객체를 생성합니다
-                                        var geocoder = new kakao.maps.services.Geocoder();
+                                            var map = new kakao.maps.Map(container, options);
 
-                                        // 주소로 좌표를 검색합니다
-                                        geocoder.addressSearch('<?=$info['shopAdress']?>', function (result, status) {
 
-                                            // 정상적으로 검색이 완료됐으면 
-                                            if (status === kakao.maps.services.Status.OK) {
+                                            // 주소-좌표 변환 객체를 생성합니다
+                                            var geocoder = new kakao.maps.services.Geocoder();
 
-                                                var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+                                            // 주소로 좌표를 검색합니다
+                                            geocoder.addressSearch('<?=$info['shopAdress']?>', function(result,
+                                                status) {
 
-                                                // 결과값으로 받은 위치를 마커로 표시합니다
-                                                var marker = new kakao.maps.Marker({
-                                                    map: map,
-                                                    position: coords
-                                                });
+                                                // 정상적으로 검색이 완료됐으면 
+                                                if (status === kakao.maps.services.Status.OK) {
 
-                                                // 인포윈도우로 장소에 대한 설명을 표시합니다
-                                                var infowindow = new kakao.maps.InfoWindow({
-                                                    content: '<div style="width:150px;text-align:center;padding:6px 0;"><?=$info['shopName']?></div>'
-                                                });
-                                                infowindow.open(map, marker);
+                                                    var coords = new kakao.maps.LatLng(result[0].y, result[0]
+                                                        .x);
 
-                                                // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
-                                                map.setCenter(coords);
-                                            }
-                                        });
+                                                    // 결과값으로 받은 위치를 마커로 표시합니다
+                                                    var marker = new kakao.maps.Marker({
+                                                        map: map,
+                                                        position: coords
+                                                    });
 
-                                    </script>
+                                                    // 인포윈도우로 장소에 대한 설명을 표시합니다
+                                                    var infowindow = new kakao.maps.InfoWindow({
+                                                        content: '<div style="width:150px;text-align:center;padding:6px 0;"><?=$info['shopName']?></div>'
+                                                    });
+                                                    infowindow.open(map, marker);
+
+                                                    // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+                                                    map.setCenter(coords);
+                                                }
+                                            });
+                                            </script>
                                         </div>
                                     </div>
                                 </div>
@@ -158,7 +173,7 @@
                                 </div>
                                 <div class="tag">
                                     <span class="tag__title">Best New</span>
-                                    <input type="checkbox" value='BEST' placeholder="베스트 소품샵"  name="best" id="best">
+                                    <input type="checkbox" value='BEST' placeholder="베스트 소품샵" name="best" id="best">
                                     <label for="best">Best</label>
                                     <input type="checkbox" value='NEW' placeholder="뉴 소품샵" name="new" id="new">
                                     <label for="new">New</label>
