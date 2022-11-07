@@ -54,19 +54,19 @@
             exit;
         }
     } else {
-        echo "<script>alert('사진을 첨부하지 않았습니다.'); history.back(1)</script>";
+        echo "<script>alert('사진을 첨부하지 않았습니다.');</script>";
         $sql = "INSERT INTO sopumShopList(myMemberID, shopListContents, shopListView, shopListLike, regTime, shopName, shopHours, shopNum, goodsList, shopAdress, shopImgFile, shopImgSize, shopTag, best, new) VALUES('$myMemberID','$shopListContents', '$shopListView', '$shopListLike', '$regTime', '$shopName' , '$shopHours', '$shopNum', '$goodsList', '$shopAdress', 'Img_default.jpg', '$shopImgSize', '$shopTag' '$best', '$new')";
     }
     //이미지 사이즈 확인
     if($shopImgSize > 1000000){
         echo "<script>alert('이미지 용량이 1메가를 초과했습니다.'); history.back(1)</script>";
         exit;
+    }else{
+        "<script>alert('소품샵 정보가 등록됐습니다.');</script>";
+        Header("Location: sopumList.php");
+        $result = $connect -> query($sql);
+        $result = move_uploaded_file($shopImgTmp, $shopImgDir.$shopImgName);
     }
-
-    $result = $connect -> query($sql);
-    $result = move_uploaded_file($shopImgTmp, $shopImgDir.$shopImgName);
-    
-    Header("Location: sopumList.php");
 
     
     ?>

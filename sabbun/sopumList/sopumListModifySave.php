@@ -56,16 +56,18 @@
     
                 } else {
                     echo "<script>alert('지원하는 이미지 파일이 아닙니다.'); history.back(1)</script>";
+                    exit;
                 }
             }
         }else {
-            echo "<p>프로필 사진을 첨부하지 않았습니다. <br> 마이 페이지에서 추가 해주세요!</p>";
-            
+            echo "<script>alert('사진을 첨부하지 않았습니다.'); history.back(1)</script>";
+            exit;
         }
  
     
     }else{
         echo "<script>alert('내가 작성한 글이 아닙니다.'); history.back(1)</script>";
+        exit;
     }
     
 
