@@ -18,7 +18,9 @@
         $result = $connect -> query($sql);
         echo json_encode(array("info" => $commentID));
     }else{
-        echo "<script>alert('댓글 비밀번호가 틀립니다.')</script>";
+        echo '<script type="text/javascript">'; 
+        echo 'alert("댓글 비밀번호가 틀립니다.");'; 
+        echo '</script>';
     }
 
 
