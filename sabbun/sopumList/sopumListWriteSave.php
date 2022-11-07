@@ -23,7 +23,9 @@
     $shopNum = $_POST['shopNum'];
     $goodsList = $_POST['goodsList'];
     $shopAdress = $_POST['shopAdress'];
-    $shopTag = $_POST['shopTag'];
+    $shopTag = $_POST['shopTag'][0];
+    //$shopTag = $_POST['shopTag'][1];
+    //$shopTag = $_POST['shopTag'][2];
     $best = $_POST['best'];
     $new = $_POST['new'];
 
@@ -61,7 +63,8 @@
         echo 'alert("사진을 첨부하지 않았습니다.");'; 
         echo 'history.back(1)';
         echo '</script>';
-        $sql = "INSERT INTO sopumShopList(myMemberID, shopListContents, shopListView, shopListLike, regTime, shopName, shopHours, shopNum, goodsList, shopAdress, shopImgFile, shopImgSize, shopTag, best, new) VALUES('$myMemberID','$shopListContents', '$shopListView', '$shopListLike', '$regTime', '$shopName' , '$shopHours', '$shopNum', '$goodsList', '$shopAdress', 'Img_default.jpg', '$shopImgSize', '$shopTag' '$best', '$new')";
+        exit;
+        //$sql = "INSERT INTO sopumShopList(myMemberID, shopListContents, shopListView, shopListLike, regTime, shopName, shopHours, shopNum, goodsList, shopAdress, shopImgFile, shopImgSize, shopTag, best, new) VALUES('$myMemberID','$shopListContents', '$shopListView', '$shopListLike', '$regTime', '$shopName' , '$shopHours', '$shopNum', '$goodsList', '$shopAdress', 'Img_default.jpg', '$shopImgSize', '$shopTag' '$best', '$new')";
     }
     //이미지 사이즈 확인
     if($shopImgSize > 1000000){

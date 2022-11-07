@@ -14,7 +14,9 @@
     $shopNum = $_POST['shopNum'];
     $goodsList = $_POST['goodsList'];
     $shopAdress = $_POST['shopAdress'];
-    $shopTag = $_POST['shopTag'];
+    $shopTag = $_POST['shopTag'][0];
+    //$shopTag = $_POST['shopTag'][0];
+    //$shopTag = $_POST['shopTag'][0];
     $best = $_POST['best'];
     $new = $_POST['new'];
 

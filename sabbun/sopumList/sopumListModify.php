@@ -182,8 +182,9 @@
                                 <div class="post__heart ir">좋아요</div> -->
                                 <div class="tag">
                                     <span class="tag__title">키워드 태그</span>
-                                    <input type="text" value=<?=$info['shopTag']?> placeholder="소품샵 키워드 태그를 입력하세요"
-                                        name="shopTag" id="shopTag">
+                                    <input type="text" value=<?=$info['shopTag'][0]?> name="shopTag[]" id="shopTag">
+                                    <input type="text" value=<?=$info['shopTag'][1]?> name="shopTag[]" id="shopTag">
+                                    <input type="text" value=<?=$info['shopTag'][2]?> name="shopTag[]" id="shopTag">
                                 </div>
                                 <div class="tag">
                                     <span class="tag__title">Best New</span>
