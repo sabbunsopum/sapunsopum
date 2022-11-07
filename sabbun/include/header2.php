@@ -77,12 +77,54 @@
     </header>
     <!-- // headerType -->
 </body>
-<script>
+<!-- <script>
     document.querySelector(".header__menu li:nth-child(3)").addEventListener("mouseover", () => {
         document.querySelector(".subMenu").classList.add("show");
     })
     document.querySelector(".header__menu li:nth-child(3)").addEventListener("mouseout", () => {
         document.querySelector(".subMenu").classList.remove("show");
     })
+</script> -->
+<script>
+const btnHam = document.querySelector(".header__ham");
+const btnMenu = document.querySelector(".header__menu");
+const btnMenuList = btnMenu.querySelectorAll("ul li a");
+
+btnHam.addEventListener("click", () => {
+    btnHam.classList.toggle("active");
+    btnMenu.classList.toggle("active");
+    document.body.classList.toggle("fixed");
+});
+
+btnMenuList.forEach((list) => {
+    list.addEventListener("click", () => {
+        document.body.classList.remove("fixed");
+        btnMenu.classList.remove("active");
+        btnHam.classList.remove("active");
+    });
+});
+
+window.addEventListener("resize", () => {
+    let width = window.innerWidth;
+    if (width > 1300) {
+        document.body.classList.remove("fixed");
+        btnMenu.classList.remove("active");
+        btnHam.classList.remove("active");
+    }
+});
+document.querySelector(".header__menu li:nth-child(3)").addEventListener("mouseover", () => {
+    document.querySelector(".subMenu").classList.add("show");
+})
+document.querySelector(".header__menu li:nth-child(3)").addEventListener("mouseout", () => {
+    document.querySelector(".subMenu").classList.remove("show");
+})
+</script>
+<script>
+document.querySelector(".header__menu li:nth-child(3)").addEventListener("mouseover", () => {
+    document.querySelector(".subMenu").classList.add("show");
+})
+document.querySelector(".header__menu li:nth-child(3)").addEventListener("mouseout", () => {
+    document.querySelector(".subMenu").classList.remove("show");
+})
 </script>
 </html>
