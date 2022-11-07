@@ -64,7 +64,7 @@
                     <ul>
                         <li><a href="myPage.php">회원 정보 수정</a></li>
                         <li class="active"><a href="myPageBoard.php">게시물</a></li>
-                        <li><a href="myPageLike.php">관심 리스트</a></li>
+                        <!-- <li><a href="myPageLike.php">관심 리스트</a></li> -->
                     </ul>
                 </div>
             </section>
