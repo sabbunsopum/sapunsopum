@@ -359,7 +359,7 @@
                 <div class="box b3">
                     <img src="../html/assets/img/myPage__icon.svg" alt="소품샵 리스트">
                     <h3>마이페이지</h3>
-                    <a href="../mypage/mypage.php">바로가기</a>
+                    <a href="../mypage/myPage.php">바로가기</a>
                 </div>
                 <div class="box b4">
                     <img src="../html/assets/img/faq__icon.svg" alt="소품샵 리스트">
