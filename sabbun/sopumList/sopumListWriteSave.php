@@ -50,16 +50,25 @@
                 $sql = "INSERT INTO sopumShopList(myMemberID, shopListContents, shopListView, shopListLike, regTime, shopName, shopHours, shopNum, goodsList, shopAdress, shopImgFile, shopImgSize, shopTag, best, new) VALUES('$myMemberID','$shopListContents', '$shopListView', '$shopListLike', '$regTime', '$shopName' , '$shopHours', '$shopNum', '$goodsList', '$shopAdress', '$shopImgName', '$shopImgSize', '$shopTag', '$best', '$new')";
             } 
         }else {
-            echo "<script>alert('지원하는 이미지 파일이 아닙니다.'); history.back(1)</script>";
+            echo '<script type="text/javascript">'; 
+            echo 'alert("지원하는 이미지 파일이 아닙니다.");'; 
+            echo 'history.back(1)';
+            echo '</script>';
             exit;
         }
     } else {
-        echo "<script>alert('사진을 첨부하지 않았습니다.');</script>";
+        echo '<script type="text/javascript">'; 
+        echo 'alert("사진을 첨부하지 않았습니다.");'; 
+        echo 'history.back(1)';
+        echo '</script>';
         $sql = "INSERT INTO sopumShopList(myMemberID, shopListContents, shopListView, shopListLike, regTime, shopName, shopHours, shopNum, goodsList, shopAdress, shopImgFile, shopImgSize, shopTag, best, new) VALUES('$myMemberID','$shopListContents', '$shopListView', '$shopListLike', '$regTime', '$shopName' , '$shopHours', '$shopNum', '$goodsList', '$shopAdress', 'Img_default.jpg', '$shopImgSize', '$shopTag' '$best', '$new')";
     }
     //이미지 사이즈 확인
     if($shopImgSize > 1000000){
-        echo "<script>alert('이미지 용량이 1메가를 초과했습니다.'); history.back(1)</script>";
+        echo '<script type="text/javascript">'; 
+        echo 'alert("이미지 용량이 1메가를 초과했습니다.");'; 
+        echo 'history.back(1)';
+        echo '</script>';
         exit;
     }else{
         "<script>alert('소품샵 정보가 등록됐습니다.');</script>";

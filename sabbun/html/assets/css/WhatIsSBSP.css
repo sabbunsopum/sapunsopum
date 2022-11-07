@@ -2,7 +2,7 @@
 .intro__wrap {
 }
 .intro__inner {
-  width: 100%;
+  /* width: 100%; */
   background: #4461f2;
   margin-top: 75px;
   height: 283px;
@@ -269,40 +269,30 @@
   line-height: 1.5;
   color: #4461f2;
   font-weight: 600;
-  margin-bottom: 100px;
+  margin-top: 100px;
 }
 .SBSPISPresent__inner .SBSPISPresetn__img {
-  height: 60vh;
   padding: 50px;
   box-sizing: border-box;
-  position: relative;
-  margin-top: 50px;
 }
 .SBSPISPresent__inner .SBSPISPresetn__img .img_box {
-  margin-top: 50px;
-  margin: 0 auto;
   background: url(../img/intro_img/Prsesent_present.svg) no-repeat;
   background-size: contain;
   width: 300px;
   height: 300px;
+  margin: 0 auto;
 }
 .SBSPISPresent__inner .SBSPISPresetn__img .img_bulb {
-  position: absolute;
   background: url(../img/intro_img/Present_bulb.svg);
   background-size: contain;
   width: 212px;
   height: 212px;
-  top: -50px;
-  left: 150px;
 }
 .SBSPISPresent__inner .SBSPISPresetn__img .img_heart {
-  position: absolute;
   background: url(../img/intro_img/Present_heart.svg);
   background-size: contain;
   width: 196px;
   height: 196px;
-  top: -100px;
-  left: 450px;
 }
 .SBSPISPresent__inner a {
   text-align: center;
@@ -315,6 +305,7 @@
   color: #fff;
   font-size: 14px;
   transition: all 0.3s;
+  margin-bottom: 100px;
 }
 .SBSPISPresent__inner a:hover {
   background: #2e3f93;
