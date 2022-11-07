@@ -2,11 +2,11 @@
     include "../connect/connect.php";
     include "../connect/session.php";
 
-    $myMemberID = $_SESSION['myMemberID'];
+    //$myMemberID = $_SESSION['myMemberID'];
 
-    $mySql = "SELECT * FROM myBMember";
-    $myResult = $connect -> query($mySql);
-    $myInfo = $myResult -> fetch_array(MYSQLI_ASSOC);
+    // $mySql = "SELECT * FROM myBMember";
+    // $myResult = $connect -> query($mySql);
+    // $myInfo = $myResult -> fetch_array(MYSQLI_ASSOC);
 
 
     $tipSql = "SELECT * FROM myTip ORDER BY myTipID DESC";
@@ -182,7 +182,7 @@
     //     // e.preventDefault();
     //     // myTipID = $(this).parent().parent();
 
-    //     if (<?=$myMemberID?> !== <?=$tipInfo['myMemberID']?>) {
+    //     if () {
     //         alert("내가 쓴 글이 아닙니다!")
     //         // } else {
     //         //     $.ajax({
@@ -205,7 +205,7 @@
     //     }
     // });
 
-    // 댓글 쓰기
+    
     $("#tipBtn").click(() => {
         if ($("#myTip__Write").val() == "") {
             alert("댓글을 써주세요!")
