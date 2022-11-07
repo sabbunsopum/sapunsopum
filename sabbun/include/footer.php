@@ -26,20 +26,20 @@
                 </ul>
                 <ul>
                     <h4>사뿐소품</h4>
-                    <li><a href="#">브랜드스토리</a></li>
-                    <li><a href="#">이용안내</a></li>
-                    <li><a href="#">연혁</a></li>
+                    <li><a href="../WhatisSBSP/WhatisSBSP.php">브랜드스토리</a></li>
+                    <li><a href="../WhatisSBSP/WhatisSBSP.php">이용안내</a></li>
+                    <li><a href="../WhatisSBSP/WhatisSBSP.php">연혁</a></li>
                 </ul>
                 <ul>
                     <h4>고객지원</h4>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">자주하는 질문</a></li>
-                    <li><a href="#">1:1 상담</a></li>
+                    <li><a href="../service/faq.php">FAQ</a></li>
+                    <li><a href="../service/faq.php">자주하는 질문</a></li>
+                    <li><a href="../service/faq.php">1:1 상담</a></li>
                 </ul>
                 <ul>
                     <h4>개인정보</h4>
-                    <li><a href="#">이용약관</a></li>
-                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="../join/join1.php">이용약관</a></li>
+                    <li><a href="../join/join1.php">개인정보처리방침</a></li>
                 </ul>
                 <p>
                     Copyright © 사뿐소품. All rights reserved.

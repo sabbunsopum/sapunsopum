@@ -4,14 +4,18 @@
     include "../connect/sessionCheck.php";
 
     
-    if(!isset($_SESSION['myMemberID'])==6){
+   
+    if($_SESSION['myMemberID']==6){
         // 로그인 페이지 이동
+        
+    }else{
         echo '<script type="text/javascript">'; 
         echo 'alert("소품샵 등록은 관리자 아이디로 가능합니다.");'; 
         echo 'window.location.href = "../login/login.php";';
         echo '</script>';
-
+        exit;
     }
+
 
     $myMemberID = $_SESSION['myMemberID'];
 
@@ -146,13 +150,13 @@
 
                                             // 주소로 좌표를 검색합니다
                                             geocoder.addressSearch('<?=$info['shopAdress']?>', function(result,
-                                            status) {
+                                                status) {
 
                                                 // 정상적으로 검색이 완료됐으면 
                                                 if (status === kakao.maps.services.Status.OK) {
 
                                                     var coords = new kakao.maps.LatLng(result[0].y, result[0]
-                                                    .x);
+                                                        .x);
 
                                                     // 결과값으로 받은 위치를 마커로 표시합니다
                                                     var marker = new kakao.maps.Marker({

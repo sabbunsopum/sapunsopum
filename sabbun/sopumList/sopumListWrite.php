@@ -4,13 +4,15 @@
     include "../connect/sessionCheck.php";
 ?>
 <?php
-    if(!isset($_SESSION['myMemberID'])==6){
+    if($_SESSION['myMemberID']==6){
         // 로그인 페이지 이동
+        
+    }else{
         echo '<script type="text/javascript">'; 
         echo 'alert("소품샵 등록은 관리자 아이디로 가능합니다.");'; 
         echo 'window.location.href = "../login/login.php";';
         echo '</script>';
-
+        exit;
     }
 ?>
 <!DOCTYPE html>
