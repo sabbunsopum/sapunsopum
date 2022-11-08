@@ -36,11 +36,11 @@
     .board__title a {
         color: #fff;
         margin: 0 10px;
-        padding: 5px;
+        padding: 7px 12px;
         font-size: 14px;
         font-weight: 500;
         background: #4461f2;
-        border-radius: 10px;
+        border-radius: 12px;
     }
     </style>
     <!-- CSS -->

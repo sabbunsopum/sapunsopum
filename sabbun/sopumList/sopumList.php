@@ -39,13 +39,19 @@
     }
 
     .board__title a {
-        color: #fff;
+        color: #888;
         margin: 0 10px;
-        padding: 5px;
+        padding: 7px 10px;
         font-size: 14px;
         font-weight: 500;
+        background: #f5f5f5;
+        border-radius: 12px;
+        transition: all 0.3s;
+    }
+
+    .board__title a:hover {
+        color: #fff;
         background: #4461f2;
-        border-radius: 10px;
     }
     </style>
     <!-- CSS -->
